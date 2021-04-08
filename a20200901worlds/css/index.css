@@ -1,0 +1,784 @@
+/* reset */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer,div,li,a,span{margin:0;padding: 0;outline: none;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif; font-family: '\5FAE\8F6F\96C5\9ED1';}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+i,em,b{font-style:normal}
+a{text-decoration:none; outline: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);} 
+a:hover{text-decoration:none; filter:brightness(1.2);}
+img{border:0} 
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+td,th,ul,ol{padding:0;list-style: none;}
+body {width: 100%; background: #ddddde!important;margin: 0 auto;padding-top: 0!important;position: relative;}
+.hidden{font-size: 0; text-indent: -999em;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{*zoom:1;}
+
+#afooter{text-align:center; line-height:20px;color: #9a9a9a;background-color: #0e0e0e;padding: 20px 0; position: relative; z-index: 2;}
+#afooter a{ color: #9a9a9a;}
+
+.drag{width: 526px;height: 670px;position: absolute;bottom: 40px;right: 0;z-index: 99999;display: none;background: rgba(0, 0, 0, .7);}
+#real-time-iframe{height: 670px!important;width: 100%!important;}
+.drag .close{display: block;float: right; width: 21px;height: 21px;margin-top: 10px; background: url(//game.gtimg.cn/images/lpl/act/a20200324lpl/close.png) no-repeat bottom;}
+.drag .drag-p{width: 90%;height: 40px;line-height: 40px;text-align: center;font-size: 20px;color: #cbaf73;position: absolute;top: 0;left: 0;cursor: move;}
+
+@font-face{
+    font-family: 'font4';
+    src: url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-4.eot');
+    src: url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-4.woff') format('woff'),url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-4.ttf') format('truetype'),url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-4.svg') format('svg');
+}
+
+/* html{
+  scroll-behavior:smooth;
+} */
+.bg{position: fixed;top: 0;left: 0; width: 100%;height: 100vh; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/bg.jpg) no-repeat center bottom;background-size: 100% 100%; object-fit:cover;}
+.spr{ background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;}
+.wrap{width: 100%; min-width: 1240px;height: auto; margin: 0 auto;position: relative;text-align: center;overflow: hidden;}
+
+.headSwiper{width: 100%;height: 100vh!important;min-height: 800px; overflow: visible;}
+.headSwiper .swiper-wrapper.headWrapper{height: 100vh!important;}
+.headSwiper .swiper-slide-next{visibility: hidden;}
+.headSwiper .swiper-slide-prev{visibility: hidden;}
+.headSwiper .swiper-slide-active{display: block;}
+/*头部*/
+.header{width: 100%;height: auto!important;position: relative;}
+.head{scroll-behavior: smooth;width: 100%;min-width: 1920px; height: 100vh;padding-top: 42px; margin: 0 auto;overflow: hidden; position: relative;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.head::before{content: '';position: absolute;width: 100%;height: 200px;left: 50%;bottom: 0;-webkit-background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,.6));-moz-background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,.6));-ms-background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,.6));background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,.6));transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);z-index: 1;}
+.kv-video{width:100%;margin: 0 auto;position: absolute;left: 50%;top: -20px;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.banner{height: 40px;max-width: 1920px;min-width: 1240px;position: absolute;top: 82px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.logo1{position: relative; width: 141px; height: 40px;font-size: 0; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/logo1.png) no-repeat;float: left;margin-right: 30px;/* position: absolute;top: 20px; left: 29px; font-size:0px;*/}
+.logo1::before{content: '';display: block;width: 2px;height: 15px;position: absolute;top: 12px;right: -15px;background: #73799d;}
+.logo2{ width: 149px; height: 40px;font-size: 0; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/logo2.png) no-repeat;float: left; /*position: absolute;top: 29px; left: 222px; font-size: 0px;*/}
+.btn-slide{width: 98px;height: 53px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/icon-slide.png) no-repeat; position: absolute;left: 50%;transform: translateX(-50%);bottom: 260px;animation: slide 2s linear infinite ;}
+@-webkit-keyframes slide{
+  0%{bottom: 260px;}
+  50%{bottom:240px}
+  100%{bottom: 260px;}
+}
+
+.time-box{width: 1400px;height: 130px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/time-bg.png) no-repeat;position: absolute;left: 50%;transform: translateX(-50%);bottom: 100px;z-index: 2;}
+.time-box>div{width: 212px;height: auto; float: left;position: absolute;top:40px;line-height: 24px; font-size: 16px;color: #e8e7d1;}
+.time-box>div .txt1{line-height: 24px;height: 48px;}
+.time-box>div .txt3{font-weight: bold;font-size: 18px;color: #f4f3e1;}
+.time-box>div .txt2{width: 100%; position: absolute;top: -24px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.time-box>div .fc{width: 153px;height: 27px;line-height: 27px; background-position: -147px -3px;position: absolute;top: -27px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.time-box .time1{left: 171px;}
+.time-box .time2{left: 383px;}
+.time-box .time3{left: 595px;}
+.time-box .time4{left: 807px;}
+.time-box .time5{left: 1019px;}
+.sponsor{width: 1226px;height: 76px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/sponsor-logo.png) no-repeat;position: absolute;bottom: 10px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);z-index: 2;}
+
+/* 侧边导航 */
+.nav-box{text-align: center; width: 200px;height: 692px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/nav-bg.png) no-repeat;position: fixed;top: 50%;right: 18px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);transition: all .3s;z-index: 8;}
+.nav-box .code{display: inline-block;margin: 170px auto 25px;}
+.nav-box .navbar div{width: 120px;height: auto; margin: 0 auto;}
+.nav-box .navbar div a{font-size: 14px;color: #d6d2c7;line-height: 44px;display: block;width: 120px;height: 44px;border-bottom: 1px solid rgba(253, 249, 206,.2);box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.nav-box .navbar div a.on,.nav-box .navbar div a:hover{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/nav-btn.png) no-repeat;color: #f7f4ea;}
+.nav-box .btn-collection{display: block; font-size: 16px;color: #fde8b1;margin: 20px auto 0;}
+.nav-box .btn-collection::before{content: '';display: inline-block;margin-right: 8px; width: 16px;height: 16px;line-height: 16px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -8px -310px;}
+.nav-box .btn-expand{display: none;width: 39px;height: 149px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/nav-expand.png) no-repeat;font-size: 16px;line-height: 20px;color: #fde8b1;letter-spacing: 10px;padding: 32px 0 0 10px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.nav-box .btn-navgo{width: 112px;height: 36px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/nav-btn.gif) no-repeat;font-size: 0;color: #000a79;line-height: 36px; position: absolute;bottom: -35px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+/* .nav-box .btn-navgo:hover{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/btn-navgo-on.png) no-repeat;color: #f7f4ea;} */
+.nav-box .btn-gotop{display: block; width: 100%;height: 140px;position: absolute;top: 15px;left: 0;z-index: 9;}
+
+/*  内容 */
+
+/* .fadeInUp{-webkit-animation: fadeInUp 1s 0.5s both;animation: fadeInUp 1s 0.5s both;} */
+/* .cont2,.cont4,.cont3,.cont5,.cont5,.cont7{ opacity: 0;} */
+/* cont1 START */
+/*4365*/
+.cont-box{scroll-behavior: smooth;max-width: 1920px;min-width: 1250px; height: auto;margin: 10px auto 0;}
+.cont-centr{ width: 1240px; height: 100%; display:block; margin: 0 auto;position: relative; }
+
+/* 第二屏切换 */
+/* .cont-box .top-icon{display: block;position: absolute;top: 100px;left:34px;width: 1920px;height: 1508px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-icon.png) no-repeat;} */
+.cont1 .top-bg1{display: none;position: absolute;top: 13%;left:50%;transform: translate(-50%,-10%);-webkit-transform: translate(-50%,-10%);-moz-transform: translate(-50%,-10%); width: 1920px;height: 1508px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/part1-bg.png) no-repeat;}
+.cont1.swiper-slide-active .top-bg1{display: block;}
+.cont1{padding-top: 160px;margin: 0 auto; width: 1240px;height: 100vh;min-height: 800px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;position: relative;}
+.tabbox{ width: 172px;height: auto; display: block;float: right; margin: 0 auto 0;text-align: center;position: absolute;padding-top:55px;top: 50%;right: 0;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.tabbox i.tab-icon{display: block;width: 103px;height: 105px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/icon.png) no-repeat;margin: 0 auto 10px;}
+.tabbox a{display: block;overflow: hidden; width:100%; height: 115px;position: relative;color: #fdf9ce;font-size: 22px;line-height: 115px; border-bottom: 1px solid rgba(253, 249, 206,.2);box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.tabbox a.on
+,.tabbox a:hover
+{width: 290px;margin-left: -49px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/tab-bg.png) no-repeat bottom;border: none;color: #fff;padding-left: 60px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.tabbox a i.num{font-family: 'font4';font-size: 0;display: block;float: left;padding-top: 15px;margin-top: 48px;}
+.tabbox .btn1 i.num{width: 35px;height: 35px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -8px -230px;}
+.tabbox .btn2 i.num{width: 35px;height: 35px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -68px -230px;}
+.tabbox .btn3 i.num{width: 35px;height: 35px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -132px -230px;}
+.tabbox .btn4 i.num{width: 37px;height: 35px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -189px -230px;}
+.tabbox .btn5 i.num{width: 35px;height: 35px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -248px -230px;}
+.tabbox a.on i.num
+,.tabbox a:hover i.num
+{font-size: 92px;line-height: 60px;background: none; padding-top: 20px;border-bottom: 4px solid #fff;margin-top: 0;width: 67px;height: 60px;}
+.tabbox a span{display: block;width: fit-content;width: -webkit-fit-content;float: left;margin-left: 15px;text-align: left;}
+.tabbox a span i{font-weight: bold;}
+.tabbox a em{display: block;font-weight: bold;height: 14px;line-height: 14px; font-size: 12px; margin-top: -45px;}
+.banner_Adver{width: 1240px; height: 110px; display: block;margin: 0px auto 35px;position: relative;}
+.sponer-banner{ width: 1240px; height: 110px; display: block;}
+.sponer-btn{width: 1240px; height: 110px;  display: block;}
+.sponer-btn .datatime{ position: absolute; top: 4px; right: 8px; font-size: 15px; color: #FFFFFF;}
+
+/* 第二屏切换内容 */
+
+.tab-box{width: 970px;height: auto;float: left;position: absolute;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+/* 
+视频点播 
+*/
+.main-video{width: fit-content;width: -webkit-fit-content;height: auto; display: block; margin: 0 auto;padding-left: 112px;}
+.main-video .mv-video{width:832px;position:relative;}
+.main-video .mv-video .mv-video-con{width:824px;height:464px;margin:25px 0 0;background: #000; position: relative;}
+.main-video .mv-video .mv-video-con .liveCon{width: 100%;height: 100%;position: absolute;top: 0;left: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-video .mv-video .mv-video-con a.btn-golive{display: none;width: 220px;height: 60px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/btn-golive.png) no-repeat;text-align: center;font-size: 18px;color: #ffffff;font-weight: bold;line-height: 60px;position: absolute;z-index: 9;top:70%;left: 50%;transform: translate(-50%,-70%);}
+.main-video .mv-video .mv-video-con:hover a.btn-golive{display: block!important;}
+/*  左边 */
+.mv-video .primary-title{ width: 100%; height: 30px; text-align: left;position: relative;}
+.mv-video .primary-title .txt1{width: fit-content;width: -webkit-fit-content;float: left; font-size: 28px; color: #fff; font-weight: bold;line-height: 30px;}
+.mv-video .primary-title .txt1 .line{display: block;float: left; width: 29px; height: 30px; background-position: -8px -3px;margin-right: 7px;}
+.mv-video .primary-title .txt2{width: fit-content;width: -webkit-fit-content;height: 30px;float: left; line-height: 30px;font-size: 16px; color: #fff;}
+.mv-video .primary-title .txt2 .game_name{display: block;float: left;max-width: 450px;height: 30px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.mv-video .primary-title .against{float: left;margin-left: 5px;color: #43e9fb;cursor: pointer;line-height: 30px;font-size: 16px;}
+.mv-video .primary-title .against-fc{display: none; position: absolute;width: 824px;height: 96px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/against-bg.png) no-repeat;left: 0;top: -100px;}
+.mv-video .primary-title .against:hover .against-fc{display: block;}
+.mv-video .primary-title .against-fc .left{width: fit-content;width: -webkit-fit-content;float: left;margin-left: 2px;}
+.mv-video .primary-title .against-fc>div span{display: block;width: 65px;height: 80px; margin-top:5px; float: left;}
+.mv-video .primary-title .against-fc .hreo{display: block; width: 65px;height: 65px;border-radius: 50%;background: rgba(255,255,255,.8);}
+.mv-video .primary-title .against-fc span div{background: #fff;border-radius: 50%;width: 28px;height: 28px;font-size: 0; border: 1px solid #304ace;margin: -10px auto 0;position: relative;}
+.mv-video .primary-title .against-fc span div img{width: 20px;height: 20px;display: block;position: absolute;top: 4px;left: 4px;}
+.mv-video .primary-title .against-fc span{display: block;float: left;font-size: 28px;font-family: 'font4';line-height: 96px;color: #fff;}
+.mv-video .primary-title .against-fc .bf{margin: 0 3px;line-height: 92px;}
+.mv-video .primary-title .against-fc .team-logo{float: left;margin: 10px 10px 0;text-align: center;color: #fff;font-size: 14px;}
+.mv-video .primary-title .against-fc .team-logo img{width: 48px;height: 48px;display: block;}
+.main-video .btn-box{width: fit-content;width: -webkit-fit-content;overflow: hidden; margin: 30px auto 0;position: relative;}
+.main-video .btn-box a{display: block;width:202px;height:50px; float: left;margin: 0 5px;}
+.main-video .btn-box a.btn1{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-btn1.png);}
+.main-video .btn-box a.btn2{background: url(../ossweb-img/cont1-btn2.png);}
+.main-video .btn-box a.btn3{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-btn3.png);}
+.main-video .btn-box a.btn1:hover{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-btn1-on.png);}
+/* .main-video .btn-box a.btn2:hover{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-btn2-on.png);} */
+.main-video .btn-box a.btn3:hover{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-btn3-on.png);}
+
+/* 公用信息轮播 */
+.tab-box .top{width:970px;height: 34px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/line2.png) no-repeat bottom;font-size: 16px;line-height: 20px;margin-bottom: 45px;}
+.tab-box .top .carouselContent{width: 700px;max-width: 800px; height: 30px;padding-left: 40px;position: relative; color: #d6d2c7; overflow: hidden;float: left;}
+.tab-box .top .carouselContent::before{content: '';display: block;width: 22px;height:20px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -49px -313px;position: absolute;left: 0;top: 0;}
+.tab-box .top .carouselContent .list{width: fit-content;width: -webkit-fit-content;height: auto;position: absolute;top: 0;left: 40px;line-height: 20px;}
+.tab-box .top .carouselContent .list li{width: fit-content;width: -webkit-fit-content;height: 20px;margin-bottom: 20px;}
+.tab-box .top .carouselContent .list li a{display: block; color: #d6d2c7;width: 100%;height: 20px;}
+.tab-box .top .btn-look{float: right;color: #fff;}
+.tab-box .top .btn-look::before{content: '';display: block;width: 8px;height: 20px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -91px -313px;float: right;margin-left: 5px;}
+.tab-box .top .btn-look:hover{color: #43e9fb;}
+.tab-box .top .btn-look:hover::before{background-position: -125px -314px;}
+.tab-box em{display: block; width: fit-content;width: -webkit-fit-content;height: 34px;padding: 0 19px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-txt.png) no-repeat;background-size: 100% 100%;position: absolute;left: -20px;bottom: 20px;font-size: 20px;line-height: 34px;color: #fde8b1;font-weight: bold;}
+
+
+/* 
+游戏周边
+*/
+.main-toys{width: 100%;height: auto; display: block; margin: 0 auto;position: relative;}
+.main-toys .content{width: 100%;height: auto;}
+.main-toys .btn-link{width:475px;height:300px;float: left;position: relative;margin-bottom: 40px;}
+.main-toys .btn-link img{width: 475px;height: 300px;display: block;object-fit: cover;}
+.main-toys .swiper-product{float: right; width: 475px;height: 300px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-slidebg.png) no-repeat;}
+.main-toys .swiper-product .swiper-slide{height: 300px;}
+.main-toys .swiper-product .swiper-slide em{left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.main-toys .part2-btn-next{display: block; width: 56px;height: 41px;top: 50%;background-position: -592px -265px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-toys .part2-btn-prev{display: block; width: 56px;height: 41px;background-position: -520px -265px;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+
+.main-toys .swiper-skin{width: 970px;height: 205px; clear: both;padding-left: 20px;margin-left: -20px;}
+.main-toys .swiper-skin .swiper-slide{width: 100%;height: 180px; position: relative;}
+.main-toys .swiper-skin .swiper-slide img{width: 100%;height: 180px;object-fit: cover;}
+.main-toys .swiper-skin .swiper-pagination{bottom: 0;}
+.main-toys .swiper-skin .swiper-pagination-bullet{width: 8px;height: 8px;background: none;border:2px solid #fff;position: relative;}
+.main-toys .swiper-skin .swiper-pagination-bullet-active::before{content: '';display: block;position: absolute;top: 2px;left: 2px; width: 0;height: 0;border: 2px solid #fff;border-radius: 50%;}
+
+
+
+/* 
+城市探索
+*/
+.main-city{width: 100%;height: auto;display: block;margin: 0 auto;position: relative;}
+.main-city .title{width: 319px; height: 28px;background-position: -8PX -347PX;font-size: 0;float: left;margin-bottom: 20px;}
+.main-city .selbox{width: fit-content;width: -webkit-fit-content; float: right;}
+.main-city .selbox select{width: 140px;height: 35px;background: #f7f4ea;border-radius: 5px;margin-left: 5px;font-size: 14px;color: #000a79;padding: 0 10px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-city .selbox .btn-query{display: block;float: left;width: 112px;height: 35px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/btn-navgo.png) no-repeat;background-size: 100% 100%; font-size: 14px; color: #000a79;line-height: 35px;margin-right: 5px;}
+.main-city .selbox .btn-query:hover{ background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/btn-navgo-on.png) no-repeat;background-size: 100% 100%;color: #f7f4ea;}
+.main-city .tb-head{width: 970px;height: 60px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-part3-tab.png) no-repeat;clear: both;font-size: 16px;color: #fde8b1;line-height: 60px;}
+.main-city .tb-head span:nth-child(1){width: 100px;height: 100%;float: left;}
+.main-city .tb-head span:nth-child(2){width: 150px;height: 100%;float: left;}
+.main-city .tb-head span:nth-child(3){width: 120px;height: 100%;float: left;}
+.main-city .tb-head span:nth-child(4){width: 310px;height: 100%;float: left;}
+.main-city .tb-head span:nth-child(5){width: 70px; height: 100%;float: left;}
+.main-city .tb-head span:nth-child(6){width: 110px;height: 100%;float: left;}
+.main-city .tb-head span:nth-child(7){width: 90px; height: 100%;float: left;}
+.main-city .table-data{width: 100%;height: 151px;overflow: hidden;}
+.main-city .table-data table{width: 100%;}
+/* 点击展开更多 */
+.main-city .table-data.on{width: 100%;height: 376px;overflow-y: scroll;}
+.main-city .table-data.on::-webkit-scrollbar{width: 4px;background: rgba(85, 135, 158,.4);border-radius: 4px;}
+.main-city .table-data.on::-webkit-scrollbar-thumb{width: 100%;background: #6cabc3;border-radius: 4px;}
+.main-city .table-data.on table{width: 950px;}
+.main-city .table-data tr{height: 75px;border-bottom: 1px rgba(255,255,255,.1) solid;font-size: 14px;line-height: 20px; color: #fde8b1;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-city .table-data tr td:nth-child(1){width: 100px;}
+.main-city .table-data tr td:nth-child(2){width: 150px;color: #d3cfc7;}
+.main-city .table-data tr td:nth-child(3){width: 120px;color: #d3cfc7;}
+.main-city .table-data tr td:nth-child(4){width: 310px;}
+.main-city .table-data tr td:nth-child(5){width: 70px; }
+.main-city .table-data tr td:nth-child(6){width: 110px;color: #d3cfc7;}
+.main-city .table-data tr td:nth-child(7){width: 90px; color: #d3cfc7;}
+.main-city .introduced{display: none; width: 100%;height: 165px;border-bottom: 1px rgba(255,255,255,.1) solid;margin-top: 22px;}
+.main-city .introduced img{margin-left: 30px;width: 126px;height: 146px;float: left;}
+.main-city .introduced p{float: left;text-align: justify; margin-left: 40px;padding-left: 40px;width: 700px; height: 141px;border-left: 1px rgba(255,255,255,.1) solid;font-size: 14px;line-height: 24px;color: #d6d2c7;}
+.main-city .introduced p span{text-align: left; font-size: 20px;line-height: 50px; color: #fde8b1;font-weight: bold;margin-bottom: 10px;}
+.main-city .btn-expand{position: relative; display: none;width: 90px;height: 30px;font-size: 14px;line-height: 30px;color: #fde8b1; background: rgba(255,255,255,.1);margin: 0 auto;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;}
+.main-city .btn-collection{position: relative; display: block;width: 90px;height: 30px;font-size: 14px;line-height: 30px;color: #fde8b1; background: rgba(255,255,255,.1);margin: 0 auto;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;}
+
+.main-city .swiper-active1{width: 100%;height: 260px;padding-left: 20px;margin-left: -20px;overflow: hidden;padding-bottom: 35px;}
+.main-city .swiper-active1 .swiper-pagination-bullet{width: 8px;height: 8px;background: none;border:2px solid #fff;position: relative;}
+.main-city .swiper-active1 .swiper-pagination-bullet-active::before{content: '';display: block;position: absolute;top: 2px;left: 2px; width: 0;height: 0;border: 2px solid #fff;border-radius: 50%;}
+
+
+.main-city .content{width: 100%;height: 395px;margin: 22px auto 0;}
+.main-city .swiper-active{width: 630px;height: 100%;padding-left: 20px;margin-left: -20px;float: left;}
+.main-city .swiper-active .swiper-slide{height: 360px;}
+.main-city .swiper-active .swiper-pagination-bullet{width: 8px;height: 8px;background: none;border:2px solid #fff;position: relative;}
+.main-city .swiper-active .swiper-pagination-bullet-active::before{content: '';display: block;position: absolute;top: 2px;left: 2px; width: 0;height: 0;border: 2px solid #fff;border-radius: 50%;}
+.main-city .publicity-box{width: 320px;height: auto;float: right;}
+.main-city .publicity{display: block; width: 320px;height: 170px;margin-bottom: 20px;position: relative;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-city .publicity img{width: 100%;height: 100%;object-fit: cover;}
+.main-city .publicity .txt{display: block;width: 100%;height: 40px;background: rgba(0,0,0,.6); position: absolute;bottom: 0;font-size: 14px;color: #fde8b1;line-height: 40px;}
+.main-city .publicity .txt p{width: fit-content;width: -webkit-fit-content;height: 100%;margin: 0 auto;position: relative;}
+.main-city .publicity .txt p::before{content: '';display: block;position: absolute;width: 8px;height: 8px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -152px -320px;top: 50%;left: -27px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-city .publicity .txt p::after{content: '';display: block;position: absolute;width: 8px;height: 8px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -152px -320px;top: 50%;right: -27px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-city .publicity .mask{display: none; width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: rgba(0,0,0,.7);font-size: 0; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-city .publicity .mask p{position: relative;display: flex;align-items: center; width: 100%;height: 100%;font-size: 0; }
+.main-city .publicity .mask::before{content: '';position: absolute;height: 0%;width: 3px;background: #43e9fb;right: 0;top: 0;transition: all .5s ease;}
+.main-city .publicity .mask::after{content: '';position: absolute;height: 0%;width: 3px;background: #43e9fb;left: 0;bottom: 0;transition: all .5s ease;}
+.main-city .publicity .mask p::before{position: absolute;content: "";left: 0;top: 0;width: 0%;height: 3px;background: #43e9fb;transition: all .5s ease;}
+.main-city .publicity .mask p::after{position: absolute;content: "";right: 0;bottom: 0;width: 0%;height: 3px;background: #43e9fb;transition: all .5s ease;}
+.main-city .publicity .mask:hover::before,
+.main-city .publicity .mask:hover::after{transition: all .3s ease;height: 100%;}
+.main-city .publicity .mask:hover p::before,
+.main-city .publicity .mask:hover p::after{transition: all .3s ease;width: 100%;}
+.main-city .publicity:hover .mask{display: block;}
+.main-city .publicity .mask i{display: inline-block;width: 52px;height: 52px; margin: 0 auto;background-position: -636px -349px;}
+.main-city .publicity .mask i::before{content: '';display: block;width: 52px;height: 52px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -578px -349px;position: relative;animation: rotateZ 1s linear infinite;}
+@-webkit-keyframes rotateZ{
+  0%{transform: rotateZ(0);}
+  50%{transform:rotateZ(180deg)}
+  100%{transform: rotateZ(360deg);}
+}
+
+/* 
+精彩活动
+*/
+.main-active{width: 100%;height: auto;display: block;margin: 0 auto;position: relative;}
+.main-active .top{margin-bottom: 20px;}
+.main-active .content{width: 100%;height: auto;position: relative;}
+.main-active .active-banner{width:970px;height:200px;}
+.main-active .active-banner img{width: 970px;height: 200px;display: block;object-fit: cover;}
+.main-active .left{width: 475px;height: auto;float: left;margin-top: 40px;position: relative;}
+.main-active .left .div1{width: 475px;height: 220px;margin-bottom: 10px;}
+.main-active .left .div2{width: 233px;height: 187px;float: left;}
+.main-active .left .div3{width: 233px;height: 187px;float: left;margin-left: 9px;}
+.main-active .left div a{display: block;width: 100%;height: 100%;position: relative;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-active .left div a img{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+.main-active .txt{display: block;width: 100%;height: 40px;background: rgba(0,0,0,.6); position: absolute;bottom: 0;font-size: 14px;color: #fde8b1;line-height: 40px;}
+.main-active .txt p{width: fit-content;width: -webkit-fit-content;height: 100%;margin: 0 auto;position: relative;}
+.main-active .txt p::before{content: '';display: block;position: absolute;width: 8px;height: 8px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -152px -320px;top: 50%;left: -20px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-active .txt p::after{content: '';display: block;position: absolute;width: 8px;height: 8px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -152px -320px;top: 50%;right: -20px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-active .right{width: 475px;height: auto;float: right;margin-top: 40px;position: relative;}
+.main-active .right .div1{width: 475px;height: 220px;clear: both;}
+.main-active .right .div2{width: 233px;height: 187px;float: left;margin-bottom: 10px;}
+.main-active .right .div3{width: 233px;height: 187px;float: left;margin-left: 9px;}
+.main-active .right .div1 em{right: -20px;left: inherit;}
+.main-active .right div a{display: block;width: 100%;height: 100%;position: relative;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-active .right div a img{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+
+/* hover */
+.main-active .hover-box{display: none; width: 474px;height: 414px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-hoverbg.png) no-repeat;position: absolute;top: 0;padding-top: 40px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-active .left .hover-box {right: -474px;}
+.main-active .right .hover-box {left: -474px;}
+.main-active .hover-box div{width: fit-content;width: -webkit-fit-content;height: 140px;position: relative;margin: 18px auto 0;}
+.main-active .hover-box div a{display: block;float: left;width: 200px;height: 140px; margin: 0 15px;}
+.main-active .hover-box div img{width: 200px;height: 140px;object-fit: cover;}
+.main-active .hover-box div a:hover .txt{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-hovertxt.png) no-repeat;color: #fff;}
+.main-active .hover-box div a:hover .txt p::before{background-position: -168px -320px;}
+.main-active .hover-box div a:hover .txt p::after{background-position: -168px -320px;}
+
+
+/* 
+音乐与视频
+*/
+.main-music{width: 100%;height: auto;display: block;margin: 0 auto;position: relative;}
+.main-music .content{width: 100%;height: auto;position: relative;}
+.main-music .link-box{width: 100%;height: 160px;}
+.main-music .link-box a{display: block;width: 313px;height: 160px;margin-right: 15px;float: left;position: relative;}
+.main-music .link-box a img{width:100%;height:100%;object-fit: cover;}
+.main-music .link-box .link3{float: left;width: 313px;height: 180px;} 
+.main-music .link-box .link3 a{margin-right:0;width:313px;height:160px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;position: relative;}
+.main-music .link-box .link3 a img{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+.main-music .txt{display: block;width: 100%;height: 40px;background: rgba(0,0,0,.6); position: absolute;bottom: 0;font-size: 14px;color: #fde8b1;line-height: 40px;}
+.main-music .txt p{width: fit-content;width: -webkit-fit-content;height: 100%;margin: 0 auto;position: relative;}
+.main-music .txt p::before{content: '';display: block;position: absolute;width: 8px;height: 8px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -152px -320px;top: 50%;left: -20px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-music .txt p::after{content: '';display: block;position: absolute;width: 8px;height: 8px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -152px -320px;top: 50%;right: -20px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+/* .main-music .hover-box{width: 474px;height: 365px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-hoverbg1.png) no-repeat; position: absolute;top: 160px;right: 0;z-index: 9;padding-top: 20px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-music .hover-box div{width: 100%;margin-bottom: 10px;}
+.main-music .hover-box div p{font-size: 14px;line-height: 24px;color: #d6d2c7;overflow: hidden; padding: 20px 25px 0 25px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-music .hover-box div p span{font-size: 20px;color: #fde8b1;font-weight: bold;}
+.main-music .hover-box div:nth-child(1) img{width: 220px;height: 175px;}
+.main-music .hover-box div:nth-child(1) p{float: right;width: 252px;height: 175px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-part5-hovertxt1.png) no-repeat;}
+.main-music .hover-box div:nth-child(2) img{width: 140px;height: 140px;}
+.main-music .hover-box div:nth-child(2) p{float: left;width: 331px;height: 140px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-part5-hovertxt2.png) no-repeat;} */
+
+.main-music .left{width: 495px;height: 360px;float: left;margin-top: 20px;}
+.main-music .swiper-cartoon{width: 475px;height: 100%;margin-left: -20px;padding-left: 20px;}
+.main-music .swiper-cartoon .swiper-slide{width: 100%;height: 325px;}
+.main-music .swiper-cartoon .swiper-slide img{width: 475px;height: 325px;}
+.main-music .swiper-cartoon .swiper-pagination-bullet{width: 8px;height: 8px;background: none;border:2px solid #fff;position: relative;}
+.main-music .swiper-cartoon .swiper-pagination-bullet-active::before{content: '';display: block;position: absolute;top: 2px;left: 2px; width: 0;height: 0;border: 2px solid #fff;border-radius: 50%;}
+
+.main-music .right{width: 475px;height: 325px;float: right;margin-top: 20px;position: relative;}
+.main-music .swiper-music{width: 475px;height: 375px;float: right;}
+.main-music .swiper-music .swiper-slide{width: 100%;height: 375px;}
+.main-music .swiper-music .swiper-slide img{width: 475px;height: 325px;object-fit: cover;}
+.main-music .swiper-music .swiper-slide h2{width: 100%; font-size: 20px;font-weight: bold;color: #fde8b1;position: absolute;bottom: 0;left: 0;}
+.main-music .part5-btn-next{display: block; width: 80px;height: 60px;background-position: -504px -142px;right: -40px;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-music .part5-btn-prev{display: block; width: 80px;height: 60px;background-position: -416px -142px;left: -40px; top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.main-music .swiper-button-disabled{opacity: 0;}
+
+.main-music .swiper-slide .mask{display: none; width: 100%;height: 325px;position: absolute;top: 0;left: 0;background: rgba(0,0,0,.7);font-size: 0; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main-music .swiper-slide .mask p{position: relative;display: flex;align-items: center; width: 100%;height: 100%;font-size: 0; }
+.main-music .swiper-slide .mask::before{content: '';position: absolute;height: 0%;width: 3px;background: #43e9fb;right: 0;top: 0;transition: all .5s ease;}
+.main-music .swiper-slide .mask::after{content: '';position: absolute;height: 0%;width: 3px;background: #43e9fb;left: 0;bottom: 0;transition: all .5s ease;}
+.main-music .swiper-slide .mask p::before{position: absolute;content: "";left: 0;top: 0;width: 0%;height: 3px;background: #43e9fb;transition: all .5s ease;}
+.main-music .swiper-slide .mask p::after{position: absolute;content: "";right: 0;bottom: 0;width: 0%;height: 3px;background: #43e9fb;transition: all .5s ease;}
+.main-music .swiper-slide .mask:hover::before,
+.main-music .swiper-slide .mask:hover::after{transition: all .3s ease;height: 100%;}
+.main-music .swiper-slide .mask:hover p::before,
+.main-music .swiper-slide .mask:hover p::after{transition: all .3s ease;width: 100%;}
+.main-music .swiper-slide:hover .mask{display: block;}
+.main-music .swiper-slide .mask i{display: inline-block;width: 73px;height: 73px; margin: 0 auto;background-position: -416px -349px;}
+.main-music .swiper-slide .mask i::before{content: '';display: block;width: 73px;height: 73px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;background-position: -498px -349px;position: relative;animation: rotateZ 1s linear infinite;}
+
+
+/* 公用图文hover */
+
+.hover-box.hover-tw{width: 474px;height: 365px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-hoverbg1.png) no-repeat; position: absolute;top: 160px;right: 0;z-index: 9;padding-top: 20px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.hover-box.hover-tw div{width: 100%;height: auto!important; margin:0 0 10px 0!important;}
+.hover-box.hover-tw div p{font-size: 14px;line-height: 24px;color: #d6d2c7;overflow: hidden; padding: 20px 25px 0 25px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.hover-box.hover-tw div p span{font-size: 20px;color: #fde8b1;font-weight: bold;}
+.hover-box.hover-tw div:nth-child(1) img{width: 220px;height: 175px;}
+.hover-box.hover-tw div:nth-child(1) p{float: right;width: 252px;height: 175px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-part5-hovertxt1.png) no-repeat;}
+.hover-box.hover-tw div:nth-child(2) img{width: 140px;height: 140px;}
+.hover-box.hover-tw div:nth-child(2) p{float: left;width: 331px;height: 140px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-part5-hovertxt2.png) no-repeat;}
+
+.main-active .hover-box.hover-tw{top: 25px!important;left: -474px!important;}
+
+.main-city .publicity .hover-box.hover-tw{top: -190px;left: -570px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont1-hoverbg1.png) no-repeat center;}
+.main-city .publicity:hover .hover-tw{width: 474px;height: 360px;display: block;}
+/* cont1 END */
+
+
+/* cont2 Start*/
+.cont2{ width:1240px; height: auto; display: block; margin:0 auto 0;position: relative;}
+.cont2 a{width: 100%; height: 110px; display: block;margin: 100px auto 0;}
+.cont2 a:hover{filter:brightness(1.1);}
+.cont2 a img{width:1240px; height: 110px; display: block; background-size: 100% 100%;}
+
+/* cont2 End */
+
+/* cont3 start */
+.cont3{width: 1240px;height:auto;display: block;margin: 0 auto 0;position:relative;z-index: 3;}
+.cont3 .title{width: 260px;height: 28px;background-position: -8px -50px;float: left;position: relative;margin-bottom: 64px;}
+.cont3 .title::before{content: '';width: 1240px;height: 3px;display: block; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/line.png) no-repeat;position: absolute;top: 50px;left: 0;}
+.cont3 .tab{float:right; width: fit-content;width: -webkit-fit-content; height:34px;display: block; margin: 0 auto; position: relative;overflow: hidden;font-size: 0;}
+.cont3 .tab a{position: relative; width: 200px; height:34px;background-color: #8be5f8;display: inline-block;vertical-align: top; font-size: 14px;color: #000a79;line-height: 34px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont3 .tab a span{display: block;width: 100%;height: 100%;position: relative;z-index: 1;}
+.cont3 .tab a::after{content: ''; display: block;width: 1px;height: 6px;background: rgba(0, 10, 122,.2);position: absolute;top:14px;right: 0;}
+.cont3 .tab a.on,.cont3 .tab a:hover{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/btn-cont3bg.png) no-repeat;border: solid 1px rgba(255, 226, 139,.2);color: #fff;filter: none;}
+.cont3 .tab a:last-child::after
+,.cont3 .tab a.on::after
+,.cont3 .tab a:hover::after{display: none;}
+/* .cont3 .tab a.on::before
+,.cont3 .tab a:hover::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height:0px;
+  padding-top: 80px;
+  background-image: -moz-radial-gradient(rgba(220, 186, 150,.7), #ee543f);
+  background-image: -webkit-gradient(radial, center bottom, center center, 220, from(rgba(220, 186, 150,.7)), to(#ee543f)); 
+  background-image: -webkit-radial-gradient(rgba(220, 186, 150,.7), #ee543f); 
+  background-image: radial-gradient(rgba(220, 186, 150,.7), #ee543f);
+  } */
+
+
+/* 
+*入围赛
+*/
+.cont3-box{ width: 1240px;overflow: hidden; position: relative;}
+.cont3-box1 .left-box{ width: 762px; height: 384px;float: left;}
+.cont3-box1 .right-box{ width: 100%; height: auto;}
+
+/* left*/
+.cont3-box1 .left-box .left-title{ width: fit-content;width: -webkit-fit-content; height: 34px; font-size: 18px;line-height: 34px; color: #fde8b1;font-weight: bold; position: relative;float: left;margin-bottom: 40px;}
+.cont3-box1 .left-box .selbox{ width: fit-content;width: -webkit-fit-content;  height: 34px; display: block; position: relative;float:right;margin-bottom: 30px;}
+.cont3-box1 .left-box .selbox a{position: relative; width: 80px; height: 34px;display: block;float: left;border: solid 1px; border-color: #485a75;border-right: none;border-left: none; font-size: 14px;color: #9a9da2;text-align:center; line-height: 34px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont3-box1 .left-box .selbox a:first-child{border-left: 1px solid #485a75;}
+.cont3-box1 .left-box .selbox a:last-child{border-right: 1px solid #485a75;}
+/* .cont3 .cont3-box1 .left-box .selbox a.on:first-child
+,.cont3 .cont3-box1 .left-box .selbox a:hover:first-child{border-left:none}
+.cont3 .cont3-box1 .left-box .selbox a.on:last-child
+,.cont3 .cont3-box1 .left-box .selbox a:hover:last-child{border-left:none} */
+.cont3-box1 .left-box .selbox a::after{content: '';display: block;width: 1px;height: 6px;background:#485a75;position: absolute;top:14px;right: -1px;}
+.cont3-box1 .left-box .selbox a.on
+,.cont3-box1 .left-box .selbox a:hover{background-color: #8be5f8;border: none;filter: none;color: #000a79;}
+.cont3-box1 .left-box .selbox a:last-child::after
+,.cont3-box1 .left-box .selbox a.on::after
+,.cont3-box1 .left-box .selbox a:hover::after{display: none;}
+.cont3-teambox{ width: 100%;  height: 310px; overflow-y: scroll; clear: both;}
+.cont3-teambox::-webkit-scrollbar{width: 4px;height: 100%;background-color: rgba(85, 135, 158,.4);border-radius: 2px;}
+.cont3-teambox::-webkit-scrollbar-thumb{width: 100%;background-color: #6cabc3;border-radius: 2px;}
+.cont3-teambox .th-head{ width: 95%; height: 36px;border-bottom: 1px solid rgba(222, 216, 207,.1);color: #fde8b1;font-size: 16px;line-height: 18px;}
+.cont3-teambox .th-head span{ width: 25%; height: 100%;text-align: center;font-weight: bold; display:block;float: left;}
+.cont3-teambox .data-ul{ width: 95%;}
+.cont3-teambox .data-ul li{ width: 100%; height: 90px;border-bottom: 1px solid rgba(222, 216, 207,.1); text-align: center;color: #818893; font-size: 16px;line-height: 90px; }
+.cont3-teambox .data-ul li .data1{width: 25%;height: 90px;float: left; position: relative;}
+.cont3-teambox .data-ul li .data2{width: 25%;height: 90px;float: left; position: relative}
+.cont3-teambox .data-ul li .data3{width: 25%;height: 90px;float: left;}
+.cont3-teambox .data-ul li .data4{width: 25%;height: 90px;float: left;}
+.cont3-teambox .data-ul li .team-logo{ width: 58px; height: 58px;display: flex;align-items: center;text-align: center;font-size: 0; border-radius: 50%;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/team-logo-bg.png) no-repeat;overflow: hidden; position: absolute; top: 16px; left: 10px;font-size: 0; align-items: center;text-align: center;}
+.cont3-teambox .data-ul li .team-logo img{width: 48px;height: 48px;display: inline-block;object-fit:cover;margin: 0 auto;}
+.cont3-teambox .data-ul li .data2 .team-name{ padding-left: 30px;}
+/* 关于入围赛 */
+.cont3-about{ width: 398px; height: 384px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont3-about-bg.png) no-repeat; display:block;float:right;margin-bottom: 80px;}
+.cont3-about .txt1{display: inline-block; font-size: 18px;line-height: 20px; color: #fde8b1;text-align: center;font-weight: bold;margin: 70px auto 55px;}
+.cont3-about .txt2{ font-size: 14px; color: #d6d2c7; width: 322px; display: block;line-height: 24px;margin: 0 auto;text-align: justify;}
+
+/* right */
+/* 晋级情况 */
+.cont3-box1 .right-box .promotion-box{width: fit-content;width: -webkit-fit-content;height: auto;margin: 0 auto 70px;  font-size: 18px; color: #fdf9ce;line-height: 90px; position: relative; text-align: center;overflow:hidden}
+.cont3-box1 .right-box .promotion-box em{display: block;float: left;font-weight: bold;color: #fde8b1;}
+.cont3-box1 .right-box .promotion-box>div{width: 250px;height: auto;font-size: 14px;line-height: 30px; color: #fdf9ce;float: left;}
+.cont3-box1 .right-box .promotion-box .left{margin-right: 150px;}
+.cont3-box1 .right-box .promotion-box .right{margin-left: 150px;}
+.cont3-box1 .right-box .promotion-box>div .team-promotion{display:block; width: 250px;height: 40px; line-height: 40px; background-position: -416px -503px; color: #fdf9ce;}
+.cont3-box1 .right-box .promotion-box>div .team-promotion.promotion{background-position: -416px -446px;}
+.cont3-box1 .right-box .promotion-box img{display: block;float: left; width: 36px;height: 36px;border-radius: 36px;margin: 2px 10px 0 25px;}
+.cont3-box1 .right-box .promotion-box span{display: block;float: left;font-weight: bold;font-size: 20px;color: #fff;}
+.cont3-box1 .right-box .promotion-box span:last-child{float: right;margin-right:25px;font-weight: normal; color: #fff;font-size: 14px;}
+.cont3-box1 .right-box .right-vsbox{ width: 740px;height: 123px; margin: 46px 0 0 30px; position: relative;}
+.cont3-box .right-box .right-vsbox2,.cont3 .cont3-box .right-box .right-vsbox3,.cont3 .cont3-box .right-box .right-vsbox4{ margin-top: 33px;}
+.cont3-box1 .right-vsbox .vs-left{ width: 302px; height: 123px; position: absolute; top: 0px; left: 0px;}
+.cont3-box1 .right-vsbox .vs-left .team-one{ width: 282px; height: 40px;background-position: -416px -95px; position: absolute; left: 20px; top:0px;color: #fff;}
+.cont3-box1 .right-vsbox .vs-left .team-one img{ width: 36px; width: 36px; border-radius: 50%; background-size: 100% 100%; position: absolute; left: 24px; top: 2px;}
+.cont3-box1 .right-vsbox .vs-left .team-one .team-name{ font-size: 20px;  font-weight: bold; position: absolute; left: 72px; line-height: 40px; top: 0px;}
+.cont3-box1 .right-vsbox .vs-left .team-one .team-num{ width: 29px; height: 40px;  font-size: 20px; font-weight: bold; line-height: 40px; text-align:center; position: absolute; top: 0px; right: 20px;}
+.cont3-box .right-vsbox .vs-left .team-two{ width: 282px; height: 40px; background-position: -416px -95px; position: absolute; left: 0px; top:41px; color: #d6d2c7;}
+.cont3-box1 .right-vsbox .vs-left .team-two img{ width: 36px; width: 36px; border-radius: 50%; background-size: 100% 100%; position: absolute; left: 24px; top: 2px;}
+.cont3-box1 .right-vsbox .vs-left .team-two .team-name{ font-size: 20px; font-weight: bold; position: absolute; left: 72px; line-height: 40px; top: 0px;}
+.cont3-box1 .right-vsbox .vs-left .team-two .team-num{ width: 29px; height: 40px; font-size: 20px; font-weight: bold; line-height: 40px; text-align:center; position: absolute; top: 0px; right: 20px;}
+.cont3-box1 .right-vsbox .vs-left .txt1{ font-size: 12px; color: #8c939c; text-align: left; position: absolute; top: 94px; left: 0px;}
+.cont3-box1 .right-vsbox .vs-left .txt1 span{ margin-right: 5px;}
+.cont3-box1 .right-vsbox .vs-left .btn{ width: 40px; height: 25px;background: #323c71; display: block; position: absolute; top: 88px; right: 50px; font-size: 12px; color: #ffffff;line-height: 26px;}
+.cont3-box1 .right-vsbox .vs-left .btn-data{right: 100px;}
+.cont3-box1 .btn{ transform: skewX(-30deg);}
+.cont3-box1 .btn span{display: block; transform: skewX(30deg);}
+/* win */
+.cont3-box1 .right-vsbox .vs-left .win{ background-position: -416px -48px; }
+/* 连接线 */
+.cont3-box1 .right-vsbox .line{ background: rgba(193, 187, 187,.2);width: 183px; height: 1px; position: absolute; top:40px; left:282px;}
+.cont3-box1 .right-vsbox .line1{left:722px;}
+/* 第二列待定 */
+.cont3-box1 .right-vsbox .vs-left.vs-left2{left:441px;}
+.cont3-box1 .right-vsbox .vs-left.vs-dd .team-one
+,.cont3-box1 .right-vsbox .vs-left.vs-dd .team-two{background-position: -416px -1px; color: #d6d2c7;}
+.cont3-box1 .right-vsbox .vs-left.vs-dd .team-name{background-position: -416px -1px; color: #d6d2c7;left: 40px;left:72px;}
+/* .cont3-box1 .right-vsbox .vs-left.vs-dd .btn{filter: grayscale(.5);} */
+/* 第三列晋级详情 */
+.cont3-box1 .right-vsbox .result{width: 234px;height: auto;font-size: 12px;line-height: 30px; color: #d6d2c7;display: inline-block;vertical-align: top; position: absolute; top: -8px; left:893px;}
+.cont3-box1 .right-vsbox .result .txt1{font-size: 0;}
+.cont3-box1 .right-vsbox .result.promotion .txt1{font-size: 14px;color: #fdf9ce;}
+.cont3-box1 .right-vsbox .result .pending{width: 234px;height: 40px;background-position: -416px -209px;}
+.cont3-box1 .right-vsbox .result.promotion .pending{display: none;}
+.cont3-box1 .right-vsbox .result .pending span{margin-left: 40px;line-height: 40px;}
+.cont3-box1 .right-vsbox .result .team-promotion{display:none; }
+.cont3-box1 .right-vsbox .result.promotion .team-promotion{display: block; width: 250px;height: 40px; line-height: 40px;  color: #fff;background-position: -416px -446px;}
+.cont3-box1 .right-vsbox .result img{display: block;float: left; width: 36px;height: 36px;border-radius: 36px;margin: 2px 10px 0 25px;}
+.cont3-box1 .right-vsbox .result span{display: block;float: left;font-weight: bold;font-size: 20px;}
+.cont3-box1 .right-vsbox .result span.team-num{float: right;margin-right:25px;font-weight: normal;font-size: 14px;}
+
+
+/* 
+*小组赛 
+*/
+.cont3-box2{ height: 464px; margin-top: 95px;}
+.cont3-box2 .left{ width: 560px; height: auto; position: absolute; top: 0px; left: 0px;}
+.cont3-box2 .right{ width: 572px; height: auto; position: absolute; top: 0px; right: 0px;}
+
+/* 天数切换 */
+.cont3-box2 .day-sw{ width: 400px; height: 34px;border: 1px solid #485a75;margin-left: 0px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont3-box2 .day-sw .swiper-slide{position: relative; width: 80px!important; height: 34px;cursor: pointer; font-size: 14px;color: #9a9da2;text-align:center; line-height: 34px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont3-box2 .day-sw .swiper-slide::after{content: '';display: block;width: 1px;height: 6px;background:#485a75;position: absolute;top:14px;right: -1px;}
+.cont3-box2 .day-sw .on,.cont3 .cont3-box2 .day-sw .swiper-slide:hover{ background-color: #8be5f8;border: none;filter: none;color: #000a79;}
+.cont3-box2 .day-next{width: 42px; height: 34px; background-position: -458px -264px;position:absolute; top: 0px; right: 0;}
+.cont3-box2 .day-prev{width: 42px; height: 34px; background-position: -416px -264px; position:absolute; top: 0px; right: 42px;}
+.cont3-box2 .day-next:hover{background-position: -458px -302px;}
+.cont3-box2 .day-prev:hover{background-position: -416px -302px;}
+/* .cont3-box2 .swiper-button-disabled{ pointer-events: none; opacity: 0.5;} */
+/* 左边比赛数据 */
+.cont3-box2 .message-ul{ width: 100%; height: 400px; margin-top: 30px; overflow-y: scroll;}
+.cont3-box2 .message-ul::-webkit-scrollbar{width: 4px;height: 100%;background-color: rgba(85, 135, 158,.4);border-radius: 2px;}
+.cont3-box2 .message-ul::-webkit-scrollbar-thumb{width: 100%;background-color: #6cabc3;border-radius: 2px;}
+
+.cont3-box2 .message-ul li{ width: 95%; height: 100px; border-bottom: 1px solid rgba(222, 216, 207,.1);color: #fde8b1; position:relative;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+
+.cont3-box2 .message-ul li .timebox{ width: 82px; height: 100px;float: left;}
+.cont3-box2 .message-ul li .timebox .txt1{font-size: 12px; display: block;  margin-top: 22px;}
+.cont3-box2 .message-ul li .timebox .txt2{ font-family: 'font4'; font-size: 32px; text-align: center;font-weight: bold; display: block;}
+.cont3-box2 .message-ul li .vsbox{ width: 323px; height: 100px;margin-left: 30px;float: left;}
+.cont3-box2 .message-ul li .vsbox .team-logo{ width: 58px; height: 100%;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/team-logo-bg.png) no-repeat center;position: relative;overflow: hidden; text-align: center;font-size: 0; border-radius: 50%; display: block;float: left;}
+.cont3-box2 .message-ul li .vsbox .team-logo img{width: 48px; height: 48px; display: block; background-size: 100% 100%;border-radius: 50%;object-fit: cover;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%0);-moz-transform: translate(-50%,50%);}
+.cont3-box2 .message-ul li .vsbox span{display: block;float: left;}
+.cont3-box2 .message-ul li .vsbox span.bf{line-height: 100px;margin: 0 5px;}
+.cont3-box2 .message-ul li .vsbox .team-name1{margin: 0 16px 0 10px;font-size: 13px; line-height: 100px;}
+.cont3-box2 .message-ul li .vsbox .team-num1{ margin-top: 33px; width: 30px; height: 34px;background-color: #353f75;color: #898193;border-radius: 2px; line-height: 34px; font-size: 22px; font-weight:bold;}
+.cont3-box2 .message-ul li .vsbox .team-num2{ margin-top: 33px; width: 30px; height: 34px;background-color: #353f75;color: #898193;border-radius: 2px; line-height: 34px; font-size: 22px; font-weight:bold;}
+.cont3-box2 .message-ul li .vsbox .team-name2{margin: 0 16px 0 10px;font-size: 13px; line-height: 100px;}
+.cont3-box2 .message-ul li .btn-video{ width: 72px; height: 24px; font-size: 12px; color: #d6d2c7; text-align: center; line-height: 24px; background-color: #323c71; position: absolute; top:40px;right: 10px;}
+
+.cont3-box2 .message-ul li.ending  .vsbox .team-num1.on{background-color: #505a95;color: #f9e5af;}
+.cont3-box2 .message-ul li.ending  .vsbox .team-num2.on{background-color: #505a95;color: #f9e5af;}
+.cont3-box2 .message-ul li.ending.nostart .btn-video{background-color: #384153;color: #a3a3a3;}
+/*right*/
+.cont3-box2 .right .right-title{ width: 557px; height: 60px;}
+.cont3-box2 .right .right-title .txt{ font-size: 20px; color: #564231; font-weight:bold; text-align: left; position:absolute; top: 0px; left: 0px;}
+.cont3-box2 .right .right-title .btnbox{ width: fit-content;width: -webkit-fit-content; height: 34px; position:absolute; top: 0px; left: 0;border-left: 1px solid #485a75;border-right: 1px solid #485a75;}
+.cont3-box2 .right .right-title .btnbox a{display: block;float: left; position: relative; width: 80px; height: 34px;border: solid 1px; border-color: #485a75;border-right: none;border-left: none;font-size: 14px;color: #9a9da2;text-align:center; line-height: 34px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont3-box2 .right .right-title .btnbox a::after{content: '';display: block;width: 1px;height: 6px;background:#485a75;position: absolute;top:14px;right: -1px;}
+.cont3-box2 .right .right-title .btnbox a.on,.cont3-box2 .right .right-title .btnbox a:hover{ background-color: #8be5f8;border: none;filter: none;color: #000a79;}
+
+.cont3-box2 .right .team-message{ width: 551px; height: auto;}
+.cont3-box2 .right .team-message .table{ width: 551px; height: 64px; overflow: hidden; font-size: 16px; color: #fde8b1;line-height: 64px;}
+.cont3-box2 .right .team-message .table .th1{width:150px; float: left; text-align: left;}
+.cont3-box2 .right .team-message .table .th2{width:250px; float: left; text-align: left; text-indent: 15px;}
+.cont3-box2 .right .team-message .table .th3{width:75px; float: left;}
+.cont3-box2 .right .team-message .table .th4{width:75px; float: left;}
+.cont3-box2 .right .team-message-ul{ width: 551px; height: auto;}
+.cont3-box2 .right .team-message-ul li{ width: 100%; height: 84px;color: #9a9da2;font-size: 16px; line-height: 84px;border-bottom: 1px solid rgba(222, 216, 207,.1);}
+.cont3-box2 .right .team-message-ul li .data1{float:left;width:150px; height:100%; text-align: left; text-indent: 12px;}
+.cont3-box2 .right .team-message-ul li .data2{float:left;width:250px; height: 100%;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/team-logo-bg.png) no-repeat center left;position: relative;overflow: hidden; text-align: center;}
+.cont3-box2 .right .team-message-ul li .data2 img{ width: 48px; height: 48px;border-radius:50%; position: absolute; top: 18px; left: 5px;}
+.cont3-box2 .right .team-message-ul li .data2 .name{position: absolute; top: 0px; left: 70px;}
+.cont3-box2 .right .team-message-ul li .data3{float:left;width:75px;height:100%;}
+.cont3-box2 .right .team-message-ul li .data4{float:left;width:75px;height:100%;}
+
+
+/* 
+*淘汰赛
+*/
+.cont3-box3 .box{width: 302px;height: auto;float: left;margin-right: 167px;}
+.cont3-box3 .box.final{margin-right: 0;}
+.cont3-box3 .box .title1{ font-size: 16px; color: #fde8b1; text-align: center; position: relative;}
+.cont3-box3 .box .title1:after{ content: ''; width: 0; height: 0;border-left: 3px solid transparent;border-right: 3px solid transparent;border-top: 3px solid #fde8b1; position: absolute; top: 10px; left: 82px;}
+.cont3-box3 .box .title1:before{ content: ''; width: 0; height: 0;border-left: 3px solid transparent;border-right: 3px solid transparent;border-top: 3px solid #fde8b1; position: absolute; top: 10px; right: 82px;}
+
+.cont3-box3 .box .team-vs-list{width: 302px;height: auto;margin-top: 40px;position: relative;z-index: 1;}
+.cont3-box3 .box .team-vs-list .vs-box{ width: 302px; height: 123px;margin-bottom: 20px;position: relative;}
+.cont3-box3 .box .team-vs-list .vs-box:last-child{margin-bottom: 0;}
+.cont3-box3 .box .team-vs-list .vs-box .no2{font-size: 14px;color: #fde8b1;position: absolute;left: 40px;top: -25px;}
+.cont3-box3 .box .team-vs-list .vs-box .team-one{ width: 282px; height: 40px;background-position: -416px -95px; position: absolute; left: 20px; top:0px;color: #d6d2c7;}
+.cont3-box3 .box .team-vs-list .vs-box .team-one img{ width: 36px; width: 36px; border-radius: 50%; background-size: 100% 100%; position: absolute; left: 24px; top: 2px;}
+.cont3-box3 .box .team-vs-list .vs-box .team-name{ font-size: 20px;  font-weight: bold; position: absolute; left: 72px; line-height: 40px; top: 0px;}
+.cont3-box3 .box .team-vs-list .vs-box .team-one .team-num{ width: 29px; height: 40px;  font-size: 20px; font-weight: bold; line-height: 40px; text-align:center; position: absolute; top: 0px; right: 20px;}
+.cont3-box  .box .team-vs-list .vs-box .team-two{ width: 282px; height: 40px; background-position: -416px -95px; position: absolute; left: 0px; top:41px; color: #d6d2c7;}
+.cont3-box3 .box .team-vs-list .vs-box .team-two img{ width: 36px; width: 36px; border-radius: 50%; background-size: 100% 100%; position: absolute; left: 24px; top: 2px;}
+.cont3-box3 .box .team-vs-list .vs-box .team-name{ font-size: 20px; font-weight: bold; position: absolute; left: 72px; line-height: 40px; top: 0px;}
+.cont3-box3 .box .team-vs-list .vs-box .team-two .team-num{ width: 29px; height: 40px; font-size: 20px; font-weight: bold; line-height: 40px; text-align:center; position: absolute; top: 0px; right: 20px;}
+.cont3-box3 .box .team-vs-list .vs-box .txt1{ font-size: 12px; color: #8c939c; text-align: left; position: absolute; top: 94px; left: 0px;}
+.cont3-box3 .box .team-vs-list .vs-box .txt1 span{ margin-right: 5px;}
+.cont3-box3 .box .team-vs-list .vs-box .btn{ width: 40px; height: 25px;background: #323c71; display: block; position: absolute; top: 88px; right: 50px; font-size: 12px; color: #ffffff;line-height: 26px;}
+.cont3-box3 .box .team-vs-list .vs-box .btn-data{right: 100px;}
+.cont3-box3 .box .btn{ transform: skewX(-30deg);}
+.cont3-box3 .box .btn span{display: block; transform: skewX(30deg);}
+/* win */
+.cont3-box3 .box .team-vs-list .vs-box .win{ background-position: -416px -48px;color: #fff;}
+.cont3-box3 .box .team-vs-list .vs-box.vs-dd .team-one
+,.cont3-box3 .box .team-vs-list .vs-box.vs-dd .team-two{background-position: -416px -1px; color: #d6d2c7;}
+.cont3-box3 .box .team-vs-list .vs-box.no-play .team-one
+,.cont3-box3 .box .team-vs-list .vs-box.no-play .team-two{background-position: -416px -1px; color: #d6d2c7;}
+.cont3-box3 .box .team-vs-list .vs-box.vs-dd .team-name{left: 40px;}
+.cont3-box3 .box .team-vs-list .vs-box.vs-dd .btn
+,.cont3-box3 .box .team-vs-list .vs-box.playing .btn{filter: grayscale(.5);}
+.cont3-box3 .box .team-vs-list .vs-box.playing .win{color: #fff;}
+/* quarter-final */
+.cont3-box3 .quarter-final .team-vs-list{margin-top: 109px;}
+.cont3-box3 .quarter-final .team-vs-list .vs-box{margin-bottom: 163px;}
+.cont3-box3 .quarter-final .team-vs-list .vs-box2{margin-bottom: 0;}
+/* final */
+.cont3-box3 .final .team-vs-list{margin-top: 249px;}
+
+/* 连接线 */
+.cont3-box3 .line{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/line1.png) no-repeat; width: 676px; height: 430px; position: absolute; top:104px; left:282px;}
+
+/* cont3 end */
+
+
+/*cont4 START*/
+.cont4{width: 1240px;height: auto;min-height: 550px; display: block;margin: 50px auto 0;padding-top: 50px;position: relative;}
+.cont4 .bg1{display: block;position: absolute;bottom: -420px;left:-340px;width: 1920px;height: 1017px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/part2-bg.png) no-repeat;}
+
+.cont4 .tab{ width:1240px; height: 40px; display: block; position: relative;margin-bottom: 60px;}
+.cont4 .tab .title{width: 260px;height: 28px;background-position: -9px -91px;float: left;position: relative;}
+.cont4 .tab .title::before{content: '';width: 1240px;height: 3px;display: block; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/line.png) no-repeat;position: absolute;top: 50px;left: 0;}
+.cont4 .tab .cont4-btn-box{float:right; width: fit-content;width: -webkit-fit-content; height:34px;display: block; margin: 0 auto; position: relative;overflow: hidden;font-size: 0;}
+.cont4 .tab .cont4-btn-box a{position: relative; width: 120px; height:34px;background-color: #8be5f8;display: inline-block;vertical-align: top; font-size: 14px;color: #000a79;line-height: 34px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont4 .tab .cont4-btn-box a span{display: block;width: 100%;height: 100%;position: relative;z-index: 1;}
+.cont4 .tab .cont4-btn-box a::after{content: ''; display: block;width: 1px;height: 6px;background: rgba(0, 10, 122,.2);position: absolute;top:14px;right: 0;}
+.cont4 .tab .cont4-btn-box a.on
+,.cont4 .tab .cont4-btn-box a:hover{background: #ee543f;border: solid 1px rgba(255, 226, 139,.2);color: #fff;filter: none;}
+.cont4 .tab .cont4-btn-box a:last-child::after
+,.cont4 .tab .cont4-btn-box a.on::after
+,.cont4 .tab .cont4-btn-box a:hover::after{display: none;}
+.cont4 .tab a.cont4-btn-look{display: block;float: right;}
+
+.cont4 .cont4-video-box{width: 1240px; height:auto; margin: 30px auto 0;}
+.cont4 .cont4-video-ul{width: 1270px; height:auto; padding-top: 10px;font-size: 0;}
+.cont4 .cont4-video-ul li{width:230px;height:210px;list-style-type:none;display: block; float:left;position:relative;margin:0 22px 35px 0}
+.cont4 .cont4-video-ul li.nodata{font-size: 18px;color: #fff;float: none;margin: 0 auto;}
+.cont4 .cont4-video-ul li img{display:block;width:230px;height:130px; background-size: 100%;position: absolute;top: 0;left: 0;transition: .2s all;}
+.cont4 .cont4-video-ul li .mask{width: 100%;height: 130px;position: absolute;top: 0;left:0;background: rgba(0,0,0,.4);transition: .2s all;}
+.cont4 .cont4-video-ul li .u-video-time{display:block;padding:0 5px;height:20px;overflow:hidden;position:absolute;top:110px;right:2px;line-height:20px;font-size:12px;color:#fff;z-index:99}
+.cont4 .cont4-video-ul li p{width:100%;height:40px;overflow:hidden;line-height:20px;font-size:14px;margin:14px 0 10px 0; text-align:left; display: -webkit-box;text-overflow: ellipsis;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.cont4 .cont4-video-ul li .m-video-info{overflow:hidden;width: 100%; height:80px;line-height:14px;font-size:12px;color:#e2dcce; text-align: left;position: absolute;top: 130px;left: 0;transition: .2s all;}
+.cont4 .cont4-video-ul li .m-video-info span:before{content:'';display: block;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat; background-position:-46px -8px; width: 14px; height: 12px; float:left;overflow:hidden;margin:1px 6px 0 0}
+.cont4 .cont4-video-ul li .m-video-info .day{float:right;}
+.cont4 .cont4-video-ul li .mask-href{width:100%;height:100%;position: absolute;top: 0;left: 0;z-index: 9;}
+.cont4 .cont4-video-ul li:hover .mask-href{width: 250px;height: 244px;top: -10px;left: -10px;}
+.cont4 .cont4-video-ul li:hover img{width: 250px;height: 150px;top: -10px;left: -10px;transition: .2s all;}
+.cont4 .cont4-video-ul li:hover .mask{width: 250px;height: 150px;top: -10px;left: -10px;transition: .2s all;}
+.cont4 .cont4-video-ul li:hover .m-video-info{color:#272c5b;width: 250px;height: 94px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/cont4-txtbg.png) no-repeat;left: -10px;top: 140px;padding: 0 10px; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;transition: .2s all;}
+.cont4 .cont4-video-ul li:hover .m-video-info span:before{background-position:-106px -8px;}
+
+/*cont4 END*/
+
+/*cont5 start*/
+/* .cont5{ width: 1240px; height:466px; display: block; margin: 100px auto 0; position: relative; overflow: hidden;}
+.cont5 .title{ font-size: 24px; color: #564231; font-weight: bold; text-align: left; position: relative; padding-left: 15px;}
+.cont5 .title:after{ content: ''; width: 5px; height: 24px; background: #564231; position: absolute; top: 7px; left: 5px;}
+.cont5 .title span{ font-size: 12px; color: #564231; font-weight: 100; padding-left: 11px; vertical-align:text-bottom;}
+.cont5 .selbox{ width: 695px; height: 50px; position: absolute; top: 0px;right: 0px; line-height: 42px; font-size: 18px; color: #8c939c; text-align: left;} 
+.cont5 .selbox .sel-txt1{ margin-left: 43px;}
+select {-webkit-appearance: none;text-indent:13px;background-color: transparent;}
+.cont5 .selbox1,.cont5 .selbox2{ font-size: 14px; color: #8c939c; text-align: center; width: 128px; height: 28px; line-height: 28px; border: 1px solid #8c939c; position: relative; margin-right: 27px;}
+.cont5 .sel-icon1{ background: url(//game.gtimg.cn/images/lpl/es/worlds/2019/spr.png) no-repeat; background-position: -291px -480px; width: 19px; height: 13px; position: absolute; top: 16px; left:238px;}
+.cont5 .sel-icon2{ background: url(//game.gtimg.cn/images/lpl/es/worlds/2019/spr.png) no-repeat; background-position: -291px -480px; width: 19px; height: 13px; position: absolute; top: 16px; left:493px;}
+.cont5 .btn-search{ width: 130px; height: 31px; background: url(//game.gtimg.cn/images/lpl/es/worlds/2019/spr.png) no-repeat; background-position:  -355px -458px; position: absolute; top: 4px; right:0px; font-size: 0px;}
+.cont5 .tb-head{ background:url(//game.gtimg.cn/images/lpl/es/worlds/2019/cont3-btn.png) no-repeat; width: 1240px; height: 53px; background-position: -12px -339px; margin-top: 23px; font-size: 16px; color: #ffffff; line-height: 53px;}
+.cont5 .tb-head span:nth-child(1){ width: 84px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(2){ width: 93px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(3){ width: 141px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(4){ width: 162px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(5){ width: 301px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(6){ width: 173px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(7){ width: 143px; height: 53px; float: left;}
+.cont5 .tb-head span:nth-child(8){ width: 140px; height: 53px; float: left;}
+.table-data{width: 1240px; height: 333px;overflow-y:auto; overflow-x: hidden;}
+.cont5-table{width: 1240px; height: 333px;  background: #FFFFFF; }
+.cont5-table tr{ font-size: 14px; color: #a18c62; border-bottom: 1px solid #a18c62; height: 56px !important;}
+.cont5-table tr td:nth-child(1){ width: 84px; height: 53px;}
+.cont5-table tr td:nth-child(2){ width: 86px; height: 53px;}
+.cont5-table tr td:nth-child(3){ width: 141px; height: 53px;}
+.cont5-table tr td:nth-child(4){ width: 167px; height: 53px;}
+.cont5-table tr td:nth-child(5){ width: 300px; height: 53px;}
+.cont5-table tr td:nth-child(6){ width: 173px; height: 53px;}
+.cont5-table tr td:nth-child(7){ width: 140px; height: 53px;}
+.cont5-table tr td:nth-child(8){ width: 140px; height: 53px;} */
+/*cont5 end*/
+
+/*cont5 start*/
+.cont5{ width: 1240px; height: auto; position: relative;margin: 100px auto 0;}
+.cont5 .bg1{display: block;position: absolute;top: 0;left:-340px;width: 1920px;height: 813px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/part3-bg.png) no-repeat;}
+
+.cont5 .left{ width: 100%; height: auto;}
+.cont5 .right{ width: 100%; height: auto;}
+
+.cont5 .left .title1{width: 260px;height: 28px;background-position: -8px -132px;float: left;position: relative;margin-bottom: 80px;}
+.cont5 .left .title1::before{content: '';width: 1240px;height: 3px;display: block; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/line.png) no-repeat;position: absolute;top: 50px;left: 0;}
+.cont5 .left .cont5-swone{ width: 100%; height: 325px; margin: 0 auto 60px;position: relative;clear: both;}
+.cont5 .left .swiper-container{width: 1130px;height: 325px;margin: 0 auto;}
+.cont5 .left .swiper-slide{width: 226px;height: 280px;position: relative;}
+.cont5 .left .swiper-slide:nth-child(2n-1){background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/slide-bg1.png) no-repeat center bottom;margin-top: 30px;}
+.cont5 .left .swiper-slide:nth-child(2n){background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/slide-bg2.png) no-repeat center bottom;}
+.cont5 .left .swiper-slide img{width: 210px;height: 210px;overflow: hidden; margin-top: 20px;}
+.cont5 .left .swiper-slide p{width: fit-content;width: -webkit-fit-content;padding: 0 15px ; height: 30px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/slide-name.png) no-repeat;background-size: 100% 100%; position: absolute;bottom: -15px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);font-size: 18px;color: #fde8b1;line-height: 30px;font-weight: bold;}
+.cont5 .left .cont5-swone-next{width: 80px; height: 60px;background-position: -504px -142px; position:absolute; top: 140px; right: 0; z-index: 2;}
+.cont5 .left .cont5-swone-prev{width: 80px; height: 60px; background-position: -416px -142px; position:absolute; top: 140px;left: 0;z-index: 2;}
+/* .cont5 .left .swiper-button-disabled{ pointer-events: none; opacity: 0;} */
+
+
+.cont5 .right .title1{width: 260px;height: 28px;background-position: -9px -173px;float: left;position: relative;margin-bottom: 64px;}
+.cont5 .right .title1::before{content: '';width: 1240px;height: 3px;display: block; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/line.png) no-repeat;position: absolute;top: 50px;left: 0;}
+.cont5 .right .cont5-swtwo{ width: 100%; height: 370px; margin: 0 auto;position: relative;clear: both;}
+.cont5 .right .swiper-container{width: 1130px;height: 370px;margin: 0 auto;}
+.cont5 .right .slide-ul{width: 1050px; height: auto; overflow: hidden;margin: 0 auto;}
+.cont5 .right .slide-ul li{ width:120px; height: auto; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/team-logo-bg1.png) top no-repeat; float: left; margin: 0 5px 30px;text-align: center;font-size: 16px;color: #a3a3a3;line-height: 20px;}
+.cont5 .right .slide-ul li:nth-child(2n){background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/team-logo-bg2.png) top no-repeat;}
+.cont5 .right .slide-ul li .team-logo{width: 120px;height: 120px;margin-bottom: 15px;display: flex;align-items: center;font-size: 0;}
+.cont5 .right .slide-ul li .team-logo img{ width: 106px;height: 106px;border-radius: 50%;margin: 0 auto;}
+.cont5 .right .cont5-swtwo-next{width: 80px; height: 60px;background-position: -504px -142px;  position:absolute; top: 120px; right: 0;z-index: 2;}
+.cont5 .right .cont5-swtwo-prev{width: 80px; height: 60px;background-position: -416px -142px; position:absolute; top: 120px; left: 0;z-index: 2;}
+/* .cont5 .right .swiper-button-disabled{ pointer-events: none; opacity: 0;} */
+
+
+/*cont5 end*/
+
+/*cont6 start*/
+.cont6{ width: 1240px; height: 450px; display: block; margin: 100px auto 140px; position: relative;}
+.cont6 .bg1{display: block;position: absolute;top: -130px;left:-340px;width: 1920px;height: 721px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/part4-bg.png) no-repeat;}
+.cont6 img{width:188px;height:299px;display:block;float:left;margin-left:30px;}
+.cont6 .box{ width: fit-content;width:-webkit-fit-content; height: 299px;border-left:1px solid rgba(255,255,255,.1);padding-left: 40px;float:left;margin-left:45px;}
+.cont6 .box .txt1{ font-size: 32px; color: #fde8b1; font-weight: bold; text-align: left;margin-bottom: 30px;}
+.cont6 .box .txt2{ font-size: 14px;line-height: 24px; color: #d6d2c7;text-align: left; width: 848px; overflow: hidden;}
+.cont6 .championsw{width: 848px; height: 60px;margin-top: 35px;}
+.cont6 .championsw .mess-txt1{ font-size: 20px; color: #fde8b1;font-weight: bold;float:left;line-height: 60px;}
+.cont6 .championsw .messagebox{width: 350px; height: 150px;float: left;margin-left: 40px;}
+.cont6 .championsw .messagebox img{ width: 60px; height: 60px; background-size: 100% 100%;margin-right: 40px;}
+.cont6 .championsw .messagebox .mess-txt2{text-align: left; font-size: 18px;line-height: 24px;font-weight: bold;color: #d6d2c7;padding-top: 6px;}
+.cont6 .championsw .messagebox .wait{margin-left:50px;line-height: 50px;}
+.cont6 .bottom{width: 100%;height: 2px; background: rgba(93, 107, 128,.7); position: absolute; left: 0; top: 351px;margin: 0 auto;}
+.cont6 .bottom .bottombox{width: fit-content;width:-webkit-fit-content;height: 100px; display: block;position: absolute; left: 20%; top: -15px;}
+.cont6 .bottom a{ width: 60px; height: 60px; float: left; margin-left:30px;}
+.cont6 .bottom a .icon{width: 12px;height: 12px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat #2e3478; border: 2px solid rgba(93, 107, 128,.7);border-radius: 50%; display: block; margin: 10px auto 0px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;transition: margin .3s;}
+.cont6 .bottom a.on .icon,.cont6 .bottom a:hover .icon{position: relative; width: 12px;height: 12px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat #2e3478;background-position: -76px -8px; border: none;margin: 10px auto 20px;transition: margin .3s;}
+.cont6 .bottom a.on .icon::before,.cont6 .bottom a:hover .icon::before{content: '';display: block; width: 4px;height: 2px;background: #43e9fb;position: absolute;left: 4px;bottom:-14px;transition: all .3s;}
+.cont6 .bottom a span{ font-size: 14px; color: rgba(93, 107, 128,.7); text-align: center; display: block;transition: all .3s;}
+.cont6 .bottom a.on span,.cont6 .bottom a:hover span{font-weight: bold; color: #43e9fb; text-align: center; font-weight: bold; transition: all .3s;}
+
+
+/* 视频弹窗 */
+.dialog{width: 961px;height: auto;position: relative;}
+.dialog .dia-close{display: block;position: absolute;top: 0;right: -74px;font-size: 0; width: 54px;height: 54px; background-position: -8px -408px;z-index: 9;}
+.dialog .video-box{width: 960px;height: 540px;position: relative;}
+.dialog .diaVideo-container{width: 960px;height: 540px;position: absolute;top: 0;left: 0;}
+.dialog .swiper-box{width: 100%;height: auto;position: relative;margin: 20px auto 0;}
+.dialog .swiper-box .swiper-container{width: 840px;height: auto;margin: 0 auto;}
+.dialog .swiper-box .swiper-slide{width: 168px;height: 100%;position: relative;font-size: 14px;line-height: 16px; text-align: center;cursor: pointer;}
+.dialog .swiper-box .swiper-slide div {width: 160px;height: 100%;margin: 0 auto;position: relative;color: #a3a3a3;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.dialog .swiper-box .swiper-slide div::before{content: '';display: block;position: absolute;width: 160px;height: 100px;background: rgba(0,0,0,.4);top: 0;left: 0;}
+.dialog .swiper-box .swiper-slide.on div{color: #fff;}
+.dialog .swiper-box .swiper-slide.on div::before{display: none;}
+.dialog .swiper-box .swiper-slide.on div::after{content: '';display: block;position: absolute;width: 156px;height: 96px;border:2px solid #43e9fb;top: 0;left: 0;}
+.dialog .swiper-box .swiper-slide img{width: 160px;height:100px;object-fit: cover;margin-bottom: 8px;}
+.dialog .dia-next{display: block;width: 44px;height: 98px;background-position: -132px -394px;position: absolute;right: 0;top:1px; margin-top: 0;}
+.dialog .dia-prev{display: block;width: 44px;height: 98px;background-position: -75px -394px;position: absolute;left: 0;top: 1px; margin-top: 0;}
+
+/*cont6 end*/
+
+
+
+/* #t6Hl8#FE736C460A50019B2C7AF3BA1771743D */

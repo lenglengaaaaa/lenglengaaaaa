@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+
+<head>
+    <meta charset="gbk" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- 为了防止页面数字被识别为电话号码，可根据实际需要添加： -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 让添加到主屏幕的网页再次打开时全屏展示，可添加： -->
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP" />
+    <meta name="Copyright" content="Tencent" />
+    <meta name="Description" content="腾讯天美工作室打造的《乱世王者》是一款历史架空背景的战争策略手游。《乱世王者》最大程度还原战争策略游戏的精髓，玩家将化身为在这个乱世中的一方诸侯，从招兵买马到安邦治国，逐步走向问鼎天下的争霸之路。" />
+    <meta name="Keywords" content="乱世王者、乱世王者手游,乱世王者官网,乱世王者官方手游、乱世王者官方手游下载,乱世王者移动版,乱世王者手机版,乱世王者手游正版,乱世王者官方手游测试" />
+    <title>乱世九鼎-乱世王者-官方网站-腾讯游戏</title>
+    <!-- 页面设计：CP | 页面制作：CP | 创建：2021-02-01 -->
+
+    <!-- rem布局计算JS -->
+    <script>(function(win,doc){if(!win.addEventListener)return;var html=document.documentElement;function setFont(){var html=document.documentElement;var k=750;html.style.fontSize=html.clientWidth/k*100+"px"}setFont();setTimeout(function(){setFont()},300);doc.addEventListener('DOMContentLoaded',setFont,false);win.addEventListener('resize',setFont,false);win.addEventListener('load',setFont,false)})(window,document);</script>
+    <!-- 主样式 -->
+    <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+    <h1 class="hid">乱世九鼎</h1>
+
+     <!-- 主体内容 Start -->
+    <div class="wrapper">
+		<!-- nav切换 -->
+        <div class="content-navs">
+            <a class="content-nav on" href="index.html" title="赛程" onclick="PTTSendClick('btn','content-tab1','赛程')">赛程</a>
+            <a class="content-nav" href="javascript:;" title="竞猜" onclick="PTTSendClick('btn','content-tab2','竞猜')">竞猜</a>
+        </div>
+        <!-- tab切换 -->
+        <div class="content-tabs">
+            <!-- 登录 -->
+            <div class="login-box">
+                <!--登录前状态 Start-->
+                <p id="unlogin" style="display: none;">你好，请 <a href="javascript:;" id="ptLoginBtn">【登录】</a></p >
+                    <!--登录前状态 End-->
+                <!--登录后状态 Start-->
+                <div id="logined">
+                    欢迎您，
+                    <span id="login_qq_span">红花会贝贝</span>
+                    <a href="javascript:TGDialogS('dialog-logout');" id="ptLogoutBtn">更换绑定</a>
+                </div>
+                <!--登录后状态 End-->
+            </div>
+            <a class="content-tab on" href="javascript:;" title="赛事竞猜" onclick="PTTSendClick('btn','content-tab1','赛事竞猜')"><span>赛事竞猜</span></a>
+            <a class="content-tab" href="javascript:;" title="转盘" onclick="PTTSendClick('btn','content-tab2','转盘')"><span>转盘</span></a>
+            <a class="content-tab" href="javascript:;" title="许愿池" onclick="PTTSendClick('btn','content-tab3','许愿池')"><span>许愿池</span></a>
+            <a class="content-tab" href="javascript:;" title="竞猜商店" onclick="PTTSendClick('btn','content-tab4','竞猜商店')"><span>竞猜商店</span></a>
+        </div>
+        
+        	
+        <!-- 赛事竞猜start -->
+        <div class="page-box match-box" style="display: block;">
+            <!-- 筛选器 -->
+            <div class="select-btns">
+                <div class="login-app login-app1">
+                    <select name="login-app" id="sel6">
+                        <option value="2" selected>手Q</option>
+                        <option value="1" >微信</option>
+                    </select>
+                </div>
+                <div class="login-area login-area1">
+                    <select name="login-area" id="sel7">
+                        <option value="1" >第一赛区</option>
+                        <option value="2" >第二赛区</option>
+                        <option value="3" >第三赛区</option>
+                        <option value="4" >第四赛区</option>
+                        <option value="5" >第五赛区</option>
+                        <option value="6" >第六赛区</option>
+                        <option value="7" >第七赛区</option>
+                        <option value="8">第八赛区</option>
+                        <option value="9">第九赛区</option>
+                        <option value="10" >第十赛区</option>
+                        <option value="11" >第十一赛区</option>
+                        <option value="12" >第十二赛区</option>
+                        <option value="13" >第十三赛区</option>
+                        <option value="14" >第十四赛区</option>
+                        <option value="15" >第十五赛区</option>
+                        <option value="16" >第十六赛区</option>
+                    </select>
+                </div>
+                <div class="login-week login-week1">
+                    <select name="login-week" id="sel8">
+                        <option value="1" selected>第一比赛周</option>
+                        <option value="2" >第二比赛周</option>
+                        <option value="3" >第三比赛周</option>
+                        <option value="4" >第四比赛周</option>
+                        <option value="5" >第五比赛周</option>
+                    </select>
+                </div>
+            </div>
+            <div class="match-btn-box">
+                <a class="btn-match-rules" href="javascript:TGDialogS('dialog-rule');" onclick="PTTSendClick('btn','btn-match-rules','竞猜规则');" title="竞猜规则"></a>
+                <a class="btn-match-record" href="javascript:OUT.user.getGuessStatus();" onclick="PTTSendClick('btn','btn-match-record','竞猜记录');" title="竞猜记录"></a>
+            </div>
+            
+            <ul class="match-guess-cont">
+<!--                <li class="match-guess-list">-->
+<!--                    <p class="match-guess-txt1">-->
+<!--                        <span>1月29日</span>·<span>第一赛区</span>-->
+<!--                        <a class="btn-match-more" href="javascript:;" onclick="PTTSendClick('btn','btn-match-more','更多玩法');" title="更多玩法">更多玩法>></a>-->
+<!--                    </p>-->
+<!--                    &lt;!&ndash; 投票后类名加on，已结束类名加end，未开始类名加notstart &ndash;&gt;-->
+<!--                    <div class="match-guess-list-bg on">-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-left">-->
+<!--                            <span class="show-win"></span>-->
+<!--                        <div class="competitors-information">-->
+<!--                            <p class="competitors-region">微信142区</p>-->
+<!--                            <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                            <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                            <a class="btn-match-winner win" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                <span>红花会军团</span>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                        <i class="icon"></i>-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-right">-->
+<!--                            <span class="show-win"></span>-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        -->
+<!--                        &lt;!&ndash;支持率&ndash;&gt;-->
+<!--                        <div class="support-box">-->
+<!--                            <div class="rate-box">-->
+<!--                                &lt;!&ndash; 左侧 &ndash;&gt;-->
+<!--                                <span>2.5万</span>-->
+<!--                                <div class="rate">-->
+<!--                                    &lt;!&ndash; 只用更改宽度 width &ndash;&gt;-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-left win"></div>-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-right"></div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; 右侧 &ndash;&gt;-->
+<!--                                <span>1.6万</span>-->
+<!--                            </div>-->
+<!--                            <p class="all">总奖池：4万</p>-->
+<!--                            <p class="time">2021年1月29日 11:30</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="match-guess-list">-->
+<!--                    <p class="match-guess-txt1">-->
+<!--                        <span>1月29日</span>·<span>第一赛区</span>-->
+<!--                        <a class="btn-match-more" href="javascript:;" onclick="PTTSendClick('btn','btn-match-more','更多玩法');" title="更多玩法">更多玩法>></a>-->
+<!--                    </p>-->
+<!--                    &lt;!&ndash; 投票后类名加on，已结束类名加end，未开始类名加notstart &ndash;&gt;-->
+<!--                    <div class="match-guess-list-bg end">-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-left">-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner win" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <i class="icon"></i>-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-right">-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        -->
+<!--                        &lt;!&ndash;支持率&ndash;&gt;-->
+<!--                        <div class="support-box">-->
+<!--                            <div class="rate-box">-->
+<!--                                &lt;!&ndash; 左侧 &ndash;&gt;-->
+<!--                                <span>2.5万</span>-->
+<!--                                <div class="rate">-->
+<!--                                    &lt;!&ndash; 只用更改宽度 width &ndash;&gt;-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-left win"></div>-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-right"></div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; 右侧 &ndash;&gt;-->
+<!--                                <span>1.6万</span>-->
+<!--                            </div>-->
+<!--                            <p class="all">总奖池：4万</p>-->
+<!--                            <p class="time">2021年1月29日 11:30</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="match-guess-list">-->
+<!--                    <p class="match-guess-txt1">-->
+<!--                        <span>1月29日</span>·<span>第一赛区</span>-->
+<!--                        <a class="btn-match-more" href="javascript:;" onclick="PTTSendClick('btn','btn-match-more','更多玩法');" title="更多玩法">更多玩法>></a>-->
+<!--                    </p>-->
+<!--                    &lt;!&ndash; 投票后类名加on，已结束类名加end，未开始类名加notstart &ndash;&gt;-->
+<!--                    <div class="match-guess-list-bg end">-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-left">-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <i class="icon"></i>-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-right">-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner win" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        -->
+<!--                        &lt;!&ndash;支持率&ndash;&gt;-->
+<!--                        <div class="support-box">-->
+<!--                            <div class="rate-box">-->
+<!--                                &lt;!&ndash; 左侧 &ndash;&gt;-->
+<!--                                <span>2.5万</span>-->
+<!--                                <div class="rate">-->
+<!--                                    &lt;!&ndash; 只用更改宽度 width &ndash;&gt;-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-left"></div>-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-right win"></div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; 右侧 &ndash;&gt;-->
+<!--                                <span>1.6万</span>-->
+<!--                            </div>-->
+<!--                            <p class="all">总奖池：4万</p>-->
+<!--                            <p class="time">2021年1月29日 11:30</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="match-guess-list notstart">-->
+<!--                    <p class="match-guess-txt1">-->
+<!--                        <span>1月29日</span>·<span>第一赛区</span>-->
+<!--                        <a class="btn-match-more" href="javascript:;" onclick="PTTSendClick('btn','btn-match-more','更多玩法');" title="更多玩法">更多玩法>></a>-->
+<!--                    </p>-->
+<!--                    &lt;!&ndash; 投票后类名加on，已结束类名加end，未开始类名加notstart &ndash;&gt;-->
+<!--                    <div class="match-guess-list-bg notstart">-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-left">-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner win" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <i class="icon"></i>-->
+<!--                        &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                        <div class="match-guess-box match-guess-right">-->
+<!--                            <div class="competitors-information">-->
+<!--                                <p class="competitors-region">微信142区</p>-->
+<!--                                <p class="competitors-name"><span>红花会 </span>  <span>红花会军团</span></p>-->
+<!--                                <p class="competitors-score">战斗比分：<span>10080</span></p>-->
+<!--                                <a class="btn-match-winner" href="javascript:;" onclick="PTTSendClick('btn','btn-match-winner','胜利');" title="胜利">-->
+<!--                                    <span>红花会军团</span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        -->
+<!--                        &lt;!&ndash;支持率&ndash;&gt;-->
+<!--                        <div class="support-box">-->
+<!--                            <div class="rate-box">-->
+<!--                                &lt;!&ndash; 左侧 &ndash;&gt;-->
+<!--                                <span>2.5万</span>-->
+<!--                                <div class="rate">-->
+<!--                                    &lt;!&ndash; 只用更改宽度 width &ndash;&gt;-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-left win"></div>-->
+<!--                                    &lt;!&ndash; 暂时投票结果胜利，则加类win&ndash;&gt;-->
+<!--                                    <div class="rate-right"></div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; 右侧 &ndash;&gt;-->
+<!--                                <span>1.6万</span>-->
+<!--                            </div>-->
+<!--                            <p class="all">总奖池：4万</p>-->
+<!--                            <p class="time">2021年1月29日 11:30</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </li>-->
+            </ul>
+         </div>
+        <!-- 赛事竞猜end -->
+        
+        <!-- 转盘start -->
+        <div class="page-box turntable-box">
+            <!-- 头图 -->
+            <div class="kv-box">
+                <img class="kv-bg" src="//testimg.qq.com/page/kv2.png" width="750" height="312" alt="kv">
+                <div class="kv-btns">
+                    <a class="kv-btn btn-rule" href="javascript:TGDialogS('dialog-turntable-rule');" onclick="PTTSendClick('btn','rule','规则');" title="规则"></a>
+                </div>
+            </div>
+            <div class="lottery-box">
+                <div class="lottery" id="lotterycontent">
+                    <img class="lottery-img" src="//testimg.qq.com/page/lottery.png"width="580"height="580"alt="奖品">
+                </div>
+                <p class="txt">请明日再来占星吧</p>
+                <div class="lott-btns">
+                    <ul>
+                        <!-- 选中请加类on -->
+                        <li>
+                            <a class="" href="javascript:;" title="飞龙星" onclick="PTTSendClick('btn','lott1','飞龙星')"><span>飞龙星</span></a>
+                            <em>2倍奖励</em>
+                        </li>
+                        <!-- 选中请加类on -->
+                        <li>
+                            <a class="" href="javascript:;" title="风舞星" onclick="PTTSendClick('btn','lott2','风舞星')"><span>风舞星</span></a>
+                            <em>4倍奖励</em>
+                        </li>
+                        <!-- 选中请加类on -->
+                        <li>
+                            <a class="" href="javascript:;" title="天狼星" onclick="PTTSendClick('btn','lott3','天狼星')"><span>天狼星</span></a>
+                            <em>8倍奖励</em>
+                        </li>
+                        <!-- 选中请加类on -->
+                        <li>
+                            <a class="" href="javascript:;" title="长啸星" onclick="PTTSendClick('btn','lott4','长啸星')"><span>长啸星</span></a>
+                            <em>16倍奖励</em>
+                        </li>
+                    </ul>
+                    <a class="btn-betting" href="javascript:showBet2();" title="投注" onclick="PTTSendClick('btn','btn-betting','投注')"><span>占星5/5</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- 转盘end -->
+        
+        <!-- 许愿池start -->
+        <div class="page-box wish-box">
+            <a class="btn-active-rule" href="javascript:TGDialogS('dialog-bets-rule');" onclick="PTTSendClick('btn','active-rule','活动规则');" title="活动规则"></a>
+            <div class="gift-box">
+                <h2>本周豪礼</h2>
+                <ul>
+                    <li>
+                        <img src="//testimg.qq.com/page/wish-gift.png" alt="">
+                        <p>待定</p>
+                    </li>
+                </ul>
+                <p class="txt">许愿池总投注：0</p>
+                <div class="wish-btns">
+                    <a class="btn-wish" href="javascript:TGDialogS('dialog-bet');" title="立即许愿" onclick="PTTSendClick('btn','btn-wish','立即许愿')"></a>
+                    <a class="btn-wish-look" href="javascript:OUT.user.wishRecord()" title="查看开奖" onclick="PTTSendClick('btn','btn-wish-look','查看开奖')"></a>
+                </div>
+            </div>
+        
+        </div>
+        <!-- 许愿池end -->
+        
+        <!-- 竞猜商店start -->
+        <div class="page-box shop-box">
+           <div class="shop-top">
+                <div class="item">
+                    <p></p>
+                    <div></div>
+                </div>
+                <div class="item">
+                    <p>0</p>
+                    <div>我的竞猜币</div>
+                </div>
+            </div>
+            <div class="shop-btns">
+                <a class="btn-get" href="javascript:OUT.user.showBetResult();" title="领取兑换币" onclick="PTTSendClick('btn','btn-get','领取兑换币')"></a>
+                <a class="btn-exrecord" href="javascript:showPending();" title="兑换记录" onclick="PTTSendClick('btn','btn-exrecord','兑换记录')"></a>
+            </div>
+            <h2 class="title">兑换商店</h2>
+            <ul>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift1.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>橙色碎片</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift2.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>神台强化</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift3.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>神台碎片</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift4.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>高级洗练玉</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift5.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>星尘</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift6.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>12小时建筑加速</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift7.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>神兽食物</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift8.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>寻龙令</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift9.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>注灵玉</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift10.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>镇龙玉</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift11.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>普通印龙章</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img-box"><img src="//testimg.qq.com/page/shop-gift12.png" alt=""></div>
+                            <p>---</p>
+                        </div>
+                        <div class="right">
+                            <p>开放粮仓</p>
+                            <em>---</em>
+                            <a class="btn-exchange" href="javascript:showPending();" title="兑换" onclick="PTTSendClick('btn','btn1','兑换')"></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 竞猜商店end -->
+    </div>
+    <!-- 主体内容 End -->
+    
+    <div class="sub-wrapper" id="morePlay">
+    	<!--更多玩法 Start-->
+    	<div class="sub-page sub-page-moreplay">
+            <div class="sub-page-top">
+                <a class="btn-back" href="javascript:;" onclick="PTTSendClick('btn','back-shortlist','返回');" title="返回"></a>
+            </div>
+            <div class="sub-page-body">
+                <ul class="sub-page-ul" id="morePlayUl">
+                    <li>
+                        <p class="titl">预测1：本场比赛两队的分数之和是？</p>
+                        <div class="btns">
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>0-20000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>20001-25000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>25001-30000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>30001-35000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>35001-40000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>40001+</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="titl">预测1：本场比赛两队的分数之差是？</p>
+                        <div class="btns">
+                            <!-- 未开始请加类no-->
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>0-20000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>20001-25000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>25001-30000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>30001-35000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>35001-40000</span></a>
+                            <a class="btn-sub-vote" href="javascript:;" onclick="PTTSendClick('btn','sub-vote','投入积分');" title="投入积分"><span>40001+</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		<!-- 更多玩法 End -->
+		
+		<!--竞猜记录 Start-->
+		<div class="sub-page sub-page-guessrecord">
+            <div class="sub-page-top">
+                <a class="btn-back" href="javascript:;" onclick="PTTSendClick('btn','back-shortlist','返回');" title="返回"></a>
+            </div>
+            <div class="sub-page-body">
+                <ul class="sub-page-ul" id="guessRecord">
+                    <!--<li>
+                        <div class="sub-item">
+                            <div class="box-mid">
+                                <p>在01-29 01:30 <em>红花会</em> VS <em>墨香堂</em> 中投注1000</p>
+                            </div>
+                        </div>
+                        <div class="sub-item">
+                           <div class="box-mid">
+                               &lt;!&ndash; 竞猜成功请加类win &ndash;&gt;
+                               <p class="win">竞猜成功</p>
+                           </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-item">
+                            <div class="box-mid">
+                                <p>在01-29 01:30 <em>红花会</em> VS <em>墨香堂</em> 中投注1000</p>
+                            </div>
+                        </div>
+                        <div class="sub-item">
+                           <div class="box-mid">
+                               <p>竞猜失败</p>
+                           </div>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+		<!-- 更多玩法 End -->
+        <!-- 兑换记录 Start-->
+		<div class="sub-page sub-page-exrecord">
+            <div class="sub-page-top">
+                <a class="btn-back" href="javascript:;" onclick="PTTSendClick('btn','back-shortlist','返回');" title="返回"></a>
+            </div>
+            <div class="sub-page-body">
+                <ul class="sub-page-ul">
+<!--                    <li>-->
+<!--                        <div class="sub-item">-->
+<!--                            <div class="box-mid">-->
+<!--                                <p>-10.00</p>-->
+<!--                                <span>-->
+<!--                                    <em>兑换军团</em>-->
+<!--                                    <em>01-29 01:00</em>-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="sub-item">-->
+<!--                           <div class="box-mid">-->
+<!--                               <p>兑换记录</p>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="sub-item">-->
+<!--                            <div class="box-mid">-->
+<!--                                <p>-10.00</p>-->
+<!--                                <span>-->
+<!--                                    <em>兑换军团</em>-->
+<!--                                    <em>01-29 01:00</em>-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="sub-item">-->
+<!--                           <div class="box-mid">-->
+<!--                                <p>兑换记录</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+        <!-- 兑换记录 End-->
+    </div>
+    
+
+    <!-- 弹出层 Start -->
+    <!-- 登录选择 -->
+    <div class="dialog dialog-login" id="dialog-login" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit dia-tit-login">登录</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dia-login-btns">
+                <a class="btn-login-wx" id="wxloginBtn" href="javascript:OUT.login.wx();" onclick="PTTSendClick('btn','login-wx','微信登录');" title="微信登录"></a>
+                <a class="btn-login-qq" id="ptLoginBtn" href="javascript:OUT.login.qq();" onclick="PTTSendClick('btn','login-qq','手Q登录');" title="手Q登录"></a>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!-- 注销-->
+    <div class="dialog dialog-logout" id="dialog-logout" style="display:none;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-logout">确定更换当前 <em></em> 绑定吗？</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dia-logout-btns">
+                <a class="btn-dialog-sure" href="javascript:OUT.role.updateBindRole();" onclick="PTTSendClick('btn','btn-sure','确定');" title="确定">确定</a>
+                <a class="btn-dialog-logout" href="javascript:closeDialog();" onclick="PTTSendClick('btn','btn-logout','注销');" title="注销">取消</a>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!-- 登录角色 -->
+    <div class="dialog dialog-login-role" id="dialog-login-role" style="display:none;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-custom">绑&nbsp;&nbsp定</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dia-login-selects">
+                <div class="login-select-item">
+                    <label class="login-label">平&emsp;台：</label>
+                    <div class="login-select">
+                        <select name="login-select-app" id="login-select-app">
+                            <option value="" selected>请选择平台</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-select-item">
+                    <label class="login-label">系&emsp;统：</label>
+                    <div class="login-select">
+                        <select name="login-select-app" id="login-select-system">
+                            <option value="" selected>请选择系统</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-select-item">
+                    <label class="login-label">区&emsp;服：</label>
+                    <div class="login-select">
+                        <select name="login-select-area" id="login-select-area">
+                            <option value="" selected>请选择大区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-select-item" id="ulinkRoleSelectParent" style="display: none">
+                    <label class="login-label">角色名：</label>
+                    <div class="login-select" >
+                        <select name="login-select-role" id="login-select-role">
+
+                        </select>
+                    </div>
+                </div>
+                <div id="ulinkErrorMessage" style="color:red; text-align: center"></div>
+            </div>
+            <div class="dia-role-btns">
+                <a class="btn-dialog-sure" id="ulinkConfirmBtn" href="javascript:;" onclick="PTTSendClick('btn','dialog-sure','确定');" title="确定">确定</a>
+                <a class="btn-dialog-logout" id="ulinkCancelBtn" href="javascript:;" onclick="PTTSendClick('btn','btn-logout','注销');" title="注销">取消</a>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭" id="ulinkCloseBtn"></a>
+    </div>
+
+    <!--文案弹窗-->
+    <div class="dialog dialog-written" id="dialog-written" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-written">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-written-desc">
+                <p>结果内容</p>
+                <span>123213</span>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+    <!--投注结果-->
+    <div class="dialog dialog-bets-end" id="dialog-bets-end" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-bets">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-bets-desc">
+                <p>您已为军团投注</p>
+                 <em>1000</em>
+                <span>请关注比赛，查看投注结果</span>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+    <!--规则弹窗2-->
+    <div class="dialog dialog-rule" id="dialog-rule" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-rule">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-rule-desc">
+            	<p>规则内容</p>
+            	<ul class="dia-rules table-scrollbar">
+	                <li class="dia-rule-item"><i>1、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>2、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规</span></li>
+	                <li class="dia-rule-item"><i>3、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文</span></li>
+	                <li class="dia-rule-item"><i>4、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>5、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>6、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>7、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>8、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	            </ul>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!--许愿池弹窗-->
+	<div class="dialog dialog-bet" id="dialog-bet" style="display:;">
+        <div class="dia-head"></div>
+       <div class="wish-tab">
+           <a class="btn-dialog-wish" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-wish1','许愿投注');" title="许愿投注"></a>
+           <a class="btn-dialog-wish-rule" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-wish2','提升许愿额度');" title="提升许愿额度"></a>
+       </div>
+       <div class="dia-con">
+           
+              <div class="wish-cont" style="display: block;">
+                  <div class="bet-head">
+                   <div class="bet-left">
+                       <p>竞猜每次最低投注100，最高500</p>
+                       <input type="number" placeholder="1" id="wishInput"/>X100
+                   </div>
+                   <div class="bet-right">
+                       <p><i class="bet-icon"></i>余额</p>
+                       <span><em>5100</em>竞猜币</span>
+                   </div>
+               </div>
+               <i class="icon-dialog-line-h"></i>
+               <div class="bet-body" id="wishSpan">
+                   
+                   <span class="on">100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>最大投注</span>
+               </div>
+               <div class="dia-tit bet-tit-vote">
+                   <a class="btn-dialog-true-bet" href="javascript:OUT.user.wish();" onclick="PTTSendClick('btn','btn-dialog-true-bet','确定下注');" title="确定下注"></a>
+                   <p class="bet-txt">猜中瓜分负方奖池，投注越多瓜分越多</p>
+               </div>
+              </div>
+           
+           <div class="wish-cont2" style="display: none;">
+               <div class="wish-rule table-scrollbar">
+                   <span>额度提升</span>
+                   <p class="wish-rule-txt">1、提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度</p>
+                   <p class="wish-rule-txt">2、提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度</p>
+                   <p class="wish-rule-txt">3、提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度提升许愿额度</p>
+               </div>
+           </div>
+           
+
+           
+       </div>
+       <div class="dia-foot"></div>
+       <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+   </div>
+
+	<!--下注弹窗-->
+	<div class="dialog dialog-bet dialog-bet1" id="dialog-bet1" style="display:none;">
+	 	<div class="dia-head"></div>
+		<!-- <div class="wish-tab">
+			<a class="btn-dialog-wish" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-wish1','许愿投注');" title="许愿投注"></a>
+			<a class="btn-dialog-wish-rule" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-wish2','提升许愿额度');" title="提升许愿额度"></a>
+		</div> -->
+        <div class="dia-con" style="padding-top: 0;">
+        	
+           	<div class="wish-cont" style="display: block;">
+	           	<div class="bet-head">
+	            	<div class="bet-left">
+	            		<p>竞猜每次最低投注100</p>
+	            		<input type="number" placeholder="1" id="pourInput"/>X100
+	            	</div>
+	            	<div class="bet-right">
+	            		<p><i class="bet-icon"></i>余额</p>
+	            		<span><em>5100</em>竞猜币</span>
+	            	</div>
+	            </div>
+	            <i class="icon-dialog-line-h"></i>
+	            <div class="bet-body" id="betPour">
+	            	
+	            	<span class="on">100</span><span>500</span><span>1000</span><span>1/4余额</span><span>1/2余额</span><span>最大投注</span>
+	            </div>
+	            <div class="dia-tit bet-tit-vote">
+	        		<a class="btn-dialog-true-bet" href="javascript:OUT.user.pour();" onclick="PTTSendClick('btn','btn-dialog-true-bet','确定下注');" title="确定下注"></a>
+	        		<p class="bet-txt">猜中瓜分负方奖池，投注越多瓜分越多</p>
+	            </div>
+           	</div>		
+
+            
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+
+    <!--转盘弹窗-->
+    <div class="dialog dialog-bet dialog-bet1" id="dialog-bet2" style="display:none;">
+        <div class="dia-head"></div>
+
+        <div class="dia-con" style="padding-top: 0;">
+
+            <div class="wish-cont" style="display: block;">
+                <div class="bet-head">
+                    <div class="bet-left">
+                        <p>转盘每次最低投注100, 最高500</p>
+                        <input type="number" placeholder="1" id="lotteryInput"/>X100
+                    </div>
+                    <div class="bet-right">
+                        <p><i class="bet-icon"></i>余额</p>
+                        <span><em>5100</em>竞猜币</span>
+                    </div>
+                </div>
+                <i class="icon-dialog-line-h"></i>
+                <div class="bet-body" id="lotteryPour">
+
+                    <span class="on">100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>最大投注</span>
+                </div>
+                <div class="dia-tit bet-tit-vote">
+                    <a class="btn-dialog-true-bet" href="javascript:OUT.user.doLottery();" onclick="PTTSendClick('btn','btn-dialog-true-bet','确定下注');" title="确定下注"></a>
+                    <p class="bet-txt">猜中瓜分负方奖池，投注越多瓜分越多</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    
+    <!--竞猜结果/每日活动弹窗-->
+    <div class="dialog dialog-active" id="dialog-active" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-active">参与每日活动，领取竞猜币对换好礼</p>
+            <div class="btn-box">
+            	<a class="btn-dialog-bet-end on" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-bet-end','竞猜结果');" title="竞猜结果"></a>
+            	<a class="btn-dialog-day-act" href="javascript:OUT.user.getTaskStatus();" onclick="PTTSendClick('btn','btn-dialog-day-act','每日活动');" title="每日活动"></a>
+            </div>
+            <i class="icon-dialog-line-h"></i>
+            <div class="act-cont table-scrollbar" style="display: block;">
+            	<div class="result-list">
+            		<span>1/4决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive on" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span>1/4决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive fail" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span>1/4决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span>1/4决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span>半决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span>半决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span>决赛</span>
+            		<span>XXXXX军团赢</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            </div>
+            
+            <div class="day-cont table-scrollbar" style="display: none;">
+            	<div class="result-list">
+            		<span  data-taskId='1'>每日登陆H5页面</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive on" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span data-taskId='2'>竞猜额超过1000</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span data-taskId='3'>竞猜超过3场</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span data-taskId='4'>参与转盘</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	<div class="result-list">
+            		<span data-taskId='5'>参与许愿池</span>
+            		<span>可领取100</span>
+                    <!-- 已领取请加类on，竞猜失败请加类fail -->
+            		<a class="btn-dialog-receive" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-receive','领取');" title="领取"></a>
+            	</div>
+            	
+            	
+            </div>
+            
+            <a class="btn-dialog-act-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-act-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    
+    
+    <!--兑换结果弹窗-->
+    <div class="dialog dialog-exchange-results" id="dialog-exchange-results" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-written">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-results-desc">
+                <p>恭喜您兑换了结果结果</p>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+    
+    <!-- 兑换-->
+    <div class="dialog dialog-vote" id="dialog-vote" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+        	<p class="dialog-vote-txt">请选择兑换数量：</p>
+            <div class="vote-range-box">
+                <a class="btn-range-minus" href="javascript:;" onclick="PTTSendClick('btn','range-minus','滑块-减');" title="滑块-减"></a>
+                <div class="range-outer">
+                    <div class="range-inner"></div>
+                    <div class="range-number-tip"><p>0</p></div>
+                    <input class="range-hid" type="range" name="range-vote-input" id="range-vote-input" value="0">
+                </div>
+                <a class="btn-range-plus" href="javascript:;" onclick="PTTSendClick('btn','range-plus','滑块-加');" title="滑块-加"></a>
+                <div class="range-vote-number"><input type="number" placeholder ="0" id="number-vote-input"></div>
+            </div>
+            <p class="my-vote-all">可投票数：230</p>
+			
+			<div class="bet-tit-vote2">
+				<p class="choice-num">已选择<span>0</span>个</p>
+				<a class="btn-dialog-exchange" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-exchange-vote','确认兑换');" title="确认兑换"></a>
+			</div>
+            <div class="vote-friends-call">
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+ 	<!--许愿池弹窗2 投注成功-->
+    <div class="dialog dialog-wish-written2" id="dialog-wish-written2" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-written">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-written-desc">
+                <p>您已投下<em>100</em>额度用于许愿</p>
+            </div>
+            <a class="btn-dialog-true" href="javascript:closeDialog();" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+	<!--许愿池弹窗2 投注规则-->
+    <div class="dialog dialog-bets-rule" id="dialog-bets-rule" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-rule">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-rule-desc">
+            	<p>规则内容</p>
+            	<ul class="dia-rules table-scrollbar">
+	                <li class="dia-rule-item"><i>1、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>2、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规</span></li>
+	                <li class="dia-rule-item"><i>3、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文</span></li>
+	                <li class="dia-rule-item"><i>4、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>5、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>6、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>7、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>8、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	            </ul>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+
+	<!--许愿池弹窗2 投注规则-->
+    <div class="dialog dialog-turntable-rule" id="dialog-turntable-rule" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-rule">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-rule-desc">
+            	<p>规则内容</p>
+            	<ul class="dia-rules table-scrollbar">
+	                <li class="dia-rule-item"><i>1、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>2、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规</span></li>
+	                <li class="dia-rule-item"><i>3、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文</span></li>
+	                <li class="dia-rule-item"><i>4、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>5、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>6、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>7、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	                <li class="dia-rule-item"><i>8、</i><span>规则文案规则文案规则文案规则文案规则文案规则文案</span></li>
+	            </ul>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    
+    <!-- 分享蒙层 -->
+    <div class="dialog-share-mask" id="dialog-share-mask" style="display:none;">
+        <img class="dialog-share-mask-img" src="//testimg.qq.com/dialog-share-mask.png" alt="">
+        <a class="dia-close-mask" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    
+    <!--系统弹窗-->
+    <div class="dialog dialog-written" id="dialog-system" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-written">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-written-desc">
+                <span>结果结果结果结果结果</span>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+    </div>
+    
+    <!-- Javascript -->
+    <script src="https://game.gtimg.cn/images/ulink/ulinksdk/jquery-3.4.1.min.js"></script>
+    <script src="https://ulink.qq.com/ulinksdk/dist/js/ulink.2.0.8.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
+    <script src="//game.gtimg.cn/images/js/delottery/lottery.js"></script>
+    <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+    <script src="js/page.js"></script>
+    <script src="https://game.gtimg.cn/images/ulink/ulinksdk/vconsole.min.js"></script>
+    <script type="text/javascript" src="https://gameact.qq.com/comm-htdocs/js/game_area/utf8verson/slg_server_select_utf8.js" charset="UTF-8"></script>
+    <script>
+        // init vConsole
+        var vConsole = new VConsole();
+    </script>
+
+
+    <script>
+        // 数据统计
+        var setSite = { //设置网站属性
+            siteType: "a20210220newstar", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "page", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+            pageName: "竞猜", //必填项:页面中文名
+            project: "other", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+            osact: 0 //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+        };
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+
+
+        // 打开Dialog
+        function TGDialogS(e) {
+            // 利用milo库引入dialog组件
+            need("biz.dialog", function(Dialog) {
+                Dialog.show({
+                    id: e,
+                    bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+                    opacity: 80 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+                });
+            });
+        }
+        // 关闭Dialog
+        function closeDialog() {
+            // 利用milo库引入dialog组件
+            need("biz.dialog", function(Dialog) {
+                Dialog.hide();
+            });
+        }
+    </script>
+    <script src="js/common.js"></script>
+    <script src="js/guess.js"></script>
+    <script>OUT.user.indexInitStatus();</script>
+</body>
+
+</html>

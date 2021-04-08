@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="gbk">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP" />
+    <meta name="Copyright" content="Tencent" />
+	<meta name="Description" content="英雄联盟官方网站，风靡全球的MOBA竞技网游，全球召唤师热爱集结地。公平竞技英雄对战，全球角逐电竞荣耀，还有神秘的英雄联盟宇宙等你来探索！无限热爱，无限可能！">
+	<meta name="Keywords" content="英雄联盟,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟攻略,明星解说视频,英雄,攻略,WCG,点亮图标,赛事">
+    <title>LPL&绽灵节主题派对</title>
+    <!-- <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-4.3.3.min.css"> -->
+	<link rel="stylesheet" href="css/index.css">
+    <!-- 页面设计：cp | 页面制作：cp | 创建：2020-07-08 -->
+    <!-- //game.gtimg.cn/images/lpl/act/a20200706partner -->
+    <script>
+	(function(win, doc, mode) {
+        var std = 750;
+        if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+            var h = document.getElementsByTagName("head")[0];
+            h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-capable" content="yes">');
+            h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-status-bar-style" content="black">');
+            h.insertAdjacentHTML('beforeEnd', '<meta name="format-detection" content="telephone=no">');
+            h.insertAdjacentHTML('beforeEnd', '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />');
+        if(mode == 'px') {
+        // Px移动端速配
+        if (!win.addEventListener) return; 
+                    var html=document.documentElement; 
+                    function setFont()
+                    {
+                function adaptVP(a){function c(){var c,d;return b.uWidth=a.uWidth?a.uWidth:750,b.dWidth=a.dWidth?a.dWidth:window.screen.width||window.screen.availWidth,b.ratio=window.devicePixelRatio?window.devicePixelRatio:1,b.userAgent=navigator.userAgent,b.bConsole=a.bConsole?a.bConsole:!1,a.mode?(b.mode=a.mode,void 0):(c=b.userAgent.match(/Android/i),c&&(b.mode="android-2.2",d=b.userAgent.match(/Android\s(\d+.\d+)/i),d&&(d=parseFloat(d[1])),2.2==d||2.3==d?b.mode="android-2.2":4.4>d?b.mode="android-dpi":d>=4.4&&(b.mode=b.dWidth>b.uWidth?"android-dpi":"android-scale")),void 0)}function d(){var e,f,g,h,c="",d=!1;switch(b.mode){case"apple":f=(window.screen.availWidth*b.ratio/b.uWidth)/b.ratio;c="width="+b.uWidth+",initial-scale="+f+",minimum-scale="+f+",maximum-scale="+f+",user-scalable=no";break;case"android-2.2":a.dWidth||(b.dWidth=2==b.ratio?720:1.5==b.ratio?480:1==b.ratio?375:.75==b.ratio?240:480),e=window.screen.width||window.screen.availWidth,375==e?b.dWidth=b.ratio*e:750>e&&(b.dWidth=e),b.mode="android-dpi",d=!0;case"android-dpi":f=160*b.uWidth/b.dWidth*b.ratio,c="target-densitydpi="+f+", width="+b.uWidth+", user-scalable=no",d&&(b.mode="android-2.2");break;case"android-scale":c="width="+b.uWidth+", user-scalable=no"}g=document.querySelector("meta[name='viewport']")||document.createElement("meta"),g.name="viewport",g.content=c,h=document.getElementsByTagName("head"),h.length>0&&h[0].appendChild(g)}function e(){var a="";for(key in b)a+=key+": "+b[key]+"; ";alert(a)}if(a){var b={uWidth:0,dWidth:0,ratio:1,mode:"apple",userAgent:null,bConsole:!1};c(),d(),b.bConsole&&e()}};adaptVP({uWidth:750});
+                    }  
+                    win.addEventListener('resize',setFont,false) 
+                    setFont();
+                } 
+                else if(mode == 'rem') {
+        var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / std) + 'px';
+                    
+        };
+                if(!doc.addEventListener) return;
+                        recalc();
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+                }
+        }
+    })(window, document, 'rem');
+    </script>
+</head>
+<body>
+	<!-- 页面主体代码 Start -->
+    <h1 class="hid">LPL&绽灵节主题派对</h1>
+    <div class="wrap">
+        <a class="btn-rule" href="javascript:;" onclick="PTTSendClick('btn','btn-rule','活动规则');">规则</a>
+        <div class="header">
+            <img class="img1" src="ossweb-img/head-bg.png" alt="">
+            <img class="img2" src="ossweb-img/head-bg1.png" alt="">
+            <a class="logo" href="//lol.qq.com/main.shtml" target="blank" onclick="PTTSendClick('btn','logo','btn');"></a>
+            <a class="logo1" href="//lpl.qq.com" target="blank" onclick="PTTSendClick('btn','logo1','btn');"></a>
+            <p class="slogan"></p>
+            <p class="time">活动时间：7月16日~8月30日</p>
+            <div class="login-info">
+                <!--登录前状态 Start-->
+                <div id="unlogin" class="login" style="display: block;">
+                    你好，请 <a id="ptLoginBtn" href="javascript:void(0)" title="登录">登录</a>
+                </div>
+                <!--登录前状态 End-->
+                <!--登录后状态 Start-->
+                <div id="logined" class="login" style="display: none;">
+                    欢迎您，<span id="login_qq_span"></span>
+                    <a id="ptLogoutBtn" href="javascript:void(0)" title="注销">注销</a>
+                </div>
+                <!--登录后状态 End-->
+            </div>
+        </div>
+
+        <div class="nav-box">
+            <ul>
+            
+                <li><a href="#part-lottery" onclick="PTTSendClick('btn','nav1','btn');">抽大奖</a></li>
+                <li class=""><a href="#part-task" onclick="PTTSendClick('btn','nav2','btn');">做任务</a></li>
+                <li><a href="#part-invite" onclick="PTTSendClick('btn','nav3','btn');">邀请好友</a></li>
+                <li><a href="#part-news" onclick="PTTSendClick('btn','nav4','btn');">最新资讯</a></li>
+            </ul>
+        </div>
+
+        <div class="part-play">
+            <div class="play-box">
+                <p class="play-title"></p>
+                <a href="javascript:;" onclick="PTTSendClick('btn','btn-play','btn');">
+                    <i></i>
+                    <img src="ossweb-img/video-bg.png" width="670" height="377" alt="">
+                </a>
+                <span class="video-container" id="video-container"></span>
+            </div>
+            <div class="live-box">
+                <ul>
+                </ul>
+            </div>
+            <!-- 已订阅请加类on -->
+            <a class="btn-task" href="javascript:TGDialogS('dia_rule');" onclick="PTTSendClick('btn','btn-task','btn');"><span>立即订阅</span>+5积分</a>
+            <em>开赛可收到qq手游公众号提醒</em>
+        </div>
+        <div class="part-lottery" id="part-lottery">
+            <p class="title">做任务领积分抽大奖<i></i><a class="btn-make" href="#part-task" onclick="PTTSendClick('btn','btn-make','btn');">做任务赚积分</a></p>
+            <div class="total">
+                <p>我的积分：<span>999</span></p>
+                <!-- 点击签到置灰请加类on -->
+                <a class="btn-sign" href="javascript:;" onclick="PTTSendClick('btn','btn-sign','btn');"><span>点击签到</span>+2积分</a>
+            </div>
+            <div class="lottery" id="lotterycontent">
+                <ul>
+                    <li><img src="ossweb-img/lott1.png" alt=""><p>79Q币</p></li>
+                    <li><img src="ossweb-img/lott2.png" alt=""><p>99Q币</p></li>
+                    <li><img src="ossweb-img/lott3.png" alt=""><p>8888现金</p></li>
+                    <li><img src="ossweb-img/lott8.png" alt=""><p>灵魂莲华 卡西奥佩亚折扇</p></li>
+                    <li class="btn-lottery">
+                        <p><span>立即抽奖</span>
+                            <br>消耗10积分
+                        </p>
+                    </li>
+                    <li><img src="ossweb-img/lott4.png" alt=""><p>9999现金</p></li>
+                    <li><img src="ossweb-img/lott7.png" alt=""><p>期限皮肤+英雄</p></li>
+                    <li><img src="ossweb-img/lott6.png" alt=""><p>绽灵节5款皮肤</p></li>
+                    <li><img src="ossweb-img/lott5.png" alt=""><p>谢谢参与</p></li>
+                </ul>
+            </div>
+            <div class="store">
+                <p class="titl">兑换商店<span>(每周刷新)</span></p>
+                <div class="schedule-box">
+                    <i></i>
+                    <ul>
+                        <!-- 达到100积分后请加类on -->
+                        <li class="on">
+                            <span>100积分</span>
+                            <img src="ossweb-img/gift1.png" width="82" height="82" alt="">
+                            <p>期限皮肤+英雄
+                                <br>20000份</p>
+                            <a class="btn-exchange changed" href="javascript:;" onclick="PTTSendClick('btn','btn-exchange1','btn');">兑换</a>
+                        </li>
+                        <!-- 达到150积分后请加类on -->
+                        <li class="on">
+                            <span>150积分</span>
+                            <img src="ossweb-img/gift2.png" width="82" height="82" alt="">
+                            <p>20Q币
+                                <br>500份</p>
+                            <a class="btn-exchange" href="javascript:;" onclick="PTTSendClick('btn','btn-exchange2','btn');">兑换</a>
+                        </li>
+                        <!-- 达到180积分后请加类on -->
+                        <li class="">
+                            <span>180积分</span>
+                            <img src="ossweb-img/gift3.png" width="82" height="82" alt="">
+                            <p>199Q币
+                                <br>20份</p>
+                            <a class="btn-exchange" href="javascript:;" onclick="PTTSendClick('btn','btn-exchange3','btn');">兑换</a>
+                        </li>
+                        <!-- 达到200积分后请加类on -->
+                        <li class="">
+                            <span>200积分</span>
+                            <img src="ossweb-img/gift4.png" width="82" height="82" alt="">
+                            <p>绽灵节皮肤2套
+                               <br>(等额Q币)</p>
+                            <a class="btn-exchange" href="javascript:;" onclick="PTTSendClick('btn','btn-exchange4','btn');">兑换</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn-record" href="javascript:TGDialogS('dia_total');" onclick="PTTSendClick('btn','btn-record','btn');">我的积分兑换记录</a>
+                <hr>
+            </div>
+        </div>
+        <div class="part-task" id="part-task">
+            <p class="title">参与每日任务额外获得抽奖次数</p>
+            <ul>
+                <li>
+                    <img src="ossweb-img/icon-logo1.png" width="90" height="90" alt="">
+                    <p>前往QQ手游英雄联盟专区(需浏览超过5S)</p>
+                    <span>+1积分</span>
+                    <!-- 已完成请加类finished -->
+                    <a class="btn-leave" href="javascript:;" onclick="PTTSendClick('btn','btn-leave1','btn');">立即前往</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/icon-logo1.png" width="90" height="90" alt="">
+                    <p>前往波动关注英雄联盟<br>官方账号<em>(单次任务)</em></p>
+                    <span>+11积分</span>
+                    <a class="btn-leave" href="javascript:;" onclick="PTTSendClick('btn','btn-leave2','btn');">立即领取</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/icon-logo2.png" width="90" height="90" alt="">
+                    <p>前往绽灵节官方专题</p>
+                    <span>+1积分</span>
+                    <!-- 已领取请加类got,文案改为已领取 -->
+                    <a class="btn-get got" href="javascript:;" onclick="PTTSendClick('btn','btn-leave3','btn');">已领取</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/icon-logo3.png" width="90" height="90" alt="">
+                    <p>每日登录掌上英雄联盟</p>
+                    <span>+1积分</span>
+                    <!-- 已完成请加类finished -->
+                    <a class="btn-leave finished" href="javascript:;" onclick="PTTSendClick('btn','btn-leave4','btn');">已完成</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/icon-logo4.png" width="90" height="90" alt="">
+                    <p>订阅赛事<br><em>(单次任务)</em></p>
+                    <span>+1积分</span>
+                    <!-- 已完成请加类finished -->
+                    <a class="btn-leave" href="javascript:;" onclick="PTTSendClick('btn','btn-leave5','btn');">立即前往</a>
+                </li>
+            </ul>
+        </div>
+        <div class="part-invite" id="part-invite">
+            <p class="title">邀请好友<span>(单次任务)</span>
+                <a href="javascript:;" onclick="PTTSendClick('btn','btn-change','btn');">换一批</a>
+            </p>
+            <ul class="invite-fri">
+                <li>
+                    <img src="ossweb-img/photo1.png" alt="">
+                    <i></i>
+                    <p>名字名字名字</p>
+                    <!-- 已邀请请加类on，更换文案为已邀请 -->
+                    <a class="btn-invite on" href="javascript:TGDialogS('dia_invite1');" onclick="PTTSendClick('btn','btn-invite1','btn');">已邀请</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/photo1.png" alt="">
+                    <i></i>
+                    <p>名字名字名字</p>
+                    <!-- 已邀请请加类on -->
+                    <a class="btn-invite" href="javascript:TGDialogS('dia_invite');" onclick="PTTSendClick('btn','btn-invite2','btn');">邀请</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/photo1.png" alt="">
+                    <i></i>
+                    <p>名字名字名字</p>
+                    <!-- 已邀请请加类on -->
+                    <a class="btn-invite" href="javascript:TGDialogS('dia_invite');" onclick="PTTSendClick('btn','btn-invite3','btn');">邀请</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/photo1.png" alt="">
+                    <i></i>
+                    <p>名字名字名字</p>
+                    <!-- 已邀请请加类on -->
+                    <a class="btn-invite" href="javascript:TGDialogS('dia_invite');" onclick="PTTSendClick('btn','btn-invite4','btn');">邀请</a>
+                </li>
+                <li>
+                    <img src="ossweb-img/photo1.png" alt="">
+                    <i></i>
+                    <p>名字名字名字</p>
+                    <!-- 已邀请请加类on -->
+                    <a class="btn-invite" href="javascript:TGDialogS('dia_invite');" onclick="PTTSendClick('btn','btn-invite5','btn');">邀请</a>
+                </li>
+            </ul>
+            <div class="invite-time">
+                <i></i>
+                <ul>
+                    <!-- 达成邀请人数请加类on -->
+                    <li class="on">
+                        <p>邀请1位好友</p>
+                        <span>+15积分</span>
+                        <!-- 已领取请加类got,删除li的类on -->
+                        <a class="btn-get1 got" href="javascript:;" onclick="PTTSendClick('btn','btn1','btn');">已领取</a>
+                    </li>
+                    <!-- 达成邀请人数请加类on -->
+                    <li class="on">
+                        <p>邀请2位好友</p>
+                        <span>+20积分</span>
+                        <!-- 已领取请加类got -->
+                        <a class="btn-get1" href="javascript:;" onclick="PTTSendClick('btn','btn2','btn');">领取</a>
+                    </li>
+                    <!-- 达成邀请人数请加类on -->
+                    <li class="on">
+                        <p>邀请3位好友</p>
+                        <span>+25积分</span>
+                        <!-- 已领取请加类got -->
+                        <a class="btn-get1" href="javascript:;" onclick="PTTSendClick('btn','btn3','btn');">领取</a>
+                    </li>
+                    <!-- 达成邀请人数请加类on -->
+                    <li>
+                        <p>邀请4位好友</p>
+                        <span>+30积分</span>
+                        <!-- 未完成 -->
+                        <a class="btn-no" href="javascript:;" onclick="PTTSendClick('btn','btn4','btn');">未达成</a>
+                    </li>
+                    <!-- 达成邀请人数请加类on -->
+                    <li>
+                        <p>邀请5位好友</p>
+                        <span>+35积分</span>
+                        <!-- 未完成 -->
+                        <a class="btn-no" href="javascript:;" onclick="PTTSendClick('btn','btn5','btn');">未达成</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn-record1" href="javascript:;" onclick="PTTSendClick('btn','btn-record1','btn');">我的邀请记录</a>
+        </div>
+        <div class="part-banner" id="part-banner">
+            <div class="group">
+                <img src="ossweb-img/qq.png" alt="">
+                <p>一键进群<span>解锁更多共同好友</span></p>
+                <a class="btn-group" href="javascript:;" onclick="PTTSendClick('btn','btn-group','btn');">加入QQ群</a>
+            </div>
+            <div class="banner">
+                <img src="ossweb-img/banner.png" alt="">
+            </div>
+            <a class="cartoon" href="//lolriotmall-wx.qq.com/act/a20200723SB/index.html" onclick="PTTSendClick('btn','cartoon','btn');"></a>
+        </div>
+        <div class="part-news" id="part-news">
+            <p class="title">最新赛讯<span>（点击跳转至掌上英雄联盟查看）</span></p>
+            <div class="news-list">
+                <a class="news" href="javascript:;" onclick="PTTSendClick('btn','news1','content');">
+                    <p class="headline">[LPL梗百科战队篇]不会吧？厂长+Faker王炸组合，米勒这都能输？</p>
+                    <div class="state">
+                        <span class="name">老炮联盟</span>
+                        <span class="comment">24评论</span>
+                    </div>
+                    <div class="video-box">
+                        <span class="vid-img">
+                            <img src="ossweb-img/video-1.png" alt="[LPL梗百科战队篇]不会吧？厂长+Faker王炸组合，米勒这都能输？" width="292" height="163">
+                            <i class="icon-play"></i>
+                        </span>
+                    </div>
+                </a>
+                <a class="news" href="javascript:;" onclick="PTTSendClick('btn','news2','content');">
+                    <p class="headline">[LPL梗百科战队篇]不会吧？厂长+Faker王炸组合，米勒这都能输？</p>
+                    <div class="state">
+                        <span class="name">老炮联盟</span>
+                        <span class="comment">24评论</span>
+                    </div>
+                    <div class="video-box">
+                        <span class="vid-img">
+                            <img src="ossweb-img/video-1.png" alt="[LPL梗百科战队篇]不会吧？厂长+Faker王炸组合，米勒这都能输？" width="292" height="163">
+                            <i class="icon-play"></i>
+                        </span>
+                    </div>
+                </a>
+                <a class="news" href="javascript:;" onclick="PTTSendClick('btn','news3','content');">
+                    <p class="headline">[LPL梗百科战队篇]不会吧？厂长+Faker王炸组合，米勒这都能输？</p>
+                    <div class="state">
+                        <span class="name">老炮联盟</span>
+                        <span class="comment">24评论</span>
+                    </div>
+                    <div class="video-box">
+                        <span class="vid-img">
+                            <img src="ossweb-img/video-1.png" alt="[LPL梗百科战队篇]不会吧？厂长+Faker王炸组合，米勒这都能输？" width="292" height="163">
+                            <i class="icon-play"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <a class="btn-moreLook" href="javascript:;" onclick="PTTSendClick('btn','btn-moreLook','btn');">阅读更多最新赛事资讯</a>
+        </div>
+        <div class="part-list">
+            <p class="title">中奖名单</p>
+            <div class="head">
+                <p>
+                    <span class="date">日期</span>
+                    <span class="nickname">用户昵称</span>
+                    <span class="prize">奖品</span>
+                </p>
+            </div>
+            <div class="carouselContent">
+                <div class="list">
+                    <!-- <p>
+                        <span class="date">7月20日</span>
+                        <span class="nickname">6704983345</span>
+                        <span class="prize">机械迷城 加里奥(7天)</span>
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页面主体代码 End -->
+    <!-- 活动规则 -->
+    <div class="dialog dia_rule" id="dia_rule" style="display:none;">
+        <div class="dia-con">
+            <h1>活动规则</h1>
+            <div class="rule-box">
+                <p>活动期间内，通过完成页面上的任务，即可领取任务对应的活动积分，通过消耗积分抽奖或兑换，可获得对应奖励；</p>
+                <p>
+                    <span>活动时间：</span>7月25日-8月30日
+                </p>
+                <p>
+                    <span>※任务说明：</span>
+                    <br>每日任务：单QQ号每日只可参与一次，刷新时间为每日0点
+                    <br>单次任务：活动期间单QQ号只可参与一次
+                    <br>每周限时任务：每周限时放出，请留意活动页面上的信息，每个每周限时任务全程单QQ号只能完成一次;
+                </p>
+                <p>
+                    <span>※积分说明：</span>
+                    <br>当日完成每日任务后，未领取积分在当日23点59分过期
+                    <br>单次任务完成后，未领取积分在活动结束后停止领取
+                    <br>活动积分将在8月30日的23:59分失效，请及时领取及使用
+                </p>
+                <p>
+                    <span>※积分兑换商店说明：</span>
+                    <br>兑换商店的兑换物、兑换积分每周刷新一次，刷新时间为每周一10点至周二18点，维护期间兑换商店暂停兑换；维护时间可能会有所延时，具体开放时间请关注活动页面以活动实际情况为准；
+                </p>
+                <p>
+                    <span>※奖励发放说明：</span>
+                    <br>实物奖励：实物奖励将在活动结束后30个工作日内统一安排邮寄，具体到货时间以物流实际情况为准；若因地址或联系方式填写错误导致未收到实物奖励的，无法安排补给，请获奖用户妥善填写收货信息；
+                    <br>游戏皮肤及道具奖励：将在领取后的24小时内发放到您领取时所指定的大区；
+                    <br>Q币奖励：将在领取后的24小时内发放到您参与活动的QQ号中;
+                </p>
+                <p>
+                    <span>※活动声明：</span>
+                    <br>本次活动遵循公平、公开、公正的原则，严厉禁止任何人以任何形式进行舞弊行为。通过非法舞弊手段获取抽奖资格的用户，一经查实，取消参与活动资格，若中奖并依法追讨已发放奖励；
+                </p>
+                <p>
+                    <span>※现金奖励：</span>
+                    <br>现金获奖用户需在9月8日前，使用获奖的QQ前往https://tgl.qq.com/注册个人作者，未完成注册的获奖人将视为自动放弃奖励资格；请获奖玩家请此页面上留下真实联系地址和联系方式，若工作人员无法与您取得联系，将视为自动放弃奖励；现金奖励将在9月的第三周安排发放，活动结束后的100个工作日内到账；
+                </p>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close1','关闭');"></a>
+    </div>
+    <!-- 我的积分记录 -->
+    <div class="dialog dia_total" id="dia_total" style="display:none1;">
+        <div class="dia-con">
+            <h1>我的积分记录
+                <span>总积分数：<i>50</i></span>
+            </h1>
+            <div class="total-box">
+                <div class="head">
+                    <p>
+                        <span class="date">时间</span>
+                        <span class="task">任务</span>
+                        <span class="total">积分</span>
+                    </p>
+                </div>
+                <div class="content">
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16 反反复复付付付付付付付付付付:04分</span>
+                        <span class="task">参与前往波动星球任反反复复付付付付付付付付付付付付务</span>
+                        <span class="total">+哒哒哒哒哒哒多多多多多多多多多多多多多多多多1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                    <p>
+                        <span class="date">7月3日16:04分</span>
+                        <span class="task">参与前往波动星球任务</span>
+                        <span class="total">+1</span>
+                    </p>
+                </div>
+                <div class="btn">
+                    <a class="btn-prev" href="javascript:;" onclick="PTTSendClick('btn','btn-prev','btn');">上一页</a>
+                    <div class="page-box">
+                        <!-- 选中加类on -->
+                        <a class="on" href="javascript:;" onclick="PTTSendClick('btn','page1','btn');">1</a>
+                        <a class="" href="javascript:;" onclick="PTTSendClick('btn','page2','btn');">2</a>
+                        <a class="" href="javascript:;" onclick="PTTSendClick('btn','page3','btn');">3</a>
+                    </div>
+                    <a class="btn-next" href="javascript:;" onclick="PTTSendClick('btn','btn-next','btn');">下一页</a>
+                </div>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close2','关闭');"></a>
+    </div>
+    <!-- 抽中皮肤 -->
+    <div class="dialog dia_skin" id="dia_skin" style="display:none;">
+        <div class="dia-con">
+            <h1>恭喜您抽中皮肤
+            </h1>
+            <div class="skin-box">
+                <ul>
+                    <li>
+                        <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+                        <span>小恶魔 崔丝塔娜（7天）</span>
+                    </li>
+                    <li>
+                        <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+                        <span>小恶魔 崔丝塔娜（7天）</span>
+                    </li>
+                </ul>
+                <a class="btn-region" href="javascript:;" onclick="PTTSendClick('btn','btn-region','btn');">(请选择领取的大区)</a>
+                <!-- 已领取请加类got，文案变为已领取 -->
+                <a class="btn-dia-get" href="javascript:;" onclick="PTTSendClick('btn','btn-dia-get','btn');">领取</a>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close3','关闭');"></a>
+    </div>
+    <!-- 填写收货地址 -->
+    <div class="dialog dia_address" id="dia_address" style="display:none;">
+        <div class="dia-con">
+            <h1>填写收货地址</i>
+            </h1>
+            <div class="address-box">
+                <p>恭喜您抽中<span>QQ公仔手办</span>一个，请仔细填写真实地址，我们将在活动结束的2个月内给您邮寄奖品。</p>
+                <div id="personInfoContent_681522" class="defaultContent" style="display:none1;">
+                    <form id="form_personInfo_681522" name="form_personInfo_681522">
+                        <header>
+                                <a href="###" id="colseLayer_681522" style="float: right;display: none;">关闭</a>
+                        </header>
+                        <section style="clear: both;">
+                                <table class="lz_act_pop_table">
+                                        <tbody>
+
+                                        <tr style="display:none;" id="tr_package_name_681522">
+                                                <td>
+                                                        <span class="star">*</span> 所获实物：
+                                                </td>
+                                        </tr>
+                                        <tr style="display:none;" id="tr_package_value_681522">
+                                                <td>
+                                                        <select name="sPackageInfo" id="package_681522"></select>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>
+                                                        <span class="star">* </span>姓名：
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>
+                                                        <input name="sName" type="text" />
+                                                </td>
+                                        </tr>
+
+                                        <tr style="display:none;">
+                                                <td>
+                                                        <span class="star"> </span>性别：
+                                                </td>
+                                        </tr>
+                                        <tr style="display:none;">
+                                                <td>
+                                                        <label for="sMale"><input type="radio" checked="checked" style="width: 14px;" value="male" id="sMale" name="sGender" />男</label>
+                                                        <label for="sFemale" ><input type="radio" value="female" style="width: 14px;" id="sFemale"  name="sGender"  />女</label>
+                                                </td>
+                                        </tr>
+
+                                        <tr style="display:none;"><td><span class="star">* </span>身份证号码：</td></tr>
+                                        <tr style="display:none;"><td><input name="sIdentity" type="text" /></td></tr>
+
+                                        <tr><td><span class="star">* </span>手机号码：</td></tr>
+                                        <tr><td><input name="sMobile" type="text" /></td></tr>
+
+                                        <tr><td><span class="star">* </span>所在城市：</td></tr>
+                                        <tr>
+                                                <td>
+                                                        <select name="sProvince" id="province_681522"></select>
+                                                        <select name="sCity" id="city_681522"></select>
+                                                        <select name="sExtend2" id="county_681522"></select>
+                                                </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td>
+                                                    <span class="star">* </span>邮政编码：
+                                                </td>
+                                        </tr>
+                                        <tr><td><input name="sPostCode" type="text" /></td></tr>
+
+                                        <tr><td><span class="star">* </span>详细地址：</td></tr>
+                                        <tr><td><input name="sAddress" type="text" /></td></tr>
+                                        <tr style="clear: both;width: fit-content;margin: 0 auto;float: none; display: none;">
+                                                <td style="width: fit-content;margin: 0 auto;">发货订单：<span id='sExtend1_681522'>暂无</span></td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                        </section>
+                        <footer>
+                                <a href="###" id="personInfoContentBtn_681522" class='submitBtn' onclick="PTTSendClick('btn','btn-submit','btn');">提交</a>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close4','关闭');"></a>
+    </div>
+    <!-- 抽中Q币 -->
+    <div class="dialog dia_qb" id="dia_ab" style="display:none;">
+        <div class="dia-con">
+            <div class="qb-box">
+                <p>恭喜你抽中<span>666Q币</span>，我们将在活动结束后的30个工作日内自动充值至您的QQ号内，<br>请注意查收。</p>
+                <a class="btn-sure" href="javascript:;" onclick="PTTSendClick('btn','btn-sure','btn');">确定</a>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close5','关闭');"></a>
+    </div>
+    <!-- 邀请 -->
+    <div class="dialog dia_invite" id="dia_invite" style="display:none;">
+        <div class="dia-con">
+            <div class="invite-box">
+                <p>
+                    <!-- <img src="ossweb-img/photo1.png" alt=""><i></i> -->
+                    <span>您即将向好友XXXX的QQ发送一条邀请；11111</span></p>
+                <div class="btn">
+                    <a class="btn-cancel" href="javascript:;" onclick="PTTSendClick('btn','btn-cancel','btn');">取消</a>
+                    <a class="btn-sure" href="javascript:;" onclick="PTTSendClick('btn','btn-sure1','btn');">确定</a>
+                </div>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close6','关闭');"></a>
+    </div>
+    <!-- 接受邀请 -->
+    <div class="dialog dia_invite1" id="dia_invite1" style="display:none;">
+        <div class="dia-con">
+            <div class="invite1-box">
+                <p>
+                    确认接受好友<span>XXX</span>的邀请<i>（接受邀请后不可修改）</i></p>
+                <div class="btn">
+                    <a class="btn-sure" href="javascript:;" onclick="PTTSendClick('btn','btn-sure2','btn');">确定</a>
+                </div>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close6','关闭');"></a>
+    </div>
+    <!-- 打开掌上英雄联盟 -->
+    <div class="dialog dia_link" id="dia_link" style="display:none;">
+        <div class="dia-con">
+            <div class="link-box">
+                <p>您即将离开，打开“掌上英雄联盟”</p>
+                <div class="btn">
+                    <a class="btn-cancel" href="javascript:;" onclick="PTTSendClick('btn','btn-cancel1','btn');">取消</a>
+                    <a class="btn-allow" href="javascript:;" onclick="PTTSendClick('btn','btn-allow','btn');">允许</a>
+                </div>
+            </div>
+        </div>
+        <a class="btn-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close7','关闭');"></a>
+    </div>
+	<script src="//js.aq.qq.com/js/aq_common.js"></script>
+	
+    <script>    
+        function TGDialogS(e){
+            // 利用milo库引入dialog组件
+            need("biz.dialog",function(Dialog){
+                Dialog.show({
+                    id:e,
+                    bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+                    opacity:50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+                });
+            });
+        }
+        function closeDialog(){
+            // 利用milo库引入dialog组件
+            need("biz.dialog",function(Dialog){
+                Dialog.hide();
+            });
+        }   
+          
+    </script>
+    <!-- 页面脚本逻辑 -->
+    <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/test.js" charset="utf-8"></script>
+	<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+	<script src="//pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+	<script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+	<script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+    <script src="//lol.qq.com/m/public/LOL_App.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/delottery/lottery_v2.js"></script>
+    <script src='//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+    <!-- <script src="//lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_134.js"></script> -->
+    <script src="//lpl.qq.com/web201612/data/LOL_MATCH2_LIVE_BMATCH_LIST.js"></script>
+    <script src="//lpl.qq.com/web201612/data/LOL_MATCH2_TEAM_LIST.js"></script>
+    <script src="js/list_134.js"></script>
+    <!-- <script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script> -->
+
+	<script>
+        
+		init_ZMApp({
+            'title':'LPL&绽灵节主题派对',
+            'summery':'LPL&绽灵节主题派对',
+            'subtitle' : 'LPL&绽灵节主题派对',
+            'img':'https://game.gtimg.cn/images/lpl/act/a20200706partner/share.jpg',
+            'url':location.href.split('?')[0],
+            'WXtrigger':function(res){
+                //微信动作回调
+            },
+            'WXsuccess':function(res){
+                //微信成功回调
+                if(!res) return;
+                if(res.errMsg == 'sendAppMessage:ok') {
+                        //微信分享个人
+                        PTTSendClick('btn','sharewx1','分享给好友');
+                } else if(res.errMsg == 'shareTimeline:ok') {
+                        //微信分享朋友圈
+                        PTTSendClick('btn','sharewx2','分享到朋友圈');
+                }else if(res.errMsg == 'shareQQ:ok'){
+                        //微信分享至QQ
+                        PTTSendClick('btn','shareqq','分享到QQ');
+                }
+            },
+            'WXcancel':function(res){
+                //微信分享取消动作回调
+                PTTSendClick('btn','sharewx_cancel','分享取消');
+            },
+            'WXfail':function(res){
+                //微信分享失败动作回调
+                PTTSendClick('btn','sharewx_fail','分享失败');
+            },
+            'QQtrigger':function(res){
+                //QQ动作回调
+
+            },
+            'QQcallback':function(res){
+                //QQ分享成功
+                PTTSendClick('btn','shareqq_succ','QQ分享成功');
+            },
+            'LOL_APPsuccess' : function(res){
+                //掌盟分享成功
+                PTTSendClick('btn','sharezm_succ','掌盟分享成功');
+            }
+        });
+
+        function delayCookie(){
+            var cookieUin = milo.cookie.get('uin', '');
+            if (cookieUin) {
+                    milo.cookie.set('uin_cookie', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+                    milo.cookie.set('ied_qq', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+            }
+        }
+        setTimeout(delayCookie,2000);
+
+        // 开始抽奖lottery->js
+        var msg="恭喜你获得大奖哟";
+        function callJsToStart(){
+            PTTSendClick('lottery','start','抽奖_开始');
+            // amsSubmit(136209,434241);
+            calllotteryToRoll(4);
+            //alert("抽奖暂未开放哦！");
+        }
+        //开发获得抽奖结果 通知lottery开始播放效果 js->lottery
+        function calllotteryToRoll(id){
+            PTTSendClick('lottery','reward_'+id,'抽奖_奖品_'+id);
+            if(lottery)lottery.stopRoll(id);
+        }
+        //动画完成通知js  lottery->js
+        function callJsToComplete(){
+            PTTSendClick('lottery','end','抽奖_完毕');
+            //alert(msg);
+        }
+        
+        //初始化抽奖的 可以不知道内部
+        var lottery= new Lottery({
+            'lighturl':'//ossweb-img.qq.com/images/js/delottery/sel.png',
+            'total':8,
+            'width':6.7,
+            'height':6.7,
+            'sbtnx':2.32,
+            'sbtny':2.32,
+            'sbtnw':2.06,
+            'sbtnh':2.06,
+            'boxw':2.06,
+            'boxh':2.06,
+            'position':"0_0,2.32_0,4.64_0,4.64_2.32,4.64_4.64,2.32_4.64,0_4.64,0_2.32",
+            'contentId' : 'lotterycontent',
+            'onClickRollEvent' : callJsToStart,
+            'onCompleteRollEvent':callJsToComplete ,
+            'unit':"rem",
+            'isResponsive':0
+        });
+	</script>
+    <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+    <script>
+		//此段代码不能放到外链JS中，
+		var setSite = { //设置网站属性
+			siteType: "a20200706partner", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+			pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+			pageName: "LPL&绽灵节主题派对", //必填项:页面中文名
+			project: "other", //必填项:按照模块内容，填写固定的对应值;皮肤 skin;英雄 hero;商业化 commerce;赛事 match;运营/版本 version;品牌 brand;IP ip;社区 community;网吧投放 netbar;默认other;
+			osact: 0 //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+		};
+		if(typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+</html><!-- #t6Hl8#572C57140597FB7432CB8D8228D64313 -->

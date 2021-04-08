@@ -1,0 +1,901 @@
+OUT.user = {
+    coinNum:0,
+    indexInitStatus: function () {
+
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        var params = {
+            'iActId': OUT.site.iActId,
+            'game': OUT.site.game,
+            'sAppId': OUT.site.sAppId,
+        };
+
+        if( ulink.isMSDK() ){
+            params = {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'area': ulink.getQueryString('areaid'),
+                'partition': ulink.getQueryString('partition'),
+                'roleId': ulink.getQueryString('roleid'),
+                'platId': ulink.getQueryString('platid'),
+            };
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=User/init',
+            params: params,
+            success: function (result) {
+                console.log('indexInitStatus=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                OUT.role.isBindRole = 1;
+                OUT.role.roleInfo = result.jData.roleData;
+                OUT.user.selectMatchGroup = result.jData.selectMatchGroup;
+                OUT.user.selectArea = result.jData.selectArea;
+                OUT.user.weekNo = result.jData.weekNo;
+                OUT.user.coinNum = result.jData.coinNum;
+                $('.shop-top .item').eq(0).find('p').text(result.jData.roleName);
+                $('.shop-top .item').eq(1).find('p').text(result.jData.coinNum);
+                $('.shop-top .item').eq(0).find('div').text(getPartitionInfo(result.jData.roleData.partition));
+                if(OUT.user.selectArea == 2){
+                    $('#sel6 option').eq(0).attr('selected',true);
+                    $('#sel6 option').eq(1).attr('selected',false);
+                }else{
+                    $('#sel6 option').eq(1).attr('selected',true);
+                    $('#sel6 option').eq(0).attr('selected',false);
+                }
+
+                $('#sel7 option').attr('selected',false);
+                $('#sel7 option').eq(OUT.user.selectMatchGroup - 1).attr('selected',true);
+                $('#sel8 option').attr('selected',false);
+                $('#sel8 option').eq(OUT.user.weekNo - 1).attr('selected',true);
+                OUT.user.listWithBet();
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 获取比赛数据
+    listWithBet: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+        ulink.http.get({
+            url: OUT.site.url + '?route=Match/listWithBet',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'selectArea': OUT.user.selectArea,
+                'selectMatchGroup': OUT.user.selectMatchGroup,
+                'weekNo': OUT.user.weekNo
+            },
+            success: function (result) {
+                console.log('listWithBet=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                var data = result.jData;
+                OUT.user.betList = data;
+                if(OUT.user.selectArea == 2){
+                    $('#sel6 option').eq(0).attr('selected',true);
+                    $('#sel6 option').eq(1).attr('selected',false);
+                }else{
+                    $('#sel6 option').eq(1).attr('selected',true);
+                    $('#sel6 option').eq(0).attr('selected',false);
+                }
+
+                $('#sel7 option').attr('selected',false);
+                $('#sel7 option').eq(OUT.user.selectMatchGroup - 1).attr('selected',true);
+                $('#sel8 option').attr('selected',false);
+                $('#sel8 option').eq(OUT.user.weekNo - 1).attr('selected',true);
+                OUT.user.createBetHtml();
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 整理竞猜页面数据html
+    createBetHtml: function() {
+        var html = '';
+        var data = OUT.user.betList;
+        var tmpArr = ['一','二','三','四','五','六','七','八','九','十','十一','十二','十三','十四','十五','十六'];
+        var status = ['end','nostart','on','on'];
+        var leftBtnHtml = '';
+        var rightBtnHtml = '';
+        var tmpNum = '';
+        var sumNum = '';
+        var leftRate = '';
+        var rightRate = '';
+        for (var k in data) {
+            html += '<li class="match-guess-list"><p class="match-guess-txt1"><span>'+data[k].matchDay+'</span>·<span>第'+tmpArr[OUT.user.selectMatchGroup - 1]+'赛区</span>';
+            html += '<a class="btn-match-more" href="javascript:showMorePlay('+k+');" onclick="PTTSendClick(\'btn\',\'btn-match-more\',\'更多玩法\');" title="更多玩法">更多玩法>></a>';
+            html += '</p>';
+            html += '<div class="match-guess-list-bg '+status[data[k].status]+'">';
+            html += '<div class="match-guess-box match-guess-left">';
+
+            html += '<div class="competitors-information"><p class="competitors-region">'+data[k].team1AreaName+'</p>';
+            html += '<p class="competitors-name"><span>'+data[k].league1Name+' </span>  <span>'+data[k].fightTeam1CoinTotal+'</span></p>';
+            html += '<p class="competitors-score">战斗比分：<span>'+data[k].team1Point+'</span></p>';
+
+            if(data[k].status == 0){
+                if(data[k].winnerGroupId == data[k].team1Id){
+                    leftBtnHtml = '<a class="btn-match-winner win" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team1Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                    rightBtnHtml = '<a class="btn-match-winner" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team2Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                }else {
+                    leftBtnHtml = '<a class="btn-match-winner" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team1Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                    rightBtnHtml = '<a class="btn-match-winner win" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team2Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                }
+            }else if(data[k].status == 1){
+                leftBtnHtml = '<a class="btn-match-winner no" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team1Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                rightBtnHtml = '<a class="btn-match-winner no" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team2Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+            }else if(data[k].status == 2 || data[k].status == 3){
+                if(data[k].fightBetGroupId == data[k].team1Id){
+                    leftBtnHtml = '<a class="btn-match-winner win" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team1Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                    rightBtnHtml = '<a class="btn-match-winner no" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team2Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                }else if(data[k].fightBetGroupId == data[k].team2Id){
+                    leftBtnHtml = '<a class="btn-match-winner no" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team1Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                    rightBtnHtml = '<a class="btn-match-winner win" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team2Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                }else {
+                    leftBtnHtml = '<a class="btn-match-winner win" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team1Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                    rightBtnHtml = '<a class="btn-match-winner win" href="javascript:showPoulPop('+k+','+1+',\''+data[k].team2Id+'\');" onclick="PTTSendClick(\'btn\',\'btn-match-winner\',\'胜利\');" title="胜利">';
+                }
+            }
+            html += leftBtnHtml;
+            html += "<span>"+data[k].group1Name+"</span>";
+            html += '</a></div></div><i class="icon"></i>';
+
+
+            html += '<div class="match-guess-box match-guess-right">';
+            html += '<div class="competitors-information"><p class="competitors-region">'+data[k].team2AreaName+'</p>';
+            html += '<p class="competitors-name"><span>'+data[k].league2Name+' </span>  <span>'+data[k].fightTeam2CoinTotal+'</span></p>';
+            html += '<p class="competitors-score">战斗比分：<span>'+data[k].team2Point+'</span></p>';
+            html += rightBtnHtml;
+            html += "<span>"+data[k].group2Name+"</span>";
+            html += '</a></div></div>'
+
+            if(data[k].fightTeam1CoinTotal < 10000){
+                tmpNum = data[k].fightTeam1CoinTotal;
+            }else {
+                tmpNum = Math.floor(data[k].fightTeam1CoinTotal / 10000) + '万';
+            }
+            html += '<div class="support-box"><div class="rate-box"><span>'+tmpNum+'</span><div class="rate">';
+            sumNum = parseInt(data[k].fightTeam2CoinTotal) + parseInt(data[k].fightTeam1CoinTotal);
+            leftRate = parseInt(data[k].fightTeam1CoinTotal) / sumNum * 100;
+            rightRate = parseInt(data[k].fightTeam2CoinTotal) / sumNum * 100;
+            if(!leftRate && !rightRate){
+                leftRate = 50;
+                rightRate = 50;
+            }
+            if(sumNum >= 10000){
+                sumNum = Math.floor(tmpNum / 10000) + '万';
+            }
+
+            if(data[k].fightTeam1CoinTotal < data[k].fightTeam2CoinTotal){
+                html += '<div class="rate-left" style="width: '+leftRate+'%"></div><div class="rate-right win" style="width: '+rightRate+'%"></div>';
+            }else {
+                html += '<div class="rate-left win" style="width: '+leftRate+'%"></div><div class="rate-right" style="width: '+rightRate+'%"></div>';
+            }
+
+            if(data[k].fightTeam2CoinTotal < 10000){
+                tmpNum = data[k].fightTeam2CoinTotal;
+            }else {
+                tmpNum = Math.floor(data[k].fightTeam2CoinTotal / 10000) + '万';
+            }
+            html += '</div><span>'+tmpNum+'</span></div>';
+
+            html += '<p class="all">总奖池：'+sumNum+'</p><p class="time">'+data[k].matchTime+'</p></div></div></li>';
+        }
+        $('.match-guess-cont').html(html);
+    },
+    // 获取任务状态
+    getTaskStatus: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Task/status',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+            },
+            success: function (result) {
+                console.log('getTaskStatus=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                var data = result.jData.statusList;
+                OUT.user.taskQual = data;
+                for (var i in data) {
+                    if(data[i] == 1){
+                        $('.day-cont .result-list').eq(i-1).find('a').removeClass().addClass('btn-dialog-receive');
+                    }else if(data[i] == 2){
+                        $('.day-cont .result-list').eq(i-1).find('a').removeClass().addClass('btn-dialog-receive on');
+                    }else {
+                        $('.day-cont .result-list').eq(i-1).find('a').removeClass().addClass('btn-dialog-receive notreach');
+                    }
+                }
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 领取任务奖励
+    prize: function (taskId) {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Task/prize',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'taskNo': taskId
+            },
+            success: function (result) {
+                console.log('prize=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    closeDialog();
+                    showTips(result.sMsg, function () {
+                        TGDialogS('dialog-active');
+                    });
+                    return;
+                }
+                closeDialog();
+                showTips('领取成功, 请到游戏邮箱内领取~', 'TGDialogS(\'dialog-active\')');
+                OUT.user.taskQual[taskId] = 2;
+                $('.day-cont .result-list').eq(taskId-1).find('a').addClass('on');
+                $('.shop-top .item').eq(1).find('p').text(result.jData.coinNum);
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 获取竞猜纪录
+    getGuessStatus: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Bet/getRecord',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'selectArea': OUT.user.selectArea,
+                'selectMatchGroup': OUT.user.selectMatchGroup,
+                'weekNo': OUT.user.weekNo
+            },
+            success: function (result) {
+                console.log('getRecord=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                var html = '';
+                var data = result.jData;
+                for (var key in data) {
+                    html += '<li><div class="sub-item"><div class="box-mid">';
+                    html += '<p>在'+data[key].matchTime+' <em>'+data[key].team1GroupName+'</em> VS <em>'+data[key].team2GroupName+'</em> 中投注'+data[key].coinNum+'</p>';
+                    html += '</div></div><div class="sub-item"><div class="box-mid">';
+                    if(data[key].betStatus == 0){
+                        html += '<p>敬请期待</p>';
+                    }else if(data[key].betStatus == 1){
+                        html += '<p>竞猜失败</p>';
+                    }else {
+                        html += '<p class="win">竞猜成功, +'+data[key].prizeNum+'竞猜币</p>'
+                    }
+
+                    html += '</div></div></li>';
+                }
+                $('#guessRecord').html(html);
+                openSubPage('guessrecord');
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 下注
+    pour:function () {
+        var len = $('#betPour .on').length;
+        var param = '';
+        if(len < 1){
+            var tmpNum = $('#pourInput').val();
+            if(!isNaN(tmpNum) && Math.ceil(tmpNum) == tmpNum && parseInt(tmpNum) > 0){
+                param = tmpNum * 100;
+            }else {
+                closeDialog();
+                showTips('投注数量不得有小数点',"TGDialogS('dialog-bet1')");
+                return;
+            }
+        }else {
+            param = $('#betPour .on').index();
+            switch (param) {
+                case 0:
+                    param = 100;
+                    break;
+                case 1:
+                    param = 500;
+                    break;
+                case 2:
+                    param = 1000;
+                    break;
+                case 3:
+                    param = Math.floor(OUT.user.coinNum / 2 / 100) * 100;
+                    break;
+                case 4:
+                    param = Math.floor(OUT.user.coinNum / 4 / 100) * 100;
+                    break;
+                case 5:
+                    param = Math.floor(OUT.user.coinNum / 100);
+                    break;
+                default:
+                    closeDialog();
+                    showTips('系统繁忙, 请稍候再试~', "TGDialogS('dialog-bet1')");
+                    return;
+            }
+        }
+
+        if(param > OUT.user.coinNum) {
+            closeDialog();
+            showTips('抱歉, 亲爱的玩家, 您持有的竞猜币不足~', "TGDialogS('dialog-bet1')");
+            return;
+        }
+        if(param < 100){
+            showTips('抱歉, 亲爱的玩家, 投注数必须是100的倍数噢~', "TGDialogS('dialog-bet1')");
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Bet/ante',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'matchId': OUT.user.matchId,
+                'type': OUT.user.type,
+                'optionId': OUT.user.optionId,
+                'coinNum': param
+            },
+            success: function (result) {
+                console.log('ante=========>' + JSON.stringify(result));
+                closeDialog();
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg, "TGDialogS('dialog-bet1')");
+                    return;
+                }
+                showTips('下注成功~');
+                OUT.user.coinNum = result.jData.coinNum;
+                OUT.user.betList = result.jData.list;
+                OUT.user.createBetHtml();
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 获取转盘初始化数据
+    getLotteryStatus: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Lottery/status',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+            },
+            success: function (result) {
+                console.log('status=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                OUT.user.lotteryNum = 5 - parseInt(result.jData.lotteryNum);
+                $('.btn-betting').text('占星' + OUT.user.lotteryNum + '/5');
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 占星
+    doLottery: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        if( (OUT.user.lotteryNum) < 1){
+            closeDialog();
+            showTips('抱歉, 您今日所剩余的占星次数不足, 请明日再来吧~');
+            return;
+        }
+
+        var len = $('.lott-btns .on').length;
+        if(len < 1){
+            showTips('请先选择倍数~');
+            return;
+        }
+
+        var index = $('.lott-btns .on').index();
+        switch (index) {
+            case 0:
+                index = 2;
+                break;
+            case 1:
+                index = 4;
+                break;
+            case 2:
+                index = 8;
+                break;
+            case 3:
+                index = 16;
+            default:
+                showTips('系统繁忙, 请稍候再试~');
+                return;
+        }
+        closeDialog();
+        len = $('#lotteryPour .on').length;
+        var param = '';
+        if(len < 1){
+            var tmpNum = $('#LotteryInput').val();
+            if(!isNaN(tmpNum) && Math.ceil(tmpNum) == tmpNum && parseInt(tmpNum) > 0){
+                param = tmpNum * 100;
+                if(param > 500){
+                    showTips('转盘投注数量每次最多只能投注500噢~', "TGDialogS('dialog-bet2')")
+                }
+            }else {
+                showTips('投注数量不得有小数点', TGDialogS('dialog-bet2'));
+                return;
+            }
+        }else {
+            param = $('#lotteryPour .on').index();
+            switch (param) {
+                case 0:
+                    param = 100;
+                    break;
+                case 1:
+                    param = 200;
+                    break;
+                case 2:
+                    param = 300;
+                    break;
+                case 3:
+                    param = 400;
+                    break;
+                case 4:
+                    param = 500;
+                    break;
+                case 5:
+                    param = 500;
+                    break;
+                default:
+                    showTips('系统繁忙, 请稍候再试~', TGDialogS('dialog-bet2'));
+                    return;
+            }
+        }
+
+        if(param > OUT.user.coinNum) {
+            showTips('抱歉, 亲爱的玩家, 您持有的竞猜币不足~', TGDialogS('dialog-bet2'));
+            return;
+        }
+
+
+        if(param < 100){
+            showTips('抱歉, 亲爱的玩家, 投注数必须是100的倍数噢~', "TGDialogS('dialog-bet2')");
+        }
+
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Lottery/do',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'type' : index,
+                'coinNum' : param
+            },
+            success: function (result) {
+                console.log('status=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                var sub = parseInt(OUT.user.lotteryNum) - 1;
+                sub = sub < 0 ? 0 : sub;
+                $('.btn-betting').text('占星' + sub + '/5');
+                OUT.user.coinNum = result.jData.coinNum;
+                if(result.jData.prizeStatus){
+                    showTips('恭喜您, 您本次成功中得' + result.jData.prizeNum + '竞猜币');
+                    return;
+                }
+
+                showTips('很遗憾, 您本次并未中奖');
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 获取许愿池初始化数据
+    getWishData: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Wish/data',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+            },
+            success: function (result) {
+                console.log('getWishData=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                $('.gift-box img').attr('src', result.jData.prizeImg);
+                $('.gift-box li p').eq(0).text(result.jData.prizeName);
+                $('.gift-box .txt').text('许愿池总投注：' + result.jData.wishTotalCoinNum);
+                OUT.user.maxWishCoinNum = result.jData.allowWishCoinNum;
+                OUT.user.coinNum = result.jData.userCoinNum;
+                $('#dialog-bet .bet-right em').eq(0).text(OUT.user.coinNum);
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 许愿
+    wish: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+
+        if(OUT.user.maxWishCoinNum < 100){
+            closeDialog();
+            showTips('您当日剩余可投注额不足噢~')
+        }
+
+        var len = $('#wishSpan .on').length;
+        var param = '';
+        if(len < 1){
+            var tmpNum = $('#wishInput').val();
+            if(!isNaN(tmpNum) && Math.ceil(tmpNum) == tmpNum && parseInt(tmpNum) > 0){
+                param = tmpNum * 100;
+                if(param > OUT.user.maxWishCoinNum){
+                    closeDialog();
+                    showTips('您当日只能投注'+OUT.user.maxWishCoinNum+'噢~', "TGDialogS('dialog-bet')");
+                }
+            }else {
+                closeDialog();
+                showTips('投注数量不得有小数点', "TGDialogS('dialog-bet')");
+                return;
+            }
+        }else {
+            param = $('#wishSpan .on').index();
+            switch (param) {
+                case 0:
+                    param = 100;
+                    break;
+                case 1:
+                    param = 200;
+                    break;
+                case 2:
+                    param = 300;
+                    break;
+                case 3:
+                    param = 400;
+                    break;
+                case 4:
+                    param = 500;
+                    break;
+                case 5:
+                    param = 500;
+                    break;
+                default:
+                    closeDialog();
+                    showTips('系统繁忙, 请稍候再试~', "TGDialogS('dialog-bet')");
+                    return;
+            }
+        }
+
+        if(param > OUT.user.coinNum) {
+            closeDialog();
+            showTips('抱歉, 亲爱的玩家, 您持有的竞猜币不足~', "TGDialogS('dialog-bet')");
+            return;
+        }
+
+        if(param < 100){
+            showTips('抱歉, 亲爱的玩家, 投注数必须是100的倍数噢~', "TGDialogS('dialog-bet')");
+        }
+
+        ulink.http.get({
+            url: OUT.site.url + '?route=Wish/do',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'coinNum': param
+            },
+            success: function (result) {
+                console.log('do=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                $('.gift-box .txt').text('许愿池总投注：' + result.jData.wishTotalCoinNum);
+                OUT.user.maxWishCoinNum = result.jData.allowWishCoinNum;
+                OUT.user.coinNum = result.jData.userCoinNum;
+                $('#dialog-bet .bet-right em').eq(0).text(OUT.user.coinNum);
+                $('#dialog-wish-written2 .dialog-written-desc em').eq(0).text(param);
+                TGDialogS('dialog-wish-written2');
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 查看许愿结果
+    wishRecord: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+        ulink.http.get({
+            url: OUT.site.url + '?route=Wish/record',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+            },
+            success: function (result) {
+                console.log('record=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                var data = result.jData;
+                var html = '<p>往期开奖</p>';
+                for (var key in data) {
+                    html += '<span>'+data[key].roleName+' '+getPartitionInfo(data[key].partition)+'</span>';
+                }
+                $('#dialog-written .dialog-written-desc').html(html);
+                TGDialogS('dialog-written');
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 显示竞猜结果
+    showBetResult: function () {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+        ulink.http.get({
+            url: OUT.site.url + '?route=Bet/prizeStatus',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+            },
+            success: function (result) {
+                console.log('prizeStatus=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    showTips(result.sMsg);
+                    return;
+                }
+                var html = '';
+                var data = result.jData;
+                var text = '';
+                OUT.user.prizeData = data;
+                for ( var key in data ){
+                    html += '<div class="result-list">';
+                    html += '<span>小组赛</span>';
+                    if(data[key].betType == 1){
+                        if(data[key].betOptionId == data[key].team1GroupId){
+                            html += '<span>'+data[key].team1GroupName+'军团赢</span>';
+                        }else {
+                            html += '<span>'+data[key].team2GroupName+'军团赢</span>';
+                        }
+                    }else if(data[key].betType == 2){
+                        switch (data[key].betOptionId) {
+                            case 1:
+                                text = '为0-20000';
+                                break;
+                            case 2:
+                                text = '为20000-25000';
+                                break;
+                            case 3:
+                                text = '为25001-30000';
+                                break;
+                            case 4:
+                                text = '为30001-35000';
+                                break;
+                            case 5:
+                                text = '为35001-40000';
+                                break;
+                            default:
+                                text = '为40001-45000';
+                                break;
+                        }
+
+                        html += '<span>'+data[key].team1GroupName+' vs '+ data[key].team2GroupName+'积分和'+text+'</span>';
+                    }else if(data[key].betType == 3){
+                        switch (data[key].betOptionId) {
+                            case 7:
+                                text = '为0-20000';
+                                break;
+                            case 8:
+                                text = '为20000-25000';
+                                break;
+                            case 9:
+                                text = '为25001-30000';
+                                break;
+                            case 10:
+                                text = '为30001-35000';
+                                break;
+                            case 11:
+                                text = '为35001-40000';
+                                break;
+                            default:
+                                text = '为40001-45000';
+                                break;
+                        }
+
+                        html += '<span>'+data[key].team1GroupName+' vs '+ data[key].team2GroupName+'积分差'+text+'</span>';
+                    }
+
+                    html += '<span>可领取'+data[key].prizeNum+'</span>';
+                    if(data[key].betStatus == 1){
+                        html += '<a class="btn-dialog-receive fail" href="javascript:;" onclick="PTTSendClick(\'btn\',\'btn-dialog-receive\',\'领取\');" title="领取"></a>';
+                    }else if(data[key].betStatus == 2){
+                        html += '<a class="btn-dialog-receive" href="javascript:OUT.user.getPrize('+key+','+data[key].betId+');" onclick="PTTSendClick(\'btn\',\'btn-dialog-receive\',\'领取\');" title="领取"></a>';
+                    }else if(data[key].betStatus == 3){
+                        html += '<a class="btn-dialog-receive on" href="" onclick="PTTSendClick(\'btn\',\'btn-dialog-receive\',\'领取\');" title="领取"></a>';
+                    }
+                    html += '</div>';
+
+                }
+                $('.act-cont').html(html);
+                TGDialogS('dialog-active');
+            },
+            error: function (e) {
+            }
+        });
+    },
+    // 领取竞猜奖励
+    getPrize: function (index,id) {
+        if(OUT.login.isLogin === false){
+            OUT.login.doLogin();
+            return;
+        }
+        if(OUT.user.prizeData[index].betStatus != 2){
+            return;
+        }
+        ulink.http.get({
+            url: OUT.site.url + '?route=Bet/getPrize',
+            params: {
+                'iActId': OUT.site.iActId,
+                'game': OUT.site.game,
+                'sAppId': OUT.site.sAppId,
+                'betId': id
+            },
+            success: function (result) {
+                console.log('prizeStatus=========>' + JSON.stringify(result));
+                if (result.iRet == 4001) {
+                    OUT.role.showBindRoleDialog(result.jData.signData);
+                    return;
+                }else if(result.iRet == -1 && result.jData.code == -111){
+                    closeDialog();
+                    showTips(result.sMsg, 'OUT.login.logout()');
+                    return;
+                }else if(result.iRet != 0){
+                    closeDialog();
+                    showTips(result.sMsg, function () {
+                        TGDialogS('dialog-active');
+                    });
+                    return;
+                }
+                OUT.user.prizeData[index].betStatus = 3;
+                $('.act-cont .result-list').eq(index).find('a').addClass('on');
+                showTips('领取成功');
+
+            },
+            error: function (e) {
+            }
+        });
+    }
+};

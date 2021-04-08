@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="gbk">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="robots" content="all">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<!-- 为了防止页面数字被识别为电话号码，可根据实际需要添加： -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- 让添加到主屏幕的网页再次打开时全屏展示，可添加：   -->
+	<meta content="yes" name="mobile-web-app-capable">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="author" content="Tencent-CP" />
+	<meta name="Copyright" content="Tencent" />
+  <meta name="Description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。">
+  <meta name="Keywords" content="英雄联盟,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟战争学院,明星解说视频,101战争学院,英雄,攻略,WCG,点亮图标,赛事">
+	<title>转区系统-英雄联盟官方网站-腾讯游戏</title>
+	<link rel="stylesheet" href="../css/index-m.css">
+    <!-- 页面设计：cp | 页面制作：cp | 创建：2020-07-02 -->
+    <script>
+        if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            window.location.href = "//lol.qq.com/act/a20200710transferzone/indextest.html"+location.search;
+        }
+    </script>
+	<script>
+		(function(win, doc, mode) {
+			var std = 750;
+			if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+				var h = document.getElementsByTagName("head")[0];
+				h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-capable" content="yes">');
+				h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-status-bar-style" content="black">');
+				h.insertAdjacentHTML('beforeEnd', '<meta name="format-detection" content="telephone=no">');
+				h.insertAdjacentHTML('beforeEnd', '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />');
+				if(mode == 'px') {
+					if (!win.addEventListener) return;
+					var html=document.documentElement;
+					function setFont() {
+						function adaptVP(a){function c(){var c,d;return b.uWidth=a.uWidth?a.uWidth:750,b.dWidth=a.dWidth?a.dWidth:window.screen.width||window.screen.availWidth,b.ratio=window.devicePixelRatio?window.devicePixelRatio:1,b.userAgent=navigator.userAgent,b.bConsole=a.bConsole?a.bConsole:!1,a.mode?(b.mode=a.mode,void 0):(c=b.userAgent.match(/Android/i),c&&(b.mode="android-2.2",d=b.userAgent.match(/Android\s(\d+.\d+)/i),d&&(d=parseFloat(d[1])),2.2==d||2.3==d?b.mode="android-2.2":4.4>d?b.mode="android-dpi":d>=4.4&&(b.mode=b.dWidth>b.uWidth?"android-dpi":"android-scale")),void 0)}function d(){var e,f,g,h,c="",d=!1;switch(b.mode){case"apple":f=(window.screen.availWidth*b.ratio/b.uWidth)/b.ratio;c="width="+b.uWidth+",initial-scale="+f+",minimum-scale="+f+",maximum-scale="+f+",user-scalable=no";break;case"android-2.2":a.dWidth||(b.dWidth=2==b.ratio?720:1.5==b.ratio?480:1==b.ratio?375:.75==b.ratio?240:480),e=window.screen.width||window.screen.availWidth,375==e?b.dWidth=b.ratio*e:750>e&&(b.dWidth=e),b.mode="android-dpi",d=!0;case"android-dpi":f=160*b.uWidth/b.dWidth*b.ratio,c="target-densitydpi="+f+", width="+b.uWidth+", user-scalable=no",d&&(b.mode="android-2.2");break;case"android-scale":c="width="+b.uWidth+", user-scalable=no"}g=document.querySelector("meta[name='viewport']")||document.createElement("meta"),g.name="viewport",g.content=c,h=document.getElementsByTagName("head"),h.length>0&&h[0].appendChild(g)}function e(){var a="";for(key in b)a+=key+": "+b[key]+"; ";alert(a)}if(a){var b={uWidth:0,dWidth:0,ratio:1,mode:"apple",userAgent:null,bConsole:!1};c(),d(),b.bConsole&&e()}};adaptVP({uWidth:750});
+					}
+					win.addEventListener('resize',setFont,false)
+					setFont();
+				}
+				else if(mode == 'rem') {
+					var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						docEl.style.fontSize = 100 * (clientWidth / std) + 'px';
+					};
+					if(!doc.addEventListener) return;
+					recalc();
+					win.addEventListener(resizeEvt, recalc, false);
+					doc.addEventListener('DOMContentLoaded', recalc, false);
+				}
+			}
+		})(window, document, 'rem');
+	</script>
+</head>
+<body>
+  <h1 class="hidden">转区系统</h1>
+  <div class="wrap">
+    <div class="content content1">
+        <div class="cont cont1-matter">
+         <a href="//lol.qq.com" target="_blank" title="英雄联盟" class="logo" onclick="PTTSendClick('btn','logo','logo');"></a>
+            <!--登录前状态 Start-->
+            <p id="unlogin" style="display:block" class="dologin">你好，请 <a href="javascript:;" id="ptLoginBtn" onclick="PTTSendClick('btn','dologin','dologin');">【登录】</a></p>
+            <!--登录前状态 End-->
+            <!--登录后状态 Start-->
+            <div id="logined" class="logined" style="display:none">欢迎您，<span id='login_qq_span'></span>，<a href="javascript:;" id="ptLogoutBtn" onclick="PTTSendClick('btn','dologout','dologout');">[注销]</a><a href="javascript:TransZone.TransferZoneList(1);" class="zhuangqu" style="color:#f0c997">[转区记录]</a>
+            </div>
+            <!--登录后状态 End-->
+
+
+        </div>
+        <a href="//kf.qq.com/faq/170726ZRFBvI170726NfIvIz.html" target="_blank" class="live-service" onclick="PTTSendClick('btn','live-service','live-service');"></a>
+    </div>
+    <div class="content content2">
+        <div class="cont cont2-matter">
+        <!-- 流程 -->
+        <!-- <h3 class="flow-tips">转区流程</h3> -->
+        <div class="flow">
+            <div>
+                <a href="javascript:" class="flow-1" onclick="PTTSendClick('btn','btn1','btn');">
+                    <span style="display:block"></span>
+                </a>
+                <a href="javascript:" class="flow-2" onclick="PTTSendClick('btn','btn2','btn');">
+                    <span style="display:none"></span>
+                </a>
+                <a href="javascript:" class="flow-3" onclick="PTTSendClick('btn','btn3','btn');">
+                    <span style="display:none"></span>
+                </a>
+                <a href="javascript:" class="flow-4" onclick="PTTSendClick('btn','btn4','btn');">
+                    <span style="display:none"></span>
+                </a>
+                <a href="javascript:" class="flow-5" onclick="PTTSendClick('btn','btn5','btn');">
+                    <span style="display:none"></span>
+                </a>
+            </div>
+        </div>
+        <!-- 流程一 -->
+        <div class="matter-1" style="display:none">
+            <h5></h5>
+            <div class="hint clearfix"><p class="fl"><span class="tipstit fl"></span>在正式开始转区前请认真阅读英雄联盟<a class="btn-f1" href="javascript:readRule();" onclick="PTTSendClick('btn','f1','f1');">转区系统2.0用户协议</a></p>
+              <!-- <p class="fl">2、转区系统目前维护中，恢复服务时间将另行公告通知</p> -->
+            </div>
+            <ul class="choose-server clearfix">
+                <li class="choose-head odd1">原大区</li>
+                <li><p><select name="leaveserver" id="leaveserver">
+                    <option value="1">艾欧尼亚(电信)</option>
+                    <option value="2">比尔吉沃特(网通)</option>
+                    <option value="3">祖安(电信)</option>
+                    <option value="4">诺克萨斯(电信)</option>
+                    <option value="5">班德尔城(电信)</option>
+                    <option value="6">德玛西亚(网通)</option>
+                    <option value="7">皮尔特沃夫(电信)</option>
+                    <option value="8">战争学院(电信)</option>
+                    <option value="9">弗雷尔卓德(网通)</option>
+                    <option value="10">巨神峰(电信)</option>
+                    <option value="11">雷瑟守备(电信)</option>
+                    <option value="12">无畏先锋(网通)</option>
+                    <option value="13">裁决之地(电信)</option>
+                    <option value="14">黑色玫瑰(电信)</option>
+                    <option value="15">暗影岛(电信)</option>
+                    <option value="16">恕瑞玛(网通)</option>
+                    <option value="17">钢铁烈阳(电信)</option>
+                    <option value="18">水晶之痕(电信)</option>
+                    <option value="19">均衡教派(电信)</option>
+                    <option value="20">扭曲丛林(网通)</option>
+                    <option value="21">教育网专区</option>
+                    <option value="22">影流(电信)</option>
+                    <option value="23">守望之海(电信)</option>
+                    <option value="24">征服之海(电信)</option>
+                    <option value="25">卡拉曼达(电信)</option>
+                    <option value="26">巨龙之巢(网通)</option>
+                    <option value="27">皮城警备(电信)</option>
+                    <option value="30">男爵领域(全网络)</option>
+                    </select></p>
+                </li>
+                <li class="choose-head odd2">目的大区</li>
+                <li><p class="to"><select name="gotoserver" id="gotoserver">
+                                        <option value="1">艾欧尼亚(电信)</option>
+                                        <option value="2">比尔吉沃特(网通)</option>
+                <option value="3">祖安(电信)</option>
+                <option value="4">诺克萨斯(电信)</option>
+                <option value="5">班德尔城(电信)</option>
+                <option value="6">德玛西亚(网通)</option>
+                <option value="7">皮尔特沃夫(电信)</option>
+                <option value="8">战争学院(电信)</option>
+                <option value="9">弗雷尔卓德(网通)</option>
+                <option value="10">巨神峰(电信)</option>
+                <option value="11">雷瑟守备(电信)</option>
+                <option value="12">无畏先锋(网通)</option>
+                <option value="13">裁决之地(电信)</option>
+                                        <option value="14">黑色玫瑰(电信)</option>
+                <option value="15">暗影岛(电信)</option>
+                <option value="16">恕瑞玛(网通)</option>
+                <option value="17">钢铁烈阳(电信)</option>
+                <option value="18">水晶之痕(电信)</option>
+                <option value="19">均衡教派(电信)</option>
+                <option value="20">扭曲丛林(网通)</option>
+                <option value="22">影流(电信)</option>
+                <option value="23">守望之海(电信)</option>
+                <option value="24">征服之海(电信)</option>
+                <option value="25">卡拉曼达(电信)</option>
+                <option value="26">巨龙之巢(网通)</option>
+                <option value="27">皮城警备(电信)</option>
+                <option value="30">男爵领域(全网络)</option>
+                </select></p></li>
+                <!-- <li><p><span></span><input type="radio" name="choose" id="a" value="艾欧尼亚"></span><label for="a">艾欧尼亚</label></p>     <p class="to">男爵领域</p></li> -->
+                <!-- <li class="odd"><p><span></span><input type="radio" name="choose" id="b" value="比尔吉沃特"><label for="b">比尔吉沃特</label></p><p class="to">男爵领域</p></li> -->
+                <!-- <li><p><span></span><input type="radio" name="choose" id="c" value="黑色玫瑰"><label for="c">黑色玫瑰</label></p><p class="to">男爵领域</p></li> -->
+            </ul>
+            <!-- 确定 -->
+            <a href="javascript:isZM(function() { TransZone.GoStep1() });" class="choose-server-check sp" onclick="PTTSendClick('btn','choose-server-check','btn');"></a>
+        </div>
+        <!-- 流程二 -->
+        <div class="matter-2" style="display:none">
+            <h5></h5>
+            <p>需要检测你的账号转出和转入大区存在召唤师角色且<br>处于<span>非封号状态</span> 以及当前预约<span>人数是否已达上限</span></p>
+            <!-- 账号安全及预约人数检测 -->
+            <a href="javascript:isZM(function() { TransZone.CheckInfo() });" class="safety-check sp" onclick="PTTSendClick('btn','safety-check','btn');"></a>
+        </div>
+        <!-- 流程三 -->
+        <div class="matter-3" style="display:none">
+            <h5></h5>
+            <p>验证你的<span>密保手机有效性</span>，才可进行下一步</p>
+            <!-- 发送验证码到密保手机 -->
+            <a href="javascript:isZM(function() { TransZone.SafePhoneCheck() })" class="sendtophone sp" onclick="PTTSendClick('btn','sendtophone','btn');"></a>
+            <!-- 绑定密保手机 -->
+            <a href="//aq.qq.com/sj" target="_blank" class="bindphone sp" onclick="PTTSendClick('btn','sendtophone1','btn');"></a>
+            <!-- 撤销未支付订单 -->
+            <!--<a href="javascript:TGDialogS('test3')" class="btn-cancel-nopay sp" onclick="PTTSendClick('btn','btn-cancel-nopay','btn');"></a>-->
+        </div>
+        <!-- 流程四 -->
+        <div class="matter-4" style="display:none">
+            <h5></h5>
+            <p class="titl">在当前步骤中，你需要最终确认预约转区服务，并<span>成功<br>支付预约转区费用</span>才能完成转区预约。</p>
+            <div class="table-reserve">
+                <div class="order">
+                    <p class="title1 sp"></p>
+                    <p class="cont">
+                            1.你预约的是从<span id="step4src">艾欧尼亚(电信)</span>&nbsp;&nbsp;转往&nbsp;&nbsp;<span id="step4dst">男爵领域(全网络)</span>
+                        <br>2.转区操作预计将在24小时内完成
+                        <br>3. 当前转区价格199元
+                    </p>
+                </div>
+                <div class="snapshoot">
+                    <p class="title2 sp"></p>
+                    <ul>
+                        <li><p class="cont">恭喜您提交转区订单成功，<span class="span1">本次转区的道具及数量如下：</span></p></li>
+                        <li>
+                            <p class="cont cont1">原大区等级：LV<span id="sSrcLV">0</span></p>
+                            <p class="cont cont2" id="sDstLV"></p>
+                        </li>
+                        <li>
+                            <p class="cont cont1">点券：<span id="rp">0</span></p>
+                            <p class="cont cont2">蓝色精萃：<span id="CURRENCY_champion">0</span></p>
+                        </li>
+                        <li>
+                            <p class="cont cont1">橙色精萃：<span id="CURRENCY_cosmetic">0</span></p>
+                            <p class="cont cont2">英雄(<span id="hero"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('hero');" onclick="PTTSendClick('btn','btn-look1','btn');">查看详情</a></p>
+                        </li>
+                        <li>
+                            <p class="cont cont1">皮肤(<span id="skin"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('skin');" onclick="PTTSendClick('btn','btn-look2','btn');">查看详情</a></p>
+                            <p class="cont cont2">守卫皮肤(<span id="guard"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('guard');" onclick="PTTSendClick('btn','btn-look3','btn');">查看详情</a></p>
+                        </li>
+                        <li>
+                            <p class="cont cont1">召唤师图标(<span id="icon"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('icon');" onclick="PTTSendClick('btn','btn-look4','btn');">查看详情</a></p>
+                            <p class="cont cont2">表情(<span id="emote"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('emote');" onclick="PTTSendClick('btn','btn-look5','btn');">查看详情</a></p>
+                        </li>
+                        <li>
+                            <p class="cont cont1">云顶之弈小小英雄(<span id="tftHero"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('tftHero');" onclick="PTTSendClick('btn','btn-look6','btn');">查看详情</a></p>
+                            <p class="cont cont2">云顶之弈棋盘(<span id="tftChess"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('tftChess');" onclick="PTTSendClick('btn','btn-look7','btn');">查看详情</a></p>
+                        </li>
+                        <li><p class="cont cont1">云顶之弈攻击特效(<span id="tftBuff"></span>)：<a class="btn-look" href="javascript:TransZone.showHeroSkinList('tftBuff');" onclick="PTTSendClick('btn','btn-look8','btn');">查看详情</a></p></li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="hint">
+                    <h4>温馨提示:</h4>
+                    <p>关闭本页面后您还可以在转区记录中查询本次转区的道具及数量。您在提交订单之后对两区进行资产操作将不会影响实际转移和删除的道具及数量<br><span>转区资产列表可能存在数据拉取不全的情况，请在生成转区资产列表后仔细核对，<em style="color: #e7c394;font-weight: bold;">确认无误后再行转区</em>，若有问题请您撤销订单后再次预约转区，重新拉取列表后进行核对。</span>
+                        <br><span>*举例：</span>召唤师小明在成功提交订单时大区拥有5000点券，他后续使用点券购买了一个4500点券的英雄，则实际转移到目标大区的的点券为500点券，且新购买的英雄将留存在原大区不会被转移</p>
+                    <!-- 确认支付预约转区费用 -->
+                    <a href="javascript:isZM(function() { TransZone.GetTransInfo() });" class="check-pay-reserve sp" style="display:block" onclick="PTTSendClick('btn','m4-btn1','btn');"></a>
+                    <!-- 查看转区订单 -->
+                    <a href="javascript:isZM(function() { TGDialogS('test3') });" class="check-indent sp" onclick="PTTSendClick('btn','m4-btn3','btn');"></a>
+                </div>
+            <!-- <a href="javascript:" class="payed-reserve" onclick="pgvSendClick({hottag:'a20170608transferzone.btn-payed-reserve'})" style="display:none"></a> -->
+            </div>
+        </div>
+        <!-- 流程五 -->
+        <div class="matter-5" style="display:none">
+            <h5></h5>
+            <p class="titl">在当前步骤中，你需要耐心等待转区<span>进度条逐步趋于100%</span>，当进行到转区最后一步时，
+                系统将<span>短信通知</span>下发到您的密保手机，<span>转区过程中你的账号下所有的大区将被暂时冻结，你需要等待系统通知转区操作完成后再登录游戏。</span></p>
+            <div class="progress-bar">
+                <div class="clearfix">
+                    <span class="title sp">当前转区进度</span>
+                    <div class="schedule">
+                        <div></div>
+                        <span id= "progress">0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cancel-table">
+                  <!-- 分享我的转区 -->
+                  <a href="javascript:isZM(function() { TransZone.GetShareUrl() });" id="btn-copyhref" class="share-reserve sp"  onclick="PTTSendClick('btn','m5-btn1','btn');"></a>
+                  <!-- 我想转回原大区 -->
+                  <a href="javascript:isZM(function() { TransZone.RollBackTransPre() });" class="cancel-reserve sp" onclick="PTTSendClick('btn','m5-btn2','btn');"></a>
+                  <p>*转区完成后<span>30天内</span>，如果你后悔了，还可以执行"我想回原大区"操作。</p>
+            </div>
+        </div>
+     </div>
+    </div>
+  </div>
+  <!-- dialog rule 转区系统2.0用户协议  -->
+	<div class="dialog dialog-rule" id="test1">
+		<a class="dialog-close" href="javascript:backHome();" title="关闭" onclick="PTTSendClick('btn', 'dialog-close', '关闭弹窗');">×</a>
+		<h2 class="dialog-title t1">转区系统2.0用户协议</h2>
+		<div class="dialog-body">
+			<div class="reserve-rule">
+				<h3 class="rule-title">一、转区预约前准备</h3>
+				<ul class="rule-list">
+					<li>1-1.尊敬的召唤师，转区系统已经升级为全新的2.0版本。与原系统相比，新的转区系统在转区完成后将不会冻结任何大区的角色，你仍然可以前往转出和转入的大区进行游戏；原大区的召唤师角色以及在转区中没有转移的道具也将保留在原大区；</li>
+					<li>1-2.为了避免不可挽回的损失，请召唤师在转区开始前考虑确认是否真的需要进行一次转区并认真阅读以下的用户协议，了解转区的基本规则以及转入转出资产的范围；</li>
+					<li>1-3.当确认的确需要进行转区，首先召唤师需要在资产转出的大区(以下简称原大区)拥有一个大于或等于<em>30级</em>的召唤师角色，同时在资产转入的大区(以下简称目的大区)创建一个新的召唤师角色并取一个心仪的ID(如果目的大区已有角色可以略过这一步)；</li>
+					<li>1-4.如果目的大区的召唤师角色是新创建的，请召唤师至少点击并进入目的大区的游戏客户端商城一次(这一步是为了避免未来转移道具失败)；</li>
+					<li>1-5.确认以上步骤都已经完成，同时请召唤师再次考虑一下本次转区是否是深思熟虑下的选择，可以进入下一步；</li>
+				</ul>
+				<h3 class="rule-title">二、转区的范围</h3>
+				<ul class="rule-list">
+                    <li>目前几乎全部大区都可以支持自由的转入转出(教育网大区不支持转入且30天之内一个QQ号只能进行1次转区)，但转区前请确认原大区没有在2020年3月10前的转区系统(以下简称：转区系统1.0)中因为转区而被冻结（如果已经被冻结可以在同意由转区系统1.0升级转区系统2.0用户协议的前提下进行资产处理后解冻，<em><a href="https://lol.qq.com/act/a20200810unfreeze/index.html">详情查看</a></em>）</li>
+				</ul>
+				<h3 class="rule-title">三、转区流程及规则</h3>
+				<ul class="rule-list">
+					<li>3-1.为了确保转区服务的顺利进行，同时为了不使召唤师等待的时间过长，转区系统设置了每日的转区预约上限(当前每日转区人数上限设置为<em>3000</em>人)，所以召唤师可能会遇到转区预约人数已达上限的情况，请召唤师耐心等待，稍后再进行预约操作；</li>
+					<li>3-2.由于转区需要对召唤师游戏道具资产进行大规模搬迁，同时涉及到召唤师的道具资产安全，为了安全起见，我们需要您先进行原大区-目的大区选择并通过对原大区、目的大区角色检测、账号安全验证以及验证密保手机等一系列安全检测才能成功进入下一步；</li>
+					<li>3-3.转区资产列表：召唤师成功提交转区订单后，可以看到本次转区资产列表(后续召唤师可以在转区记录中查看转区资产列表)，转区中将要转移的道具资产将以转区资产列表中列出的道具资产为准，但点券、蓝色精萃、橙色精萃转移数量以实际执行时原大区的数量为准(举例：召唤师小明在成功提交订单时原大区拥有5000点券，他后续使用这些点券购买了一个4500点券的英雄，则实际转移点券为500点券，而无论目的大区是否拥有这个新购买的英雄，新购买的英雄都将留存在原大区不会被转移)；
+            <br>温馨提示：新版本更新的道具在快照中可能在存在1-3天无法显示的情况，但可转移的新版本道具仍会实际上进行转移，请您周知。</li>
+					<li>3-4.召唤师在成功提交转区订单、查看转区资产列表(详见3-3)，确认本次转区的原大区、目的大区以及将被转移的道具资产后，请在24小时内完成转区费用的支付，当前转区费用为： 199元(或等值Q币、Q点)，订单超过24小时未支付将被自动取消，当然你也可以手动删除已经提交成功但未付费的订单，无论是自动取消或手动删除转区订单，需要再次进行转区都需要重复进行上述步骤；</li>
+					<li>3-5.支付完成后，转区将在7个工作日内完成。当等待时间小于24小时我们会以短信形式通知您，转区将于24小时内执行，请耐心等待并随时留意下一步的短信通知；</li>
+					<li>3-6.转区一旦开始，通常会在数小时内完成，转区系统将按照转区资产列表中所列出的道具资产进行道具转移(点券、蓝色精萃、橙色精萃转移数量以实际执行时原大区的数量为准)。系统在转区完成后以短信形式通知召唤师，召唤师可以在接到通知后前往原大区或目的大区进行游戏。(如果因为账号或其他原因导致转区失败，我们也会以短信形式进行通知，召唤师可以联系在线客服进行退款处理。)；</li>
+					<li>3-7.转区完成后30天内，召唤师可以视情况自主选择执行 "我想回原大区" 操作，执行该操作时我们将在24小时内按照转区资产列表中的道具资产列表从目的大区往原大区的逆向转移道具资产(点券、蓝色精萃、橙色精萃转移数量以实际执行时目的大区的数量为准)，召唤师等级在转区时因为原大区等级高于目的大区等级时发生过等级交换将被逆向交换回来(若需要逆向交换等级，将以转区资产列表中记录的等级为准，在转区操作至执行“我想回原大区”操作之间两大区发生的等级变更将被忽略），温馨提示："我想回原大区" 的操作并不会退回转区费用，且无论你是否选择"我想回原大区" 操作，30天内都无法再次进行转区；</li>
+				</ul>
+				<h3 class="rule-title">四、下列情况将导致转区失败</h3>
+				<ul class="rule-list">
+					<li>4-1.原大区召唤师账号未达到30级；</li>
+					<li>4-2.目的大区召唤师角色未创建;</li>
+					<li>4-3.目的大区新建角色未点击进入游戏客户端商城；</li>
+					<li>4-4.召唤师账号因为任何原因处于封停状态；</li>
+					<li>4-5.QQ账号处于高危盗号风险状态下无法通过安全监测；</li>
+          <li>4-6.QQ账号在30天内有转区操作；</li>
+          <li>4-7.用户申请原大区或目的大区在24小时内执行了历史转区用户申请的解冻操作。</li>
+				</ul>
+				<h3 class="rule-title">五、道具资产转移规则详解：</h3>
+				<ul class="rule-list">
+					<li>
+						<div class="rule-sub-title">5-1.永久英雄、皮肤、图标、守卫、表情、云顶之弈：小小英雄、棋盘、攻击特效</div>
+						转移规则：按照转区订单提交成功时只转移原大区拥有且目的大区尚未拥有的道具(如转区资产列表中所示)，转区完成后原大区重置，目的大区将新增原大区转移的道具(例如召唤师小明在提交转区订单成功时：原大区拥有英雄 A B C ，在目的大区拥有英雄 B C D，则转区完成后，原大区拥有英雄 B C，目的大区拥有英雄A B C D)
+					</li>
+					<li>
+						<div class="rule-sub-title">5-2.点券、蓝色精萃、橙色精萃</div>
+						转移规则：按转区开始时原大区和目的大区数量为基准，原大区数量清零，目的区将两区的数量叠加、<br/>
+						(例如召唤师小明在提交转区订单成功时：原大区拥有点券 5000 ，在目的大区拥有点券3000，在转区开始之前，原大区花去了4500点券，则转区完成后，原大区点券数量为0，目的大区点券数量为：3500)
+					</li>
+					<li>
+						<div class="rule-sub-title">5-3.召唤师等级</div>
+						转移规则：按转区资产列表时记录的原大区等级和目的大区等级，原大区等级大于目的大区等级时，原大区和目的大区等级交换，反之两大区等级维持不变，快照之后发生的等级变更将被忽略(例如：转区资产列表时召唤师小明在原大区105级 ，目的大区35级，则转区完成后目的大区角色等级为105级，原大区等级为35级)
+					</li>
+					<li>
+						<div class="rule-sub-title">5-4.不可转移的道具资产：</div>
+						<dl class="sub-list">
+							<dd>召唤师ID</dd>
+							<dd>门票、入场券、事件通行证、宝典资格、等级</dd>
+							<dd>符文页、符文</dd>
+							<dd>所有的期限道具类型</dd>
+							<dd>永恒星碑</dd>
+							<dd>冠军杯赛获得的临时道具，如旗帜、奖杯等</dd>
+							<dd>战绩、英雄成就、成就代币、荣誉等级、段位</dd>
+							<dd>特殊事件道具(例如：源计划 风 边框)</dd>
+							<dd>海克斯战利品类道具除橙色精萃外都属于不可以转移道具资产：</dd>
+						</dl>
+						<p>海克斯英雄、皮肤、守卫、图标、表情及碎片(此类道具可以升级或合成永久的英雄、皮肤、图标、表情、守卫并领取到召唤师背包，也可以分解为蓝色精萃或橙色精萃)</p>
+						<p>任务代币(此类道具可以在代币商城中兑换合成永久的英雄、皮肤、图标、守卫、表情并领取到召唤师背包)</p>
+						<p>紫色宝石、至臻点(此类道具可以通过神秘合成或至臻商城兑换成海克斯皮肤或至臻皮肤并领取到召唤师背包)</p>
+						<p>蓝色宝箱、紫色宝箱、杰作宝箱、钥匙、钥匙碎片、法球、魔法引擎、小小英雄蛋(此类道具可以通过开启获得永久的英雄、皮肤、图标、守卫、表情并领取到召唤师背包)</p>
+						<dl class="sub-list">
+							<dd>平台加成道具：经验卡、改名卡</dd>
+							<dd>其他区分大区的活动资格：例如理财计划、集卡活动、龙的传人系列皮肤对应的卡片兑换资格等</dd>
+							<dd>其他因大区角色行为所获得的奖励或资格，请在原大区继续维持游戏行为，例如峡谷之巅段位资格检测等；</dd>
+						</dl>
+						<p>转移规则：不可转移道具在转区中不会从原大区转移到目的大区，也不会从原大区重置或删除，召唤师可以在原大区继续使用这些道具</p>
+						<p>六、因本活动及其规则产生的任何争议，用户与举办方友好协商解决，若无法达成一致，用户和举办方均同意将争议提交至举办方即腾讯公司所在地人民法院诉讼解决。因本活动及其规则的一切事宜均适用中华人民共和国法律。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dialog-foot">
+			<div class="check-wrap">
+				<a href="javascript:;" class="checkbox on" id="checkbox" onclick="PTTSendClick('btn', 'checkbox', '我已认真阅读并同意');"></a>
+        <strong>我已详细阅读《转区系统2.0用户协议》并同意上述全部条款，点击我同意开始进行转区预约。</strong>
+        <br>温馨提示：请滑动到协议底部完成全文阅读后再勾选同意选项。
+			</div>
+			<div class="btn-group">
+				<!-- confirm -->
+				<a href="javascript:;" class="btn confirm" id="btn-coutdown" onclick="PTTSendClick('btn', 'confirm1', '我同意');">我同意</a>
+				<!--<a href="javascript:backHome();" class="btn cancel" onclick="PTTSendClick('btn', 'cancel1', '再想想');">再想想</a>-->
+			</div>
+		</div>
+  </div>
+
+  <!-- dialog tip 提示弹窗 -->
+	<div class="dialog dialog-tip" id="infoMsg">
+	  <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close2', '关闭弹窗');">×</a>
+		<div class="dialog-title t2">温馨提示</div>
+	  <div class="dialog-body">
+			<div class="info" id="msg"></div>
+			<div class="btn-group">
+        <a href="javascript:closeDialog()" class="btn okay" onclick="PTTSendClick('btn', 'okay1', '确定');"></a>
+      </div>
+		</div>
+	</div>
+
+	<!-- dialog tip 提示弹窗-空 -->
+	<div class="dialog dialog-tipes" id="infoMsg2">
+
+    </div>
+
+  <!-- dialog indent 转区订单 -->
+	<div class="dialog dialog-indent" id="test3">
+	  <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close3', '关闭弹窗');">×</a>
+		<div class="dialog-title t3">转区订单</div>
+		<div class="dialog-body">
+			<ul class="indent-list">
+                <li>
+                    <div class="label">转区QQ</div>
+                    <div class="value" id="cancelUin"></div>
+                </li>
+                <li>
+                    <div class="label">原大区</div>
+                    <div class="value" id="cancelSrcArea"></div>
+                </li>
+                <li>
+                    <div class="label">目的大区</div>
+                    <div class="value" id="cancelDstArea"></div>
+                </li>
+				<li>
+					<div class="label">转区价格(元)</div>
+					<div class="value">199</div>
+				</li>
+				<li>
+					<div class="label">当前状态</div>
+					<div class="value"><a href="javascript:TGDialogS('confirm');" onclick="PTTSendClick('btn', 'cancel-order', '撤销订单');">可撤销</a></div>
+				</li>
+			</ul>
+		</div>
+  </div>
+
+  	<!-- dialog snapshoot 转区资产列表 -->
+	<!--
+		弹窗状态
+		status-one 棋盘数量
+		status-two 小小英雄数量
+		status-three 英雄数量
+	-->
+	<div class="dialog dialog-snapshoot status-three" id="dialogSnapshoot">
+	  <a class="dialog-close" href="javascript:closeDialogList()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close4', '关闭弹窗');">×</a>
+		<div class="dialog-title t4">转区资产列表</div>
+		<div class="dialog-body">
+			<div class="dialog-num-tip">
+                <span id="tftChessNum"><!--云顶之弈棋盘(数量)：140--></span>
+                <span id="tftHeroNum"><!--云顶之弈小小英雄(数量)：140--></span>
+                <span id="skinHeroNum"><!--英雄(数量)：140--></span>
+			</div>
+			<ul class="snapshoot-list" id="snapshoot-list">
+        <!--<li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="//game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" alt="">
+          </div>
+          <div class="text">海克斯科技<br/>斯维因</div>
+        </li>-->
+      </ul>
+		</div>
+  </div>
+
+  <!-- dialog quitclaim 补偿权利放弃声明 -->
+  <div class="dialog dialog-quitclaim" id="test20">
+    <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close5', '关闭弹窗');">×</a>
+    <div class="dialog-title t5">补偿权利放弃声明</div>
+    <div class="dialog-body">
+      <div class="tip-info">
+        召唤师：
+        <div class="text-indent">
+          经过检测，发现您属于此次季前赛版本系统升级(涉及符文、符文页、金币、蓝色精萃等系统)的补偿尚未发放完成的用户，建议您<em>等待相关补偿发放完毕</em>，再进行转区(因为补偿可能发放到您的原大区，如果先进行转区，转入区将无法获得补偿。)。
+        </div>
+        <div class="text-indent">
+          <em>如果您执意要即刻进行转区，则视作您已经放弃相关系统升级的补偿。</em>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="javascript:;" class="btn confirm" id="agree" onclick="PTTSendClick('btn', 'confirm2', '我同意');">我同意</a>
+        <a href="javascript:closeDialog();" class="btn cancel" onclick="PTTSendClick('btn', 'cancel2', '再想想');">再想想</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- dialog confirm 确认转区预约信息 -->
+  <div class="dialog dialog-confirm" id="payMsg">
+    <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close4', '关闭弹窗');">×</a>
+    <div class="dialog-title t6">请确认以下转区预约信息</div>
+    <div class="dialog-body">
+      <div class="tip-info">
+        你预约的是从 <em><span id="srcArea">艾欧尼亚(电信)</span> 转往 <span id="desArea">男爵领域(全网络)</span>。</em><br/>您需要支付人民币199元或等价的Q币(Q点)。
+      </div>
+      <div class="btn-group">
+        <a href="javascript:isZM(function() { TransPay() });" class="btn pay" onclick="PTTSendClick('btn', 'pay2', '确定支付');">确定支付</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- dialog confirm 确认转区预约信息 二次确认 -->
+  <div class="dialog dialog-confirm" id="checkMsg">
+    <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close5', '关闭弹窗');">×</a>
+    <div class="dialog-title t6">请确认以下转区预约信息</div>
+    <div class="dialog-body">
+      <div class="tip-info">
+        你预约的是从 <em><span id="checkSrc">艾欧尼亚(电信)</span> 转往 <span id="checkDst">男爵领域(全网络)</span><br/>的转区服务</em> ，是否确认，一旦确认将无法再次修改。
+      </div>
+      <div class="btn-group">
+        <a href="javascript:isZM(function() { TransZone.CheckInfo() });" class="btn confirm" onclick="PTTSendClick('btn', 'confirm3', '我同意');">我同意</a>
+        <a href="javascript:closeDialog();" class="btn cancel" onclick="PTTSendClick('btn', 'cancel3', '再想想');">再想想</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- dialog cancel 转回原大区 -->
+  <div class="dialog dialog-cancel" id="rollbackMsg">
+    <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close6', '关闭弹窗');">×</a>
+    <div class="dialog-title t7">转回原大区提示</div>
+    <div class="dialog-body">
+      <div class="tip-info">
+        你选择了"我想回原大区" 操作，执行该操作时我们将在<span>24小时内按照转区资产列表中的道具资产列表从目的大区往原大区的逆向转移道具资产</span>(点券、蓝色精萃、橙色精萃转移数量以实际执行时目的大区的数量为准)，温馨提示："我想回原大区" 的操作并<em>不会退回转区费用</em>，且无论你是否选择"我想回原大区" 操作，<em>30天内都无法再次进行转区</em>；本操作一旦确认执行将<em>无法再次撤销</em>。
+      </div>
+      <div class="btn-group">
+        <a href="javascript:;" class="btn confirm" id="rollbackCheck"  onclick="PTTSendClick('btn', 'confirm4', '我同意');">我同意</a>
+        <a href="javascript:;" class="btn cancel" onclick="PTTSendClick('btn', 'cancel4', '再想想');">再想想</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 系统提示 -->
+  <div class="dialog dialog-tip" id="test4">
+      <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close7', '关闭弹窗');">×</a>
+      <div class="dialog-title t2">温馨提示</div>
+      <div class="dialog-body">
+          <div class="info" id="msgs"></div>
+          <div class="btn-group">
+              <a href="javascript:closeDialog()" class="btn okay" onclick="PTTSendClick('btn', 'okay2', '确定');"></a>
+          </div>
+      </div>
+  </div>
+  <!-- dialog zmol 提示弹窗 -->
+	<div class="dialog dialog-zmol" id="zmolMsg">
+	  <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-closez', '关闭弹窗');">×</a>
+	  <div class="dialog-title t2">温馨提示</div>
+	  <div class="dialog-body">
+			<div class="tip-info">亲爱的召唤师，<br> 如果希望继续转区，可前往掌上英雄联盟申请。</div>
+			<div class="btn-group">
+            <a href="javascript:closeDialog()" class="btn close" onclick="PTTSendClick('btn', 'closez', '取消');"></a>
+                <a href="javascript:" class="btn go-zmol" id="know" onclick="PTTSendClick('btn', 'go-zmol', '去掌盟');"></a>
+            </div>
+	  </div>
+	</div>
+
+  <!-- 系统提示 -->
+  <div class="dialog dialog-tip" id="confirm">
+      <a class="dialog-close" href="javascript:closeDialog()" title="关闭" onclick="PTTSendClick('btn', 'dialog-close7', '关闭弹窗');">×</a>
+      <div class="dialog-title t2">温馨提示</div>
+      <div class="dialog-body">
+          <div class="info">你确定要撤销订单么，付款确认可能出现延迟(通常在5分钟以内)，请勿在付款后立刻撤回订单，以免造成不必要的损失。</div>
+          <div class="btn-group">
+              <a href="javascript:TransZone.CancelOrder();" class="btn confirm" onclick="PTTSendClick('btn', 'confirm4', '我同意');">确定</a>
+              <a href="javascript:closeDialog();" class="btn cancel" onclick="PTTSendClick('btn', 'cancel4', '再想想');">再想想</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- 转区记录 -->
+  <div class="dialog tank5" id="test5">
+      <div class="dia-con">
+          <ul id="TransferZoneList">
+              <!-- <li>
+                   <span class="first shallow">时间</span>
+                   <span class="second shallow">原大区-目的大区</span>
+                   <span class="third shallow">状态</span>
+                   <span class="fourth shallow">转区快照</span>
+               </li>
+               <li>
+                   <span class="first">2020-07-22 10:01</span>
+                   <span class="second">比尔吉沃特 转 艾欧尼亚</span>
+                   <span class="third">完成</span>
+                   <span class="fourth deep">查看</span>
+               </li>
+               <li>
+                   <span class="first">2020-07-22 10:01</span>
+                   <span class="second">比尔吉沃特 转艾欧尼亚</span>
+                   <span class="third">回原大区</span>
+                   <span class="fourth deep">查看</span>
+               </li>
+               <li>
+                   <span class="first">2020-07-22 10:01</span>
+                   <span class="second">比尔吉沃特 转 艾欧尼亚</span>
+                   <span class="third">撤回</span>
+                   <span class="fourth deep">查看</span>
+               </li>-->
+          </ul>
+          <p class="pageNumber" id="jPager">
+              <!-- <a href="javascript:;" class="up">上一页</a>
+               <span class="on">1</span>
+               <span>2</span>
+               <span>3</span>
+               <span>4</span>
+               <span>5</span>
+               <a href="javascript:;" class="next">下一页</a>-->
+          </p>
+      </div>
+      <a class="dialog-close" href="javascript:closeDialog()" title="关闭"  onclick="PTTSendClick('btn','close10','close');">×</a>
+  </div>
+  <script type="text/html" id="TransferZoneListTemp">
+      <li>
+          <span class="first shallow">时间</span>
+          <span class="second shallow">原大区-目的大区</span>
+          <span class="third shallow">状态</span>
+          <span class="fourth shallow">转区快照</span>
+      </li>
+      {{each tmpData as v i}}
+      <li>
+          <span class="first">{{v.dtTime}}</span>
+          <span class="second">{{LOLServerSelect(v.sSrcArea)}} 转 {{LOLServerSelect(v.sDstArea)}}</span>
+          {{if v.iStatus=='3' && v.iBan=='2'}}
+          <span class="third">完成</span>
+          <span class="fourth deep" onclick="TransZone.TransferZoneUserInfo('{{v.iId}}')">查看</span>
+          {{else if v.iStatus=='6' && v.iBan=='2'}}
+          <span class="third">回原大区</span>
+          <span class="fourth deep" onclick="TransZone.TransferZoneUserInfo('{{v.iId}}')">查看</span>
+          {{else}}
+          <span class="third">未完成</span>
+          <span class="fourth deep" onclick="TransZone.TransferZoneUserInfo('{{v.iId}}')">查看</span>
+          {{/if}}
+      </li>
+      {{/each}}
+  </script>
+  <!-- 转区资产列表 -->
+  <div class="dialog tank6" id="test6">
+      <div class="dia-con">
+          <ul>
+              <li>
+                  <p class="name">原大区等级：</p>
+                  <span id="sSrcLV2">LV0</span>
+              </li>
+              <li>
+                  <p class="name">目的大区等级：</p>
+                  <span id="sDstLV2">LV0</span>
+              </li>
+              <li>
+                  <p class="name">点券：</p>
+                  <span id="rp2">0</span>
+              </li>
+              <li>
+                  <p class="name">蓝色精粹：</p>
+                  <span id="CURRENCY_champion2">0</span>
+              </li>
+              <li>
+                  <p class="name">橙色精粹：</p>
+                  <span id="CURRENCY_cosmetic2">0</span>
+              </li>
+              <li>
+                  <p class="name">英雄(<span id="hero2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('hero',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">皮肤(<span id="skin2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('skin',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">守卫皮肤(<span id="guard2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('guard',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">召唤师图标(<span id="icon2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('icon',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">表情(<span id="emote2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('emote',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">云顶之弈小小英雄(<span id="tftHero2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('tftHero',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">云顶之弈棋盘(<span id="tftChess2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('tftChess',1)">查看详情</span>
+              </li>
+              <li>
+                  <p class="name">云顶之弈攻击特效(<span id="tftBuff2">0</span>)：</p>
+                  <span class="detailed" onclick="TransZone.showHeroSkinList('tftBuff',1)">查看详情</span>
+              </li>
+          </ul>
+      </div>
+      <!--<a class="dialog-close" href="javascript:TransZone.TransferZoneList(1);" title="关闭"  onclick="PTTSendClick('btn','close11','close');">×</a>-->
+      <a class="dialog-close" href="javascript:closeDialog();" title="关闭"  onclick="PTTSendClick('btn','close11','close');">×</a>
+  </div>
+
+  <script src="//js.aq.qq.com/js/aq_common.js"></script>
+  <script src="//pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+  <script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/ArtTemplate.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+  <script src="//lol.qq.com/m/public/LOL_App.js"></script>
+  <script src="//gameact.qq.com/comm-htdocs/js/game_area/lol_server_select.js"></script>
+  <script src="//lol.qq.com/act/AutoCMS/publish/LOLAct/TFTItemHash_MiniHero/TFTItemHash_MiniHero.js"></script>
+  <script src="//lol.qq.com/act/AutoCMS/publish/LOLAct/TFTItemHash_Map/TFTItemHash_Map.js"></script>
+  <script src="//lol.qq.com/act/AutoCMS/publish/LOLAct/TFTItemHash_Damage/TFTItemHash_Damage.js"></script>
+  <script src="../js/lazyload.min.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/transZonem.js"></script>
+  <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+  <script>
+    /*$(".btn-f1").on('click',function(){*/
+
+    $('.dialog-rule .reserve-rule').scroll(function(){
+            var flTop=$(".reserve-rule")[0].scrollHeight-$('.reserve-rule').height();
+            var scrollTop = $('.reserve-rule').scrollTop();
+          if(flTop <= scrollTop){
+    //		　　　　alert("已经到最底部了！");
+            if ($(".checkbox").hasClass("on")) {
+              $(".checkbox").removeClass("on");
+              $('.check-wrap').css('color','#f0c997');
+            }
+        　　}
+        });
+    /*})*/
+    document.domain="qq.com";
+    init_ZMApp({
+      'title': '英雄联盟转区系统2.0',
+      'summery': '自由转入转出大区，与好朋友一起才好玩！',
+      'subtitle': '自由转入转出大区，与好朋友一起才好玩！',
+      'img': 'https://game.gtimg.cn/images/lol/act/a20200710transferzone/m/share.jpg',
+      'url': location.href.split('?')[0],
+      'WXtrigger': function (res) {
+        //微信动作回调
+      },
+      'WXsuccess': function (res) {
+        //微信成功回调
+        if (!res) return;
+        if (res.errMsg == 'sendAppMessage:ok') {
+          //微信分享个人
+          PTTSendClick('btn', 'sharewx1', '分享给好友')
+        } else if (res.errMsg == 'shareTimeline:ok') {
+          //微信分享朋友圈
+          PTTSendClick('btn', 'sharewx2', '分享到朋友圈')
+        } else if (res.errMsg == 'shareQQ:ok') {
+          //微信分享至QQ
+          PTTSendClick('btn', 'shareqq', '分享到QQ')
+        }
+      },
+      'WXcancel': function (res) {
+        //微信分享取消动作回调
+        PTTSendClick('btn', 'sharewx_cancel', '分享取消')
+      },
+      'WXfail': function (res) {
+        //微信分享失败动作回调
+        PTTSendClick('btn', 'sharewx_fail', '分享失败')
+      },
+      'QQtrigger': function (res) {
+        //QQ动作回调
+      },
+      'QQcallback': function (res) {
+        //QQ分享成功
+        PTTSendClick('btn', 'shareqq_succ', 'QQ分享成功')
+      },
+      'LOL_APPsuccess': function (res) {
+        //掌盟分享成功
+        PTTSendClick('btn', 'sharezm_succ', '掌盟分享成功')
+      }
+    })
+  </script>
+  <script>
+      milo.addEvent(g("ptLoginBtn"), "click", function() {
+          need("biz.login",function(LoginManager){
+              LoginManager.login({"sData":{"pt_no_onekey":1}});
+          });
+          return false;
+      });
+      milo.addEvent(g("ptLogoutBtn"), "click", function() {
+          need("biz.login",function(LoginManager){
+              LoginManager.logout();
+          });
+          return false;
+      });
+      milo.ready(function() {
+          need("biz.login", function(LoginManager) {
+              LoginManager.checkLogin(function() {
+                  LoginManager.init();
+                  g("login_qq_span").innerText = LoginManager.getUserUin(); //获取QQ号
+
+                  //if (!milo.cookie.get('notice_' + LoginManager.getUserUin())) {
+                     // readRule ();
+                  //}
+
+              });
+          });
+          need(["ams.daoju_buy_v2.appid"], function(autoappid) {
+              autoappid.init('lol', 16509, function(final_appid) {
+                  //final_appid为自动判断得到的道聚城渠道号
+                  //本段代码内自动进行道聚城全流程数据的收集，必须保留并放到milo.ready内，除非自行在页面上进行基于道聚城活动号的eas曝光上报
+              });
+          });
+      });
+      $('#btn-coutdown').on('click', function () {
+          if($("#btn-coutdown").hasClass('coutdown')){
+              return;
+          }
+          if (!$("#checkbox").hasClass('check')) {
+              alert("您好，请选择我已认真阅读并同意");
+              return;
+          } else {
+              need("biz.login", function(LoginManager) {
+                  //milo.cookie.set('notice_' + LoginManager.getUserUin(), '111', 360000);
+                  amsSubmit(316212,685098);
+                  closeDialog();
+                  isZM(function () {
+
+                  })
+              })
+          }
+      });
+      var dna_result_key = milo.request('dna_result_key');
+      if (!(dna_result_key == '' || $('#infoMsg2', window.parent.document).css('display') == 'none')) {
+          var url = window.location.href;
+          parent.window.location.href = url;
+      }
+
+      milo.ready(function() {
+          amsSubmit(316212,685099);
+          TransZone.InitPage();
+      });
+  </script>
+  <script>
+    var isCoutDown=0;
+    function TGDialogS(e) {
+      // 利用milo库引入dialog组件
+      need("biz.dialog", function (Dialog) {
+        Dialog.show({
+          id: e,
+          bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+          opacity: 50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+        });
+      });
+    }
+
+    function closeDialog() {
+        need("biz.dialog", function(Dialog) {
+            Dialog.hide();
+            if (TransZone.iStep == 2 || TransZone.iStep == 3) {
+                window.location.reload();
+            }
+        });
+    }
+
+		// dialog-rule checkbox切换
+		$('#checkbox').on('click', function () {
+			$(this).toggleClass('check')
+		})
+		// 强制阅读倒计时
+		var timer = null
+		var time = 30 // 倒计时秒数
+		function btnCoutDown (el) {
+			if (timer) {
+				clearInterval(timer)
+				time = 30
+				el.text('30s')
+			}
+			el.removeClass('confirm').addClass('coutdown')
+			timer = setInterval(function () {
+				if (time === 0) {
+					el.removeClass('coutdown').addClass('confirm')
+					el.text('我同意')
+					clearInterval(timer)
+				} else {
+					el.text(time-- + 's')
+				}
+			}, 1000)
+		}
+		// 查看转区须知
+
+		function readRule () {
+            if(isCoutDown>0 || IS_READ>0){
+                isCoutDown++;
+                timer=null
+                clearInterval(timer);
+                time = 0;
+                $('#btn-coutdown').removeClass('coutdown').addClass('confirm').text('我同意');
+                TGDialogS('test1');
+            }else{
+                isCoutDown++;
+                TGDialogS('test1');
+                btnCoutDown($('#btn-coutdown'));
+            }
+		}
+		// 关闭转区须知
+		function closeRule () {
+            showDialog.hide();
+			clearInterval(timer)
+			time = 30
+		}
+	</script>
+  <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+  <script>
+    // 此段代码不能放到外链JS中，
+    var setSite = { // 设置网站属性
+      siteType: 'a20200710transferzone', // 必填项:'os'代表是官网，如果不是，则填写actName例如a20160701xxx
+      pageType: 'index-m', // 必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+      pageName: '移动首页', // 必填项:页面中文名
+      project: 'other', // 选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+      osact: 0 // 选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+    }
+    if (typeof (pgvMain) == 'function') pgvMain() // 千万不能忘记！
+  </script>
+</body>
+</html>
+<!-- #t6Hl8#815AA5279F0A19160710C0577FDC7387 -->

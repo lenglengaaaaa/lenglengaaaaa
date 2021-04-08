@@ -1,0 +1,213 @@
+/* reset */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer,div,li,a,span{margin:0;padding: 0;outline: none;}
+a,img,input {border:none;}
+body{font: 14px/1.75  -apple-system, "Microsoft YaHei" ,"Helvetica Neue", Helvetica, Arial, sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body{font-family: "Microsoft YaHei";background: #1f205d;}
+a {text-decoration:none;}
+ul,li{list-style: none}
+em,b{font-style:normal}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单，根据需要选择是否删除 */}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+/* reset end */
+html {
+  font-size: 50px;/* 兼容不支持vw的系统 */
+  font-size: 13.33333333vw;/* 7.5rem === 100vw */
+}
+
+@media (max-width: 1024px) {
+  html,body {
+    max-width: 1024px;
+  }
+}
+
+#afooter{background-color: #2b3982;text-align: center;font-size:.22rem;padding:.2rem 0;}
+#afooter, #afooter a{color: #fff;text-decoration: none;}
+
+h1{font-size: 0;display: none;}
+.icon-spr{background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/icon-spr.png) no-repeat;background-size: 750px 200px;}
+.tit-spr{margin: 0 auto;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/tit-spr.png) no-repeat;background-size: 750px 1650px;font-size: 0;}
+.spr{width: 700px;height: 554px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/spr.png) no-repeat;}
+
+.wrap{overflow: hidden;height: 100vh;}
+/* 头部 */
+.head-box{width: 750px;height: 100vh;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/head-bg.jpg) center no-repeat;text-align: center;object-fit: cover; overflow: hidden;background-size: 750px 1650px;position: relative;background-color: black;}
+.head-box.on{transition: all 0.5s ease-in-out;}
+.head-box .logo-box{display: inline-block;margin-top: 27px;text-align: center;font-size: 0;}
+.head-box .logo-box img,.head-box .logo-box span{display: inline-block;vertical-align: middle;}
+.head-box .logo-box img{height: 80px;}
+.head-box .logo-box span{width: 1px;height: 14px;background: rgba(255,255,255,0.4);}
+.head-box .slgan{width: 555px;height: 303px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/slgan.png) no-repeat;background-size: 100% 100%;position: absolute;left: 50%;transform: translateX(-50%);top: 360px;}
+/* .head-box .go-watch{width: 317px;height: 86px;font-size: 24px;font-weight: bold;color: #ffffff;text-align: center;position: absolute;bottom: 250px; left: 50%;transform: translateX(-50%);background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/go-watch.png) no-repeat;background-size: 100% 100%;line-height: 86px;}
+.head-box .sponsor{width: 699px;height: 92px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/sponsor.png) no-repeat;background-size: 100% 100%;position: absolute;bottom: 30px; left: 50%;transform: translateX(-50%);}
+.head-box .head-hint{width: 98px;height: 53px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/icon-spr.png) no-repeat;background-size: 750px 200px;position: absolute;bottom: 150px; left: 50%;transform: translateX(-50%);background-position: -15px -109px;animation: slide 2s linear infinite;}
+@-webkit-keyframes slide{
+  0%{bottom: 170px;}
+  50%{bottom:150px}
+  100%{bottom: 170px;}
+} */
+
+.time-box{position: absolute;bottom: 275px;left: 0; width: 100%;height: 130px;background: linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,0.4),rgba(0,0,0,.5),rgba(0,0,0,0.4),rgba(0,0,0,.2));}
+.time-box .time-mid{width: 670px;height: 100%;margin: 0 auto;position: relative; color: #e8e7d1;padding-top: 42px;box-sizing: border-box;text-align: center;}
+.time-box .time-mid::before{content: '';display: block;width: 750px;height: 2px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/line.png) no-repeat;background-size: 100% 100%; position: absolute;left: -40px;top: 74px;}
+.time-box .time1{width: 242px;height: auto;position: relative;float: left;}
+.time-box .time2{width: 182px;height: auto;position: relative;float: left;}
+.time-box .time3{width: 242px;height: auto;position: relative;float: left;}
+.time-box .txt1{font-size: 16px;line-height: 20px;}
+.time-box .txt2{font-size: 18px;line-height: 18px;font-weight: bold;}
+.time-box .time-mid div i{display: block;width: 12px;height: 12px;margin: 7px auto 10px; border:2px solid #a0969e;border-radius: 50%; box-sizing: border-box;position: relative;}
+.time-box .time-mid div i::before{content: '';display: block;width: 4px;height: 4px;background: #fff;border-radius: 50%;position: absolute;top: 2px;left: 2px;}
+.time-box .fc{position: absolute;font-size: 16px;color: #fff;line-height: 26px; width: 152px;height: 26px;background-position: -598px -91px;top: -30px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+
+.head-box .go-watch{width: 317px;height: 86px;font-size: 24px;font-weight: bold;color: #ffffff;text-align: center;position: absolute;bottom: 150px; left: 50%;transform: translateX(-50%);background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/go-watch.png) no-repeat;background-size: 100% 100%;line-height: 86px;}
+/* .head-box .sponsor{width: 699px;height: 92px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/sponsor.png) no-repeat;background-size: 100% 100%;position: absolute;bottom: 30px; left: 50%;transform: translateX(-50%);} */
+.head-box .head-hint{width: 98px;height: 53px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/icon-spr.png) no-repeat;background-size: 750px 200px;position: absolute;bottom: 50px; left: 50%;transform: translateX(-50%);background-position: -15px -109px;animation: slide 2s linear infinite;}
+@-webkit-keyframes slide{
+  0%{bottom: 70px;}
+  50%{bottom:50px}
+  100%{bottom: 70px;}
+}
+
+/* 其他内容 */
+.main-box{overflow: auto;height: 100vh;min-height: 100vh; position: relative;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/main-bg.jpg) top center no-repeat;background-size: 750px 1650px;}
+.main-box.on{transition: all 0.5s ease-in-out;}
+.main-box.on .nav-box{position: fixed;transition: all 0.5s ease-in-out;}
+
+/* 导航 */
+.nav-box{width: 750px;height: 120px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/nav-box.png) no-repeat;background-size: 100% 100%;position: absolute;top: 0;left: 50%;transform: translateX(-50%);text-align: center;font-size: 0;z-index: 10;}
+.nav-box a{width: 150px;height: 120px;position: relative;display: inline-block;vertical-align: top;}
+.nav-box a::before{display: block;clear: both;content: "";width: 1px;height: 40px;background: rgba(255,255,255,0.2);position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
+.nav-box a:last-child::before{display: none;}
+.nav-box a i{display: block;position: absolute;bottom: 52px;left: 50%;transform: translateX(-50%);}
+.nav-box a:nth-of-type(1) i{background-position: -8px -8px;width: 38px;height: 42px;}
+.nav-box a:nth-of-type(2) i{background-position: -64px -8px;width: 40px;height: 40px;}
+.nav-box a:nth-of-type(3) i{background-position: -131px -8px;width: 41px;height: 42px;}
+.nav-box a:nth-of-type(4) i{background-position: -195px -8px;width: 44px;height: 37px;}
+.nav-box a:nth-of-type(5) i{background-position: -262px -8px;width: 38px;height: 34px;}
+.nav-box a p{font-size: 20px;color: #fde8b1;padding-top: 60px;}
+.nav-box a p span{font-weight: bold;}
+.nav-box a em{display: none;}
+
+.nav-box a.on{height: 140px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/nav-btnon.png) no-repeat;background-size: 100% 100%;}
+.nav-box a.on i{display: none;}
+.nav-box a.on p{padding-top: 74px;color: #fff;}
+.nav-box a.on em{display: block;font-size: 12px;color: #fff;}
+
+.content-box{display: none;overflow: auto;padding-top: 190px;min-height: 100vh;box-sizing: border-box;}
+.content-box.on{display: block;}
+
+/* 赛事直播 */
+.content1 h2{margin: 0 auto;margin-bottom: 40px;background-position: -127px -48px;width: 499px;height: 182px;}
+.content1 .wonderful-box{width: 670px;margin: 0 auto;overflow: hidden;position: relative;}
+.content1 .wonderful-box::before{content: '';display: block;width: 100%;height: 0;border: 1px solid rgba(255,255,255,0.1);position: absolute;top: 60px;left: 0;}
+.content1 .wonderful-nav{font-size: 0;width: 550px;display: inline-block;position: sticky;overflow: hidden; overflow-x: auto;height: 60px;margin-bottom: 40px; box-sizing: border-box;}
+.content1 .wonderful-nav div{white-space: nowrap; }
+.content1 .wonderful-nav a{font-size: 22px;color: #d6d2c7;margin-right: 25px;display: inline-block; height: 60px;line-height: 60px;}
+.content1 .wonderful-nav a.on{font-size: 28px;color: #43e9fb;}
+.content1 .btn-look{float: right;display: block;height: 60px; font-size: 22px;color: #51e5fa;line-height: 62px;padding-right: 20px;position: relative;}
+.content1 .btn-look::before{content: '';display: block;position: absolute;top: 20px;right: 0; width: 10px;height: 20px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/icon-spr.png) no-repeat;background-size: 750px 200px;background-position: -350px -7px;}
+.content1 .wonderful-video-box{font-size: 0;display: none;}
+.content1 .wonderful-video-box.on{display: block;}
+.content1 .wonderful-video-box.nodata p{font-size: 22px;color: #d6d2c7;text-align: center;}
+.content1 .wonderful-video-box .wonderful-video{width: 320px;height: 300px;display: inline-block;vertical-align: top;margin-right: 30px;margin-bottom: 35px;}
+.content1 .wonderful-video-box .wonderful-video:nth-of-type(2n){margin-right: 0;}
+.content1 .wonderful-video a{width: 320px;height: 180px;display: block;position: relative;}
+.content1 .wonderful-video a::before{width: 100%;height: 100%;background: linear-gradient(to bottom, transparent 0%,#000 160%);display: block;clear: both;content: "";position: absolute; top: 0;left: 0;z-index: 1;}
+.content1 .wonderful-video a img{width: 320px;height: 180px;display: block;position: relative;}
+.content1 .wonderful-video a p{font-size: 14px;color: #ffffff;position: absolute;bottom: 10px;right: 10px;z-index: 2;}
+.content1 .wonderful-video > p{font-size: 20px;color: #e2dcce;line-height: 28px;padding-top: 10px;margin-bottom: 10px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.content1 .transmit-box{width: 100%;height: 30px;position: relative;}
+.content1 .transmit-box p{height: 30px;font-size: 0;}
+.content1 .transmit-box p i{display: inline-block;vertical-align: middle;background-position: -8px -68px;width: 20px;height: 17px;margin-right: 8px;}
+.content1 .transmit-box p span{display: inline-block;vertical-align: middle;font-size: 18px;color: #8a8a8a;}
+.content1 .transmit-box em{font-size: 18px;color: #8a8a8a;height: 30px;position: absolute;top: 0;right: 0;line-height: 30px;}
+
+/* 周边 */
+.content2 .content2-tit1{margin: 0 auto;margin-bottom: 40px;background-position: -146px -287px;width: 458px;height: 182px;}
+.content2 .skin-swiper{height: 450px;margin-bottom: 70px;}
+.content2 .skin-swiper .swiper-slide{width: 580px !important;}
+.content2 .skin-swiper .swiper-slide p{font-size: 28px;color: #fde8b1;font-weight: bold;text-align: center;margin-bottom: 18px;}
+.content2 .skin-swiper .swiper-slide a{width: 317px;height: 86px;font-size: 24px;font-weight: bold;color: #ffffff;text-align: center;position: absolute;bottom: 0px; left: 50%;transform: translateX(-50%);background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/go-watch.png) no-repeat;background-size: 100% 100%;line-height: 86px;}
+.content2 .skin-swiper .swiper-button-next{background-position: -662px -12px;width: 80px;height: 60px;right: 40px;z-index: 9;}
+.content2 .skin-swiper .swiper-button-prev{background-position: -559px -12px;width: 80px;height: 60px;left: 40px;z-index: 9;}
+/* .content2 .skin-swiper .swiper-button-next.swiper-button-disabled{background-position: -559px -12px;width: 80px;height: 60px;opacity: 1;transform: rotate(-180deg);}
+.content2 .skin-swiper .swiper-button-prev.swiper-button-disabled{background-position: -559px -12px;width: 80px;height: 60px;opacity: 1;transform: rotate(360deg);} */
+
+
+.content2 .content2-tit2{margin: 0 auto;margin-bottom: 30px;background-position: -127px -526px;width: 497px;height: 182px;}
+.content2 .rim{width: 670px;margin: 0 auto;font-size: 0;}
+.content2 .rim .rim-box{width: 320px;display: inline-block;vertical-align: top;margin-right: 25px;text-align: center;margin-bottom: 50px;}
+.content2 .rim .rim-box:nth-of-type(2n){margin-right: 0;}
+.content2 .rim-box p{width: 300px;height: 38px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/rim-p.png);background-size: 100% 100%;font-size: 22px;font-weight: bold;color: #fde8b1;line-height: 38px;margin: 0 auto 20px;}
+.content2 .rim-box img{width: 315px;height: 352px;display: block;margin-bottom: 20px;}
+.content2 .rim-box a{width: 317px;height: 86px;font-size: 24px;font-weight: bold;color: #ffffff;text-align: center;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/go-watch.png) no-repeat;background-size: 100% 100%;line-height: 86px;margin: 0 auto;display: block;}
+
+
+/* 城市探索 */
+.content3 .content3-tit1{margin: 0 auto;margin-bottom: 40px;background-position: -196px -765px;width: 359px;height: 182px;}
+.content3 .gorge-swiper{height: 450px;margin-bottom: 90px;}
+.content3 .gorge-swiper .swiper-slide{width: 580px !important;}
+.content3 .gorge-swiper .swiper-slide p{font-size: 28px;color: #fde8b1;font-weight: bold;text-align: center;margin-bottom: 18px;}
+.content3 .gorge-swiper .swiper-slide a{width: 317px;height: 86px;font-size: 24px;font-weight: bold;color: #ffffff;text-align: center;position: absolute;top: 363px; left: 50%;transform: translateX(-50%);background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/go-watch.png) no-repeat;background-size: 100% 100%;line-height: 86px;}
+.content3 .gorge-swiper .swiper-button-next{background-position: -662px -12px;width: 80px;height: 60px;right: 40px;}
+.content3 .gorge-swiper .swiper-button-prev{background-position: -559px -12px;width: 80px;height: 60px;left: 40px;}
+/* .content3 .gorge-swiper .swiper-button-next.swiper-button-disabled{background-position: -559px -12px;width: 80px;height: 60px;opacity: 1;transform: rotate(-180deg);}
+.content3 .gorge-swiper .swiper-button-prev.swiper-button-disabled{background-position: -559px -12px;width: 80px;height: 60px;opacity: 1;transform: rotate(360deg);} */
+
+.content3 .offline{width: 670px;font-size: 0;height: auto;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/offline.png) bottom center no-repeat;background-size: 710px 110px;padding-bottom: 66px;padding-left: 40px;}
+.content3 .offline .code,
+.content3 .offline .offline-box{display: inline-block;vertical-align: top;}
+.content3 .offline .code{width: 150px;height: 150px;margin-right: 40px;}
+.content3 .offline .offline-box{width: 455px;}
+.content3 .offline .offline-box p{font-size: 28px;color: #fde8b1;font-weight: bold;margin-bottom: 25px;}
+.content3 .offline .offline-box span{font-size: 18px;color: #f7f4ea;line-height: 24px;display: block;}
+
+
+/* 精彩活动 */
+.content4 h2{margin: 0 auto;margin-bottom: 40px;background-position: -127px -1004px;width: 497px;height: 182px;}
+.content4 .activity-box{width: 650px;height: auto;float: right;clear: both; box-sizing: border-box;position: relative;margin-bottom: 60px;}
+.content4 .activity-box img{display: block;width: 650px;height: 300px;}
+.content4 .activity-box h3{text-align: center; display:block;position: absolute;top: 220px;left: -30px;width: 390px; height: 52px;background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/activity-h3.png) top center no-repeat;background-size: 390px 52px;font-size: 32px;color: #fde8b1;line-height: 52px;}
+.content4 .activity-box .text{font-size: 24px;color: #d6d2c7;line-height: 30px;margin-top: 35px;}
+.content4 .activity-box .time{font-size: 22px;color: #a3a3a3;line-height: 33px;margin: 27px 0 40px;}
+.content4 .activity-box .time span{margin-right: 10px; width: fit-content;padding: 0 8px; height: 33px;box-sizing: border-box;border-radius: 3px;border: 1px solid #43e9fb; color: #43e9fb;}
+.content4 .activity-box::after{content: '';display: block;width: 610px;height: 0; border-bottom: 1px solid rgba(255,255,255,0.1);}
+.content4 .activity-box:nth-child(2n){float: right;}
+.content4 .activity-box:nth-child(2n+1){float: left;}
+.content4 .activity-box:nth-child(2n) h3{left: -30px;right: inherit;}
+.content4 .activity-box:nth-child(2n+1) h3{right: -30px;left: inherit;}
+.content4 .activity-box:nth-child(2n+1) .text{text-align: left;margin-left: 20px;}
+.content4 .activity-box:nth-child(2n+1) .time{text-align: left;}
+.content4 .activity-box:nth-child(2n+1) .time span{float: left;margin-right: 10px;margin-left: 20px;}
+.content4 .activity-box:nth-child(2n+1)::after{float: right;}
+
+/* 音乐与视频 */
+.content5 h2{margin: 0 auto;margin-bottom: 40px;background-position: -242px -1233px;width: 266px;height: 182px;}
+.content5 .music-box{width: fit-content;height: auto;margin: 0 auto;position: relative;text-align: center;}
+.content5 .music-box h3{font-size: 28px;color: #fde8b1;line-height: 30px;margin-bottom: 25px;}
+.content5 .music-box i{display: block;width: 630px;height: 513px; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/content5-bg.png) no-repeat;position: absolute;top: 95px;left: 50%;transform: translateX(-50%);}
+.content5 .music-box .cover-bg{width: 590px;height: 590px;font-size: 0; background: url(//game.gtimg.cn/images/lpl/act/a20200901worlds/m/music-bg.png) no-repeat;margin: 0 auto;position: relative;}
+.content5 .music-box .cover-bg img{width: 276px;height: 276px;margin: 157px auto 0;border-radius: 50%;object-fit: cover;}
+.content5 .music-box .cover-bg .btn-play{display: block;width: 88px;height: 88px; margin: 0 auto;background-position: -439px -5px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.content5 .swiper-box{width: 680px;height: 130px;margin: 37px auto 0;position: relative;}
+.content5 .swiper-box .swiper-container{width: 100%;height: 100%;}
+.content5 .swiper-box .swiper-slide{width: 170px;height: 106px;box-sizing:border-box;}
+.content5 .swiper-box .swiper-slide div{width: 162px;height: 100%;position: relative;}
+.content5 .swiper-box .swiper-slide div::before{content: '';display: block;position: absolute;width: 100%;height: 100%;background: rgba(0,0,0,.4);top: 0;left: 0;}
+.content5 .swiper-box .swiper-slide.swiper-slide-active div::before{display: none;}
+.content5 .swiper-box .swiper-slide.swiper-slide-active div::after{content: '';display: block;position: absolute;width: 100%;height: 100%;border:2px solid #43e9fb;box-sizing: border-box; top: 0;left: 0;}
+.content5 .swiper-box img{display: block; width: 162px;height: 106px;margin: 0 auto;}
+.content5 .swiper-button-next{background-position: -662px -12px;width: 80px;height: 60px;right: 10px;margin-top: 0;top: -362px;}
+.content5 .swiper-button-prev{background-position: -559px -12px;width: 80px;height: 60px;left: 10px;margin-top: 0;top: -362px;}
+/* .content5 .swiper-button-next.swiper-button-disabled{background-position: -559px -12px;width: 80px;height: 60px;opacity: 1;transform: rotate(-180deg);}
+.content5 .swiper-button-prev.swiper-button-disabled{background-position: -559px -12px;width: 80px;height: 60px;opacity: 1;transform: rotate(360deg);} */
+.content5 .swiper-scrollbar{background: rgba(85, 135, 158, .4);}
+.content5 .swiper-scrollbar-drag{background: #6cabc3;}
+
+/* 视频弹窗 */
+.dialog{width: 670px;height: 380px;position: relative;}
+.dialog .dia-close{display: block;position: absolute;top: -64px;right: 0;font-size: 0; width: 54px;height: 54px; background-position: -8px -408px;z-index: 9;}
+.dialog .video-box{width: 100%;height: 100%;}
+.dialog .video-box .diaVideo-container{width: 100%;height: 100%;}

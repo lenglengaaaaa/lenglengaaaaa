@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+
+<head>
+    <meta charset="gbk" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- 为了防止页面数字被识别为电话号码，可根据实际需要添加： -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 让添加到主屏幕的网页再次打开时全屏展示，可添加： -->
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP" />
+    <meta name="Copyright" content="Tencent" />
+    <meta name="Description" content="腾讯天美工作室打造的《乱世王者》是一款历史架空背景的战争策略手游。《乱世王者》最大程度还原战争策略游戏的精髓，玩家将化身为在这个乱世中的一方诸侯，从招兵买马到安邦治国，逐步走向问鼎天下的争霸之路。" />
+    <meta name="Keywords" content="乱世王者、乱世王者手游,乱世王者官网,乱世王者官方手游、乱世王者官方手游下载,乱世王者移动版,乱世王者手机版,乱世王者手游正版,乱世王者官方手游测试" />
+    <title>乱世九鼎-乱世王者-官方网站-腾讯游戏</title>
+    <!-- 页面设计：CP | 页面制作：CP | 创建：2021-02-01 -->
+
+    <!-- rem布局计算JS -->
+    <script>(function(win,doc){if(!win.addEventListener)return;var html=document.documentElement;function setFont(){var html=document.documentElement;var k=750;html.style.fontSize=html.clientWidth/k*100+"px"}setFont();setTimeout(function(){setFont()},300);doc.addEventListener('DOMContentLoaded',setFont,false);win.addEventListener('resize',setFont,false);win.addEventListener('load',setFont,false)})(window,document);</script>
+    <!-- 主样式 -->
+    <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="hid">乱世九鼎</h1>
+
+    <!-- 主体内容 Start -->
+    <div class="wrapper">
+
+        <!-- nav切换 -->
+        <div class="content-navs">
+            <a class="content-nav on" href="javascript:;" title="赛程" onclick="PTTSendClick('btn','content-tab1','赛程')">赛程</a>
+            <a class="content-nav" href="javascript:toPage();" title="竞猜" onclick="PTTSendClick('btn','content-tab2','竞猜')">竞猜</a>
+        </div>
+        <!-- tab切换 -->
+        <div class="content-tabs">
+            <!-- 登录 -->
+            <div class="login-box" style="display: none;">
+                <!--登录前状态 Start-->
+                <p id="unlogin" style="display: block;">你好，请 <a href="javascript:OUT.login.doLogin();" id="ptLoginBtn">【登录】</a></p >
+                    <!--登录前状态 End-->
+                <!--登录后状态 Start-->
+                <div id="logined" style="display: none;">
+                    欢迎您，
+                    <span id="login_qq_span"></span>
+                    <a href="javascript:TGDialogS('dialog-logout');" id="ptLogoutBtn">更换绑定</a>
+                </div>
+                <!--登录后状态 End-->
+            </div>
+            <a class="content-tab" href="javascript:;" title="赛程" onclick="PTTSendClick('btn','content-tab1','赛程')"><span>赛程</span></a>
+            <a class="content-tab on" href="javascript:;" title="主页" onclick="PTTSendClick('btn','content-tab2','主页')"><span>主页</span></a>
+            <a class="content-tab" href="javascript:;" title="视讯" onclick="PTTSendClick('btn','content-tab3','视讯')"><span>视讯</span></a>
+        </div>
+        <!-- 赛程start -->
+        <div class="cont-box cont-box2" style="display: none1;">
+            <!-- tab切换 -->
+            <div class="schedule-ul">
+                <a class="schedule-nav-list on" href="javascript:;" onclick="PTTSendClick('btn','nav-list1','入围赛');">入围赛</a>
+                <a class="schedule-nav-list" href="javascript:;" onclick="PTTSendClick('btn','nav-list2','淘汰赛');">淘汰赛</a>
+                <a class="schedule-nav-list" href="javascript:;" onclick="PTTSendClick('btn','nav-list3','对局详情');">对局详情</a>
+            </div>
+            <div class="integral-content-box">
+                <!-- 入围赛 -->
+                <div class="integral-content" style="display: none;">
+                    <!-- 头图 -->
+                    <div class="kv-box1">
+                        <img class="kv-bg" src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/kv1.png" width="750" height="354" alt="kv">
+                    </div>
+                    <!-- 筛选器 -->
+                    <div class="select-btns">
+                        <div class="login-app">
+                            <select name="login-app" id="sel1">
+                                <option value="2" selected>手Q</option>
+                                <option value="1" >微信</option>
+                            </select>
+                        </div>
+
+                        <div class="login-area">
+                            <select name="login-area" id="sel2">
+                                <option value="1" >第一赛区</option>
+                                <option value="2" >第二赛区</option>
+                                <option value="3" >第三赛区</option>
+                                <option value="4" >第四赛区</option>
+                                <option value="5" >第五赛区</option>
+                                <option value="6" >第六赛区</option>
+                                <option value="7" >第七赛区</option>
+                                <option value="8" selected>第八赛区</option>
+                                <option value="9">第九赛区</option>
+                                <option value="10" >第十赛区</option>
+                                <option value="11" >第十一赛区</option>
+                                <option value="12" >第十二赛区</option>
+                                <option value="13" >第十三赛区</option>
+                                <option value="14" >第十四赛区</option>
+                                <option value="15" >第十五赛区</option>
+                                <option value="16" >第十六赛区</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="legion-list">
+                        <div class="list-box" id="matchGroup_1">
+                            <div class="title"><p class="text">第一赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_2">
+                            <div class="title"><p class="text">第二赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_3">
+                            <div class="title"><p class="text">第三赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_4">
+                            <div class="title"><p class="text">第四赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_5">
+                            <div class="title"><p class="text">第五赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_6">
+                            <div class="title"><p class="text">第六赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_7">
+                            <div class="title"><p class="text">第七赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_8">
+                            <div class="title"><p class="text">第八赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_9">
+                            <div class="title"><p class="text">第九赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_10">
+                            <div class="title"><p class="text">第十赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_11">
+                            <div class="title"><p class="text">第十一赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_12">
+                            <div class="title"><p class="text">第十二赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_13">
+                            <div class="title"><p class="text">第十三赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_14">
+                            <div class="title"><p class="text">第十四赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_15">
+                            <div class="title"><p class="text">第十五赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                        <div class="list-box" id="matchGroup_16">
+                            <div class="title"><p class="text">第十六赛区</p></div>
+                            <p class="tips">点击军团名，查看更多比赛详情</p>
+                            <div class="legion-table">
+                                <div class="table-head">
+                                    <span class="th1">排名</span>
+                                    <span class="th2">军团</span>
+                                    <span class="th3">胜负</span>
+                                    <span class="th4">积分</span>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-scrollbar">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-foot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 淘汰赛 -->
+                <div class="integral-content" style="display: none1;">
+                    <div class="finalis-tabs">
+                        <a class="finalis-tab on" href="javascript:;" onclick="PTTSendClick('btn','finalis-tab1','飞龙组')">飞龙组</a>
+                        <a class="finalis-tab" href="javascript:;" onclick="PTTSendClick('btn','finalis-tab2','天狼组')">天狼组</a>
+                    </div>
+                    <div class="finalis-cont finalis-cont1 list-scrollbar">
+                        <div class="finalis-box">
+                            <div class="finalis-out-txts">
+                                <div class="txts-box">
+                                    <p class="finalis-out-txt">32强</p>
+                                    <p class="finalis-out-txt finalis-out-txt1">16强</p>
+                                    <p class="finalis-out-txt finalis-out-txt2">8强</p>
+                                    <p class="finalis-out-txt finalis-out-txt3">4强</p>
+                                </div>
+                            </div>
+                            <div class="finalis-out-list">
+                                <div class="first-box boxs">
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">   </div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第二赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第三赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第六赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第七赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第八赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第九赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十二赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十三赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十六赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="second-box boxs">
+                                   <div class="second-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="second-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第八赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="second-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十二赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="second-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十六赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="third-box boxs">
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="fourth-box boxs">
+                                   <div class="fourth-list box">
+                                       <div class="finalisout-team-box">
+                                            <div class="finalisout-team">
+                                                <div class="finalisout-area">第五赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="fourth-list box">
+                                       <div class="finalisout-team-box">
+                                            <div class="finalisout-team">
+                                                <div class="finalisout-area">第十四赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="finalis-cont finalis-cont2 list-scrollbar" style="display: none;">
+                        <div class="finalis-box">
+                            <p class="finalis-out-txt">32强</p>
+                            <p class="finalis-out-txt finalis-out-txt1">准16强</p>
+                            <p class="finalis-out-txt finalis-out-txt2">16强</p>
+                            <p class="finalis-out-txt finalis-out-txt3">准8强</p>
+                            <p class="finalis-out-txt finalis-out-txt4">8强</p>
+                            <p class="finalis-out-txt finalis-out-txt5">准4强</p>
+                            <p class="finalis-out-txt finalis-out-txt6">4强</p>
+                            <div class="finalis-out-list">
+                                <div class="first-box boxs">
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第二赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第三赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第六赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第七赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第八赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第九赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十二赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十三赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="first-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十六赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="second-box boxs">
+                                   <div class="second-list box">
+                                       <!-- 在second-box里面，finalisout-team没有类win则加飞龙组图标 -->
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">飞龙组败者</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="second-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">飞龙组败者</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                           <p>2月19日 星期五 16:30</p>
+                                       </div>
+                                   </div>
+                                   <div class="second-list box">
+                                        <div class="finalisout-team-box">
+                                            <div class="finalisout-team">
+                                                <div class="finalisout-area">飞龙组败者</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                            <div class="finalisout-team win">
+                                                <div class="finalisout-area">第五赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                        </div>
+                                        <div class="finalisout-time">
+                                            <p>2月19日 星期五 16:30</p>
+                                        </div>
+                                    </div>
+                                    <div class="second-list box">
+                                         <div class="finalisout-team-box">
+                                             <div class="finalisout-team win">
+                                                 <div class="finalisout-area">第八赛区</div>
+                                                 <div class="finalisout-name"></div>
+                                             </div>
+                                             <div class="finalisout-team">
+                                                 <div class="finalisout-area">飞龙组败者</div>
+                                                 <div class="finalisout-name"></div>
+                                             </div>
+                                         </div>
+                                         <div class="finalisout-time">
+                                             <p>2月19日 星期五 16:30</p>
+                                         </div>
+                                     </div>
+                                     <div class="second-list box">
+                                          <div class="finalisout-team-box">
+                                              <div class="finalisout-team">
+                                                  <div class="finalisout-area">飞龙组败者</div>
+                                                  <div class="finalisout-name"></div>
+                                              </div>
+                                              <div class="finalisout-team win">
+                                                  <div class="finalisout-area">第九赛区</div>
+                                                  <div class="finalisout-name"></div>
+                                              </div>
+                                          </div>
+                                          <div class="finalisout-time">
+                                              <p>2月19日 星期五 16:30</p>
+                                          </div>
+                                      </div>
+                                    <div class="second-list box">
+                                         <div class="finalisout-team-box">
+                                             <div class="finalisout-team win">
+                                                 <div class="finalisout-area">第十赛区</div>
+                                                 <div class="finalisout-name"></div>
+                                             </div>
+                                             <div class="finalisout-team">
+                                                 <div class="finalisout-area">飞龙组败者</div>
+                                                 <div class="finalisout-name"></div>
+                                             </div>
+                                         </div>
+                                         <div class="finalisout-time">
+                                             <p>2月19日 星期五 16:30</p>
+                                         </div>
+                                     </div>
+                                     <div class="second-list box">
+                                          <div class="finalisout-team-box">
+                                              <div class="finalisout-team">
+                                                  <div class="finalisout-area">飞龙组败者</div>
+                                                  <div class="finalisout-name"></div>
+                                              </div>
+                                              <div class="finalisout-team win">
+                                                  <div class="finalisout-area">第十三赛区</div>
+                                                  <div class="finalisout-name"></div>
+                                              </div>
+                                          </div>
+                                          <div class="finalisout-time">
+                                              <p>2月19日 星期五 16:30</p>
+                                          </div>
+                                      </div>
+                                      <div class="second-list box">
+                                           <div class="finalisout-team-box">
+                                               <div class="finalisout-team win">
+                                                   <div class="finalisout-area">第十五赛区</div>
+                                                   <div class="finalisout-name"></div>
+                                               </div>
+                                               <div class="finalisout-team">
+                                                   <div class="finalisout-area">飞龙组败者</div>
+                                                   <div class="finalisout-name"></div>
+                                               </div>
+                                           </div>
+                                           <div class="finalisout-time">
+                                               <p>2月19日 星期五 16:30</p>
+                                           </div>
+                                       </div>
+                                </div>
+                                <div class="third-box boxs">
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第四赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第八赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team ">
+                                               <div class="finalisout-area">第九赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十三赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="third-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="fourth-box boxs">
+                                   <div class="fourth-list box">
+                                       <div class="finalisout-team-box">
+                                            <div class="finalisout-team">
+                                                <div class="finalisout-area">飞龙组败者</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                            <div class="finalisout-team win">
+                                                <div class="finalisout-area">第一赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                        </div>
+                                        <div class="finalisout-time">
+                                             <p>2月19日 星期五 16:30</p>
+                                         </div>
+                                   </div>
+                                   <div class="fourth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第五赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                            <div class="finalisout-team">
+                                                <div class="finalisout-area">飞龙组败者</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                            <p>2月19日 星期五 16:30</p>
+                                        </div>
+                                   </div>
+                                   <div class="fourth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">飞龙组败者</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                            <div class="finalisout-team win">
+                                                <div class="finalisout-area">第十赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                            <p>2月19日 星期五 16:30</p>
+                                        </div>
+                                   </div>
+                                   <div class="fourth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十三赛区</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                            <div class="finalisout-team">
+                                                <div class="finalisout-area">飞龙组败者</div>
+                                                <div class="finalisout-name"></div>
+                                            </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                            <p>2月19日 星期五 16:30</p>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="fifth-box boxs">
+                                   <div class="fifth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="fifth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第五赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="fifth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="fifth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十三赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="sixth-box boxs">
+                                   <div class="sixth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">飞龙组败者</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                            <p>2月19日 星期五 16:30</p>
+                                        </div>
+                                   </div>
+                                   <div class="sixth-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team win">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">飞龙组败者</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                       <div class="finalisout-time">
+                                            <p>2月19日 星期五 16:30</p>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="seventh-box boxs">
+                                   <div class="seventh-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第一赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="seventh-list box">
+                                       <div class="finalisout-team-box">
+                                           <div class="finalisout-team">
+                                               <div class="finalisout-area">第十赛区</div>
+                                               <div class="finalisout-name"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 对局详情 -->
+                <div class="integral-content" style="display: none;">
+                    <!-- 筛选器 -->
+                    <div class="select-btns">
+                        <div class="login-app login-app1">
+                            <select name="login-app" id="sel3">
+                                <option value="2" selected>手Q</option>
+                                <option value="1" >微信</option>
+                            </select>
+                        </div>
+                        <div class="login-area login-area1">
+                            <select name="login-area" id="sel4">
+                                <option value="1" >第一赛区</option>
+                                <option value="2" >第二赛区</option>
+                                <option value="3" >第三赛区</option>
+                                <option value="4" >第四赛区</option>
+                                <option value="5" >第五赛区</option>
+                                <option value="6" >第六赛区</option>
+                                <option value="7" >第七赛区</option>
+                                <option value="8" selected>第八赛区</option>
+                                <option value="9">第九赛区</option>
+                                <option value="10" >第十赛区</option>
+                                <option value="11" >第十一赛区</option>
+                                <option value="12" >第十二赛区</option>
+                                <option value="13" >第十三赛区</option>
+                                <option value="14" >第十四赛区</option>
+                                <option value="15" >第十五赛区</option>
+                                <option value="16" >第十六赛区</option>
+                            </select>
+                        </div>
+                        <div class="login-week login-week1">
+                            <select name="login-week" id="sel5">
+                                <option value="1" selected>第一比赛周</option>
+                                <option value="2" >第二比赛周</option>
+                                <option value="3" >第三比赛周</option>
+                                <option value="4" >第四比赛周</option>
+                                <option value="5" >第五比赛周</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="match-list">
+                        <div class="list-box">
+                            <div class="title"><p class="text" id="matchDetailTitle"></p></div>
+                            <ul class="match-ul" id="matchDetailWeek_1">
+                            </ul>
+                            <ul class="match-ul" id="matchDetailWeek_2">
+                            </ul>
+                            <ul class="match-ul" id="matchDetailWeek_3">
+                            </ul>
+                            <ul class="match-ul" id="matchDetailWeek_4">
+                            </ul>
+                            <ul class="match-ul" id="matchDetailWeek_5">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 赛程end -->
+        <!-- 主页start -->
+        <div class="cont-box cont-box1" style="display: block;">
+            <!-- 头图 -->
+            <div class="kv-box">
+                <img class="kv-bg" src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/kv.png" width="750" height="682" alt="kv">
+                <div class="kv-btns">
+                    <a class="kv-btn btn-match-rule" href="javascript:TGDialogS('dialog-match-rules');" onclick="PTTSendClick('btn','match-rule','赛事规则');" title="赛事规则"></a>
+                </div>
+            </div>
+            <!-- 内容 -->
+            <div class="content">
+                <h2>军团积分排名</h2>
+                <!-- 微信qq切换 -->
+                <div class="login-tabs">
+                    <!-- 选中请加类on -->
+                    <a class="login-tab on" href="javascript:OUT.user.matchHomeList(2);" title="手Q区" onclick="PTTSendClick('btn','login-tab1','手Q区')">手Q区</a>
+                    <a class="login-tab" href="javascript:OUT.user.matchHomeList(1);" title="微信区" onclick="PTTSendClick('btn','login-tab2','微信区')">微信区</a>
+                </div>
+                    
+                <!-- 军团列表 Start -->
+                <div class="legion-list">
+                    <div class="legion-list-box table-scrollbar">
+                        <!-- li.legion-li 军团列表 -->
+                        <!-- legion-li-mine 我的军团 -->
+                        <!-- legion-li-first 第一名，legion-li-second 第二名，legion-li-third 第三名 -->
+                        <ul class="legion-ul" id="legion-ul">
+
+                        </ul>
+                        <div class="load-tip">已经到底啦~</div>
+                    </div>
+                </div>
+                <!-- 军团列表 End -->
+            </div>
+        </div>
+        <!-- 主页end -->
+        <!-- 视讯start -->
+        <div class="cont-box cont-box3" style="display: none;">
+            <!-- 头图 -->
+            <div class="kv-box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/video1.png" width="750" height="422" alt="" style="display: none;">
+                            <a class="btn-play" href="javascript:;" title="播放" onclick="PTTSendClick('btn','btn-play','播放')" style="display: none;"></a>
+                        </div>
+                        <div class="video-container" id="video-container"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="content">
+                <h2>社区文章</h2>
+                <div class="txt-list" id="txt-list">
+                    <!-- <a class="btn-txt" href="javascript:;" title="文章" onclick="PTTSendClick('btn','txt1','文章')">
+                        <div class="img-box"><img src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/video1.png" alt=""></div>
+                        <div class="txt-box">
+                            <p class="titl">天尊版本总览 | 新武将、新赛事...看完这些还怕跟不上版本步伐？</p>
+                            <p class="txt">天尊降临，祥瑞现世最近的王城可谓是热闹非凡，房玄龄、尉迟恭两位大将现身乱世45堡版本上线掀起升堡热潮最强王国天尊赛季热血开战全新的天尊版本到底有哪些内容呢？快随小蝉一起来看看吧~</p>
+                        </div>
+                    </a>
+                    <a class="btn-txt" href="javascript:;" title="文章" onclick="PTTSendClick('btn','txt2','文章')">
+                        <div class="img-box"><img src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/img1.png" alt=""></div>
+                        <div class="txt-box">
+                            <p class="titl">天尊版本总览 | 新武将、新赛事...看完这些还怕跟不上版本步伐？</p>
+                            <p class="txt">天尊降临，祥瑞现世最近的王城可谓是热闹非凡，房玄龄、尉迟恭两位大将现身乱世45堡版本上线掀起升堡热潮最强王国天尊赛季热血开战全新的天尊版本到底有哪些内容呢？快随小蝉一起来看看吧~</p>
+                        </div>
+                    </a> -->
+                </div>
+                <div class="pager" id="pager"></div>
+            </div>
+        </div>
+        <!-- 视讯end -->
+    </div>
+    <!-- 主体内容 End -->
+
+    <!-- 副页面 -->
+    <div class="sub-wrapper">
+        <!-- 对局详情 -->
+        <div class="sub-page sub-page-matchlist">
+            <div class="sub-page-top">
+                <a class="btn-back" href="javascript:;" onclick="PTTSendClick('btn','back-shortlist','返回');" title="返回"></a>
+            </div>
+            <div class="sub-page-body">
+                <ul class="sub-page-ul">
+<!--                    <li>-->
+<!--                        <div class="sub-item">-->
+<!--                            <div class="box">-->
+<!--                                <span>-->
+<!--                                    <em>2月19日 星期五</em>-->
+<!--                                    <em>十六强淘汰赛</em>-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="sub-item">-->
+<!--                            <div class="box">-->
+<!--                                <div class="box-mid">-->
+<!--                                    <span>-->
+<!--                                        &lt;!&ndash; 胜利请加类win &ndash;&gt;-->
+<!--                                        <em class="win">红花会</em>-->
+<!--                                        vs-->
+<!--                                        <em>墨香堂</em>-->
+<!--                                    </span>-->
+<!--                                    <p>10800分：300分</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="sub-item">-->
+<!--                            <div class="box">-->
+<!--                                <span>-->
+<!--                                    <em>2月19日 星期五</em>-->
+<!--                                    <em>十六强淘汰赛</em>-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="sub-item">-->
+<!--                            <div class="box">-->
+<!--                                <div class="box-mid">-->
+<!--                                    <span>-->
+<!--                                        &lt;!&ndash; 胜利请加类win &ndash;&gt;-->
+<!--                                        <em>红花会</em>-->
+<!--                                        vs-->
+<!--                                        <em class="win">墨香堂</em>-->
+<!--                                    </span>-->
+<!--                                    <p>10800分：300分</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+        <!-- 视讯图文 -->
+        <div class="sub-page sub-page-img" style="display: none;">
+            <div class="sub-page-top">
+                <a class="btn-back" href="javascript:;" onclick="PTTSendClick('btn','back-shortlist','返回');" title="返回"></a>
+            </div>
+            <div class="sub-page-body" id="img-body">
+                <!-- <div class="txt-box">
+                    <p class="titl">天尊版本总览 | 新武将、新赛事...看完这些还怕跟不上版本步伐？</p>
+                    <div class="img-box"><img src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/video1.png" alt=""></div>
+                    <p class="txt">天尊降临，祥瑞现世最近的王城可谓是热闹非凡，房玄龄、尉迟恭两位大将现身乱世45堡版本上线掀起升堡热潮最强王国天尊赛季热血开战全新的天尊版本到底有哪些内容呢？快随小蝉一起来看看吧~</p>
+                    <div class="img-box"><img src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/img-big1.png" alt=""></div>
+                    <p class="txt">天尊降临，祥瑞现世最近的王城可谓是热闹非凡，房玄龄、尉迟恭两位大将现身乱世45堡版本上线掀起升堡热潮最强王国天尊赛季热血开战全新的天尊版本到底有哪些内容呢？快随小蝉一起来看看吧~</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出层 Start -->
+    <!-- 登录选择 -->
+    <div class="dialog dialog-login" id="dialog-login" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit dia-tit-login">登录</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dia-login-btns">
+                <a class="btn-login-wx" id="wxloginBtn" href="javascript:OUT.login.wx();" onclick="PTTSendClick('btn','login-wx','微信登录');" title="微信登录"></a>
+                <a class="btn-login-qq" id="ptLoginBtn" href="javascript:OUT.login.qq();" onclick="PTTSendClick('btn','login-qq','手Q登录');" title="手Q登录"></a>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!-- 注销-->
+    <div class="dialog dialog-logout" id="dialog-logout" style="display:none;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-logout">确定更换当前 <em></em> 绑定吗？</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dia-logout-btns">
+                <a class="btn-dialog-sure" href="javascript:OUT.role.updateBindRole();" onclick="PTTSendClick('btn','btn-sure','确定');" title="确定">确定</a>
+                <a class="btn-dialog-logout" href="javascript:closeDialog();" onclick="PTTSendClick('btn','btn-logout','注销');" title="注销">取消</a>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!-- 登录角色 -->
+    <div class="dialog dialog-login-role" id="dialog-login-role" style="display:none;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-custom">绑&nbsp;&nbsp定</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dia-login-selects">
+                <div class="login-select-item">
+                    <label class="login-label">平&emsp;台：</label>
+                    <div class="login-select">
+                        <select name="login-select-app" id="login-select-app">
+                            <option value="" selected>请选择平台</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-select-item">
+                    <label class="login-label">系&emsp;统：</label>
+                    <div class="login-select">
+                        <select name="login-select-app" id="login-select-system">
+                            <option value="" selected>请选择系统</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-select-item">
+                    <label class="login-label">区&emsp;服：</label>
+                    <div class="login-select">
+                        <select name="login-select-area" id="login-select-area">
+                            <option value="" selected>请选择大区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-select-item" id="ulinkRoleSelectParent" style="display: none">
+                    <label class="login-label">角色名：</label>
+                    <div class="login-select" >
+                        <select name="login-select-role" id="login-select-role">
+
+                        </select>
+                    </div>
+                </div>
+                <div id="ulinkErrorMessage" style="color:red; text-align: center"></div>
+            </div>
+            <div class="dia-role-btns">
+                <a class="btn-dialog-sure" id="ulinkConfirmBtn" href="javascript:;" onclick="PTTSendClick('btn','dialog-sure','确定');" title="确定">确定</a>
+                <a class="btn-dialog-logout" href="javascript:closeDialog();" onclick="PTTSendClick('btn','btn-logout','注销');" title="注销">取消</a>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭" id="ulinkCloseBtn"></a>
+    </div>
+
+    <!-- 赛事规则 -->
+    <div class="dialog dialog-match-rules" id="dialog-match-rules" style="display:;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit dia-tit-match-rules">九鼎新星赛规则</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="table-scrollbar">
+                <ul class="dia-rules">
+                    <li class="dia-rule-titl">九鼎新星赛规则</li>
+                    <li class="dia-rule-item"><i>1、</i><span>比赛分为4个阶段，分别为资格入围阶段，小组赛阶段，淘汰赛阶段以及表演赛阶段。</span></li>
+                    <li class="dia-rule-item"><i>2、</i><span>资格入围阶段（3.8-3.23）：九鼎新星赛S1赛季开放手Q及微信各96个入围名额，以投票形式选出入围队伍，选票主要由游戏内各类活动产出。</span></li>
+                    <li class="dia-rule-item"><i>3、</i><span>小组赛阶段（3.28-4.25）：96支入围队伍将会分为16个赛区，每个赛区6支军团进行组内循环赛，每两支队伍会有一次交手机会，该赛段共5场比赛，最终排名靠前的2支队伍出线，排名第一出线飞龙组，排名第二出线天狼组。</span></li>
+                    <li class="dia-rule-item"><i>4、</i><span>淘汰赛阶段（5.2-5.20）：淘汰赛共32支队伍，最终决出4强军团。淘汰赛采用经典双败淘汰制，三个组分别为飞龙组（相对应的KCL的麒麟组），天狼组（相对应KCL的朱雀组），以及长啸组（相对应KCL的虎啸组），比赛共计3周。</span></li>
+                    <li class="dia-rule-item"><i>5、</i><span>表演赛阶段（5.30）：新星赛S1赛季战斗表现最佳的30位选手将与九鼎S6赛季战斗表现最佳的30位选手，以各15人的形式组成两只融合队伍进行对战。</span></li>
+                    <li class="dia-rule-titl">小组赛出线规则</li>
+                    <li class="dia-rule-item"><i>1、</i><span>每个赛区内积分最高的两支队伍入围淘汰赛，赛区内第一名晋级飞龙组，赛区内第二名晋级天狼组，未出线军团则进入长啸组。</span></li>
+                    <li class="dia-rule-item"><i>2、</i><span>若赛区内出现两支队伍积分相同的情况，则按积分相同两支队伍的历史交战场次的胜负关系决定，胜利方则小组排名靠前。</span></li>
+                    <li class="dia-rule-item"><i>3、</i><span>若赛区内出现大于两只队伍积分相同的情况（例如3只或3只队伍以上并列第2名），先判定胜负关系，若A对阵B胜利，B对阵C胜利，A对阵C胜利，则排位为A>B>C; 若对局胜负关系无法判定名词排序时，则按每只队伍的所有比赛的净胜分之和由高到低排序。净胜分高者，赛区内排名则靠前。
+                        <br>（注：净胜分指比赛双方战斗积分之差，如A对阵B 赢了500分，A对阵C 输了300分，则A队的净胜分为200分）。</span></li>
+                    <li class="dia-rule-item"><i>4、</i><span>若积分相同，对局胜负关系无法判定名次排序，且净胜分相同时，则每场比赛的总比分相加，总分更高者排名靠前。</span></li>
+                    <li class="dia-rule-item"><i>5、</i><span>规则优先级：积分>胜负关系>净胜分>总比分</span></li>
+                    <li class="dia-rule-titl">淘汰赛规则</li>
+                    <li class="dia-rule-item"><i>1、</i><span>淘汰赛采用经典双败淘汰制，三个组分别为飞龙组（相对应的KCL的麒麟组），天狼组（相对应KCL的朱雀组），以及长啸组（相对应KCL的虎啸组）</span></li>
+                    <li class="dia-rule-item"><i>2、</i><span>每个赛区内第一名晋级飞龙组，赛区内第二名晋级天狼组。每场比赛对阵双方均来自同一个组。</span></li>
+                    <li class="dia-rule-item"><i>3、</i><span>若比赛胜利则继续留在所在组；若飞龙组军团失败，则会进入天狼组，于下周四进行第二场比赛；若天狼军团失败，则进入长啸组，不再进行4强席位争夺。</span></li>
+                    <li class="dia-rule-item"><i>4、</i><span>飞龙组只每周日晚21：00-21：50进行比赛，天狼组每周四周日晚21：00-21：50皆有比赛，请主公实时关注自己的赛程，以免错过比赛。长啸组每周日晚21：00-21：50进行比赛</span></li>
+                    <li class="dia-rule-titl">表演赛</li>
+                    <li class="dia-rule-item"><i>1、</i><span>新星赛S1赛季中战斗表现最佳的30位选手将与九鼎S6赛季战斗表现最佳的30位选手，以各15人的形式组成两只融合队伍进行对战，届时将全程直播。</span></li>
+                    <li class="dia-rule-item"><i>2、</i><span>战斗表现评定会结合个人战功及个人积分综合评定，届时会公布评定细则</span></li>
+                    <li class="dia-rule-titl">联赛积分获取规则</li>
+                    <li class="dia-rule-item"><i>1、</i><span>新区范围内所有玩家均参与九鼎新星赛，通过比赛获得联赛积分，赛季末统一发放联赛奖励。</span></li>
+                    <li class="dia-rule-item"><i>2、</i><span>积分规则如下：
+                        <br>入围队伍：
+                        <br>小组赛胜1场获得2积分，败1场获得1积分
+                        <br>季后赛飞龙组胜1场获得4积分，败1场获得2积分
+                        <br>季后赛天狼组胜1场获得2积分，败1场获得1积分
+                        <br>季后赛长啸组胜1场获得2积分，败1场获得1积分
+                        <br>未入围队伍：
+                        <br>整赛季期间，胜1场获得1积分，败1场获得0积分
+                    </span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="dia-foot"></div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!-- 分享蒙层 -->
+    <div class="dialog-share-mask" id="dialog-share-mask" style="display:none;">
+        <img class="dialog-share-mask-img" src="//game.gtimg.cn/images/slg/act/5130/a20210225newstar/dialog-share-mask.png" alt="">
+        <a class="dia-close-mask" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    
+    <!--系统弹窗-->
+    <div class="dialog dialog-written" id="dialog-system" style="display:none;">
+        <div class="dia-head"></div>
+        <div class="dia-con">
+            <p class="dia-tit-written">乱世王者 九鼎之战 一决高下</p>
+            <i class="icon-dialog-line-h"></i>
+            <div class="dialog-written-desc">
+                <span></span>
+            </div>
+            <a class="btn-dialog-true" href="javascript:;" onclick="PTTSendClick('btn','btn-dialog-true','确定');" title="确定"></a>
+        </div>
+        <div class="dia-foot"></div>
+    </div>
+
+    <!-- 弹出层 End -->
+
+    <!-- Javascript -->
+    <script src="//game.gtimg.cn/images/js/fillnewsgicp/v1.4.js" charset="gbk"></script>
+    <script src="https://game.gtimg.cn/images/ulink/ulinksdk/jquery-3.4.1.min.js"></script>
+    <script src="https://ulink.qq.com/ulinksdk/dist/js/ulink.2.0.8.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script> 
+    <script src='//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+    <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 数据统计
+        var setSite = { //设置网站属性
+            siteType: "a20210220newstar", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+            pageName: "首页", //必填项:页面中文名
+            project: "other", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+            osact: 0 //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+        };
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+
+
+
+        // 打开Dialog
+        function TGDialogS(e) {
+            // 利用milo库引入dialog组件
+            need("biz.dialog", function(Dialog) {
+                Dialog.show({
+                    id: e,
+                    bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+                    opacity: 80 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+                });
+            });
+        }
+        // 关闭Dialog
+        function closeDialog() {
+            // 利用milo库引入dialog组件
+            need("biz.dialog", function(Dialog) {
+                Dialog.hide();
+            });
+        }
+    </script>
+    <script type="news-template" id="tpl">
+        <div class="txt-box">
+            <p class="titl">{sTitle}</p>
+            <div class="content">{sContent}</div>
+        </div>
+    </script>
+    <script src="https://game.gtimg.cn/images/ulink/ulinksdk/vconsole.min.js"></script>
+    <script type="text/javascript" src="https://gameact.qq.com/comm-htdocs/js/game_area/utf8verson/slg_server_select_utf8.js" charset="UTF-8"></script>
+    <script>
+        // init vConsole
+        var vConsole = new VConsole();
+    </script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
