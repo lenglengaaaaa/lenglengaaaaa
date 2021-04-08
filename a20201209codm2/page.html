@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="gbk" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="robots" content="all" />
+    <meta name="author" content="Tencent-CP" />
+    <meta name="Description"
+        content="《使命召唤》手游官方预约站，立即预约CODM，即可获得绝版礼包，另邀请好友共赴全新战场，可获得1次免费抽奖机会，召唤战友共赴CODM战场，一同预约共赢好礼，全新挑战与你不见不散！" />
+    <meta name="Keywords" content="使命召唤,使命召唤手游,使命召唤手游活动,使命召唤手游礼包,使命召唤手游官方,使命召唤手游预约,CODM" />
+    <title>使命集结来场最后的战役-腾讯游戏</title>
+    <link rel="stylesheet" href="css/page.css">
+    <script>
+        //适配pc端
+        function is_pc() {
+            var os = new Array("Android", "iPhone", "Windows Phone", "iPod", "BlackBerry", "MeeGo",
+                "SymbianOS"); // 其他类型的移动操作系统类型，自行添加
+            var info = navigator.userAgent;
+            var len = os.length;
+            for (var i = 0; i < len; i++) {
+                if (info.indexOf(os[i]) > 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        if (!is_pc()) {
+            window.location.href = "./page-m.html";
+        }
+    </script>
+    <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-4.3.3.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+      
+        <div class="wrap1">
+            <!-- logo -->
+            <a href="//codm.qq.com/" target="_blank" class="logo" title="使命召唤手游"
+                onclick="PTTSendClick('btn','logo','使命召唤手游');"></a>
+            <div class="cont clearfix">
+
+                <!-- 播放 -->
+                <p class="play-box">
+                    <a href="javascript:;" class="btn-play" onclick="PTTSendClick('btn','btn-play','播放');"></a>
+                    <span></span>
+                </p>
+                <p class="slogan"></p>
+                <!-- 登录 -->
+                <div class="login-box">
+                    <!--登录前状态 Start-->
+                    <div id="unlogin" class="login" style="display: block;">
+                        你好，请【<a id="btn_qqlogin" href="javascript:;" title="登录"
+                            onclick="PTTSendClick('btn','login','登录')">登录</a>】
+                    </div>
+                    <!--登录前状态 End-->
+                    <!--登录后状态 Start-->
+                    <div id="logined" class="login" style="display: none;  ">
+                        欢迎您，<span id="login_qq_span"></span>
+                        <span id="ams_user_headimg"></span>
+                        <span id="areaName"></span>
+                        <a id="changeRole" style="display: none">【更换绑定】</a>
+                        <!--<a id="btn_bind" href="javascript:;" >【绑定角色】</a>-->
+                        <!--<a id="btn_binded" href="javascript:;" >【更换绑定】</a>-->
+                        <a id="btn_logout" href="javascript:;" title="注销"
+                            onclick="PTTSendClick('btn','logined','注销')">【注销】</a>　
+                    </div>
+                </div>
+                <!-- 添加on切换成下载游戏 -->
+                <a href="javascript:;" class="btn-order" onclick="PTTSendClick('btn','btn-order','立即预约');"></a>
+                <i class="tips-next"></i>
+            </div>
+            <i class="icon-foot"></i>
+            <!-- 预告片 -->
+            <div class="notice-box">
+                <a href="javascript:;" class="btn-expand" onclick="PTTSendClick('btn','btn-expand','展开');"></a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <span><img src="ossweb-img/p/notice1.png"></span>
+                            <p><i>01</i>fuankan预告片</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="ossweb-img/p/notice1.png"></span>
+                            <p><i>02</i>fuankan预告片</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="ossweb-img/p/notice1.png"></span>
+                            <p><i>03</i>fuankan预告片</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="ossweb-img/p/notice1.png"></span>
+                            <p><i>04</i>fuankan预告片</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="ossweb-img/p/notice1.png"></span>
+                            <p><i>05</i>fuankan预告片</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 页面切换 -->
+            <div class="btn-box">
+                <a href="javascript:;" class="btn on btn1"
+                    onclick="PTTSendClick('btn','btn1','更多杰伦独家');"><i></i><span>更多杰伦独家</span></a>
+                <a href="javascript:;" class="btn btn2"
+                    onclick="PTTSendClick('btn','btn2','领取专属福利');"><i></i><span>领取专属福利</span></a>
+            </div>
+
+        </div>
+        <div class="wrap2">
+            <div class="cont1 clearfix">
+                <div class="left">
+                    <div class="film">
+                        <img src="ossweb-img/p/film-img.png" alt="胶片图片">
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="title"></p>
+                    <p class="word">
+                        分享页面，邀请好友点赞助力页面点赞数<em>每破10万</em>，解锁—套价值<em>6000元的周杰伦限量黑胶唱片套装</em>共限10套活动结束后，将由点赞排行前10的玩家获得</p>
+                    <em class="sanjiao"></em>
+                    <div class="schedule-box">
+                        <div class="swiper-schedule swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide on">
+                                    <em class="bar"></em>
+                                    <p class="number">10万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">20万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">30万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">40万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">50万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">60万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">70万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">80万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">90万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <em class="bar"></em>
+                                    <p class="number">100万</p>
+                                    <img src="ossweb-img/p/award.png" alt="">
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="btns-box">
+                        <a href="javascript:;" class="btn-invite"
+                            onclick="PTTSendClick('btn','btn-invite','邀请好点赞');"></a>
+                        <a href="javascript:;" class="btn-look on" onclick="PTTSendClick('btn','btn-look','查看我获得的赞');"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="cont2">
+                <p class="title"></p>
+                <ul class="rank-bg">
+                    <li class="on">
+                        <span>Top 1</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 2</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 3</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 4</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+
+                    <li>
+                        <span>Top 5</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 6</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 7</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+
+                    <li>
+                        <span>Top 8</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 9</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                    <li>
+                        <span>Top 10</span>
+                        <img src="ossweb-img/p/rank-img.png" alt="">
+                    </li>
+                </ul>
+
+            </div>
+            <div class="cont3">
+                <p class="title"></p>
+                <p class="word">完成以下任务，即可获得对应积分;<em>每10积分</em>可抽奖—次，活动期间最高<em>可抽取8次</em></p>
+                <p class="integral">你的积分：<em>999</em><a href="javasript:;" class="cj-record">[抽奖记录]</a></p>
+                <div class="lottery" id="lotterycontent">
+                    <ul class="lottery-inner">
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+                        <li class="btn-cj">
+
+                        </li>
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+                        <li>
+                            <img src="ossweb-img/p/prop.png" alt="">
+                            <p>金币X5000</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <p class="cj-adorn"></p>
+            </div>
+            <div class="cont4">
+                <div class="text">
+                    <p>1.每日转发页面,邀请好友点赞,可获得10积分；关注官方微博。可获得5积分；</p>
+                    <p>2.关注官方微信公众号，可获得5积分；关注官方视频号，可获得5积分；</p>
+                    <p>
+                        3.关注官方快手号，可获得5积分；关注官方B站号，可获得5积分；
+                    </p>
+                    <p>
+                        4.关注官方波洞号，可获得5积分；下载游戏。注册角色。可获得20积分；
+                    </p>
+                    <p>
+                        5.每日完成—场对局，可获得10积分
+                    </p> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- 二维码 -->
+     <div class="dialog dia-p1" id="dia-p1" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <img src="ossweb-img/p/dia-code.png" alt="">
+            <p>我正在集赞抢周杰伦限量黑胶唱片套装，快来帮我点一个赞吧</p>
+        </div>
+    </div>
+    <!-- 爷青回，点一个 -->
+    <div class="dialog dia-p2" id="dia-p2" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <p>(好友ID)正在集赞抢周杰伦限量黑胶唱片套装, 快帮忙点个赞吧</p>
+            <a href="javascript:;" class="dia-btn dia-btn1" onclick="PTTSendClick('btn','dia-btn1','爷青回，点一个');">爷青回，点一个!</a>
+        </div>
+    </div>
+    <!-- 立刻发起 -->
+    <div class="dialog dia-p3" id="dia-p3" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <p>您已为(好友ID)点赞成功，点赞数+1您也去发起 点赞吧，杰伦是大家的杰伦!</p>
+            <a href="javascript:;" class="dia-btn dia-btn2" onclick="PTTSendClick('btn','dia-btn2','立刻发起');">立刻发起</a>
+        </div>
+    </div>
+    <!-- 提交订单 -->
+    <div class="dialog dia-p4" id="dia-p4" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <p>恭喜获得XXXX，请填写收件方式，奖品将在 活动结束后—个月内寄出</p>
+            <div class="address">
+                <input type="text" placeholder="姓名">
+                <input type="text" placeholder="身份证号码">
+                <input type="text" placeholder="手机号码">
+                <span>
+                    <select name="" id=""></select>
+                    省
+                </span>
+                <span>
+                    <select name="" id=""></select>
+                    市
+                </span>
+                <input type="text" placeholder="详细地址">
+                <input type="text" placeholder="邮编">
+            </div>
+            <a href="javascript:;" class="dia-btn dia-btn3" onclick="PTTSendClick('btn','dia-btn3','提交');">提交</a>
+        </div>
+    </div>
+    <!-- 永久道具 -->
+    <div class="dialog dia-p5" id="dia-p5" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <p>恭喜获得XXXX，奖励将直接发放至 游戏内，请注意查收!</p>
+            <span>
+                <img src="" alt="">
+                <em>永久道具</em>
+            </span>
+        </div>
+    </div>
+    <!-- 查看当时总积分 -->
+    <div class="dialog dia-p6" id="dia-p6" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <p>成功完成任务，恭喜获得积分+10，祝你好运!</p>
+            <a href="javascript:;" class="dia-btn dia-btn4" onclick="PTTSendClick('btn','dia-btn4','查看当时总积分');">查看当时总积分</a>
+        </div>
+    </div>
+    <!-- 前往完成任务 -->
+    <div class="dialog dia-p7" id="dia-p7" style="display: none;">
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+        <div class="dia-con">
+            <p>当前积分余额不足，请去完成任务攒积分吧</p>
+            <a href="javascript:;" class="dia-btn dia-btn5" onclick="PTTSendClick('btn','dia-btn5','前往完成任务');">前往完成任务</a>
+        </div>
+    </div>
+
+    <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/title.js"></script>
+    <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/milo_bundle/milo.js"></script>
+    <script src="js/page.js"></script>
+    <script src="//game.gtimg.cn/images/js/delottery/lottery.js"></script>
+    <script>
+        //点击开始抽奖 通知js flash->js
+
+        //开始抽奖lottery->js
+        function callJsToStart() {
+            lottery.disable();
+            calllotteryToRoll(4);
+        }
+        //开发获得抽奖结果 通知lottery开始播放效果 js->lottery
+        function calllotteryToRoll(id) {
+            if (lottery) lottery.stopRoll(id);
+        }
+        //动画完成通知js lottery->js        
+        function callJsToComplete() {
+            alert('恭喜你获得大奖哟！！');
+        }
+
+        //初始化抽奖的 可以不知道内部
+        var lottery = new Lottery({
+            'lighturl': 'ossweb-img/p/sel.png', //外部光圈png 不填写就用默认的效果
+            'starturl': 'ossweb-img/p/btn-cj.png', //外部按钮png 不填写就用默认的按钮效果
+            'width': 843, //lottery 宽度
+            'height': 387, //lottery 高度
+            'total': 8, //抽奖产品的总数
+            'sbtnx': 285, // 开始抽奖按钮的位置x坐标
+            'sbtny': 133, // 开始抽奖按钮的位置y坐标
+            'sbtnw': 273, // 开始抽奖按钮的宽度
+            'sbtnh': 121, // 开始抽奖按钮的高度
+            'boxw': 273, // 奖品光效的宽度
+            'boxh': 121, //奖品光效的高度 
+            'position': "0_0,285_0,570_0,570_133,570_266,285_266,0_266,0_133",
+            //奖品光效的位置，对应奖品图片的布局，填入每个奖品的位置以及角度用逗号分割 x_y 例如19_20或者19_20_0 表示第一个奖品的位置 x坐标为19px y坐标为20px 角度为0。）
+            'contentId': 'lotterycontent', //嵌入lottery 的div层的 id 
+            'onClickRollEvent': callJsToStart, //对应上面接口
+            'onCompleteRollEvent': callJsToComplete //对应上面接口
+        });
+    </script>
+    <script type="text/javascript">
+    </script>
+    <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+    <script>
+        //此段代码不能放到外链JS中，
+        var setSite = { //设置网站属性
+            siteType: "a20201209codm", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "page", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+            pageName: "使命集结", //必填项:页面中文名
+            osact: "pc", //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+            project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;原生官网base;微社区ingame;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;
+        }
+        if (typeof (pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+
+</html>

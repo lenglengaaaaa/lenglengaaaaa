@@ -1,0 +1,211 @@
+.gka-wrap {
+    width: 2.5rem;
+    height: 3.5rem;
+}
+#gka{
+    width: 2.5rem;
+    height: 3.5rem;
+}
+.animation {
+    width: 2.5rem;
+    height: 3.5rem;
+    background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/0.png");
+    background-size: 2.5rem 3.5rem;
+    background-repeat: no-repeat;
+    animation-name: keyframes-gifimg;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(1);
+}
+
+@keyframes keyframes-gifimg {
+    0% {
+        width: 2.5rem;
+        height: 3.5rem;
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/0.png");
+        background-size: 2.5rem 3.5rem;
+    }
+
+    2.17% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/1.png");
+    }
+
+    4.35% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/2.png");
+    }
+
+    6.52% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/3.png");
+    }
+
+    8.70% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/4.png");
+    }
+
+    10.87% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/5.png");
+    }
+
+    13.04% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/6.png");
+    }
+
+    15.22% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/7.png");
+    }
+
+    17.39% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/8.png");
+    }
+
+    19.57% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/9.png");
+    }
+
+    21.74% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/10.png");
+    }
+
+    23.91% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/11.png");
+    }
+
+    26.09% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/12.png");
+    }
+
+    28.26% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/13.png");
+    }
+
+    30.43% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/14.png");
+    }
+
+    32.61% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/15.png");
+    }
+
+    34.78% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/16.png");
+    }
+
+    36.96% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/17.png");
+    }
+
+    39.13% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/18.png");
+    }
+
+    41.30% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/19.png");
+    }
+
+    43.48% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/20.png");
+    }
+
+    45.65% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/21.png");
+    }
+
+    47.83% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/22.png");
+    }
+
+    50.00% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/23.png");
+    }
+
+    52.17% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/24.png");
+    }
+
+    54.35% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/25.png");
+    }
+
+    56.52% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/26.png");
+    }
+
+    58.70% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/27.png");
+    }
+
+    60.87% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/28.png");
+    }
+
+    63.04% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/29.png");
+    }
+
+    65.22% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/30.png");
+    }
+
+    67.39% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/31.png");
+    }
+
+    69.57% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/32.png");
+    }
+
+    71.74% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/33.png");
+    }
+
+    73.91% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/34.png");
+    }
+
+    76.09% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/35.png");
+    }
+
+    78.26% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/36.png");
+    }
+
+    80.43% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/37.png");
+    }
+
+    82.61% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/38.png");
+    }
+
+    84.78% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/39.png");
+    }
+
+    86.96% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/40.png");
+    }
+
+    89.13% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/41.png");
+    }
+
+    91.30% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/42.png");
+    }
+
+    93.48% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/43.png");
+    }
+
+    95.65% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/44.png");
+    }
+
+    97.83%,
+    100% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210205springm/img/45.png");
+    }
+}/* #t6Hl8#7886C24A5070D7C50A7F0B5F15890360 */

@@ -1,0 +1,57 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+a:hover{-webkit-filter:brightness(1.1);-o-filter:brightness(1.1);-moz-filter:brightness(1.1);filter:brightness(1.1);}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{font-size:100%;}
+input,a{text-decoration: none; outline: none; color: #FFFFFF;-webkit-appearance: none; -webkit-tap-highlight-color:rgba(255,255,255,0);}
+.hid{text-indent:-9999px;font-size:0px;overflow:hidden;width:0px;height:0px;display:block;}
+.hidden{text-indent:-9999px;font-size:0px;}
+body,button,input,select,textarea{font:12px/1.5 "Microsoft YaHei",Helvetica,\5b8b\4f53,sans-serif;}
+body{background:#131a24;}
+/*afooter*/
+#afooter{text-align:center; line-height:1.5;color: #9a9a9a; padding: 40px 0;margin-bottom: -20px;background-color: #000;min-width: 1400px;}
+#afooter a{ color: #9a9a9a;}
+/*Çå³ý¸¡¶¯*/
+.clearfix:after,.clearfix:before{content:"";display:table;}
+.clearfix:after{clear:both;}
+
+.wrapper{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/bg.jpg) no-repeat center;height: 2408px;}
+.wrap1{min-width: 1400px;height: 862px;margin:0 auto;max-width: 1920px;position: relative;overflow: hidden;}
+.wrap2{min-width: 1400px;height: 1546px;margin:0 auto;max-width: 1920px;}
+
+.wrap1 .logo{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/logo.png) no-repeat;width: 424px;height: 67px;position: absolute;left: 100px;top:50px;}
+.wrap1 .header{width: 1400px;margin:0 auto;}
+.wrap1 .time-inner{width: 800px;margin:0 auto;}
+.wrap1 .time{font-size: 24px;color:#dfe0e0;text-align: center;}
+.wrap1 .title{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/title.png) no-repeat;width: 919px;height: 250px;margin:474px auto 15px;}
+.wrap1 .login-box{color:#fff;text-align: center;margin-top:25px;font-size: 14px;}
+
+.wrap2 .cont{width: 1400px;margin:0 auto;}
+.wrap2 .ul1 li{float: left;width: 640px;height: 795px;margin:28px 29px 15px;}
+.wrap2 .tit1{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/tit1.png) no-repeat;width: 494px;height: 61px;margin:78px auto 0;}
+.wrap2 .tit2{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/tit2.png) no-repeat;width: 494px;height: 61px;margin:78px auto 0;}
+.wrap2 .lq-bg{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/lq-time-bg.png) no-repeat;width: 657px;height: 62px;margin:20px auto 40px;color:#b7b7b7;font-size: 22px;text-align: center;line-height: 62px;}
+.wrap2 .lq-bg span{font-size: 30px;font-weight: bold;color:#e3e3e3;margin-right: 10px;}
+.wrap2 img{width: 453px;height: 311px;display: block;margin:0 auto;}
+.wrap2 .btn-lq{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/btn-lq.png) no-repeat;width: 509px;height: 129px;display: block;margin:40px auto 0;}
+.wrap2 .btn-lq.btn-zhih{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/btn-lq-on.png) no-repeat;}
+
+.wrap2 .lq-tips{color:#fff;font-size: 18px;text-align: center;}
+.wrap2 .title2{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/title2.png) no-repeat;width: 696px;height: 109px;margin:110px auto 60px;}
+.wrap2 .ul2 a{float: left;width: 430px;height: 290px;margin-right: 26px;display: block;cursor: pointer;position: relative;}
+.wrap2 .ul2 a:last-child{margin-right: 0;}
+.wrap2 .ul2{width: fit-content;margin:0 auto;}
+.wrap2 .ul2 a:hover::before{content: '';width: 100%;height: 100%;border: 3px solid #e93228;position: absolute;top: 0;left: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.wrap2 .ul2 .li1{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/img1.png) no-repeat;}
+.wrap2 .ul2 .li2{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/img2.png) no-repeat;}
+.wrap2 .ul2 .li3{background: url(//game.gtimg.cn/images/cfhd/lbact/a20201103lba5gs2/img3.png) no-repeat;}
+

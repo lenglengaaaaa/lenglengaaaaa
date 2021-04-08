@@ -1,0 +1,51 @@
+/* reset */
+body,dl,dd,ul,li,div,a,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer{margin:0;padding: 0;outline: none;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em,b{font-style:normal}
+a{text-decoration:none; outline: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);} 
+a:hover{text-decoration:none;}
+img{border:0} 
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+td,th,ul,ol{padding:0;list-style: none;}
+div{outline: none;}
+.hidden{display: none; font-size: 0; text-indent: -999em;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{*zoom:1;}
+#afooter{text-align:center; line-height:20px;color: #9a9a9a;background-color: #0e0e0e;padding: 20px 0; position: relative; z-index: 2;}
+#afooter a{color: #9a9a9a;}
+#loginStatusSyncFrame_ams_ame{ display: none;}
+.wrap{min-width: 1400px; max-width: 1920px; overflow-x: hidden;position: relative; margin: 0 auto;}
+.head{min-width: 1400px; height: 1080px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/bg-public-head.jpg) no-repeat; background-position: center center; position: relative;}
+
+.login-box{ float: left;  height: 74px; line-height: 74px; padding-left: 20px;}
+.login-info{ text-align: center;color: #FFFFFF;}
+.login-info a{ color: #FFFFFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

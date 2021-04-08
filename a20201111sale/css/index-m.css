@@ -1,0 +1,84 @@
+.title1/* reset */
+html,body,div,p,ul,li,dl,dt,dd,em,i,span,a,img,input,h1,h2,h3,h4,h5 {margin:0;padding:0}
+a,img,input {border:none;}
+body{font: 14px/1.75  -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a {text-decoration:none;}
+ul,li{list-style: none}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单，根据需要选择是否删除 */}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+    background: #380f0f;
+}
+/* reset end */
+html {
+  font-size: 50px;/* 兼容不支持vw的系统 */
+  font-size: 13.33333333vw;/* 7.5rem === 100vw */
+}
+
+@media (max-width: 1024px) {
+  html,body {
+    max-width: 1024px;
+  }
+}
+@font-face {
+  font-family: 'sellnum-2';
+  src: url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.eot');
+  src: url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.woff') format('woff'),url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.ttf') format('truetype'),url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.svg') format('svg');
+}
+#afooter{background-color: #000;text-align: center;font-size:18px;padding:30px 0;}
+#afooter, #afooter a{color: #ffffff;text-decoration: none;}
+.clearfix:after,.clearfix:before{content: "";display: table;}
+.clearfix:after{clear: both;}
+.clearfix{*zoom: 1;}
+.hidden{display: none; font-size: 0; text-indent: -999em;}
+.head{ width: 100%;  background: url(//game.gtimg.cn/images/lol/act/a20201111sale/headm.jpg) no-repeat;background-size: 100% 100%; height: 736px;  display: block; margin: 0 auto; position: relative; overflow: hidden;}
+.logo{ background: url(//game.gtimg.cn/images/lol/v3/logo-public.png) no-repeat; background-size: 100% 100%; width: 192px; height: 61px; position: absolute; top:22px; left:22px;font-size: 0px; transition: all 0.3s; z-index: 999;}
+.cont{ width: 100%; height: auto;margin: -1px auto 0;background: #651010;}
+.cont .center{ width: 100; height:100%; display: block; margin: 0 auto; overflow: hidden;}
+.time{ font-size: 20px; text-align: center; color: #ffffff; margin-top:539px; letter-spacing: 1px;}
+.nav{display: none!important;}
+.navbox{width: 750px;height: 74px; background: url(//game.gtimg.cn/images/lol/act/a20201111sale/navm.png) no-repeat;background-size: 100% 100%;position: absolute;bottom: 65px;left: 0;}
+.navbox a{font-size: 0;display: block;float: left;width: 25%;height: 100%;}
+
+/* title */
+.title1{ width: 100%; height: 311px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/title1m.png) no-repeat;background-size: 750px 100%; display:block; margin:0 auto; font-size: 0px;position: relative;z-index: 1;}
+.title2{ width: 100%; height: 319px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/title2m.png) no-repeat;background-size: 750px 100%; display:block; margin:0 auto; font-size: 0px;}
+.title3{ width: 100%; height: 326px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/title3m.png) no-repeat;background-size: 750px 100%; display:block; margin:0 auto; font-size: 0px;}
+.title4{ width: 100%; height: 317px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/title4m.png) no-repeat;background-size: 750px 100%; display:block; margin:0 auto; font-size: 0px;}
+
+.ul{ width: 100%; height: auto; display: flex; margin: 0 auto 40px; clear: both;position: relative; justify-content: left; flex-wrap: wrap;padding-left: 13px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.limitul1{margin-top: -211px;}
+.limitul2{margin-top: -219px;}
+.limitul3{margin-top: -226px;}
+.limitul4{margin-top: -217px;}
+
+.limitul1::after{content: '';display: block;position: absolute;top: 0;left: 0;z-index: 0; background: #63160c;}
+.limitul2::after{content: '';display: block;position: absolute;top: 0;left: 0;z-index: 0; background: #5d0a0f;}
+.limitul3::after{content: '';display: block;position: absolute;top: 0;left: 0;z-index: 0; background: #63160c;}
+.limitul4::after{content: '';display: block;position: absolute;top: 0;left: 0;z-index: 0; background: #5d0a0f;}
+
+.ul li{ width: 159px; height: 435px; margin-right:27px;position: relative;z-index: 1;}
+.ul li:nth-child(4n){margin-right: 0;}
+.picbox{width: 159px; height: 246px; display:block; position: relative; margin: 0 auto;padding-top: 3px;border-radius: 12px; overflow: hidden;}
+.ul li .mc{ background: url(//game.gtimg.cn/images/lol/act/a20201111sale/mc.png) no-repeat;background-size: 100% 100%; width: 159px; height: 251px; position: absolute; top: 0px; left: 0px;z-index: 2;}
+.picbox .pic{display: block; width: 169px; height: auto;margin: 0 auto; background-size: 100% 100%;}
+.picbox .name{width: 100%;height: auto;background: rgba(0,0,0,0.5);position: absolute;bottom: 0px;left: 0px;text-align: center;font-size: 18px;color: #fed4ab;line-height: 20px;padding: 10px 5px;z-index: 1;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.ul li .txt1{width: fit-content; font-size: 18px;line-height: 18px; color: #cc5656; text-align: center; position: relative;margin: 15px auto;}
+.ul li .txt1::before{content: ''; width: 100%; height: 1px; background: #cc5656; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.ul li .txt2{width: 110%;margin-left: -5%; font-size: 16px; color: #fed4ab;line-height: 34px; text-align: center;} 
+.ul li .txt2 span{ font-size: 32px;font-family: 'sellnum-2';}
+.btn-buy{ width: 158px; height: 56px; display: block;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/btn-buy.png) no-repeat;background-size: 100% 100%; margin: 0 auto; font-size: 0px;}
+.ul .icon{display: block;width: 53px;height: 53px; background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon-sale.png) no-repeat;background-size: 100% 100%; position: absolute;top: 0;left: -2px;z-index: 3;}
+.limitul2 .icon,.limitul4 .icon{width: 53px;height: 53px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon-limit.png) no-repeat;background-size: 100% 100%;}
+.limitul2 .txt2,.limitul4 .txt2{margin: 20px auto 10px;}
+
+
+.ul .icon29::before{content: '';display: block; width: 102px;height: 64px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon29.png) no-repeat;background-size: 100% 100%; position: absolute;top: -1%;right: -8%;z-index: 3;}
+.ul .icon31::before{content: '';display: block; width: 102px;height: 64px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon31.png) no-repeat;background-size: 100% 100%;position: absolute;top: -1%;right: -8%;z-index: 3;}
+.ul .icon10::before{content: '';display: block; width: 128px;height: 80px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon10.png) no-repeat;background-size: 100% 100%;position: absolute;top: -3%;right: -14%;z-index: 3;}
+.ul .icon1::before{content: '';display: block; width: 102px;height: 64px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon1.png) no-repeat;background-size: 100% 100%;position: absolute;top: -1%;right: -8%;z-index: 3;}
+.ul .icon8::before{content: '';display: block; width: 154px;height: 96px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon8.png) no-repeat;background-size: 100% 100%;position: absolute;top: -4%;right: -20%;z-index: 3;}
+.ul .icon9::before{content: '';display: block; width: 102px;height: 64px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon9.png) no-repeat;background-size: 100% 100%;position: absolute;top: -1%;right: -4%;z-index: 3;}
+.ul .icon58::before{content: '';display: block; width: 102px;height: 64px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon58.png) no-repeat;background-size: 100% 100%;position: absolute;top: -1%;right: -4%;z-index: 3;}
+.ul .icon54::before{content: '';display: block; width: 102px;height: 64px;background: url(//game.gtimg.cn/images/lol/act/a20201111sale/icon54.png) no-repeat;background-size: 100% 100%;position: absolute;top: 0%;right: -2%;z-index: 3;}

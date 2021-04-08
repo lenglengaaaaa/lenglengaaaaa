@@ -1,0 +1,203 @@
+/* reset */
+body,div,p,ul,li,select,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;list-style:none;outline: none;}
+body{-webkit-text-size-adjust:none; font-size: 0.24rem;}
+header,nav,section,article,footer,figure,figcaption{display:block;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0;}
+em,strong{font-weight:normal;font-style:normal;}
+a {text-decoration:none;}
+.hid {display:block;width:0;height:0;overflow:hidden;}
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.fl {float:left;}
+.fr {float:right;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {display:block;text-indent:-999em;}
+body,html{background-color: #000;position: relative;}
+footer {width:100%;margin:0 auto;}
+footer{color:#fff;background-color:#000;padding:0.2rem 0;font-size:0.2rem;text-align:center;}
+
+.wrap{width: 100%;height: 35.09rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/bg.jpg) no-repeat;background-size: 7.5rem 100%;position: relative;} 
+
+/* head */
+.head{width: 100%;height: 7.37rem;position: relative;}
+.logo{width: 1.59rem;height: 0.51rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/logo1.png) no-repeat;background-size: 100% 100%;position: absolute;top: .2rem;left: .2rem;font-size: 0;}
+.login-box{width: 5.4rem;height: auto;overflow: hidden; text-align: right;position: absolute;top: .25rem;right: .2rem;font-size: .2rem;line-height: .3rem;color: #333333;}
+.login-box a{color: #333333;}
+.top-btn{width: fit-content;height: auto;overflow: hidden;position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.top-btn .btn-get{width: 3.16rem;height: 1.21rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-get.png) no-repeat;background-size: 100% 100%;float: left;}
+.top-btn .btn-look{width: 3.16rem;height: 1.21rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-look.png) no-repeat;background-size: 100% 100%;float: left;}
+
+/* cont1 */
+.cont1{width: 100%;height: 10.6rem;padding-top: .52rem;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont1 .title{width: 2.24rem;height: 0.84rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/title1.png) no-repeat;background-size: 100% 100%;margin: 0 auto .52rem;}
+.answer-box{width: 100%;height: auto;}
+.answer-box p{color: #bd932d;font-size: .22rem;line-height: .28rem;margin-left: .37rem;}
+.answer-box p span{font-size: .36rem;font-weight: bold;line-height: .4rem;}
+.answer1 select{display: block; width: 6.74rem;height: 0.5rem;border: none; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/select-bg.png) no-repeat;background-size: 100% 100%; margin: .3rem auto .57rem;font-size: .22rem;color: #d1a439;line-height: .5rem;appearance:none;-webkit-appearance: none;-moz-appearance: none; padding: 0 .5rem 0 .3rem;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.answer2 .chip{width: 6.73rem;height: 3.69rem;overflow: hidden;margin: .4rem auto 0;position: relative;}
+.answer2 .chip img{width: 6.72rem;height: 3.67rem;background-size: 100% 100%;position: absolute;top: 0;left: 0;}
+.answer2 ul{width: 6.76rem;height: auto;margin: 0 auto; position: relative;z-index: 2;}
+.answer2 ul::after{content: '';display: block;width: 100%;height: 100%; clear: both;}
+.answer2 li{width: 2.23rem;height: 1.23rem;position: relative;float: left;margin-right: -1px;}
+.answer2 li:nth-child(3n-1){width: 2.2rem;}
+.answer2 li:nth-child(3n){width: 2.33rem;}
+.answer2 li a{position: absolute;}
+.answer2 li:nth-child(1) a{width: 2.42rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc1.png) no-repeat;background-size: 100% 100%;top: 0;left: 0;}
+.answer2 li:nth-child(2) a{width: 2.39rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc2.png) no-repeat;background-size: 100% 100%;top: 0;left: 0;}
+.answer2 li:nth-child(3) a{width: 2.33rem;height: 1.42rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc3.png) no-repeat;background-size: 100% 100%;top: 0;left: 0;}
+.answer2 li:nth-child(4) a{width: 2.23rem;height: 1.43rem;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc4.png) no-repeat;background-size: 100% 100%;top: -.18rem;left: 0;}
+.answer2 li:nth-child(5) a{width: 2.57rem;height: 1.63rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc5.png) no-repeat;background-size: 100% 100%;top: -.2rem;left: -.18rem;}
+.answer2 li:nth-child(6) a{width: 2.33rem;height: 1.43rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc6.png) no-repeat;background-size: 100% 100%;top: 0;left: 0;}
+.answer2 li:nth-child(7) a{width: 2.22rem;height: 1.41rem;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc7.png) no-repeat;background-size: 100% 100%;top: -.17rem;left: 0;}
+.answer2 li:nth-child(8) a{width: 2.41rem;height: 1.24rem;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc8.png) no-repeat;background-size: 100% 100%;top: 0px;left: -.2rem;}
+.answer2 li:nth-child(9) a{width: 2.52rem;height: 1.24rem;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/mc9.png) no-repeat;background-size: 100% 100%;top: 0px;left: -.19rem;}
+
+/* 第一支球队的第一个球员的第一个碎片team1-img1-1 */
+.answer2 li:nth-child(1) a.on{width: 2.42rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-1.png) no-repeat;background-size: 100% 100%;}
+/* 第一支球队的第一个球员的第二个碎片team1-img1-2 */
+.answer2 li:nth-child(2) a.on{width: 2.39rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-2.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(3) a.on{width: 2.33rem;height: 1.42rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-3.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(4) a.on{width: 2.23rem;height: 1.43rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-4.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(5) a.on{width: 2.42rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-5.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(6) a.on{width: 2.33rem;height: 1.43rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-6.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(7) a.on{width: 2.22rem;height: 1.41rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-7.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(8) a.on{width: 2.41rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-8.png) no-repeat;background-size: 100% 100%;}
+.answer2 li:nth-child(9) a.on{width: 2.52rem;height: 1.24rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1-9.png) no-repeat;background-size: 100% 100%;}
+
+.tab-box{width: fit-content;height: auto;margin: .35rem auto 0;overflow: hidden;}
+.tab-box p{text-align: center;float: left; width: 2.3rem;height: 1.1rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/tab.png) no-repeat;background-size: 100% 100%;margin: 0 .02rem;color: rgba(255,255,255,.4);}
+.tab-box p.on{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/tabon.png) no-repeat;background-size: 100% 100%;color: #fff;}
+.tab-box p span{display: block; font-size: .22rem;margin-top: .05rem;line-height: .5rem;}
+.tab-box p span::after{content: '';display: block;width: 0.29rem;height: 0.02rem;background:rgba(255,255,255,.4);margin: 0 auto;}
+.tab-box p.on span::after{background: #fff;}
+.tab-box p i{font-style: normal;font-size: .12rem;line-height: .3rem;letter-spacing: .04rem;}
+
+/* cont2 */
+.cont2{width: 100%;height: auto;}
+.cont2 .title{width: 1.02rem;height: 0.48rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/title2.png) no-repeat;background-size: 100% 100%;margin-left: .37rem;margin-top: .5rem;}
+.cont2 ul{width: 6.9rem;height: auto;margin-top: .25rem;margin-left: .37rem;}
+.cont2 li{font-size: .2rem;color: #ffffff;line-height: .36rem;margin-bottom: .15rem;margin-left: .2rem;list-style-type: decimal;}
+.cont2 span{text-shadow: .01rem .01rem #fff;}
+
+/* cont3 */
+.cont3{width: 100%;height: 6.15rem;margin: 0 auto;}
+.cont3 .title{width: 4.47rem;height: 0.84rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/title3.png) no-repeat;background-size: 100% 100%;margin: 0 auto .45rem;}
+.cont3 ul{width: fit-content;height: auto;overflow: hidden;margin: 0 auto;}
+.cont3 li {float: left;}
+.cont3 img{width: 2.37rem;height: 2.05rem;background-size: 100% 100%;margin: auto;}
+.cont3 li p{font-size: .18rem;color: #000;line-height: .28rem;text-align: center;}
+.cont3 .btn-get{display: block;width: 3.16rem;height: 1.21rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-get1.png) no-repeat;background-size: 100% 100%;margin: .45rem auto;}
+.cont3 .btn-getno{display: block;width: 2.9rem;height: .97rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-getno.png) no-repeat;background-size: 100% 100%;margin: .45rem auto;}
+.cont3 .btn-got{display: block;width: 2.9rem;height: .97rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-got.png) no-repeat;background-size: 100% 100%;margin: .45rem auto;}
+
+/* 弹窗 */
+.dialog{position: relative;margin: auto;}
+.dialog .btn-close{width: 0.37rem;height: 0.37rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-close.png) no-repeat;background-size: 100% 100%;position: absolute;top: -.57rem;right: 0;}
+.dialog .btn-box{width: fit-content;height: .9rem;margin: 0 auto;}
+.dialog .btn-box a{display: block;float: left;width: 2.23rem;height: 0.9rem;}
+/* 按钮 */
+.btn-answer{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-answer.png) no-repeat;background-size: 100% 100%;}
+.btn-receive{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-receive.png) no-repeat;background-size: 100% 100%;}
+.btn-putin{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-putin.png) no-repeat;background-size: 100% 100%;}
+.btn-dice{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-dice.png) no-repeat;background-size: 100% 100%;}
+.btn-share{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-share.png) no-repeat;background-size: 100% 100%;}
+.btn-give{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-give.png) no-repeat;background-size: 100% 100%;}
+.btn-givenow{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-givenow.png) no-repeat;background-size: 100% 100%;}
+.btn-back{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-back.png) no-repeat;background-size: 100% 100%;}
+.btn-manage{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-manage.png) no-repeat;background-size: 100% 100%;}
+.btn-keep{background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/btn-keep.png) no-repeat;background-size: 100% 100%;}
+
+/* dia1 */
+.dia1{width: 4.2rem;height: auto;}
+.dia1 .dia-con{width: fit-content;height: auto;padding-top: .1rem;margin: 0 auto;}
+.dia1 .btn-box{width: 4.46rem;margin-left: -.13rem;}
+.dia1 img{width: 4.2rem;height: 5.94rem;background-size: 100% 100%;margin-bottom: .38rem;}
+
+/* dia2 */
+.dia2{width: 6.75rem;height: 5.14rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-bg1.png) no-repeat;background-size: 100% 100%;}
+.dia2 .dia-con{width: fit-content;height: auto;padding-top: .68rem;margin: 0 auto;}
+.dia2 ul{width: fit-content;height: auto;margin: 0 auto .53rem;overflow: hidden;}
+.dia2 li{width: 1.8rem;height: 2.55rem;float: left;margin: 0 .19rem;position: relative;}
+.dia2 li.on::before{content: '';width: 100%;height: 100%;background: rgba(19, 44, 55,.7); border: .08rem solid #1fdfff;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;position: absolute;top: 0;left: 0;}
+.dia2 img{width: 100%;height: 100%;background-size: 100% 100%;}
+
+/* dia3 */
+.dia3{width: 6.75rem;height: 6.25rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-bg2.png) no-repeat;background-size: 100% 7.24rem;}
+.dia3 .dia-con{width: fit-content;height: auto;padding-top: .68rem;margin: 0 auto;}
+.dia3 ul{width: fit-content;height: auto;margin: 0 auto .5rem;overflow: hidden;}
+.dia3 li{width: 1.8rem;height: 2.55rem;float: left;margin: 0 .19rem;position: relative;}
+.dia3 li.on::before{content: '';width: 100%;height: 100%;background: rgba(19, 44, 55,.7); border: .08rem solid #1fdfff;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;position: absolute;top: 0;left: 0;}
+.dia3 img{width: 100%;height: 100%;background-size: 100% 100%;}
+.dia3 .select-box{width: 6.1rem;height: auto;overflow: hidden;margin: 0 auto .1rem;}
+.dia3 p{font-size: .22rem;color: #2f2f2f;line-height: .24rem;/* font-weight: bold; */margin-bottom: .2rem;}
+.dia3 select{width: 100%;height: 0.35rem;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/select-bg1.png);background-size: 100% 100%;border: none; appearance: none;-webkit-appearance: none;-moz-appearance: none; line-height: .35rem;margin-bottom: .4rem;padding: 0 .1rem; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.dia3 label{display: block; width: 100%;height: 0.35rem;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/sreach-bg.png);background-size: 100% 100%; line-height: .35rem;margin-bottom: .4rem; padding-left: .1rem; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.dia3 input{display: block;float: left;width: 5rem;height: 100%;border: none; background: none;}
+.dia3 label a{display: block;float: right;width: 0.75rem;height: 100%;}
+
+/* dia4 */
+.dia4{width: 4.2rem;height: auto;}
+.dia4 .dia-con{width: fit-content;height: auto;padding-top: .1rem;margin: 0 auto;}
+.dia4 .btn-box{width: 4.46rem;margin:0 0 0 -.13rem;}
+.dia4 ul{width: fit-content;height: auto;margin: 0 auto .33rem;overflow: hidden;}
+.dia4 li{width: 4.18rem;height: 5.9rem;float: left;position: relative;margin: 0 0 0 .2rem;}
+.dia4 li.on::before{content: '';width: 100%;height: 100%;background: rgba(19, 44, 55,.7); border: .08rem solid #1fdfff;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; position: absolute;top: 0;left: 0;}
+.dia4 img{width: 100%;height: 100%;background-size: 100% 100%;}
+.dia4 ul.two{width: 6.18rem;margin-left: -.12rem;}
+.dia4 ul.two li{width: 2.85rem;height: 4.02rem;margin: 0 .12rem .2rem;}
+.dia4 ul.three{width: 7.11rem;margin-left: -.09rem;}
+.dia4 ul.three li{width: 2.19rem;height: 3.09rem;margin: 0 .09rem .2rem;}
+
+/* dia5 */
+.dia5{width: 5.25rem;height: 3.4rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-bg3.png) no-repeat;background-size: 100% 100%;}
+.dia5 .dia-con{width: fit-content;height: auto;padding-top: 1.05rem;margin: 0 auto;}
+.dia5 p{/* width: 3.95rem; *//* height: .35rem; *//* background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-txt.png) no-repeat; */background-size: 100% 100%;margin-bottom: .75rem;font-size: .32rem;}
+
+/* dia6 */
+.dia6{width: 5.25rem;height: 3.4rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-bg3.png) no-repeat;background-size: 100% 100%;}
+.dia6 .dia-con{width: fit-content;height: auto;padding-top: 1.05rem;margin: 0 auto;}
+.dia6 p{/* width: 4.6rem; *//* height: .35rem; *//* background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-txt1.png) no-repeat; */background-size: 100% 100%;margin-bottom: .75rem;font-size: .32rem;}
+
+/* diashare */
+/* .diashare{position:absolute;z-index:-1;opacity:0;width:100%;height:13.34rem;left: 0;top:0;margin-left: 0;margin-top: 0;}
+.diashare .dia-con{width: 100%;height: 13.34rem;background: url(sharebg.jpg) no-repeat;background-size: 100% 100%;margin: 0 auto;}
+.diashare .img-box{width: 6.7rem;height: 10.6rem;}
+.diashare .card1{display: block; width: 3.24rem;height: 4.58rem;background-size: 100% 100%;position: relative;z-index: 1;}
+.diashare .card2{display: block; width: 3.97rem;height: 5.61rem;background-size: 100% 100%;position: relative;z-index: 2;margin-top: -2.77rem;margin-left: 2.71rem;}
+.diashare .card3{display: block; width: 3.24rem;height: 4.58rem;background-size: 100% 100%;position: relative;z-index: 3;margin-top: -2.25rem;margin-left: .6rem;}
+.diashare .code-box{width: 100%;height: auto;overflow: hidden;}
+.diashare .code-box p{font-size: .25rem;line-height: .44rem;color: #000;float: left;}
+.diashare .code-box img{width: 1.1rem;height: 1.1rem;background-size: 100% 100%;float: right;margin-top: .25rem;} */
+
+.diashare{position:absolute;z-index:-1;opacity:0;width:750px;height:1334px;left: 0;top:0;margin-left: 0;margin-top: 0;}
+.diashare .dia-con{width: 100%;height: 1334px;background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/sharebg.jpg) no-repeat;background-size: 100% 100%;margin: 0 auto;}
+.diashare .img-box{width: 670px;height: 1060px;margin: 0 auto;padding-top: 90px;}
+.diashare .card1{display: block; width: 324px;height: 458px;background-size: 100% 100%;/*position: relative;z-index: 1;*/}
+.diashare .card2{display: block; width: 397px;height: 561px;background-size: 100% 100%;/*position: relative;z-index: 2;*/margin-top: -277px;margin-left: 271px;}
+.diashare .card3{display: block; width: 324px;height: 458px;background-size: 100% 100%;/*position: relative;z-index: 3;*/margin-top: -225px;margin-left: 60px;}
+.diashare .code-box{width: 670px;height: auto;overflow: hidden;margin: 0 auto;}
+.diashare .code-box p{font-size: 25px;line-height: 44px;color: #000;float: left;}
+.diashare .code-box img{width: 110px;height: 110px;background-size: 100% 100%;float: right;margin-top: 25px;}
+
+
+/* 系统弹窗 */
+.diasys{width: 5.25rem;height: 3.4rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/dia-bg4.png) no-repeat;background-size: 100% 100%;}
+.diasys .dia-con{width: 100%;height: 100%;display: flex;padding: 0 .2rem; box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;align-items: center;text-align: center;}
+.diasys p{font-size: .32rem;color: #000;line-height: .4rem;margin: 0 auto;}
+
+
+.dia-txt{font-size: .32rem;color: #000;line-height: .4rem;margin: 1rem auto .5rem;text-align: center;}
+
+.diayd{width: 100%;height: 100vh;}
+.diayd .dia-con{width: 100%;height: 5.51rem; background: url(//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/yd.png) no-repeat;background-size: 7.5rem 100%;position: fixed;top: 0;left: 0;}
+
+.pop-sbox{width:100%;height: 100%;position: fixed;top:0;left:0;z-index: 9999;overflow: visible;background: rgba(0,0,0,.5);}
+.pop-sbox .pop-smain{position: absolute;top: 50%;left: 0;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.pop-simg{position:relative;/*width:5.45rem;height:9.68rem;*/width: 100%;height:  13.34rem; overflow: visible;}
+.pop-simg img{display: block;/*width:5.45rem;height:9.68rem;*/width: 100%;height:  13.34rem;background-size: 100% 100%;}
+.pop-sbox p{font-size: .2rem;width: 100%; color: #000;line-height: .4rem; text-align: center;position: fixed;bottom: 0;z-index: 9;}

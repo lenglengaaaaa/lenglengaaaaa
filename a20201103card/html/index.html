@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="gbk">
+		<meta name="author" content="Tencent-CP">
+		<meta name="Copyright" content="Tencent">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" id="viewport" content="initial-scale=1, maximum-scale=5, minimum-scale=0.5, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="Keywords" content="答题收集球星卡,FIFA Online4,FIFA Online4官方下载,FIFA下载,足球在线,FIFAOL4,FIFA,3D,足球,网游,体育,世界杯,欧冠,中超,球员,梅西,C罗,内马尔,转会,电子竞技,腾讯,网络游戏" />
+		<meta name="Description" content="《FIFA Online 4》官方网站。中国地区唯一的国际足联官方授权游戏，全球最受欢迎真实3D足球网游系列，拥有逼真的球员形象，丰富的球员球队养成，快速匹配全球玩家，带给你超拟真绿茵乐趣。" />
+		<title>答题收集球星卡-FIFA Online 4官方网站-腾讯游戏</title>
+        <script>
+            //屏幕适应 
+			(function(win, doc) {
+				if(!win.addEventListener) return;
+				var html = document.documentElement;
+
+				function setFont() {
+					var html = document.documentElement;
+					var k = 750;
+					html.style.fontSize = html.clientWidth / k * 100 + "px";
+				}
+				setFont();
+				setTimeout(function() {
+					setFont();
+				}, 300);
+				doc.addEventListener('DOMContentLoaded', setFont, false);
+				win.addEventListener('resize', setFont, false);
+				win.addEventListener('load', setFont, false);
+			})(window, document);
+        </script>
+        <link rel="stylesheet" type="text/css" href="../ossweb-img/index.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/index.css" /> -->
+	</head>
+	<body>
+		<h1 class="hid">答题收集球星卡</h1>
+		<div class="wrap" id="wrap">
+			<div class="head">
+                <a href="//fo4.qq.com/main.shtml" target="_blank" class="logo" onclick="PTTSendClick('btn','logo','FIFA Online 4');">FIFA Online 4</a>
+				<div class="login-box">
+                    <!--登录前状态 Start-->
+                    <div id="unlogin" class="login" style="display: block;">
+                        你好，请【<a id="btn_qqlogin" href="javascript:;" title="登录" onclick="PTTSendClick('btn','login','登录')">登录</a>】
+                    </div>
+                    <!--登录前状态 End-->
+                    <!--登录后状态 Start-->
+                    <div id="logined" class="login" style="display: none;  ">
+                        欢迎您，<span id="login_qq_span"></span> 
+                        <span id="ams_user_headimg"></span>
+                        <span id="areaName"></span>
+                        <a id="changeRole" style="display: none">【更换绑定】</a>
+<!--                        <a id="btn_bind" href="javascript:;" >【绑定角色】</a>-->
+<!--                        <a id="btn_binded" href="javascript:;" >【更换绑定】</a>-->
+                        <a id="btn_logout" href="javascript:;" title="注销" onclick="PTTSendClick('btn','logined','注销')">【注销】</a>　
+                    </div>
+                </div>
+                <div class="top-btn">
+                    <a href="javascript:manageGiveCard();" class="btn-get"  onclick="PTTSendClick('btn','btn-get','获取受赠的球星卡');"></a>
+                    <a href="javascript:manageMyCard();" class="btn-look" id="manageMyCard" onclick="PTTSendClick('btn','btn-look','查看我收藏的球星卡');"></a>
+                </div>
+            </div>
+            <div class="cont1">
+                <p class="title"></p>
+                <div class="answer-box answer1">
+                    <p><span>Question 01</span>/你最喜欢的是哪个球队？</p>
+                    <select name="" id="club">
+                        <option value="">--请选择--</option>
+                    </select>
+                </div>
+                <div class="answer-box answer2">
+                    <p><span>Question 02</span>/请选择拼图内你认为正确的球员</p>
+                    <div class="chip">
+                        <img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/team1-img1.jpg" alt="">
+                        <ul>
+                            <li>
+                                <a href="javascript: TGDialogS('dia2');;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mc"  onclick="PTTSendClick('btn','img','拼图');"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-box" id="clubStar">
+                        <!-- 选中请加类on -->
+                        <p class="on">
+                            <span>拉莫斯</span>
+                            <i>ANSWER A</i>
+                        </p>
+                        <p>
+                            <span>莫德里奇</span>
+                            <i>ANSWER B</i>
+                        </p>
+                        <p>
+                            <span>阿扎尔</span>
+                            <i>ANSWER C</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont3">
+                <p class="title"></p>
+                <ul>
+                    <li>
+                        <img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/gift.png" alt="">
+                        <p>10亿BP + MOG/BOE/19UCL赛季
+                            <br>混合5强球员包(91能力值及以上)</p>
+                    </li>
+                </ul>
+                <!-- 灰：领取奖励btn-getno ;彩：领取奖励btn-get ;已领取btn-got -->
+                <a href="javascript:;" class="btn-getno" id="getStarPriza" onclick="PTTSendClick('btn','btn-get','领取奖励');"></a>
+            </div>
+            <div class="cont2">
+                <p class="title"></p>
+                <ul>
+                    <li><span>活动时间</span>：2020年11月18日-2020年12月8日;</li>
+                    <li><span>如何进入活动页面？</span>此活动为FIFA Online 4公众号专属H5活动，通过关注FIFA Online 4公众号，点击菜单栏“球星卡搜集”进入活动页面，PC端无法打开;</li>
+                    <li><span>如何获得球星卡？</span>进入活动页面后绑定QQ号和领奖的大区角色，即可参与活动。选择“你最喜欢的俱乐部”后，系统会随机抽取该俱乐部的一位球星，进行“足球拼图”。球员图目前被9块拼图遮挡，最多翻开三张牌。做出选择前球员图片将不会刷新。若答对即可获得该球员的球星卡，更有概率获得该球员金边卡，若答错，则只能重新开始。获得球星卡后，需要点击“放入集卡册”，该球星卡才会被放入集卡册，若选择“再次答题”或关闭弹窗则默认丢弃当前球星卡;</li>
+                    <li><span>如何管理当前获得的球星卡？</span>若需管理当前获得的球星卡，需要点击“查看我收藏的球星卡”，选择想要操作的球星卡，进行丢弃/赠送的操作。丢弃的球星卡无法被重新获得;</li>
+                    <li><span>如何赠送和受赠球星卡？</span>赠送时需点击“查看我收藏的球星卡”并点击你想赠送的球星卡，点击“赠送球星卡”，输入赠送对象的QQ号，即可完成赠送。若收到好友赠送的球星卡，需要点击“获取受赠的球星卡”，选择需要收取的球星卡，点击“放入集卡册”即可完成受赠;</li>
+                    <li><span>如何通过分享获得奖励？</span>当获取完自己需要的球星卡后，可通过点击右上角分享至朋友圈后获取奖励：MOG/BOE/19UCL赛季混合5强球员包（91能力值及以上）和10亿金币
+                        分享生成的长图到朋友圈后，可将朋友圈截图发送至后台，小菲将抽取5人赠送FIFA Online 4礼盒，快来参与吧！</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 再次答题 -->
+        <div class="dialog dia1"  id="dia1" style="display:none">
+            <div class="dia-con">
+                <img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt="">
+                <div class="btn-box">
+                    <a href="javascript:showDialog.hide();" class="btn-answer"  onclick="PTTSendClick('btn','btn-answer','再次答题');"></a>
+<!--                    <a href="javascript:;" class="btn-receive"  onclick="PTTSendClick('btn','btn-receive','领取答题奖励');"></a>-->
+                    <a href="javascript:;" class="btn-putin" id="collectCard"  onclick="PTTSendClick('btn','btn-putin','放入集卡册');"></a>
+                </div>
+                <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+            </div>
+        </div>
+        <!-- 生成长图分享你的收藏册 -->
+        <div class="dialog dia2" id="dia2" style="display:none1">
+            <div class="dia-con">
+                <p class="dia-txt" >没有收藏球星卡</p>
+                <ul id="MyCard">
+                    <!-- 选中请加类on -->
+<!--                    <li class="on"><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+                </ul>
+                <div class="btn-box">
+                    <a href="javascript:;" class="btn-dice" id="lostMyCard" onclick="PTTSendClick('btn','btn-dice','丢弃');"></a>
+                    <a href="javascript:;" class="btn-share" onclick="PTTSendClick('btn','btn-share','生成长图分享你的收藏册');"></a>
+                    <a href="javascript:TGDialogS('dia3');" class="btn-give"  onclick="PTTSendClick('btn','btn-zs','赠送球星卡');"></a>
+                </div>
+            </div>
+            <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+        </div>
+        <!-- 赠送卡片 -->
+        <div class="dialog dia3" id="dia3" style="display:none">
+            <div class="dia-con">
+                <p class="dia-txt" >暂时没有球星卡可以赠送</p>
+                <ul id="MyCard1">
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+                </ul>
+                <div class="select-box">
+<!--                    <p>选择你想赠送的卡片</p>-->
+<!--                    <select name="" id="">-->
+<!--                        <option value="">选择你想赠送的卡片</option>-->
+<!--                    </select>-->
+                    <p>选择你想赠送的对象</p>
+                    <label for="">
+                        <input type="text" value="" id="qqNumber">
+                        <a href="javascript:;" class="btn-search"  onclick="PTTSendClick('btn','btn-search','搜索');"></a>
+                    </label>
+                </div>
+                <div class="btn-box">
+                    <a href="javascript:;" class="btn-givenow" id="giveMyCard"  onclick="PTTSendClick('btn','btn-give','立即赠送');"></a>
+                </div>
+            </div>
+            <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+        </div>
+        <!-- 丢弃 -->
+        <div class="dialog dia4" id="dia4" style="display:none">
+            <div class="dia-con">
+                <p class="dia-txt" style="color:#fff">暂时没有好友赠送球星卡</p>
+                <!-- 果然为一张图的时候 ul加类名one ；两张图：two；三或多张图：three -->
+                <ul id="giveCard">
+                    <!-- 选中请加类on -->
+
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+<!--                    <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li>-->
+                    <!-- <li><img src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/card1.png" alt=""></li> -->
+                </ul>
+                <div class="btn-box">
+                    <a href="javascript:;" class="btn-dice" id="lostGiveCard" onclick="PTTSendClick('btn','btn-dice','丢弃');"></a>
+                    <a href="javascript:;" class="btn-putin" id="collectGiveCard"  onclick="PTTSendClick('btn','btn-putin','放入集卡册');"></a>
+                </div>
+            </div>
+            <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+        </div>
+        <!-- 返回重新答题 -->
+        <div class="dialog dia5" id="dia5" style="display:none">
+            <div class="dia-con">
+                <p>答错啦，无法获得该球星卡</p>
+                <div class="btn-box">
+                    <a href="javascript:showDialog.hide();;" class="btn-back"  onclick="PTTSendClick('btn','btn-back','返回重新答题');"></a>
+                </div>
+            </div>
+            <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+        </div>
+        <!-- 管理我的集卡册 -->
+        <div class="dialog dia6" id="dia6" style="display:none">
+            <div class="dia-con">
+                <p>集卡册已满，无法收藏该球星卡</p>
+                <div class="btn-box">
+                    <a href="javascript:;" class="btn-keep" id="TS" onclick="PTTSendClick('btn','btn-keep','暂存');"></a>
+                    <a href="javascript:manageMyCard();" class="btn-manage"  onclick="PTTSendClick('btn','btn-manage','管理我的集卡册');"></a>
+                </div>
+            </div>
+            <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+        </div>
+        <!-- 分享弹窗 -->
+        <div class="dialog diashare">
+            <div style="position: relative;" >
+            <div class="dia-con" id="diashare">
+                <div class="img-box" id="shareCard">
+                   <img  crossorigin="anonymous" src="../ossweb-img/dia-card1.png" class="card1" alt="">
+                   <img  crossorigin="anonymous" src="../ossweb-img/dia-card2.png" class="card2" alt="">
+                   <img  crossorigin="anonymous" src="../ossweb-img/dia-card3.png" class="card3" alt="">
+                </div>
+                <div class="code-box">
+                    <p  crossorigin="anonymous">我在FIFA Online 4获得了我的专属球星卡，
+                        <br>快来扫码获取你的专属球星卡吧！</p>
+                    <img  crossorigin="anonymous" src="//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/code.png" alt="">
+                </div> 
+                <!-- <div class="pop-simg"><img src=""></div> -->
+            </div>
+            </div>
+        </div>
+        <!-- 系统弹窗 -->
+        <div class="dialog diasys" id="alert" style="display: none;">
+            <div class="dia-con">
+                <p id="publicMsg">系统弹窗</p>
+            </div>
+            <a href="javascript:showDialog.hide();" class="btn-close"  onclick="PTTSendClick('btn','btn-close','关闭');"></a>
+        </div>
+        <div class="dialog diayd" id="yd" style="display: none;">
+            <div class="dia-con"></div>
+        </div>
+        <!-- 生成分享图 -->
+		<div id="pop-sbox" class="pop-sbox" style="/* opacity: 0; z-index: -1; */ display: none;">
+			<div class="pop-smain">
+                <div class="pop-simg"><img src=""></div> 
+                <p>长按保存图片</p>
+			</div>
+		</div>
+        <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+		<!-- <script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script> -->
+        <script src="//game.gtimg.cn/images/ulink/ulinksdk/html2canvas.js"></script>
+		<script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+<!--        <script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>-->
+        <script type="text/javascript" src="//ulink.qq.com/ulinksdk/dist/js/ulink.2.0.7.js"></script>
+        <script src="index.js"></script>
+
+		<script>
+            //转换图片为base64
+            function saveImg() {
+				// ulink.Dialog.showLoading();
+				$('#pop-sbox').show();
+				$('#diashare').css('opacity',1);
+
+				html2canvas($("#diashare")[0], {
+					scale: 2,
+					// dpi: window.devicePixelRatio * 2,
+					useCORS: true,
+					logging: true,
+				}).then(function(canvas){
+					this.pics = canvas.toDataURL("image/jpeg");
+					var context = canvas.getContext('2d');
+					context.mozImageSmoothingEnabled = false;
+					context.webkitImageSmoothingEnabled = false;
+					context.msImageSmoothingEnabled = false;
+					context.imageSmoothingEnabled = false;
+					$("#pop-sbox img").attr("src", this.pics).show();
+					closeDialog();
+					// $('#diashare').css('opacity',0);
+					// vm.shareSuccess(vm.artId);
+					// ulink.Dialog.hideLoading();
+					$("#pop-sbox").css("opacity",1).css("z-index",9999);
+					
+				});
+			}
+			$('.btn-share').on('click',function(){
+				saveImg();
+				// getBase64('http://p1.pstatp.com/large/435d000085555bd8de10');
+            });
+            
+            $('body').on('click','#pop-sbox',function(){
+
+                $('#pop-sbox').css('opacity',0).css("z-index",-1);
+            })
+
+            // getBase64('http://p1.pstatp.com/large/435d000085555bd8de10').then(function(base64){
+			// 		console.log(base64);//处理成功打印在控制台
+			// 		$('.card1').attr('src',base64);
+			// 	},function(err){
+			// 		console.log(err);//打印异常信息
+			// 	});
+
+			//传入图片路径，返回base64
+			// function getBase64(img){
+			// 	function getBase64Image(img,width,height) {//width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
+			// 	var canvas = document.createElement("canvas");
+			// 	canvas.width = width ? width : img.width;
+			// 	canvas.height = height ? height : img.height;
+		
+			// 	var ctx = canvas.getContext("2d");
+			// 	ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+			// 	var dataURL = canvas.toDataURL();
+			// 	return dataURL;
+			// 	}
+			// 	var image = new Image();
+			// 	image.crossOrigin = '';
+			// 	image.src = img;
+			// 	var deferred=$.Deferred();
+			// 	if(img){
+			// 	image.onload =function (){
+			// 		deferred.resolve(getBase64Image(image));//将base64传给done上传处理
+			// 	}
+			// 	return deferred.promise();//问题要让onload完成后再return sessionStorage['imgTest']
+			// 	}
+			// }
+
+			// 分享
+			// TGMobileShare({
+			// 	shareTitle: '我在FIFA Online 4获得了拉莫斯专属球星卡，快来扫码获取你的专属球星卡吧！', //不设置或设置为空时，页面有title，则调取title
+			// 	shareDesc: '答题收集球星卡', //不设置或设置为空时，页面有Description，则调取Description
+			// 	shareImgUrl: '//game.gtimg.cn/images/ulink/act/4107/a20201102sjh/share.jpg', //分享图片尺寸200*200，且填写绝对路径
+			// 	shareLink: '', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+			// 	actName: 'a20201103card' //点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+            // });
+            
+            function TGDialogS(e){
+				// 利用milo库引入dialog组件
+				need("biz.dialog",function(Dialog){
+					Dialog.show({
+						id:e,
+						bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+						opacity:50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+					});
+				});
+			}
+			function closeDialog(){
+				// 利用milo库引入dialog组件
+				need("biz.dialog",function(Dialog){
+					Dialog.hide();
+				});
+			}
+		</script>
+		<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+		<!--通用统计代码-->
+		<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+		<script>
+			//此段代码不能放到外链JS中，
+			var setSite = { //设置网站属性
+				siteType: "a20201103card", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+				pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+				pageName: "首页", //必填项:页面中文名
+				osact: 0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+				ingame: 0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+				stayTime: 0 //选填项:是否需要统计停留时长boolean；默认是0
+			};
+			if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP">
+    <meta name="Copyright" content="Tencent">
+    <meta name="Description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。">
+    <meta name="Keywords" content="英雄联盟,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟战争学院,明星解说视频,101战争学院,英雄,攻略,WCG,点亮图标,赛事">
+    <title>牛年“霸福”抽抽抽-腾讯游戏</title>
+    <!-- 页面设计：cp | 页面制作：cp | 创建：2020-01-31-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!--[if lt IE 9]><link rel="stylesheet" href="css/index.css"> <![endif]-->
+</head>
+<script>
+//mode  移动端的适配方式 按需 传参  目前只有两种 px和rem
+(function(win, doc, mode) {
+    var std = 750;
+    if (/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+        var h = document.getElementsByTagName("head")[0];
+        h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-capable" content="yes">');
+        h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-status-bar-style" content="black">');
+        h.insertAdjacentHTML('beforeEnd', '<meta name="format-detection" content="telephone=no">');
+        h.insertAdjacentHTML('beforeEnd', '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />');
+        if (mode == 'px') {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+
+            function setFont() {
+                function adaptVP(a) {
+                    function c() { var c, d; return b.uWidth = a.uWidth ? a.uWidth : 750, b.dWidth = a.dWidth ? a.dWidth : window.screen.width || window.screen.availWidth, b.ratio = window.devicePixelRatio ? window.devicePixelRatio : 1, b.userAgent = navigator.userAgent, b.bConsole = a.bConsole ? a.bConsole : !1, a.mode ? (b.mode = a.mode, void 0) : (c = b.userAgent.match(/Android/i), c && (b.mode = "android-2.2", d = b.userAgent.match(/Android\s(\d+.\d+)/i), d && (d = parseFloat(d[1])), 2.2 == d || 2.3 == d ? b.mode = "android-2.2" : 4.4 > d ? b.mode = "android-dpi" : d >= 4.4 && (b.mode = b.dWidth > b.uWidth ? "android-dpi" : "android-scale")), void 0) }
+
+                    function d() {
+                        var e, f, g, h, c = "",
+                            d = !1;
+                        switch (b.mode) {
+                            case "apple":
+                                f = (window.screen.availWidth * b.ratio / b.uWidth) / b.ratio;
+                                c = "width=" + b.uWidth + ",initial-scale=" + f + ",minimum-scale=" + f + ",maximum-scale=" + f + ",user-scalable=no";
+                                break;
+                            case "android-2.2":
+                                a.dWidth || (b.dWidth = 2 == b.ratio ? 720 : 1.5 == b.ratio ? 480 : 1 == b.ratio ? 375 : .75 == b.ratio ? 240 : 480), e = window.screen.width || window.screen.availWidth, 375 == e ? b.dWidth = b.ratio * e : 750 > e && (b.dWidth = e), b.mode = "android-dpi", d = !0;
+                            case "android-dpi":
+                                f = 160 * b.uWidth / b.dWidth * b.ratio, c = "target-densitydpi=" + f + ", width=" + b.uWidth + ", user-scalable=no", d && (b.mode = "android-2.2");
+                                break;
+                            case "android-scale":
+                                c = "width=" + b.uWidth + ", user-scalable=no"
+                        }
+                        g = document.querySelector("meta[name='viewport']") || document.createElement("meta"), g.name = "viewport", g.content = c, h = document.getElementsByTagName("head"), h.length > 0 && h[0].appendChild(g)
+                    }
+
+                    function e() {
+                        var a = "";
+                        for (key in b) a += key + ": " + b[key] + "; ";
+                        alert(a)
+                    }
+                    if (a) {
+                        var b = { uWidth: 0, dWidth: 0, ratio: 1, mode: "apple", userAgent: null, bConsole: !1 };
+                        c(), d(), b.bConsole && e()
+                    }
+                };
+                adaptVP({ uWidth: 750 });
+            }
+            win.addEventListener('resize', setFont, false)
+            setFont();
+        } else if (mode == 'rem') {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / std) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            recalc();
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        }
+    }
+})(window, document, 'px');
+</script>
+
+<body>
+    <div class="wrap">
+        <h1 class="hidden">牛年“霸福”抽抽抽</h1>
+        <!--[if lte IE 9]>
+            <p style="background:#3e1f10;color:#fbf5e7;padding:10px 0;text-align:center;width:100%;font-size:14px;position:fixed;z-index:99999;top:0;left:0;">您使用的IE浏览器版本过低，本站不再支持，<a href="//support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads" style="color:#F13C35">升级您的IE浏览器</a>，或使用<a href="//www.google.cn/chrome/"  style="color:#F13C35">Google Chrome</a>等高级浏览器，将会得到更好的体验！</p>
+        <![endif]-->
+        <!--头图-->
+        <div class="head">
+            <a class="logo" href="//lol.qq.com" target="_blank" title="英雄联盟" onclick="PTTSendClick('btn','logo','官网LOGO');"></a>
+            <a style="display: none;" href="javascript:;" class="btn-look" onclick="PTTSendClick('btn','btn-look','查看我的奖励');"></a>
+            <div class="login-box">
+                <!--登录前状态 Start-->
+                <p id="unlogin">召唤师你好，请 <a href="javascript:;" id="ptLoginBtn">【登录】</a></p >
+                <!--登录前状态 End-->
+                <!--登录后状态 Start-->
+                <div id="logined" style="display:none">
+                    欢迎您，<span id="login_qq_span"></span>，
+                    <span id="spanNotBind_740157">
+                        <a a href="javascript: amsInit(360463, 740156);"> 绑定大区</a>
+                       </span>
+                  <span id="spanBind_740157" style="display:none">
+                      <span id="area_info_740157"></span>
+                      <span id="role_info_740157"></span>
+                      <a a href="javascript: amsInit(360463, 740156);">更改绑定</a>
+                  </span>
+
+                    
+                    <a a href="javascript:;" id="ptLogoutBtn">【注销】</a>
+                </div>
+                <!--登录后状态 End-->
+            </div>
+        </div>
+        <div class="content">
+            <div class="cont cont1" style="display: block;">
+                <!-- 特等奖，7号才显示 -->
+                <div class="lotttop" style="display: none;">
+                    <h2 class="title hidden">特等奖：牛年福霸</h2>
+                    <div>
+                        <img src="//game.gtimg.cn/images/lpl/act/a20210202springmlott/prizetop.png" alt="">
+                        <p class="giftlist">TCL75寸电视+TCL冰箱+TCL洗衣机
+                            <br>+全套至臻皮肤+全套福牛守护者皮肤</p>
+                    </div>
+                </div>
+                <div class="lott1">
+                    <h2 class="title hidden">一等奖：超神BUFF</h2>
+                    <div>
+                        <p class="giftlist">傲风lpl联名款电竞椅</p>
+                        <!-- prize3代表3号的奖品，prize4：4号，prize5:5号，prize6-1：第一场间，prize6-2：第二场间，prize7-1：第一场间，prize7-2：第二场间，prize7-3：第三场间-->
+                        <img src="//game.gtimg.cn/images/lpl/act/a20210202springmlott/prize3.png" alt="">
+                    </div>
+                </div>
+                <div class="lott-box lott2">
+                    <h2 class="title hidden">二等奖：主宰全场BUFF</h2>
+                    <div>
+                        <p class="giftlist">雷蛇旋风黑鲨V2游戏耳麦
+                            <br>莫斯利安carry牛year限定礼盒
+                            <br>TCL空气净化器
+                            <br>Nike Air 女子帽衫
+                            <br>Nike Sportswear男子套头连帽衫
+                            <br>猎聘金卡</p>
+                    </div>
+                </div>
+                <div class="lott-box lott3">
+                    <h2 class="title hidden">三等奖：无人可挡BUFF</h2>
+                    <div>
+                        <p class="giftlist">TT战队新年礼盒
+                            <br>RW 2020版战队队服+选手名条</p>
+                    </div>
+                </div>
+                <div class="lott-box lott4">
+                    <h2 class="title hidden">四等奖：暴走BUFF</h2>
+                   <div>
+                        <p class="giftlist">哈啤发财包
+                            <br>手办+战马饮品
+                            <br>娃哈哈苏打水（整箱24瓶装）
+                            <br>TT语音欢欢公仔
+                            <br>TT语音T娘16定制鼠标垫</p>
+                   </div>
+                </div>
+                <div class="lott-box lott5">
+                    <h2 class="title hidden">QB红包：红蓝BUFF</h2>
+                   <div>
+                        <p class="giftlist">10W Q币等你来分
+                            <br>大家一起抽抽抽</p>
+                   </div>
+                </div>
+                <p class="txt">
+                    玩家参与抽奖即有机会获得任一奖品，每日每个账号<br>抽奖机会仅限一次，奖品多多每日更新。
+                </p>
+                <a href="javascript:;" class="btn-lott" onclick="PTTSendClick('btn','btn-lott','开始抽奖');"></a>
+            </div>
+            <!-- 点击开始抽奖 -->
+            <div class="cont cont2" style="display: none;">
+                <!-- <img src="//game.gtimg.cn/images/lpl/act/a20210202springmlott/card1.png" alt=""> -->
+                <!-- 点击后加类名active -->
+                <a href="javascript:openred();" class="btn-openred" onclick="PTTSendClick('btn','btn-openred','开红包');">
+                    <i class="top-box"></i>
+                    <i class="bottom-box"></i>
+                </a>
+                <!-- 点击后请加类btn-lotted，加了类btn-lotted后才能点击开红包按钮btn-openred -->
+                <a href="javascript:;" class="btn-lott" onclick="PTTSendClick('btn','btn-lott1','开始抽奖');"></a>
+            </div>
+            <!-- 游戏内的虚拟奖励 -->
+            <div class="cont cont3" style="display: none;">
+                <div class="gift-box">
+                    <img src="" alt="">
+                </div>
+                <p>
+                    恭喜您获得<em>xxx（奖励内容）</em> 
+                    <br>系统将在15个工作日内将奖品发放至
+                    <br>您登陆的账号和大区当中
+                </p>
+            </div>
+            <!-- 实物的奖励 -->
+            <div class="cont cont4" style="display: none;">
+                <div class="gift-box">
+                    <img src="" alt="">
+                </div>
+                <p>
+                    恭喜您获得<em>xxx（奖励内容）</em> 
+                    <br>请您填写您的邮寄地址，我们将在
+                    <br>30个工作日内完成奖品发放
+                </p>
+                <a href="javascript:TGDialogS('dia-address');" class="btn-address" onclick="PTTSendClick('btn','btn-address','填写地址');"></a>
+            </div>
+            <!-- 未抽中 -->
+            <div class="cont cont5" style="display: none;">
+                <div class="gift-box">
+                    很遗憾，您没有中奖<br>期待您的再次参与
+                </div>
+                <a href="javascript:;" class="btn-sure" onclick="PTTSendClick('btn','btn-sure','确认');"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 填写收货地址 -->
+    <div class="dialog dia-address" id="dia-address" style="display: none;">
+        <a class="dia-close" href="javascript:closeDialog();" title="关闭"></a>
+        
+        <div class="dia-con">
+            <form id="form_personInfo_740292" name="form_personInfo_740292">
+                <header></header>
+                <section>
+                    <table class="lz_act_pop_table">
+                        <tbody>
+                            <label for="">
+                                姓名：<input name="sName"  type="text">
+                            </label>
+                            <label for="" style="display: none;">
+                                <select name="sPackageInfo" id="package_740292"></select>
+                            </label>
+                            <label for="">
+                                电话：<input name="sMobile" type="text">
+                            </label>
+                            <label for="">
+                                收件地址：<input class="sAddress" name="sAddress" type="text">
+                            </label>
+                        </tbody>
+                    </table>
+                </section>
+                <footer>
+                    <a href="javascript:;" class="dia-btn1" id="personInfoContentBtn_740292" onclick="PTTSendClick('btn','dia-btn1','确认地址');"></a>
+                </footer>
+            </form>
+        </div>
+    </div>
+    <!-- 确认收货地址弹窗 -->
+    <div class="dialog dia-submit" id="dia-submit" style="display: none;">
+        <a class="dia-close" href="javascript:closeDialog();" title="关闭"></a>
+        <div class="dia-con">
+            <a href="javascript:;" class="dia-btn2" onclick="PTTSendClick('btn','dia-btn2','确认提交');"></a>
+        </div>
+    </div>
+    <!-- 弹出抽中弹窗不要用组件弹出 -->
+    <!-- 未中奖-->
+    <div class="dialott dianone" id="dia5" style="display: none;">
+        <div class="dialott-con">
+            <a class="dia-close" href="javascript:closeDialog();" title="关闭"></a>
+            <div class="dia-box">
+                <p class="tips">很遗憾，您没有中奖<br>期待您的再次参与
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 不是一等奖，抽中实物奖励 -->
+    <div class="dialott dia1" id="dia1" style="display: none;">
+        <div class="dialott-con">
+            <a class="dia-close" href="javascript:closeDialog();" title="关闭"></a>
+            <div class="dia-box">
+                <span></span>
+                <p class="tips">系统将在15个工作日内将奖品发放至
+                    <br>您登陆的账号和大区当中
+                </p>
+                <a href="javascript:addAddress();" class="btn-address" onclick="PTTSendClick('btn','btn-address','填写地址');"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 不是一等奖，抽中虚拟奖励 -->
+    <div class="dialott dia2" id="dia2" style="display: none;">
+        <div class="dialott-con">
+            <a class="dia-close" href="javascript:;" title="关闭"></a>
+            <div class="dia-box">
+                <span></span>
+                <p class="tips">系统将在15个工作日内将奖品发放至
+                    <br>您登陆的账号和大区当中
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 一等奖实物奖励-->
+    <div class="dialott dialott1 dia3" id="dia3" style="display: none;">
+        <div class="dialott-con">
+            <a class="dia-close" href="javascript:;" title="关闭"></a>
+            <div class="dia-box">
+                <div class="lott-box">
+                    <img src="//game.gtimg.cn/images/lpl/act/a20210202springmlott/first-prize1.png" alt="">
+                    <span>恭喜您获得傲风LPL现场款电竞椅</span>
+                </div>
+                <p class="tips">系统将在15个工作日内将奖品发放至
+                    <br>您登陆的账号和大区当中
+                </p>
+                <a href="javascript:addAddress();" class="btn-address" onclick="PTTSendClick('btn','btn-address','填写地址');"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 一等奖虚拟奖励-->
+    <div class="dialott dialott1 dia4" id="dia4" style="display: none;">
+        <div class="dialott-con">
+            <a class="dia-close" href="javascript:;" title="关闭"></a>
+            <div class="dia-box">
+                <div class="lott-box">
+                    <img src="//game.gtimg.cn/images/lpl/act/a20210202springmlott/first-prize1.png" alt="">
+                    <span>恭喜您获得傲风LPL现场款电竞椅</span>
+                </div>
+                <p class="tips">系统将在15个工作日内将奖品发放至
+                    <br>您登陆的账号和大区当中
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 领取记录 -->
+    <div class="dialog dia-record" id="dialogRecord" style="display: none;">
+        <a class="dia-close" href="javascript:closeDialog();" title="关闭"></a>
+        <div class="dia-con">
+            <h3>领取记录</h3>
+            <ul class="record-titl">
+                <li>
+                    <span style="font-weight:bold;">获奖时间</span>
+                    <span style="font-weight:bold;">所获礼包</span>
+                </li>
+            </ul>
+            <!-- 如果未中奖就隐藏display: none -->
+            <ul class="record-gift" style="display: block;">
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+                <li>
+                    <span>2021-1-11</span>
+                    <span>傲风LPL现场款电竞椅傲风LPL现场款电竞椅</span>
+                </li>
+            </ul>
+            <!-- 未中奖 -->
+            <ul class="record-none" style="display: none;">
+                <li>亲，您还没有奖品！继续加油</li>
+            </ul>
+            <a href="javascript:addAddress();" class="btn-address" onclick="PTTSendClick('btn','btn-address','填写地址');"></a>
+        </div>
+    </div>
+    <!-- End -->
+    <!--js-->
+    <script src="//js.aq.qq.com/js/aq_common.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.1.min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/share/share-min.js" charset="gb2312"></script>
+    <script src='//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+    <script src="//ossweb-img.qq.com/images/js/delottery/lottery_v2.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script>
+
+
+    <script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function delayCookie(){
+            var cookieUin = milo.cookie.get('uin', '');
+            if (cookieUin) {
+                milo.cookie.set('uin_cookie', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+                milo.cookie.set('ied_qq', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+            }
+        }
+        //加载js
+        function loadScripts(t,e){function a(){var o=document.createElement("script");o.type="text/javascript";var c=-1==t[n].indexOf("?")?t[n]+"?d="+Math.random():t[n]+"&d="+Math.random();o.src=c,document.body.appendChild(o),n++,o.readyState?o.onreadystatechange=function(){("loaded"==o.readyState||"complete"==o.readyState)&&(o.onreadystatechange=null,d++,d<t.length?a():e&&e())}:o.onload=function(){d++,d<t.length?a():e&&e()}}e=e||function(){};var n=0,d=0;a()}
+  
+            loadScripts([
+                "//pub.idqqimg.com/qqmobile/qqapi.js?_bid=152",//用户手Q分享以及在手机上拉起掌盟
+                "//game.gtimg.cn/images/js/2018foot/foot.js",//公共底部
+                "//ossweb-img.qq.com/images/js/zepto/zepto.min.js",//移动端必引，同时分享依赖该文件
+                // "//ossweb-img.qq.com/images/js/mobile_bundle/milo.js",
+                "//lol.qq.com/m/public/LOL_App.js",
+                "js/data.js",
+                // "js/index.js"
+            ],function(){
+                init_ZMApp({
+                    'title':'牛年“霸福”抽抽抽',
+                    'summery':'牛年“霸福”抽抽抽',
+                    'subtitle' : '牛年“霸福”抽抽抽',
+                    'img':'https://game.gtimg.cn/images/lpl/act/a20210202springmlott/share.jpg',
+                    'url':location.href.split('?')[0],
+                    'WXtrigger':function(res){
+                        //微信动作回调
+                    },
+                    'WXsuccess':function(res){
+                        //微信成功回调
+                        if(!res) return;
+                        amsSubmit(353484,730842);
+                        if(res.errMsg == 'sendAppMessage:ok') {
+                            //微信分享个人
+                            PTTSendClick('btn','sharewx1','分享给好友');
+                        } else if(res.errMsg == 'shareTimeline:ok') {
+                            //微信分享朋友圈
+                            PTTSendClick('btn','sharewx2','分享到朋友圈');
+                        }else if(res.errMsg == 'shareQQ:ok'){
+                            //微信分享至QQ
+                            PTTSendClick('btn','shareqq','分享到QQ');
+                        }
+                    },
+                    'WXcancel':function(res){
+                        //微信分享取消动作回调
+                        PTTSendClick('btn','sharewx_cancel','分享取消');
+                    },
+                    'WXfail':function(res){
+                        //微信分享失败动作回调
+                        PTTSendClick('btn','sharewx_fail','分享失败');
+                    },
+                    'QQtrigger':function(res){
+                        //QQ动作回调
+    
+                    },
+                    'QQcallback':function(res){
+                        //QQ分享成功
+                        amsSubmit(353484,730842);
+                        PTTSendClick('btn','shareqq_succ','QQ分享成功');
+                    },
+                    'LOL_APPsuccess' : function(res){
+                        //掌盟分享成功
+                        amsSubmit(353484,730842);
+                        PTTSendClick('btn','sharezm_succ','掌盟分享成功');
+                    }
+                });
+    
+                setTimeout(delayCookie,2000);
+                //移动端脚本逻辑
+            })
+        
+
+            function TGDialogS(e) {
+                // 利用milo库引入dialog组件
+                need("biz.dialog", function (Dialog) {
+                    Dialog.show({
+                        id: e,
+                        bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+                        opacity: 50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+                    });
+                });
+            }
+
+            function closeDialog() {
+                // 利用milo库引入dialog组件
+                need("biz.dialog", function (Dialog) {
+                    Dialog.hide();
+                });
+            }
+
+
+    </script>
+    <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+    <script>
+
+    //此段代码不能放到外链JS中，
+    var setSite = { //设置网站属性
+        siteType: "a20210202springmlott", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+        pageName: "首页-移动端", //必填项:页面中文名
+        project: "other", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+        osact: 0 //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+    };
+    if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+
+</html>
+
+<!-- #t6Hl8#AB28023BEB81376DCB17066DFEA565D2 -->

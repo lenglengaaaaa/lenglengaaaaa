@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="robots" content="all">
+	<meta name="author" content="Tencent-CP" />
+	<meta name="Copyright" content="Tencent" />
+	<meta name="Description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。" />
+	<meta name="Keywords" content="英雄联盟,战斗学院,战斗学院系列,限定皮肤,战斗学院系列限定皮肤,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟战争学院,明星解说视频,101战争学院,英雄,攻略,WCG,点亮图标,赛事" />
+	<title>新赛季新征程活动专题-英雄联盟官方网站-腾讯游戏</title>
+	<link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-4.3.3.min.css">
+	<link rel="stylesheet" href="css/index.css" media="screen and (min-device-width: 1025px)">
+	<!-- <link rel="stylesheet" href="css/index-m.css" media="screen and (max-device-width: 1024px)"> -->
+	<link rel="stylesheet" href="css/public.css" media="screen and (min-device-width: 1025px)">
+    <!-- <link rel="stylesheet" href="css/public-m.css" media="screen and (max-device-width: 1024px)">	 -->
+    <!--[if lt IE 9]> <link rel="stylesheet" href="css/index.css"> <![endif]-->
+    <!--//game.gtimg.cn/images/lol/act/a20210130spring/-->
+    <script>
+		//mode  移动端的适配方式 按需 传参  目前只有两种 px和rem
+		(function(win, doc, mode) {
+			var std = 750;
+			if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+				var h = document.getElementsByTagName("head")[0];
+				h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-capable" content="yes">');
+				h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-status-bar-style" content="black">');
+				h.insertAdjacentHTML('beforeEnd', '<meta name="format-detection" content="telephone=no">');
+				h.insertAdjacentHTML('beforeEnd', '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />');
+				if(mode == 'px') {
+					//	Px移动端速配
+					if (!win.addEventListener) return;
+					var html=document.documentElement;
+					function setFont()
+					{
+						function adaptVP(a){function c(){var c,d;return b.uWidth=a.uWidth?a.uWidth:750,b.dWidth=a.dWidth?a.dWidth:window.screen.width||window.screen.availWidth,b.ratio=window.devicePixelRatio?window.devicePixelRatio:1,b.userAgent=navigator.userAgent,b.bConsole=a.bConsole?a.bConsole:!1,a.mode?(b.mode=a.mode,void 0):(c=b.userAgent.match(/Android/i),c&&(b.mode="android-2.2",d=b.userAgent.match(/Android\s(\d+.\d+)/i),d&&(d=parseFloat(d[1])),2.2==d||2.3==d?b.mode="android-2.2":4.4>d?b.mode="android-dpi":d>=4.4&&(b.mode=b.dWidth>b.uWidth?"android-dpi":"android-scale")),void 0)}function d(){var e,f,g,h,c="",d=!1;switch(b.mode){case"apple":f=(window.screen.availWidth*b.ratio/b.uWidth)/b.ratio;c="width="+b.uWidth+",initial-scale="+f+",minimum-scale="+f+",maximum-scale="+f+",user-scalable=no";break;case"android-2.2":a.dWidth||(b.dWidth=2==b.ratio?720:1.5==b.ratio?480:1==b.ratio?375:.75==b.ratio?240:480),e=window.screen.width||window.screen.availWidth,375==e?b.dWidth=b.ratio*e:750>e&&(b.dWidth=e),b.mode="android-dpi",d=!0;case"android-dpi":f=160*b.uWidth/b.dWidth*b.ratio,c="target-densitydpi="+f+", width="+b.uWidth+", user-scalable=no",d&&(b.mode="android-2.2");break;case"android-scale":c="width="+b.uWidth+", user-scalable=no"}g=document.querySelector("meta[name='viewport']")||document.createElement("meta"),g.name="viewport",g.content=c,h=document.getElementsByTagName("head"),h.length>0&&h[0].appendChild(g)}function e(){var a="";for(key in b)a+=key+": "+b[key]+"; ";alert(a)}if(a){var b={uWidth:0,dWidth:0,ratio:1,mode:"apple",userAgent:null,bConsole:!1};c(),d(),b.bConsole&&e()}};adaptVP({uWidth:750});
+					}
+					win.addEventListener('resize',setFont,false)
+					setFont();
+				}
+				else if(mode == 'rem') {
+					var docEl = doc.documentElement,
+							resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+							recalc = function() {
+								var clientWidth = docEl.clientWidth;
+								if(!clientWidth) return;
+								docEl.style.fontSize = 100 * (clientWidth / std) + 'px';
+							};
+					if(!doc.addEventListener) return;
+					recalc();
+					win.addEventListener(resizeEvt, recalc, false);
+					doc.addEventListener('DOMContentLoaded', recalc, false);
+				}
+			}
+		})(window, document, 'rem');
+	</script>
+	</head>
+	<body>
+	<div class="wrap">
+        <h1 class="hidden">金猪开盟红</h1>
+        <div id="audio" style="height: 0;"></div>
+        <div class="head">
+            <a class="logo" href="//lol.qq.com" target="_blank" title="英雄联盟" onclick="PTTSendClick('btn','logo','官网LOGO');"></a>
+            <a class="go-home" href="//lol.qq.com/main.shtml" target="_blank" title="英雄联盟官网" onclick="PTTSendClick('btn','go-home','进入官网');"></a>
+            <div class="music-box">									
+                <a class="audio-name" href="javascript:;" title="恭喜你发财">
+                    <img class="icon-music top-icon2 icon-music2" src="//game.gtimg.cn/images/lol/act/a20190129spring/musicon01.gif" width="14" height="15" alt="音乐图标">									
+                </a>								
+            </div>
+            <div class="tab-box">
+                <ul class="tab-ul">
+                    <li class="nav1"><a href="javascript:;" onclick="PTTSendClick('btn','index','整合页面');"></a></li>
+                    <li class="nav2"><a href="page2.html" onclick="PTTSendClick('btn','page2','抽奖活动');"></a></li>
+                    <li class="nav3"><a href="page3.html" onclick="PTTSendClick('btn','page3','皮肤购买');"></a></li>
+                    <li class="nav4"><a href="page4.html" onclick="PTTSendClick('btn','page4','门票购买');"></a></li>
+                    <li class="nav5"><a href="page5.html" onclick="PTTSendClick('btn','page5','社区活动');"></a></li>
+                    <!-- <li class="nav6"><a href="page6.html" onclick="PTTSendClick('btn','page6','网吧活动');"></a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="p1-content1">
+                <div class="p1-title-box" style="z-index: 2;">
+                    <div class="p1-title1 p1-title-srp" id="ct1"></div>
+                </div>
+                <div class="p1-letter-box" style="opacity: 1;">
+                    <div class="p1-letter-txt1"></div>
+                    <div class="p1-letter-cont">
+                        <ul class="p1-letter-ul">
+                            <li class="p1-letter-list list1">
+                                <div class="p1-icon-pig">
+                                    <img src="//game.gtimg.cn/images/lol/act/a20190129spring/p1-pig1.png" width="117" height="117" alt="免费炫金炫彩皮肤">
+                                </div>
+                                <div class="p1-txt-box">
+                                    <div class="p1-skin-name"><em>免费炫金</em>炫彩<span class="p1-label">炫金炫彩</span></div>
+                                    <div class="p1-line"></div>
+                                    <p class="p1-skin-tips">一个免费的神秘随机炫金炫彩（优先未拥有）和图标，通过完成客户端内10个任务来兑换它
+                                        <a class="p1-see-jackpot" href="javascript:TGDialogS('popAwardBox');" onclick="PTTSendClick('btn','jackpot','查看炫金奖池');">查看炫金奖池</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="p1-letter-list">
+                                <div class="p1-icon-pig">
+                                    <img src="//game.gtimg.cn/images/lol/act/a20190129spring/p1-pig2.png" width="117" height="117" alt="免费炫金炫彩皮肤">
+                                </div>
+                                <div class="p1-txt-box">
+                                    <div class="p1-skin-name"><em>猪年新春定制</em>纪念图标<span class="p1-label">图标</span></div>
+                                    <div class="p1-line"></div>
+                                    <p class="p1-skin-tips">一个猪年新春定制纪念图标，<br><span class="p1-colorw">2019年1月29日-3月5日</span> 期间在任意模式<br>获得一局游戏胜利就可以领取。</p>
+                                    <a class="p1-get-skin" id="lingqu" href="javascript:;" onclick="PTTSendClick('btn','lingqu','领取');"></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="p1-call-friend">
+                            <div class="p1-call-txt">
+                                <p class="p1-call-tilte">呼朋唤友，过年开黑</p>
+                                <div class="p1-line p1-line2"></div>
+                                <p class="p1-call-phase"><span class="p1-color2-w">1月29日 - 3月6日6:59</span> 无限乱斗模式限时开放</p>
+                                <p class="p1-call-phase"><span class="p1-color2-w">2月2日18：00 - 2月10日23：59</span> 142英雄免费畅爽</p>
+                                <p class="p1-call-phase p1-call-tips">[ 限召唤师峡谷和扭曲丛林排位，匹配及人机模式 ]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p1-letter-txt2"></div>
+                </div>
+                <!--已经领取过的显示-->
+                <div class="on-skin"></div>
+            </div>
+            <div class="cont1">
+                <p>英雄联盟给所有召唤师拜年啦！<br>
+                祝大家新的一年超神常相伴，欢乐“鼠”不尽！<br>
+                2019年英雄联盟与各位召唤师一起见证了LPL S9的卫冕，<i>我们一起用无限热爱创造了无限可能！<br>
+                新春到来之际，</i><i>英雄联盟特别为所有召唤师准备了<span>2份新春小礼物！</span></i></p>
+                
+                <div class="gift-box">
+                    <div class="info">
+                        <p class="p1">新春炫金礼</p>
+                        <p class="p2">活动期间新解锁任意炫金炫彩或王国机神光 炫彩，即可抽取一个随机炫金炫彩。</p>
+                        <p class="p2"><span>活动时间：2020年1月16日18:00至2020年2月20日06:00</span></p>
+                        <p class="p2"><span>领取时间：2020年1月22日12:00至2020年2月20日06:00</span></p>
+                        <p class="p2 p-gray">（单QQ每多解锁一个炫金炫彩或王国机神光 炫彩，即可获取一次抽取资格，可领取至其他大区）<br>
+                        （如在战利品解锁炫金炫彩后，活动抽取次数没有增加，<span>可在3小时后刷新尝试</span>)</p>
+                    </div>
+                    
+                    <div class="button-wrap">
+                        <a href="javascript:TGDialogS('dialogAward');" class="btn-view-award" title="查看奖池" onclick="PTTSendClick('btn','view-award','查看奖池');">【查看奖池】</a>
+                        <a href="javascript:getLottery();" class="btn-lottery" id="lotteryBtn" title="立即抽取" onclick="PTTSendClick('btn','lottery','立即抽取');">当前大区可抽取次数（<em id="leftLotteryNum">0</em>）</a>
+                        <a href="Javascript:change_area();" class="btn-change" title="切换大区" onclick="PTTSendClick('btn','change','切换大区');">切换大区</a>
+                        <a href="Javascript:showGetHistory();" class="btn-record" title="领取记录" onclick="PTTSendClick('btn','record','领取记录');">领取记录</a>
+                    </div>
+                    
+                </div>						
+                
+                <div class="gift-box gift-box2">
+                    <div class="info">
+                        <p class="p1">神秘表情和随机图标</p>
+                        <p class="p2">活动期间完成1场召唤师峡谷/云顶之弈模式的匹配/排位即可领取<br><span>活动时间：2020年1月16日00:00至2020年2月1日23:50</span></p>
+                    </div>
+                    <a href="javascript: get_btn();" class="btn-get" title="立即领取" onclick="PTTSendClick('btn','get','立即领取神秘表情和随机图标');"></a>
+                </div>
+            </div>
+            <div class="cont11">
+                <h1 class="title"></h1>
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <h2>福利一</h2>
+                        <p>英雄觉醒<br>嗨翻峡谷</p>
+                        <span>时间<em>2.26-2.30</em></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont2">
+                <h1 class="title"></h1>
+                <div class="swiper-box">
+                    <div class="swiper-container scroll">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <i class="icon"></i>
+                                <i class="num">1</i>
+                                <img src="" alt="">
+                                <em>英雄觉醒<br>嗨翻峡谷</em>
+                                <span>
+                                    <p><i>1月23日</i>起</p>
+                                    <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                                </span>
+                            </div>
+                            <div class="swiper-slide">
+                                <i class="icon"></i>
+                                <i class="num">1</i>
+                                <img src="" alt="">
+                                <em>英雄觉醒<br>嗨翻峡谷</em>
+                                <span>
+                                    <p><i>1月23日</i>起</p>
+                                    <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                                </span>
+                            </div>
+                            <div class="swiper-slide">
+                                <i class="icon"></i>
+                                <i class="num">1</i>
+                                <img src="" alt="">
+                                <em>英雄觉醒<br>嗨翻峡谷</em>
+                                <span>
+                                    <p><i>1月23日</i>起</p>
+                                    <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                                </span>
+                            </div>
+                            <div class="swiper-slide">
+                                <i class="icon"></i>
+                                <i class="num">1</i>
+                                <img src="" alt="">
+                                <em>英雄觉醒<br>嗨翻峡谷</em>
+                                <span>
+                                    <p><i>1月23日</i>起</p>
+                                    <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont3">
+                <h1 class="title"></h1>
+                <div class="play-box">
+                    <p class="titl"></p>
+					<a href="javascript:;" class="btn-play" onclick="PTTSendClick('btn','btn-play','btn');"></a>
+					<div class="video-container" id="video-container"></div>
+				</div>
+            </div>
+            <div class="cont4">
+                <img src="" alt="">
+                <a href="javascript:;" class="btn-play" onclick="PTTSendClick('btn','btn-play1','btn');"></a>
+                <h1 class="title"></h1>
+                <p class="time">2020年1月16日12:00 - 2020年3月17日23:59</p>
+                <p class="tips"></p>
+            </div>
+            <div class="cont4">
+                <h1 class="title"></h1>
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <i class="num">01-</i>
+                        <p class="name">B站拜年祭
+                            <img src="" alt="" class="logo">
+                        </p>
+                        <p class="txt">
+
+                        </p>
+                        <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <i class="num">01-</i>
+                        <p class="name">B站拜年祭
+                            <img src="" alt="" class="logo">
+                        </p>
+                        <p class="txt">
+
+                        </p>
+                        <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <i class="num">01-</i>
+                        <p class="name">B站拜年祭
+                            <img src="" alt="" class="logo">
+                        </p>
+                        <p class="txt">
+
+                        </p>
+                        <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <i class="num">01-</i>
+                        <p class="name">B站拜年祭
+                            <img src="" alt="" class="logo">
+                        </p>
+                        <p class="txt">
+
+                        </p>
+                        <a href="javascript:;" class="btn-detail" onclick="PTTSendClick('btn','btn-detail','了解详情');"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 头部视频弹窗 -->
+    <div class="dialog dialog-video" id="dialogVideo">
+        <a href="javascript:;" class="dia-VideoClose close" onclick="PTTSendClick('btn','close','关闭弹窗');">×</a>
+		<a href="javascript:;" class="dia-play" onclick="PTTSendClick('btn','btn-play','btn');"></a>
+        <div class="video-box" id="topVideo"></div>
+    </div>
+    <!-- 视频弹窗 -->
+    <div class="dialog dialog-video" id="dialogVideo1">
+        <a href="javascript:;" class="dia-VideoClose close" onclick="PTTSendClick('btn','close','关闭弹窗');">×</a>
+        <div class="video-box" id="fightVideo"></div>
+    </div>
+    <!-- 炫彩奖池弹窗 -->
+    <div class="popAwardBox" id="popAwardBox" style="display: none1;">
+		<div class="dia-con">
+            <ul class="award-list heroul scroll">
+                <li>
+                    <!-- <div>
+                        <img src="//game.gtimg.cn/images/lol/act/img/skinloading/59005.jpg" class="pic" alt="">
+                    </div>
+                    <p class="phone-box"><span><img src="+src1+" class="pic1"></span></p>
+                    <p class="name">吕布 奉先</p> -->
+                </li>
+            </ul>
+        </div>
+		<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+    </div>
+    <!-- 领取弹窗 -->
+    <div class="dialog dialog-get" id="dialog-get">
+        <div class="dialog-get-items">
+            <div class="dialog-get-item">
+                <img id="icon_img" src="//game.gtimg.cn/images/lol/act/a20200103spring/index_emote_icon.png">
+                <p id="icon_name" class="dialog-get-name">随机图标</p>
+            </div>
+            <div class="dialog-get-item">
+                <img id="emo_img" src="//game.gtimg.cn/images/lol/act/a20200103spring/index_emote_icon.png">
+                <p id="emo_name" class="dialog-get-name">随机表情</p>
+            </div>
+        </div>
+        <div class="dialog-get-area">当前奖励领取大区：<span class="get_area">艾欧尼亚 电信 </span><a class="pop_c_area" href="javascript: change_icon_area();">切换大区</a></div>
+        <div class="dialog-get-btns">
+            <!-- <a href="javascript:;" id="check_has" class="dialog-get-btn-query"></a> -->
+            <a href="javascript:;" class="dialog-get-btn-get got" onclick="PTTSendClick('btn','dialog-get','领取');"></a>
+        </div>
+        <p class="area-tips">如果您在当前大区已经拥有这些道具，可以通过切换大区将它们领取到别的大区</p>
+        <a href="javascript:closeDialog1();" class="close" title="关闭"></a>
+    </div>
+    <!-- 领取弹窗 -->
+    <div class="dialog dialog-get2" id="dialog-get2">
+        <div class="dialog-get-items">
+            <div class="dialog-get-item">
+                <img src="">
+                <p class="dialog-get-name"></p>
+            </div>
+        </div>
+        <input type="hidden" id="iDbPackageAutoIncId">
+        <input type="hidden" id="skinId">
+        <div class="dialog-get-area">当前奖励领取大区：<span class="get_area"> </span><a class="pop_c_area" href="javascript: swithcColorSkinArea();">切换领取大区</a></div>
+        <div class="dialog-get-btns">
+            <a href="javascript:checkSkinExit();" id="check_has2" class="dialog-get-btn-query"></a>
+            <!-- 已领取加got -->
+            <a href="javascript:getColorSkin();" class="dialog-get-btn-get" onclick="PTTSendClick('btn','dialog-get','领取');"></a>
+        </div>
+        <a href="javascript:closeDialog();" class="close" title="关闭"></a>
+    </div>
+    <!-- 领取记录 -->
+    <div class="dialog dialog-record" id="dialogRecord">
+        <a href="javascript:closeDialog();" class="close" title="关闭" onclick="PTTSendClick('btn','close','关闭弹窗');"></a>
+        <table>
+            <thead>
+                <tr>
+                    <th>道具</th>
+                    <th>领取时间</th>
+                    <th>领取大区</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody id="lotteryList">
+                
+            </tbody>
+            <tr>
+                <td>神龙之翼 库奇 炫金焰龙</td>
+                <td>2018-05-14 00:30:21</td>
+                <td>艾欧尼亚 电信</td>
+                <td>已领取</td>
+            </tr>
+            <tr>
+                <td>神龙之翼 库奇 炫金焰龙</td>
+                <td>2018-05-14 00:30:21</td>
+                <td>艾欧尼亚 电信</td>
+                <td>已领取</td>
+            </tr>	
+            <tr>
+                <td>神龙之翼 库奇 炫金焰龙</td>
+                <td>2018-05-14 00:30:21</td>
+                <td>艾欧尼亚 电信</td>
+                <td>已领取</td>
+            </tr>	
+            <tr>
+                <td>神龙之翼 库奇 炫金焰龙</td>
+                <td>2018-05-14 00:30:21</td>
+                <td>艾欧尼亚 电信</td>
+                <td>已领取</td>
+            </tr>	
+            <tr>
+                <td>神龙之翼 库奇 炫金焰龙</td>
+                <td>2018-05-14 00:30:21</td>
+                <td>艾欧尼亚 电信</td>
+                <td>已领取</td>
+            </tr>																
+        </table>
+        <div class="pagination-box" id="div_page_roller">
+            <span>1/1页</span>
+            <a href="javascript:;" class="page-prev">上一页</a>
+            <span>1</span>
+            <a href="javascript:;" class="page-next">下一页</a>
+        </div>
+    </div>
+    <script src="//js.aq.qq.com/js/aq_common.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/share/share-min.js"></script>
+    <script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script>
+	<script>
+        function delayCookie(){
+            var cookieUin = milo.cookie.get('uin', '');
+            if (cookieUin) {
+                milo.cookie.set('uin_cookie', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+                milo.cookie.set('ied_qq', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+            }
+        }
+        //加载js
+        function loadScripts(t,e){function a(){var o=document.createElement("script");o.type="text/javascript";var c=-1==t[n].indexOf("?")?t[n]+"?d="+Math.random():t[n]+"&d="+Math.random();o.src=c,document.body.appendChild(o),n++,o.readyState?o.onreadystatechange=function(){("loaded"==o.readyState||"complete"==o.readyState)&&(o.onreadystatechange=null,d++,d<t.length?a():e&&e())}:o.onload=function(){d++,d<t.length?a():e&&e()}}e=e||function(){};var n=0,d=0;a()}
+        if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)){
+            loadScripts([
+                "//pub.idqqimg.com/qqmobile/qqapi.js?_bid=152",//用户手Q分享以及在手机上拉起掌盟
+                "//game.gtimg.cn/images/js/2018foot/foot.js",//公共底部
+                "//ossweb-img.qq.com/images/js/zepto/zepto.min.js",//移动端必引，同时分享依赖该文件
+                "//ossweb-img.qq.com/images/js/mobile_bundle/milo.js",
+                "//gameact.qq.com/comm-htdocs/js/game_area/lol_server_select.js",
+                "//lol.qq.com/m/public/LOL_App.js",
+                "js/skindata.js",
+                "js/public.js",
+                "js/index.js"
+            ],function(){
+                init_ZMApp({
+                    'title':'新赛季 新征程',
+                    'summery':'免费赢取永久皮肤、小小英雄稀有蛋等丰富奖励',
+                    'subtitle' : '免费赢取永久皮肤、小小英雄稀有蛋等丰富奖励',
+                    'img':'https://game.gtimg.cn/images/lol/act/a20210108newseason/m/share.jpg',
+                    'url':location.href.split('?')[0],
+                    'WXtrigger':function(res){
+                        //微信动作回调
+                    },
+                    'WXsuccess':function(res){
+                        //微信成功回调
+                        if(!res) return;
+                        amsSubmit(353484,730842);
+                        if(res.errMsg == 'sendAppMessage:ok') {
+                            //微信分享个人
+                            PTTSendClick('btn','sharewx1','分享给好友');
+                        } else if(res.errMsg == 'shareTimeline:ok') {
+                            //微信分享朋友圈
+                            PTTSendClick('btn','sharewx2','分享到朋友圈');
+                        }else if(res.errMsg == 'shareQQ:ok'){
+                            //微信分享至QQ
+                            PTTSendClick('btn','shareqq','分享到QQ');
+                        }
+                    },
+                    'WXcancel':function(res){
+                        //微信分享取消动作回调
+                        PTTSendClick('btn','sharewx_cancel','分享取消');
+                    },
+                    'WXfail':function(res){
+                        //微信分享失败动作回调
+                        PTTSendClick('btn','sharewx_fail','分享失败');
+                    },
+                    'QQtrigger':function(res){
+                        //QQ动作回调
+    
+                    },
+                    'QQcallback':function(res){
+                        //QQ分享成功
+                        amsSubmit(353484,730842);
+                        PTTSendClick('btn','shareqq_succ','QQ分享成功');
+                    },
+                    'LOL_APPsuccess' : function(res){
+                        //掌盟分享成功
+                        amsSubmit(353484,730842);
+                        PTTSendClick('btn','sharezm_succ','掌盟分享成功');
+                    }
+                });
+    
+                setTimeout(delayCookie,2000);
+                //移动端脚本逻辑
+            })
+        }else{
+            loadScripts([
+                "//ossweb-img.qq.com/images/lol/title/lol.js",
+                "//game.gtimg.cn/images/js/2018foot/foot.js",
+                "//ossweb-img.qq.com/images/js/milo_bundle/milo.js",
+                "//gameact.qq.com/comm-htdocs/js/game_area/lol_server_select.js",
+                "js/skindata.js",
+                "js/public.js",
+                "js/index.js"
+            ],function(){
+    
+                setTimeout(delayCookie,2000);
+                //PC端脚本逻辑
+    
+            });
+        }
+    
+    </script>
+    <script>
+    
+    </script>
+	<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+	<script>
+	//此段代码不能放到外链JS中，
+	var setSite={ //设置网站属性 
+	    siteType:"a20210130spring", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+	    pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+	    pageName:"首页", //必填项:页面中文名 
+	    project:"other", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;原生官网base;微社区ingame;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+	    osact:0 //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+	};
+	if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+	</script>
+	</body>
+</html>

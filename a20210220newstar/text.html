@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GICP新闻填充demo</title>
+  <link rel="stylesheet" href="./demo.css">
+  <script src="./demo.js"></script>
+</head>
+<body class="demo-detail-news">
+  <div id="wrap"></div>
+  <script type="news-template" id="tpl">
+    <h1>{sTitle}</h1>
+    <h2 class="author">{sAuthor}</h2>
+    <div class="time">{sIdxTime}</div>
+    <div class="tags">{keyword:{sWord}{iWord}}</div>
+    <div class="content">{sContent}</div>
+  </script>
+  <h2>相关文章</h2>
+  <div class="rel"></div>
+  <script src="//game.gtimg.cn/images/js/fillnewsgicp/v1.4.js" charset="UTF-8"></script>
+  <script>
+  fillNews.detail({
+    gameID: 73,
+    wrap:'#wrap', // 模板处理完填充进来的容器
+    tpl:document.querySelector('#tpl').innerHTML, // 模板字符串
+    source:'web_pc', // V4系统的数据上报，需要去GICP后台手动创建
+    relWrap:'.rel', // 相关推荐的容器
+    relTpl:'<p><a href="{url}"><img src="{sIMG}">{sTitle} {sCreated}</a></p>', // 相关推荐的dom结构模板
+    callback:function(obj){
+      console.log(obj);
+    }
+  });
+  </script>
+
+  <!-- 如果想手动填充，可以看下面的代码 -->
+  <script>
+  // 组件会自动从当前页面的url中获取newsType和对应的文章id
+  // 所以上面的代码中并没有设定这两项。
+  // 也可手动指定 newsType 和 id
+  // 下面是从url中获取文章id的参考代码
+  (function(){
+    var newsID=null;
+    var newsIDMatch=location.search.match(/newsid=(\d+)/);
+    if(newsIDMatch){
+      newsID=newsIDMatch[1]
+    }
+    console.log('文章的ID是：',newsID);
+    // fillNews.detail({
+    //   ...
+    //   newsType:'news' // 或'video'
+    //   id: newsID
+    //   ...
+    // })
+  })();
+  </script>
+</body>
+</html>

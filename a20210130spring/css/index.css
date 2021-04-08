@@ -1,0 +1,152 @@
+.wrap{ min-width: 1400px; max-width: 1920px; overflow-x: hidden;position: relative; margin: 0 auto;}
+.wrap .head{overflow: hidden;}
+.wrap .logo{display: block;position: absolute;top: 30px;left: 30px;z-index: 33;}
+.p1-content1{width: 1400px;margin: 0 auto; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-bg1.png) no-repeat 50% 0; height: 1527px;}
+/*p1-main1 S*/
+.p1-title-srp{ background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-title-srp.png) no-repeat;}
+.p1-title1{ width: 1156px; height: 171px; background-position: 0 0;}
+.p1-title-box{width: 1156px; height: 274px; margin-left: 50px; padding-top: 274px; position: relative;}
+
+.p1-lettervid-box{ width: 1920px; height: 1080px; position: absolute; top: 0px; left: 0px; pointer-events: none;}
+.p1-lettervid{ position: absolute; top: 196px; left: -313px;width: 1920px;height: auto;}
+
+
+.p1-letter-box{ width: 1053px; height: 942px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-letter-bg.png) no-repeat; margin: 0 auto;}
+.p1-letter-txt1{ width: 734px; height: 148px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-letter-txt1.png) no-repeat; background-position: bottom center;  margin: 0px auto 30px; padding-top: 87px;}
+.p1-letter-cont{ width: 779px; height: 383px; margin: 0 auto;}
+.p1-letter-ul{ width: 779px; height: 195px;}
+.p1-letter-list{ width: 381px; height: 150px; float: left; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-letter-txtbg.png) no-repeat; position: relative;}
+.p1-icon-pig{ float: left; width: 118px; height: 117px; margin: 13px;}
+.p1-txt-box{ float: left; width: 236px; height: 94px; margin: 24px 0 28px 0;}
+.p1-skin-name{ height: 29px;font-size: 17px; color: #8a0d0d;}
+.p1-skin-name em{ font-weight: bold;}
+.p1-label{ display: inline-block; height: 17px; margin-left: 5px; padding: 2px; border: 1px solid #8a0d0d; border-radius: 5px; line-height: 17px; font-size: 12px; text-align: center;}
+.p1-line{ width: 173px; height: 1px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-line.png) no-repeat;}
+.p1-skin-tips{ font-size: 12px; color: #281301; padding-top: 9px;}
+.p1-see-jackpot{ padding-left: 5px; color: #a1680f; text-decoration: underline;}
+.p1-see-jackpot:hover{text-decoration: underline;}
+.list1{ margin-right: 17px;}
+.p1-colorw{ color: #8a0d0d; font-weight: bold;}
+.p1-get-skin{ display: block; width: 174px; height: 56px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-get-skin.png) no-repeat; position: absolute; bottom: -28px; right: 27px;}
+.p1-on-skin{background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-on-state.png) no-repeat;}
+.p1-call-friend{ width: 778px; height: 158px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-letter-txtbg2.png) no-repeat; border-radius: 5px; overflow: hidden;}
+.p1-call-txt{ width: 351px; height: 114px; margin-top: 21px; margin-left: 39px;}
+.p1-call-tilte{ height: 40px; font-size: 22px; color: #fffae8; font-weight: bold;}
+.p1-line2{ margin-bottom: 10px;}
+.p1-call-phase{ font-size: 14px; color: #fff1be;}
+.p1-color2-w{ font-weight: bold; color: #fffae8;}
+.p1-call-tips{color: #f5b46e;}
+.p1-letter-txt2{ width: 664px; height: 50px; background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p1-letter-txt2.png) no-repeat; margin: 0 auto;}
+/*p1-main1 E*/
+
+/* cont1 */
+.cont1>p {height: 156px; line-height: 30px; text-align: center; font-size: 18px; color: #000000;}
+.cont1>p span{color: #db581b;}
+.cont1>p i{font-style: normal;}
+.cont1 .gift-box {position: relative; display: block; width: 862px; height: auto; text-align: left; padding: 20px 0 28px 60px; margin: 0 auto 25px auto;background: rgba(249, 244, 201, .5);}
+.cont1 .btn-get {position: absolute; top: 50%; right: 60px; transform: translateY(-50%); width: 215px;height: 68px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_btn_get.png) no-repeat;display: inline-block; vertical-align: top;}
+.cont1 .gift-box img {vertical-align: top; display: inline-block; width: 151px; height: 98px; margin-right: 20px;position: relative;top: -5px;}
+.cont1 .gift-box .info {vertical-align: top; display: inline-block; width: 510px; height: auto; text-align: left;}
+.cont1 .gift-box .info .p1 {height: 44px; line-height: 42px; margin-bottom: 8px; border-bottom: 1px solid #e5e2bc; font-weight: bold; font-size: 24px; color: #000000;}
+.cont1 .gift-box .info .p2 {line-height: 20px; font-size: 14px; color: #000000;}
+.cont1 .gift-box .info .p2 span {color: #e64b13;}
+
+.cont1 .button-wrap {position: relative;display: block; width: 215px; height: auto; padding-top: 20px; text-align: center;float: right;margin-right: 60px;}
+.cont1 .btn-view-award {vertical-align: top; display: inline-block; width: auto; height: 40px; line-height: 40px; font-size: 16px; color: #000000;}
+.btn-lottery {vertical-align: top; display: inline-block; width: 215px; height: 82px; line-height: 112px; font-size: 12px; color: #fff2cb; background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_btn_lottery.png) no-repeat;}
+.btn-lottery em {font-weight: bold; font-size: 14px;}
+.btn-lottery.gray {background-position: -215px 0; color: #dddad8; pointer-events: none;}
+.btn-change,
+.btn-record {vertical-align: top; display: inline-block; width: auto; height: 40px; line-height: 40px; margin: 0 20px; font-size: 16px; color: #000000; text-decoration: underline;}
+.btn-change:hover,
+.btn-record:hover {text-decoration: underline;}
+
+/*  ”∆µ */
+.btn-play{width: 76px;height: 76px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-play.png) no-repeat;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%); z-index: 2;}
+
+/* µØ¥∞ */
+.dialog{position: relative;}
+.dialog .dia-con{width: 100%;height: auto;padding-top: 57px;}
+
+/*  ”∆µµØ¥∞ */
+.dialog-video {width: 1000px; height: 564px;}
+.dialog-video .close {position: absolute; top: -17px; right: -70px; font-size: 70px; font-weight: bold; color: #ffdca0; line-height: 1; background: none !important;}
+.dialog-video .video-box {width: 1000px; height: 564px; border: 2px solid #ffdca0; background: #000;}
+.dialog-video .dia-play{width: 76px;height: 76px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-play.png) no-repeat;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%); z-index: 2;}
+
+/* Ï≈≤ Ω±≥ÿµØ¥∞ */
+.popAwardBox{width: 1006px;height: 710px;position: relative;padding-top: 130px;background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p3-popBg.png) no-repeat;}
+.popAwardBox .award-list{width: 922px;height: 610px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/icon-dia.png) no-repeat center;overflow-y: auto;margin: 0 auto;text-align: center;}
+/* .popAwardBox .award-list{width: 960px;height: 470px;display: block;margin: 0 auto; overflow-y: auto;padding-top: 10px;} */
+.popAwardBox .award-list li{width: 168px;height: 295px;float: left;margin: 0 0 20px 13px;position: relative;}
+.popAwardBox .award-list li div{width: 100%;height: 100%;position: relative;}
+.popAwardBox .award-list li div::before{content: '';display: block;width: 100%;height: 100%; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-skinbg.png) no-repeat;position: absolute;top: 0;left: 0;}
+.popAwardBox .award-list li img.pic{width: 156px;height: 286px;background-size: 100%;display: block;margin: 0 auto;padding-top: 5px;}
+.popAwardBox .award-list li .phone-box{display: flex;align-items: center;justify-content: center; overflow: hidden; width: 64px;height: 64px;border: 1px solid #4e594f;border-radius: 50%; position: absolute;top: 180px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.popAwardBox .award-list li .phone-box span{width: 54px;height: 54px;display: block;overflow: hidden;position: relative;border-radius: 50%;border:1px solid #be9e56;}
+.popAwardBox .award-list li img.pic1{width: 54px;height: 143px;object-fit: cover;background-size: 100%;/* background-position: -53px -200px; */display: block;position: absolute;top: -15px;left: 0px;}
+.popAwardBox .award-list li .name{width: 154px; height: auto; background-size: 100% 100%;background: linear-gradient(to top,#052a3c,#052a3c,transparent); position: absolute; left: 7px; bottom: 4px; font-size: 14px; color: #fefbdb;padding: 100px 0px 10px;}
+
+.popAwardBox .dia-close{background: url(//game.gtimg.cn/images/lol/act/a20190129spring/p3-spr.png) no-repeat -900px 0;width: 46px;height: 48px;position: absolute;top: -15px;right: 15px;}
+
+/* ¡Ï»°º«¬º */
+.dialog-get {width: 611px;height: 516px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dialog-get.jpg) no-repeat;padding-top: 120px;font-size: 16px;color: #31454e;text-align: center;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.dialog-get-item {display: inline-block;width: 211px;height: 171px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_get_item_frame.png) no-repeat top center;margin: 0 6px;padding-top: 33px;position: relative;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.dialog-get-item img {width: 105px;height: 105px;object-fit: cover;}
+.dialog-get-name {width: 100%;position: absolute;top: 100%;left: 0;}
+.dialog-get-area {margin: 50px 0 30px; color: #31454e;}
+.dialog-get-area a {text-decoration: underline; color: #e64b13; margin: 0 6px;}
+.dialog-get-btn-query {display: inline-block;width: 161px;height: 43px;line-height: 43px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dia_btn_query.png) no-repeat;margin: 0 20px;}
+.dialog-get-btn-get {display: inline-block;width: 161px;height: 43px;line-height: 43px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dia_btn_get.png) no-repeat;margin: 0 20px;}
+.dialog-get-btn-get.got {background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dia_btn_got.png) no-repeat; pointer-events: none;}
+.dialog-get .close {width: 48px;height: 48px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_close.png) no-repeat;position: absolute;top: 0;right: -60px;font-size: 0;}
+.area-tips {height: 60px; line-height: 60px; text-align: center; font-size: 12px; color: #677b84;}
+.dialog-get .close {position: absolute;top: -20px;right: -68px;display: block; width: 48px;height: 48px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/pass_close.png) no-repeat;}
+
+.dialog-get2 {width: 611px;height: 501px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dialog-get2.jpg) no-repeat;padding-top: 120px;font-size: 16px;color: #31454e;text-align: center;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.dialog-get2 .close {position: absolute;top: -20px;right: -68px;display: block; width: 48px;height: 48px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/pass_close.png) no-repeat;}
+.dialog-get2 img {position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); width: 156px; height: auto; object-fit: cover;}
+
+.dialog-get2 .dialog-get-btn-get {background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dia_btn_get2.png) no-repeat;}
+
+.dialog-message p {position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 500px; text-align: center; font-size: 24px; color: #31454e; }
+
+
+/* ¡Ï»°º«¬º */
+.dialog-record {width: 979px; height: 541px; background: url(//game.gtimg.cn/images/lol/act/a20200103spring/index_dialog-record.jpg) no-repeat;}  
+.dialog-record .close {position: absolute;top: -20px;right: -68px;display: block; width: 48px;height: 48px;background: url(//game.gtimg.cn/images/lol/act/a20200103spring/pass_close.png) no-repeat;}
+.dialog-record table {width: 884px; margin: 26px auto; text-align: center;}  
+.dialog-record table a {font-size: 16px; color: #e64b13; text-decoration: underline;}
+.dialog-record table tr {border-bottom: 1px solid #e3dcc5;}  
+.dialog-record table th {height: 62px; border-right: 1px solid #e3dcc5; font-size: 22px; font-weight: bold; color: #31454e;}  
+.dialog-record table td {height: 72px; border-right: 1px solid #e3dcc5; font-size: 16px; color: #31454e;}  
+.dialog-record table th:nth-child(4),
+.dialog-record table td:nth-child(4) {border-right: none;}
+.dialog-record table th:nth-child(1) {width: 250px;}
+.dialog-record table th:nth-child(2) {width: 260px;}
+.dialog-record table th:nth-child(3) {width: 226px;}
+.dialog-record table th:nth-child(4) {width: 146px;}
+    
+.dialog-record .pagination-box {width: 100%; text-align: center; font-size: 16px; color: #31454e;}
+.dialog-record .pagination-box a {font-size: 16px; color: #e64b13; text-decoration: underline;}
+.dialog-record .pagination-box input {width: 40px; margin: 0 6px; background: #e1d8ba; border: none; text-align: center;}
+.dialog-record .pagination-box .page-prev {margin-left: 40px;}
+.dialog-record .pagination-box .page-next {margin-right: 40px;}
+
+.scroll::-webkit-scrollbar-track
+{
+	border-radius: 6px;
+	background-color: #072328; 
+}
+
+.scroll::-webkit-scrollbar
+{
+	width: 6px;
+	border-radius: 6px;
+	background-color:#072328;
+}
+.scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 6px;
+	background-color: #f9eab8;
+}

@@ -1,0 +1,172 @@
+.gka-wrap {
+    width: 5rem;
+    height: 5rem;
+}
+
+.animation {
+    width: 5rem;
+    height: 5rem;
+    background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00000.png");
+    background-size: 5rem 5rem;
+    background-repeat: no-repeat;
+    animation-name: keyframes-img;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(1);
+}
+
+@keyframes keyframes-img {
+    0% {
+        width: 5rem;
+        height: 5rem;
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00000.png");
+        background-size: 5rem 5rem;
+    }
+
+    2.70% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00001.png");
+    }
+
+    5.41% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00002.png");
+    }
+
+    8.11% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00003.png");
+    }
+
+    10.81% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00004.png");
+    }
+
+    13.51% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00005.png");
+    }
+
+    16.22% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00006.png");
+    }
+
+    18.92% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00007.png");
+    }
+
+    21.62% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00008.png");
+    }
+
+    24.32% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00009.png");
+    }
+
+    27.03% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00010.png");
+    }
+
+    29.73% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00011.png");
+    }
+
+    32.43% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00012.png");
+    }
+
+    35.14% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00013.png");
+    }
+
+    37.84% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00014.png");
+    }
+
+    40.54% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00015.png");
+    }
+
+    43.24% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00016.png");
+    }
+
+    45.95% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00017.png");
+    }
+
+    48.65% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00018.png");
+    }
+
+    51.35% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00019.png");
+    }
+
+    54.05% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00020.png");
+    }
+
+    56.76% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00021.png");
+    }
+
+    59.46% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00022.png");
+    }
+
+    62.16% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00023.png");
+    }
+
+    64.86% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00024.png");
+    }
+
+    67.57% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00025.png");
+    }
+
+    70.27% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00026.png");
+    }
+
+    72.97% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00027.png");
+    }
+
+    75.68% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00028.png");
+    }
+
+    78.38% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00029.png");
+    }
+
+    81.08% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00030.png");
+    }
+
+    83.78% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00031.png");
+    }
+
+    86.49% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00032.png");
+    }
+
+    89.19% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00033.png");
+    }
+
+    91.89% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00034.png");
+    }
+
+    94.59% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00035.png");
+    }
+
+    97.30%,
+    100% {
+        background-image: url("//game.gtimg.cn/images/lol/act/a20210108newseason/img/BX_00036.png");
+    }
+}/* #t6Hl8#DEC3A87637844E0E4DA645A009581E18 */

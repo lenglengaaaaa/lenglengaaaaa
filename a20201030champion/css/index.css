@@ -1,0 +1,72 @@
+/*//game.gtimg.cn/images/lol/act/a20201030champion */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer{margin:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em,b{font-style:normal}
+a{text-decoration:none}
+img{border:0}
+body{padding-top:0.42rem; background: #e6e6e8;}
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+td,th,ul,ol{padding:0;list-style: none;}
+a:hover{filter:brightness(1.1);}
+/* reset end */
+/* foot */
+#afooter {
+    position: relative;
+    padding: 0.3rem 0;
+    text-align: center;
+    font-size: 0.19rem;
+    z-index: 10;
+    background-color: #191219;
+}
+#afooter, #afooter a {
+    color: #c0c0c0;
+    text-decoration: none;
+}
+.hidden{display: none; font-size: 0; text-indent: -999em;}
+.wrap{width: 100%; height: 100%;position: relative; overflow-x: hidden; min-width: 1200px;}
+/* ͷͼ */
+.head{ background: url(../ossweb-img/head.jpg) no-repeat; width: 100%; height:977px; position: relative;}
+/*.video{ width: 25.60rem; height:auto; background-size: 100% 100%; position: absolute; top: 0rem; left: 0rem;}*/
+.logo1{ background: url(//game.gtimg.cn/images/lol/v3/logo-public-white.png) no-repeat; width: 204px; height: 65px;font-size: 0px; position: absolute; left: 300px; top: 22px;}
+.logo1:hover{filter: brightness(1.1);}
+.logo2{ background: url(../ossweb-img/logo.png) no-repeat; width:204px; height: 55px; position:absolute; top: 26px; left: 80px; font-size: 0;}
+.login{ width: 100%; position: absolute; top: 750px; left: 0; text-align: center; font-size: 20px; color: #fff;}
+.login a{ color: #fff;}
+
+.tabspr{width: 1270px;height: 90px; background: url(../ossweb-img/tabspr.png) no-repeat;}
+.tab{ background: url(../ossweb-img/tab.png) no-repeat; width: 1920px;height: 101px; font-size: 0;display: flex;justify-content: center; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background-size: 100% 100%;z-index: 2;padding-top: .03rem;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.tabcomm{display: inline-block;vertical-align: top;width: 252px;height: 94px;margin: 0 -9px;}
+.tabcomm.tab1{width: 212px;margin-left: -18px;margin-top: 3px;}
+.tabcomm.tab2{width: 233px;}
+.tabcomm.tab3{width: 232px;}
+.tabcomm.tab4{width: 252px;}
+.tabcomm.tab5{width: 202px;}
+.tabcomm.tab6{width: 202px;}
+
+.tabcomm .time{ font-size: 16px; text-align: center; color: #fff; width: 100%;}
+.tabcomm .txt{height: 23px;margin: 23px auto 14px;}
+.tab1 .txt{width: 116px;background-position: -21px -8px;}
+.tab2 .txt{width: 196px;background-position: -224px -8px}
+.tab3 .txt{width: 174px;background-position: -467px -8px}
+.tab4 .txt{width: 155px;background-position: -708px -8px}
+.tab5 .txt{width: 119px;background-position: -962px -8px}
+.tab6 .txt{width: 117px; background-position: -1128px -9px}
+
+.tabcomm.tab1.on,.tabcomm.tab1:hover{background: url(../ossweb-img/tabbg1.png);background-size: 100% 100%;}
+.tabcomm.tab2.on,.tabcomm.tab2:hover{background: url(../ossweb-img/tabbg2.png);background-size: 100% 100%;}
+.tabcomm.tab3.on,.tabcomm.tab3:hover{background: url(../ossweb-img/tabbg3.png);background-size: 100% 100%;}
+.tabcomm.tab4.on,.tabcomm.tab4:hover{background: url(../ossweb-img/tabbg4.png);background-size: 100% 100%;}
+.tabcomm.tab5.on,.tabcomm.tab5:hover{background: url(../ossweb-img/tabbg5.png);background-size: 100% 100%;}
+.tabcomm.tab6.on,.tabcomm.tab6:hover{background: url(../ossweb-img/tabbg6.png);background-size: 100% 100%;}
+
+.cont{width: 100%; height: 3300px;min-width: 1200px; position: relative;background: url(../ossweb-img/bg1.jpg) no-repeat;}
+
+.cont4{ width: 1200px; height: auto; display: block; margin: 0 auto;position: relative;}
+.title4{ width: 146px; height: 40px;background: url(../ossweb-img/title4.png) no-repeat; display: block; font-size: 0;}
+.cont4 .ul{width: 100%; height: auto; margin-top: 40px;}
+.cont4 .ul li{ font-size: 16px; color: #8de8f9; margin-bottom: 30px;}
+.cont4 .ul li span{ color: #f6c04d; font-weight: bold;}
+
+/* #t6Hl8#1ADE7D4F9D22C94AFE06F6AE893B806C */

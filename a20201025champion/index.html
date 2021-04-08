@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="GBK">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="robots" content="all">
+		<meta name="author" content="Tencent-CP" />
+		<meta name="Copyright" content="Tencent" />
+		<meta name="Description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。">
+		<meta name="Keywords" content="英雄联盟,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟攻略,明星解说视频,英雄,攻略,WCG,点亮图标,赛事">
+		<title>凤鸣世界，巅峰共荣-英雄联盟官方网站-腾讯游戏</title>
+		<link rel="stylesheet" href="css/index.css" media="screen and (min-device-width: 1025px)">
+		<link rel="stylesheet" href="css/index-m.css" media="screen and (max-device-width: 1024px)">
+		<!--[if lt IE 9]><link rel="stylesheet" href="css/index.css"> <![endif]-->
+		<!-- 页面设计：cp | 页面制作：cp | 创建：2020-10-25 -->
+		<script>
+			//mode  移动端的适配方式 按需 传参  目前只有两种 px和rem
+			(function(win, doc, mode) {
+				var std = 750;
+				if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+					var h = document.getElementsByTagName("head")[0];
+					h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-capable" content="yes">');
+					h.insertAdjacentHTML('beforeEnd', '<meta name="apple-mobile-web-app-status-bar-style" content="black">');
+					h.insertAdjacentHTML('beforeEnd', '<meta name="format-detection" content="telephone=no">');
+					h.insertAdjacentHTML('beforeEnd', '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />');
+					if(mode == 'px') {
+						if(!win.addEventListener) return;
+						var html = document.documentElement;
+
+						function setFont() {
+							function adaptVP(a) {
+								function c() {
+									var c, d;
+									return b.uWidth = a.uWidth ? a.uWidth : 750, b.dWidth = a.dWidth ? a.dWidth : window.screen.width || window.screen.availWidth, b.ratio = window.devicePixelRatio ? window.devicePixelRatio : 1, b.userAgent = navigator.userAgent, b.bConsole = a.bConsole ? a.bConsole : !1, a.mode ? (b.mode = a.mode, void 0) : (c = b.userAgent.match(/Android/i), c && (b.mode = "android-2.2", d = b.userAgent.match(/Android\s(\d+.\d+)/i), d && (d = parseFloat(d[1])), 2.2 == d || 2.3 == d ? b.mode = "android-2.2" : 4.4 > d ? b.mode = "android-dpi" : d >= 4.4 && (b.mode = b.dWidth > b.uWidth ? "android-dpi" : "android-scale")), void 0)
+								}
+
+								function d() {
+									var e, f, g, h, c = "",
+										d = !1;
+									switch(b.mode) {
+										case "apple":
+											f = (window.screen.availWidth * b.ratio / b.uWidth) / b.ratio;
+											c = "width=" + b.uWidth + ",initial-scale=" + f + ",minimum-scale=" + f + ",maximum-scale=" + f + ",user-scalable=no";
+											break;
+										case "android-2.2":
+											a.dWidth || (b.dWidth = 2 == b.ratio ? 720 : 1.5 == b.ratio ? 480 : 1 == b.ratio ? 375 : .75 == b.ratio ? 240 : 480), e = window.screen.width || window.screen.availWidth, 375 == e ? b.dWidth = b.ratio * e : 750 > e && (b.dWidth = e), b.mode = "android-dpi", d = !0;
+										case "android-dpi":
+											f = 160 * b.uWidth / b.dWidth * b.ratio, c = "target-densitydpi=" + f + ", width=" + b.uWidth + ", user-scalable=no", d && (b.mode = "android-2.2");
+											break;
+										case "android-scale":
+											c = "width=" + b.uWidth + ", user-scalable=no"
+									}
+									g = document.querySelector("meta[name='viewport']") || document.createElement("meta"), g.name = "viewport", g.content = c, h = document.getElementsByTagName("head"), h.length > 0 && h[0].appendChild(g)
+								}
+
+								function e() {
+									var a = "";
+									for(key in b) a += key + ": " + b[key] + "; ";
+									alert(a)
+								}
+								if(a) {
+									var b = {
+										uWidth: 0,
+										dWidth: 0,
+										ratio: 1,
+										mode: "apple",
+										userAgent: null,
+										bConsole: !1
+									};
+									c(), d(), b.bConsole && e()
+								}
+							};
+							adaptVP({
+								uWidth: 750
+							});
+						}
+						win.addEventListener('resize', setFont, false)
+						setFont();
+					} else if(mode == 'rem') {
+						var docEl = doc.documentElement,
+							resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+							recalc = function() {
+								var clientWidth = docEl.clientWidth;
+								if(!clientWidth) return;
+								docEl.style.fontSize = 100 * (clientWidth / std) + 'px';
+							};
+						if(!doc.addEventListener) return;
+						recalc();
+						win.addEventListener(resizeEvt, recalc, false);
+						doc.addEventListener('DOMContentLoaded', recalc, false);
+					}
+				}
+			})(window, document, 'px');
+			if(!/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)){
+				// 适配
+				var w = document.documentElement.clientWidth || document.body.clientWidth;
+				document.documentElement.style.fontSize = (w / 1920 * 100) + "px";
+
+				window.onresize = function() {
+					var w = document.documentElement.clientWidth || document.body.clientWidth;
+					document.documentElement.style.fontSize = (w / 1920 * 100) + "px";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--#include virtual="/inc/tip-lte-ie9.html"-->
+		<!-- 页面主体代码 -->
+		<div class="wrap">
+			<h1 class="hidden">凤鸣世界，巅峰共荣</h1>
+			<!-- <a href="javascript:" class="btn-wb" onclick="PTTSendClick('btn','tab4','网吧特权');"></a> -->
+			<!-- 头部 -->
+			<div class="head">
+				<div class="head-center">
+					<a href="//lol.qq.com" target="_blank" class="logo1" title="英雄联盟" onclick="PTTSendClick('btn','logo1','英雄联盟');">英雄联盟</a>
+					<a href="//lpl.qq.com" target="_blank" class="logo2" title="英雄联盟赛事官网" onclick="PTTSendClick('btn','logo1','英雄联盟赛事官网');">英雄联盟赛事官网</a>
+					<!--登录前状态 Start-->
+					<div class="login-box login">
+			             <!--登录前状态 Start-->
+			            <p id="unlogin">召唤师你好，请 <a href="javascript:" id="ptLoginBtn">【登录】</a></p>
+			            <!--登录前状态 End-->
+			           	<!--登录后状态 Start-->
+			            <p id="logined" style="display:none">
+			            	欢迎您，<span id="login_qq_span"></span>，
+			            	<span id="spanNotBind_617865">
+			                    <a href="javascript:amsInit(266697, 617864);">【绑定大区】</a>
+			                </span>
+			                <span id="spanBind_617865" style="display:none">
+			                    <span id="area_info_617865"></span>
+			                    <span id="role_info_617865"></span>
+			                    <a href="javascript:amsInit(266697, 617864);">【更改绑定】</a>
+			                </span>
+			            	<a href="javascript:getUserHistory();" title="查看领奖记录">【查看领奖记录】</a>
+			            	<a href="javascript:;" id="ptLogoutBtn">【注销】</a>
+			            </p>
+			            <!--登录后状态 End-->
+			        </div>
+
+					<!--登录后状态 End-->
+					<div class="tab">
+						<a href="javascript:;" class="tabcomm tab1 on" onclick="PTTSendClick('btn','tab1','冠军纪念宝箱');">
+							<!-- <i class="mc"></i> -->
+							<p class="txt tabspr">冠军纪念宝箱</p>
+							<p class="time">11月6日-12月8日</p>
+						</a>
+						<a href="javascript:;" class="tabcomm tab2" onclick="PTTSendClick('btn','tab2','商城在售物品 全场半价');">
+							<!-- <i class="mc"></i> -->
+							<p class="txt tabspr">商城在售物品 全场半价</p>
+							<p class="time">2021年1月1日-1月3日</p>
+							
+						</a>
+						<a href="javascript:;" class="tabcomm tab3" onclick="PTTSendClick('btn','tab3','三连冠特别纪念物品');">
+							<!-- <i class="mc"></i> -->
+							<p class="txt tabspr">三连冠特别纪念物品</p>
+							<p class="time">12月18日-12月20 日</p>
+						</a>
+						<a href="javascript:;" class="tabcomm tab4" onclick="PTTSendClick('btn','newtab4','紫色宝石半价兑换');">
+							<!-- <i class="mc"></i> -->
+							<p class="txt tabspr">紫色宝石半价兑换</p>
+							<p class="time">2021年1月8日-1月10日</p>
+						</a>
+						<a href="javascript:;" class="tabcomm tab5" onclick="PTTSendClick('btn','tab5','周边商城特惠');">
+							<!-- <i class="mc"></i> -->
+							<p class="txt tabspr">周边商城特惠</p>
+							<p class="time">11月11日-11月11日</p>
+						</a>
+						<a href="javascript:;" class="tabcomm tab6" onclick="PTTSendClick('btn','tab6','网吧特权庆典');">
+							<!-- <i class="mc"></i> -->
+							<p class="txt tabspr">网吧特权庆典</p>
+							<p class="time">11月20日-11月22日</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="cont contbox1" style="display: block;">
+				<div class="box1">
+					<div class="cont1">
+						<p class="title1 spr">狮醒东方</p>
+						<div class="cont1box">
+							<div class="pic"></div>
+							<img src="//game.gtimg.cn/images/lol/act/a20201025champion/cont1icon.png" class="icon"/>
+							<p class="txt1 spr">SN冠军皮肤宝箱</p>
+							<a href="javascript:TGDialogS(tc15);" class="btn-lq spr " onclick="PTTSendClick('btn','lq1','荣耀领取');">荣耀领取</a>
+							<p class="txt2">领取时间：11月6日12:00-2021年1月10日23:59<span>掌上英雄联盟提前两小时开放领取</span></p>
+							<ul class="ul">
+								<li><i class="spr"></i>随机一个<span>永久皮肤</span><a href="javascript:;" class="look-skin" onclick="PTTSendClick('btn','btn-award','查看奖池');">查看奖池>></a></li>
+								<li><i class="spr"></i>每个玩家可先抽取2个皮肤（优先产出对应奖池内未拥有道具），然后从<span>两个奖励中二选一</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="cont2">
+						<p class="title2 spr">再造巅峰</p>
+						<div class="pic"></div>
+						<div class="right">
+							<div class="cont2box">
+								<img src="//game.gtimg.cn/images/lol/act/a20201025champion/cont2icon1.png" class="icon" alt="" />
+								<P>SN冠军头像</P>
+							</div>
+							<div class="cont2box cont2box1">
+								<img src="//game.gtimg.cn/images/lol/act/a20201025champion/cont2icon2.png" class="icon" alt="" />
+								<P>SN冠军头像</P>
+							</div>
+							
+							<p class="txt1 spr">SN冠军纪念图标及表情</p>
+							<a href="javascript:;" class="btn-lq spr " onclick="PTTSendClick('btn','lq2','荣耀领取');">荣耀领取</a>
+							<p class="txt2">领取时间：2020年12月4日12:00<span>掌上英雄联盟提前两小时开放领取</span></p>
+						</div>
+						<ul class="ul">
+							<li><i class="spr"></i>单个QQ在多个大区角色均可领取</li>
+							<li><i class="spr"></i>在领取之日（2020年12月4日12：00）的前7天内该大区角色有赢得1场游戏对局的胜利（除自定义模式、训练模式）</li>
+							<li><i class="spr"></i>领取后可重新登陆游戏客户端查看，本领取页面长期有效</li>
+						</ul>
+					</div>
+					<div class="cont3">
+						<p class="title3 spr">巅峰之上</p>
+						<div class="pic"></div>
+						<div class="cont3box">
+							<img src="//game.gtimg.cn/images/lol/act/a20201025champion/cont3icon.png" class="icon"/>
+							<p class="txt1 spr">fpx冠军皮肤宝箱</p>
+							<a href="javascript:;" class="btn-lq spr " onclick="PTTSendClick('btn','lq1','荣耀领取');">荣耀领取</a>
+							<p class="txt2">领取时间：11月27日12:00-2021年1月10日23:59<span>掌上英雄联盟提前两小时开放领取</span></p>
+							<ul class="ul">
+								<li><i class="spr"></i>随机一个<span>永久图标</span><a href="javascript:;" class="look-icon" onclick="PTTSendClick('btn','btn-lookicon','查看图标列表');">查看图标列表>></a></li>
+								<li><i class="spr"></i>每个玩家可先抽取2个图标（优先产出对应奖池内未拥有道具），然后从<span>两个奖励中二选一</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="cont4">
+						<p class="title4 spr">惊滔破浪</p>
+						<p class="txt1 spr">FPX冠军胜利加成卡宝箱</p>
+						<!-- <img src="//game.gtimg.cn/images/lol/act/a20201025champion/cont4icon.png" class="pic" alt="" /> -->
+						<b class="pic"></b>
+						<p class="txt3"><span>12月11日00:00-12月13日23:59
+							<br>12月18日00:00-12月20日23:59
+							<br>12月25日00:00-12月27日23:59</span>
+							<br>全大区全模式开放双倍经验加成，奖励无需领取，进入客户端后即可享受加成！</p>
+					</div>
+					<div class="cont5">
+						<p class="title5 spr">加冕为王</p>
+						<div class="cont5box1">
+							<p class="cont5box1-people"></p>
+							<p class="txt1 spr">小组赛阵容礼包</p>
+							<p class="txt2">英雄+皮肤一组（30天免费体验）</p>
+							<ul class="ul">
+								<li>								
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/58009.jpg"/>
+									<i></i>
+									<p class="name">鳄霸 雷克顿</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/60003.jpg"/>
+									<i></i>
+									<p class="name">腥红之月 伊莉丝</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/13007.jpg"/>
+									<i></i>
+									<p class="name">恶魔男爵 瑞兹</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/145001.jpg"/>
+									<i></i>
+									<p class="name">弹幕天使 卡莎</p>
+								</li>
+								<li>									
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/3004.jpg"/>
+									<i></i>
+									<p class="name">地狱之门卫士 加里奥</p>
+								</li>
+							</ul>
+							<!--已领取class 为btn-lqoff-->
+							<a href="javascript:; " class="btn-lq spr"  onclick="PTTSendClick('btn','lq4','荣耀领取');">荣耀领取</a>
+							<p class="txt3">领取时间：11月27日12:00-2021年1月10日23:59</p>
+						</div>
+						<div class="cont5box2">
+							<p class="cont5box2-people"></p>
+							<p class="txt1 spr">淘汰赛阵容礼包</p>
+							<p class="txt2">英雄+皮肤一组（30天免费体验）</p>
+							<ul class="ul">
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/164002.jpg"/>
+									<i></i>
+									<p class="name">魔女 卡蜜尔</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/79006.jpg"/>
+									<i></i>
+									<p class="name">美酒节特使 古拉加斯</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/68004.jpg"/>
+									<i></i>
+									<p class="name">废土男爵 兰博</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/110006.jpg"/>
+									<i></i>
+									<p class="name">死兆星 韦鲁斯</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/223001.jpg"/>
+									<i></i>
+									<p class="name">大厨 塔姆</p>
+								</li>
+							</ul>
+							<!--已领取class 为btn-lqoff-->
+							<a href="javascript:;" class="btn-lq spr"  onclick="PTTSendClick('btn','lq5','荣耀领取');">荣耀领取</a>
+							<p class="txt3">领取时间：11月27日12:00-2021年1月10日23:59</p>
+						</div>
+						<div class="cont5box3">
+							<p class="cont5box3-people"></p>
+							<p class="txt1 spr">决赛阵容礼包</p>
+							<p class="txt2">英雄+皮肤一组（30天免费体验）</p>
+							<ul class="ul">
+							 	<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/41008.jpg"/>
+									<i></i>
+									<p class="name">恐惧新星 普朗克</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/64004.jpg"/>
+									<i></i>
+									<p class="name">至高之拳 李青</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/111005.jpg"/>
+									<i></i>
+									<p class="name">灭世魔神 诺提勒斯</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/498001.jpg"/>
+									<i></i>
+									<p class="name">暮星之羽 霞</p>
+								</li>
+								<li>
+									<img src="//game.gtimg.cn/images/lol/act/img/skinloading/412003.jpg"/>
+									<i></i>
+									<p class="name">腥红之月 锤石</p>
+								</li>
+							</ul>
+							<!--已领取class 为btn-lqoff-->
+							<a href="javascript:;" class="btn-lq spr"  onclick="PTTSendClick('btn','lq6','荣耀领取');">荣耀领取</a>
+							<p class="txt3">领取时间：11月27日12:00-2021年1月10日23:59</p>
+						</div>
+
+					</div>
+					<div class="cont6">
+						<p class="title6 spr">活动说明</p>
+						<ul class="ul">
+							<li>
+								<p><span>问：</span>单个QQ可以多个大区角色领取吗？</p>
+								<p><span>答：</span>每个QQ号限1个大区角色领取。</p>
+							</li>
+							<li>
+								<p><span>问：</span>随机的皮肤和图标是否会产出已拥有的道具？</p>
+								<p><span>答：</span>本次活动会优先随机产出对应奖池内未拥有道具，但如果奖池里道具已全部拥有，则会产出已拥有的道具，可领取到其它大区。</p>
+							</li>
+							<li>
+								<p><span>问：</span>物品发货多久时间可以到账？</p>
+								<p><span>答：</span>因本次活动参与玩家较多，发货量巨大，自领取之日预计需要5天内陆续到账，还请召唤师耐心等待。</p>
+							</li>
+							<li>
+								<p><span>问：</span>本次活动物品领取截止时间是？</p>
+								<p><span>答：</span>领取时间截止2019年12月15日23：59分，过期未领取会视为玩家主动放弃，故请在活动期间内领取。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<!-- End -->
+			<!-- 弹窗 -->
+			<!-- 领取永久皮肤 start -->
+			<div class="tc1" id="tc1" style="display: none1;">
+				<a href="javascript:closeDialog('tc1');" class="btn-close">关闭</a>
+				<p class="txt1">恭喜你，获得永久皮肤/小小英雄蛋</p>
+				<p class="txt2">*请点击图片勾选<span>其中1个奖励</span>领取</p>
+				<div class="selbox">
+					<div class="left selcomm">
+						<img src="https://game.gtimg.cn/images/lol/act/img/skinloading/1000.jpg" class="heropic skin_img"/>
+						<p class="name skin_name">皇家火枪手 崔斯特</p>
+						<i class="mc"></i>
+						<i class="sel skins-img"></i>
+					</div>
+					<!-- 加 on 打开正面-->
+					<div class="right selcomm">
+						<!-- 正面 -->
+						<img src="//game.gtimg.cn/images/lol/act/a20201025champion/tc-heroback.png" class="backpic" alt="" />
+						<!-- 反面 -->
+						<div class="font">
+							<img src="//game.gtimg.cn/images/lol/act/a20201025champion/tc-skin1.png" class="heropic skin_img"/>
+							<p class="namebg"></p>
+							<i class="mc"></i>
+							<i class="sel skins-img"></i>
+						</div>
+						<p class="name name2 skin_name"></p>
+					</div>
+					<!-- <div class="right selcomm on">
+						<img src="//game.gtimg.cn/images/lol/act/a20201025champion/tc-egg.png" class="egg_img"/>
+						<i class="sel skins-img"></i>
+					</div> -->
+					<a href="javascript:;" class="btn-look skin_check_btn" onclick="PTTSendClick('btn','tc-btnlook1','查看是否拥有');">查看是否拥有</a>
+					<!-- 加on 变为查看是否拥有文案， 加btn-againoff 置灰-->
+					 <a href="javascript:;" class="btn-again skin_check_btn" onclick="PTTSendClick('btn','tc-btnagain1','再抽一次');">再抽一次</a> 
+
+				</div>
+				<p class="txt3">你当前绑定的大区：<span><a href="javascript:;" class="myAreaInfo">艾欧尼亚（点击切换大区）</a></span></p>
+				<a href="javascript:;" class="btn-lq get_btn_617867" onclick="PTTSendClick('btn','tc-btnlq1','确认领取');">确认领取</a>
+				<p class="txt4">温馨提示：奖励将于5个工作日内陆续到账。</p>
+			</div>
+			<!-- 领取永久皮肤 end -->
+
+
+			<!-- 领取永久图标 start -->
+			<div class="tc2" id="tc2" style="display: none1;">
+				<a href="javascript:closeDialog('tc2');" class="btn-close">关闭</a>
+				<p class="txt1">恭喜你：获得永久图标</p>
+				<p class="txt2">*每个召唤师<span>可抽取2次</span>，请点击图片勾选<span>其中1个图标</span>领取</p>
+				<div class="selbox">
+					<div class="left selcomm">
+						<img src="//game.gtimg.cn/images/lol/act/a20201025champion/tc-tb1.png" class="heropic icon_img"/>
+						<p class="name icon_name">电玩女神阿狸图标</p>
+						<i class="mc"></i>
+						<i class="sel icons-img"></i>
+					</div>
+					<!-- 加on 打开正面-->
+					<div class="right selcomm">
+						<!-- 正面 -->
+						<img src="//game.gtimg.cn/images/lol/act/a20201025champion/tc-heroback2.png" class="backpic" alt="" />
+						<div class="font">
+							<img src="" class="heropic icon_img"/>
+							<i class="mc"></i>
+							<i class="sel icons-img"></i>
+						</div>
+						<p class="name name2 icon_name"></p>
+					</div>
+					<a href="javascript:;" class="btn-look icon_check_btn" onclick="PTTSendClick('btn','tc-btnlook2','查看是否拥有');">查看是否拥有</a>
+					<!-- 加on 变为查看是否拥有文案， 加btn-againoff 置灰-->
+					<a href="javascript:;" class="btn-again icon_check_btn" onclick="PTTSendClick('btn','tc-btnagain2','再抽一次');">再抽一次</a>
+
+				</div>
+				<p class="txt3">你当前绑定的大区：<span><a href="javascript:switchArea();" class="myAreaInfo"> 艾欧尼亚（点击切换大区）</a></span></p>
+				<a href="javascript:getIcon();" class="btn-lq get_btn_617869" onclick="PTTSendClick('btn','tc-btnlq2','确认领取');">确认领取</a>
+				<p class="txt4">温馨提示：奖励将于5个工作日内陆续到账。</p>
+			</div>
+			<!-- 领取永久图标 end -->
+
+			<!--活动公告 start-->
+			<div class="tc4 tccombg" id="tc4" style="display: none1;">
+				<a href="javascript:closeDialog('tc4');" class="btn-close">关闭</a>
+				<div class="tccont">
+					<!-- <p class="txt1">活动公告</p> -->
+					<p class="txt2">非常抱歉，当前活动参与玩家较多，<br />网页部分功能异常， 可稍后再尝试，谢谢。</p>
+				</div>
+			</div>
+			<!--活动公告 end-->
+
+			<!--请先选中一个皮肤再领取。 start-->
+			<div class="tc5 tccombg" id="tc5" style="display: none1;">
+				<a href="javascript:closeDialog('tc5');" class="btn-close">关闭</a>
+				<div class="tccont">
+					<p class="txt1">未拥有</p>
+				</div>
+			</div>
+			<!--请先选中一个皮肤再领取。 end-->
+
+			<!--领取成功 start-->
+			<div class="tc8 tccombg" id="tc8" style="display: none1;">
+				<a href="javascript:closeDialog('tc8');" class="btn-close">关闭</a>
+				<div class="tccont">
+					<p class="txt1">领取成功</p>
+				</div>
+			</div>
+			<!--领取成功 end-->
+
+			<!--领取成功 start-->
+			<div class="tc9 tccombg" id="tc9" style="display: none1;">
+				<a href="javascript:closeDialog('tc9');" class="btn-close">关闭</a>
+				<div class="tccont">
+					<p class="txt1">半价时间将在×月×日10点开启<br />可先收藏购买地址</p>
+					<a href="javascript:;" class="btn-sure">确定</a>
+				</div>
+			</div>
+			<!--领取成功 end-->
+
+			<!--皮肤列表 start-->
+			<div class="tc11" id="skin-tc" style="display: none1;">
+				<a href="javascript:closeDialog('tc11');" class="btn-close">关闭</a>
+				<ul class="heroul scroll">
+				</ul>
+			</div>
+			<!--皮肤列表 end-->
+
+			<!--图标列表 start-->
+			<div class="tc12" id="icon-tc" style="display: none1;">
+				<a href="javascript:closeDialog('tc12');" class="btn-close">关闭</a>
+				<ul class="iconul scroll">
+				</ul>
+			</div>
+			<!--图标列表  end-->
+
+			<!--系统提示弹窗。 start-->
+			<div class="tc6 tccombg" id="tc15" style="display: none1;">
+				<a href="javascript:closeDialog('tc15');" class="btn-close">关闭</a>
+				<div class="tccont">
+					<p class="txt1">活动已结束</p>
+				</div>
+			</div>
+			<!--系统提示弹窗。 end-->
+
+			<!--即将开放，敬请期待。 start-->
+			<div class="tc16 tccombg" id="expect" style="display: none1;">
+				<a href="javascript:closeDialog();" class="btn-close">关闭</a>
+				<div class="tccont">
+					<p class="txt1">冠军纪念图标及表情将于10.1版本开启领取,<br />感谢你的等待！</p>
+				</div>
+			</div>
+			<!--即将开放，敬请期待。 end-->
+
+			<!-- 确认绑定大区 start-->
+			<div class="tc17 tccombg" id="tc17" style="display: none1;">
+				<a href="javascript:closeDialog('tc17');" class="btn-close">关闭</a>
+				<div class="tccont">
+					<p class="txt1">你当前绑定的大区：<span><a href="javascript:;" class="areaInfo">艾欧尼亚(点击切换大区)</a></span></p>
+					<p class="txt2">是否确认领取到该大区？</p>
+					<a href="javascript:;" class="yes">确定</a>
+				</div>
+			</div>
+			<!-- 确认绑定大区 end-->
+			<!--图标列表 start-->
+			<div class="tc18" id="tc18" style="display: none;">
+				<a href="javascript:closeDialog('tc18');" class="btn-close">关闭</a>
+				<ul class="allskin scroll">
+				</ul>
+			</div>
+			<!--图标列表  end-->
+
+		</div>
+		<script src="//js.aq.qq.com/js/aq_common.js"></script>
+		<script src="//lol.qq.com/plugin/business/sell_common.min.js"  charset="UTF-8"></script>
+		
+		<!--IEG通用底部-->
+		<script id="afooter" src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+		<script>
+			function loadScripts(t,e){function a(){var o=document.createElement("script");o.type="text/javascript";var c=-1==t[n].indexOf("?")?t[n]+"?d="+Math.random():t[n]+"&d="+Math.random();o.src=c,document.body.appendChild(o),n++,o.readyState?o.onreadystatechange=function(){("loaded"==o.readyState||"complete"==o.readyState)&&(o.onreadystatechange=null,d++,d<t.length?a():e&&e())}:o.onload=function(){d++,d<t.length?a():e&&e()}}e=e||function(){};var n=0,d=0;a()}
+
+
+			lolSellCommon.init({
+			//分享信息、悬浮广告等配置项
+			mobileShareCfg: {
+				  title: "共贺FPX夺冠，紫色宝石半价兑换现已开启！",//[必填]分享标题
+				  summery: "凤鸣世界，巅峰共荣", //[必填]分享描述
+				  subtitle: "凤鸣世界，巅峰共荣",//[必填]分享二级标题
+				  img: "https://game.gtimg.cn/images/lol/act/a20191108champion/share.png",//[必填]分享图标；尺寸：200x200
+				  url: location.href.split('?')[0],//[选填]分享地址；默认值：当前页面地址
+				},
+			    callback: function() {
+
+					//加载js
+					if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+
+						loadScripts([
+						     		"//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js",
+									"js/skin.js",
+						     		"js/index.js",
+						     	],function(){
+
+							init_ZMApp({
+								'title':'共贺FPX夺冠，商城全场半价现已开启！',
+								'summery':'凤鸣世界，巅峰共荣',
+								'subtitle' : '凤鸣世界，巅峰共荣',
+								'img':'https://game.gtimg.cn/images/lol/act/a20191108champion/share.png',
+								'url':location.href.split('?')[0],
+								'WXtrigger':function(res){
+									//微信动作回调
+								},
+								'WXsuccess':function(res){
+									//微信成功回调
+									if(!res) return;
+									if(res.errMsg == 'sendAppMessage:ok') {
+											//微信分享个人
+											PTTSendClick('btn','sharewx1','分享给好友');
+									} else if(res.errMsg == 'shareTimeline:ok') {
+											//微信分享朋友圈
+											PTTSendClick('btn','sharewx2','分享到朋友圈');
+									}else if(res.errMsg == 'shareQQ:ok'){
+											//微信分享至QQ
+											PTTSendClick('btn','shareqq','分享到QQ');
+									}
+								},
+								'WXcancel':function(res){
+									//微信分享取消动作回调
+									PTTSendClick('btn','sharewx_cancel','分享取消');
+								},
+								'WXfail':function(res){
+									//微信分享失败动作回调
+									PTTSendClick('btn','sharewx_fail','分享失败');
+								},
+								'QQtrigger':function(res){
+									//QQ动作回调
+		
+								},
+								'QQcallback':function(res){
+									//QQ分享成功
+									PTTSendClick('btn','shareqq_succ','QQ分享成功');
+								},
+								'LOL_APPsuccess' : function(res){
+									//掌盟分享成功
+									PTTSendClick('btn','sharezm_succ','掌盟分享成功');
+								}
+							});
+//
+							// 移动登录
+							milo.ready(function () {
+								need("biz.login", function (LoginManager) {
+									LoginManager.init();
+
+									//QQ登录
+									milo.addEvent(g('ptLoginBtn'), 'click', function (e) {
+										LoginManager.login();
+									});
+
+									//注销
+									milo.addEvent(g("ptLogoutBtn"),"click",function(){
+										LoginManager.logout({
+											logoutCallback:function(){
+												$('#unlogin2').show();
+												$('#logined2').hide();
+											}
+										});
+									});
+
+									//QQ登录
+									milo.addEvent(g('ptLoginBtn2'), 'click', function (e) {
+										LoginManager.login();
+									});
+
+									//注销
+									milo.addEvent(g("ptLogoutBtn2"),"click",function(){
+										LoginManager.logout({
+											logoutCallback:function(){
+
+											}
+										});
+										$('#unlogin2').show();
+										$('#logined2').hide();
+									});
+
+									//检查登录态
+									LoginManager.checkLogin(function(userInfo){
+										console.log("已登录：\n",userInfo);
+										amsInit(266697, 617865);
+										$("#login_qq_span").html(LoginManager.getUserUin());//获取QQ号
+										$(".login_qq_span").html(LoginManager.getUserUin());//获取QQ号
+										$('#unlogin2').hide();
+										$('#logined2').show();
+									},function(){
+										console.log("未登录");
+										$('#unlogin2').show();
+										$('#logined2').hide();
+									});
+								});
+							});
+							//移动端脚本逻辑
+		  					
+
+						})
+
+
+
+
+					} else {
+
+						loadScripts([
+							     		"//lol.qq.com/m/public/LOL_App.js",
+							     		"js/skin.js",
+							     		"js/index.js",
+							     	],function(){
+
+								// PC登录
+								 milo.ready(function () {
+									need("biz.login", function (LoginManager) {
+										LoginManager.init();
+
+										//QQ登录
+										milo.addEvent(g('ptLoginBtn'), 'click', function (e) {
+											LoginManager.login();
+										});
+
+										//注销
+										milo.addEvent(g("ptLogoutBtn"),"click",function(){
+											LoginManager.logout({
+												logoutCallback:function(){
+													$('#unlogin2').show();
+													$('#logined2').hide();
+												}
+											});
+										});
+
+										//QQ登录
+										milo.addEvent(g('ptLoginBtn2'), 'click', function (e) {
+											LoginManager.login();
+										});
+
+										//注销
+										milo.addEvent(g("ptLogoutBtn2"),"click",function(){
+											LoginManager.logout({
+												logoutCallback:function(){
+												}
+											});
+											$('#unlogin2').show();
+											$('#logined2').hide();
+										});
+
+										//检查登录态
+										LoginManager.checkLogin(function(userInfo){
+											console.log("已登录：\n",userInfo);
+											$(".login_qq_span").html(LoginManager.getUserUin());//获取QQ号
+											$('#unlogin2').hide();
+											$('#logined2').show();
+											amsInit(266697, 617865);
+										},function(){
+											console.log("未登录");
+											$('#unlogin2').show();
+											$('#logined2').hide();
+										});
+									});
+								});
+								//PC端脚本逻辑
+
+								
+								$(window).on('resize scroll', function() {
+									var w = $('body').width();
+										if (w < 1000) {
+											 document.documentElement.style.fontSize = 39.0234+'px';
+										} else {
+
+										}
+								})
+
+							})
+
+					}
+			    }
+			});
+		</script>
+		<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+		<script>
+			//此段代码不能放到外链JS中，
+			var setSite = { //设置网站属性
+				siteType: "a20201025champion", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+				pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+				pageName: "首页", //必填项:页面中文名
+				project: "commerce", //必填项:按照模块内容，填写固定的对应值;皮肤 skin;英雄 hero;商业化 commerce;赛事 match;运营/版本 version;品牌 brand;IP ip;社区 community;网吧投放 netbar;默认other;
+				osact: 0 //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+			};
+			if(typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+		</script>
+	</body>
+
+</html>
+
+
+
+
+<!-- #t6Hl8#7A82EEE5F63702BB7F51BF8285735A5D -->

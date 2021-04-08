@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="gbk" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="robots" content="all" />
+    <meta name="author" content="Tencent-CP" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="Description" content="《使命召唤》手游官方预约站，立即预约CODM，即可获得绝版礼包，另邀请好友共赴全新战场，可获得1次免费抽奖机会，召唤战友共赴CODM战场，一同预约共赢好礼，全新挑战与你不见不散！" />
+    <meta name="Keywords" content="使命召唤,使命召唤手游,使命召唤手游活动,使命召唤手游礼包,使命召唤手游官方,使命召唤手游预约,CODM" />
+    <title>使命集结来场最后的战役-腾讯游戏</title>
+    <link rel="stylesheet" href="css/fullPage.css">
+    <link rel="stylesheet" href="css/index-m.css">
+    <script>
+     //适配pc端
+     function is_pc() {
+            var os = new Array("Android", "iPhone", "Windows Phone", "iPod", "BlackBerry", "MeeGo", "SymbianOS"); // 其他类型的移动操作系统类型，自行添加
+            var info = navigator.userAgent;
+            var len = os.length;
+            for (var i = 0; i < len; i++) {
+                if (info.indexOf(os[i]) > 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        if (is_pc()) {
+            window.location.href = "./index.html";
+        }
+        (function (win,doc){
+            if (!win.addEventListener) return;
+            var html=document.documentElement;
+            function setFont()
+            {
+                var cliWidth=html.clientWidth;
+                html.style.fontSize=100*(cliWidth/750)+'px';
+            }
+            win.addEventListener('resize',setFont,false);
+            setFont();
+        })(window,document);
+    </script>
+    
+    <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-4.3.3.min.css">
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="video-bg"></div>
+        <div class="nav">
+            <a href="javascript:;" class="btn-order1" onclick="PTTSendClick('btn','btn-order1','立即预约');"></a>
+            <ul id="myMenu" class="nav-ul">
+                <li data-menuanchor="firstPage" class="menuList firstPage"><a href="#firstPage"></a><span>01</span></li>
+                <li data-menuanchor="secondPage" class="menuList secondPage"><a href="#secondPage"></a><span>02</span></li>
+                <li data-menuanchor="thirdPage" class="menuList thirdPage"><a href="#thirdPage"></a><span>03</span></li>
+                <li data-menuanchor="fourthPage" class="menuList fourthPage"><a href="#fourthPage"></a><span>04</span></li>
+            </ul>
+        </div>
+        <div id="fullpage">
+            <div class="section firstPage" data-menuancho='firstPage'>
+                <div class="cont">
+                    <!-- logo -->
+                    <a href="//codm.qq.com/" target="_blank" class="logo" title="使命召唤手游" onclick="PTTSendClick('btn','logo','使命召唤手游');"></a>
+                    <i class="icon-foot"></i>
+                    <i class="icon-slide"></i>
+                    <!-- 播放 -->
+                    <p class="play-box">
+                        <a href="javascript:TGDialogS('dia2');" class="btn-play" onclick="PTTSendClick('btn','btn-play','播放');"></a>
+                        <span></span>
+                    </p>
+                    <p class="slogan"></p>
+                    <!-- 登录 -->
+                    <div class="login-box">
+                        <!--登录前状态 Start-->
+                        <div id="unlogin" class="login" style="display: block;">
+                            你好，请【<a id="btn_qqlogin" href="javascript:;" title="登录" onclick="PTTSendClick('btn','login','登录')">登录</a>】
+                        </div>
+                        <!--登录前状态 End-->
+                        <!--登录后状态 Start-->
+                        <div id="logined" class="login" style="display: none;  ">
+                            欢迎您，<span id="login_qq_span"></span> 
+                            <span id="ams_user_headimg"></span>
+                            <span id="areaName"></span>
+                            <a id="changeRole" style="display: none">【更换绑定】</a>
+                            <!--<a id="btn_bind" href="javascript:;" >【绑定角色】</a>-->
+                            <!--<a id="btn_binded" href="javascript:;" >【更换绑定】</a>-->
+                            <a id="btn_logout" href="javascript:;" title="注销" onclick="PTTSendClick('btn','logined','注销')">【注销】</a>　
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="btn-order" onclick="PTTSendClick('btn','btn-order','立即预约');"></a>
+                    <!-- 预告片 -->
+                    <div class="notice-box">
+                        <a href="javascript:;" class="btn-expand" onclick="PTTSendClick('btn','btn-expand','展开');"></a>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <span><img data-src="ossweb-img/notice1.png"></span>
+                                    <p><i>01</i>fuankan预告片</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span><img data-src="ossweb-img/notice1.png"></span>
+                                    <p><i>02</i>fuankan预告片</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span><img data-src="ossweb-img/notice1.png"></span>
+                                    <p><i>03</i>fuankan预告片</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span><img data-src="ossweb-img/notice1.png"></span>
+                                    <p><i>04</i>fuankan预告片</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span><img data-src="ossweb-img/notice1.png"></span>
+                                    <p><i>05</i>fuankan预告片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 页面切换 -->
+                    <div class="btn-box">
+                        <a href="javascript:;" class="btn on btn1" onclick="PTTSendClick('btn','btn1','更多杰伦独家');"><i></i><span>更多杰伦独家</span></a>
+                        <a href="javascript:;" class="btn btn2" onclick="PTTSendClick('btn','btn2','领取专属福利');"><i></i><span>领取专属福利</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section secondPage" data-menuancho='secondPage'>
+                <div class="cont">
+                    <a href="//codm.qq.com/" target="_blank" class="logo" title="使命召唤手游" onclick="PTTSendClick('btn','logo','使命召唤手游');"></a>
+                    <i class="icon-foot"></i>
+                    <i class="icon-slide"></i>
+                    <div class="btn-box">
+                        <a href="javascript:;" class="btn on btn1" onclick="PTTSendClick('btn','btn1','更多杰伦独家');"><i></i><span>更多杰伦独家</span></a>
+                        <a href="javascript:;" class="btn btn2" onclick="PTTSendClick('btn','btn2','领取专属福利');"><i></i><span>领取专属福利</span></a>
+                    </div>
+                    <div class="main">
+                        <div class="img-box">
+                            <img data-src="ossweb-img/m/m-p2-img.png">
+                            <p class="star-name">周杰伦虚拟角色</p>
+                            <i class="icon1"></i>
+                            <div class="btn-box1">
+                                <p><span>抽取周杰伦</span><em>游戏福利</em></p>
+                                <div>
+                                    <p>WELFARE</p>
+                                    <i></i>
+                                </div>
+                                <a href="javascript:;" class="btn-go" onclick="PTTSendClick('btn','btn-go','btn-go');"></a>
+                            </div>
+                        </div>
+                        <div class="video-box">
+                            <!-- 装饰文案 -->
+                            <p class="icon2"></p>
+                            <!-- 播放框 -->
+                            <a href="javascript:TGDialogS('dia2');" class="btn-video" onclick="PTTSendClick('btn','btn-video','btn-video');">
+                                <img data-src="ossweb-img/m/m-p2-video-bg.png" alt="">
+                                <!-- 播放按钮 -->
+                                <i></i>
+                            </a>
+                            <!-- 文案 -->
+                            <p class="txt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section thirdPage" data-menuancho='thirdPage'>
+                <div class="cont">
+                    <a href="//codm.qq.com/" target="_blank" class="logo" title="使命召唤手游" onclick="PTTSendClick('btn','logo','使命召唤手游');"></a>
+                    <i class="icon-foot"></i>
+                    <i class="icon-slide"></i>
+                    <div class="btn-box">
+                        <a href="javascript:;" class="btn on btn1" onclick="PTTSendClick('btn','btn1','更多杰伦独家');"><i></i><span>更多杰伦独家</span></a>
+                        <a href="javascript:;" class="btn btn2" onclick="PTTSendClick('btn','btn2','领取专属福利');"><i></i><span>领取专属福利</span></a>
+                    </div>
+                    <div class="main">
+                        <p class="title">周杰伦系列海报</p>
+                        <div class="img-box swiper-img-box">
+                            <div class="img-bg">
+                                <p><span>周杰伦群像海报</span>点击海报查看大图</p>
+                            </div>
+                            <div class="swiper-wrapper">
+                                <a href="javascript:TGDialogS('dia1');" class="swiper-slide" onclick="PTTSendClick('btn','p3-img','海报');"><img data-src="ossweb-img/p3-img1.png" alt=""></a>
+                                <a href="javascript:TGDialogS('dia1');" class="swiper-slide" onclick="PTTSendClick('btn','p3-img','海报');"><img data-src="ossweb-img/p3-img1.png" alt=""></a>
+                                <a href="javascript:TGDialogS('dia1');" class="swiper-slide" onclick="PTTSendClick('btn','p3-img','海报');"><img data-src="ossweb-img/p3-img1.png" alt=""></a>
+                                
+                            </div>
+                            <div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                            <p class="prev-tips">左右滑动</p>
+                     
+                        </div>
+                        <div class="yy-box">
+                            <div class="voice-box">
+                                <a href="javascript:;" class="btn-voice" onclick="PTTSendClick('btn','btn-vioce','聆听周杰伦CODM专属语音');">
+                                    <i></i>
+                                    <span class="playing">
+                                        <em class="playing__bar playing__bar1"></em>
+                                        <em class="playing__bar playing__bar2"></em>
+                                        <em class="playing__bar playing__bar3"></em>
+                                        <em class="playing__bar playing__bar4"></em>
+                                        <em class="playing__bar playing__bar5"></em>
+                                    </span>
+                                </a>
+                                聆听周杰伦CODM专属语音
+                            </div>
+                            <div class="next-box">
+                                点击播放下一条
+                                <a href="javascript:;" class="play-next" onclick="PTTSendClick('btn','play-next','播放下一条');"><i></i></a>
+                            </div>
+                            <audio id="voice">
+                                <source src="ossweb-img/voice1.wav"/>
+                            </audio>
+                        </div>                    
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="section fourthPage" data-menuancho='fourthPage'>
+                <div class="cont">
+                    <a href="//codm.qq.com/" target="_blank" class="logo" title="使命召唤手游" onclick="PTTSendClick('btn','logo','使命召唤手游');"></a>
+                    <i class="icon-foot"></i>
+                    <i class="icon-slide"></i>
+                    <div class="btn-box">
+                        <a href="javascript:;" class="btn on btn1" onclick="PTTSendClick('btn','btn1','更多杰伦独家');"><i></i><span>更多杰伦独家</span></a>
+                        <a href="javascript:;" class="btn btn2" onclick="PTTSendClick('btn','btn2','领取专属福利');"><i></i><span>领取专属福利</span></a>
+                    </div>
+                    <div class="main">
+                        <p class="title">枪战大片</p>
+                        <div class="video-box">
+                            <div class="video-bg"></div>
+                            <p class="tips">[ 使命召唤微电影观影TIPS ]</p>
+                            <a href="javascript:TGDialogS('dia2');" class="btn-video" onclick="PTTSendClick('btn','btn-video','btn-video');">
+                                <img data-src="ossweb-img/m/m-p4-video.png" alt="">
+                                <!-- 播放按钮 -->
+                                <i></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <!-- 弹窗 -->
+    <div class="dialog dia1" id="dia1" style="display:none">
+        <div class="dia-con">
+            <div class="tank-bg">
+                <img src="ossweb-img/dia-img.png" alt="">
+            </div>
+        </div>
+        <a class="dia-close" href="javascript:showDialog.hide()" title="关闭">×</a>
+    </div>
+    <!-- 弹窗播放视频 -->
+	<div class="dialog dia2" id="dia2" style="display: none;">
+        <a class="dia-close" href="javascript:;" title="关闭"></a>
+        <div class="dia-con">
+            <a href="javascript:;" class="btn-video" onclick="PTTSendClick('btn','btn-video','btn-video');">
+                <img src="ossweb-img/m/m-p4-video.png" alt="">
+                <!-- 播放按钮 -->
+                <i></i>
+            </a>
+            <div id="dia-video" class="dia-video"></div>
+        </div>
+	</div>
+    <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+
+    <script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+    <script>
+        function TGDialogS(e){
+            // 利用milo库引入dialog组件
+            need("biz.dialog",function(Dialog){
+                Dialog.show({
+                    id:e,
+                    bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+                    opacity:50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+                });
+            });
+        }
+        function closeDialog(){
+            // 利用milo库引入dialog组件
+            need("biz.dialog",function(Dialog){
+                Dialog.hide();
+            });
+        }
+    </script>
+    <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+    <script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script>
+    <script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script>
+    <script src="js/fullPage.js"></script>
+    <script src="js/index-m.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+    <script>
+        //此段代码不能放到外链JS中，
+        var setSite = { //设置网站属性
+            siteType: "a20201209codm", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "index-m", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+            pageName: "使命集结", //必填项:页面中文名
+            osact: "m", //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+            project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;原生官网base;微社区ingame;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;
+        }
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+</html>

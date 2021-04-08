@@ -1,0 +1,73 @@
+/* reset */
+html,body,div,p,ul,li,dl,dt,dd,em,i,span,a,img,input,h1,h2,h3,h4,h5 {margin:0;padding:0}
+a,img,input {border:none;}
+body{font: 14px/1.75  -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a {text-decoration:none;}
+ul,li{list-style: none}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单，根据需要选择是否删除 */}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+    background-color: #191219;
+}
+/* reset end */
+html {
+  font-size: 50px;/* 兼容不支持vw的系统 */
+  font-size: 13.33333333vw;/* 7.5rem === 100vw */
+}
+
+@media (max-width: 1024px) {
+  html,body {
+    max-width: 1024px;
+  }
+}
+
+#afooter{background-color: #191219;text-align: center;font-size:.22rem;padding:.2rem 0;}
+#afooter, #afooter a{color: #c0c0c0;text-decoration: none;}
+/* 图片分离路径示例 */
+/* .bg{background-image: url(//game.gtimg.cn/images/lol/act/a20190510battle/bg.jpg);} */
+.header{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/bg1.jpg) no-repeat; width: 7.5rem; height: 6.1rem; background-size: 100% 100%; position: relative;}
+.content{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/bg2.jpg) no-repeat; width: 7.5rem; height: 19.4rem; background-size: 100% 100%; position: relative; overflow: hidden;}
+.spr{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/spr-btn-nav.png) no-repeat; width: 7.3rem; height: 1.5rem; background-size: 7.3rem 1.5rem;}
+
+.btn-order{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-order.png) no-repeat; width: 2.13rem; height: 0.71rem; background-size: 100% 100%; position: absolute; top: 4.6rem; left: 50%; transform: translateX(-50%);}
+.btn-order.on{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-order-on.png) no-repeat; background-size: 100% 100%;}
+
+.login-box{padding-top: 0.6rem; box-sizing: border-box; width: 100%; height: 2.9rem; text-align: center;}
+.time-txt{font-size: 0.24rem; color: #feffff; text-align: center; line-height: 0.26rem; margin-bottom: 0.1rem;}
+#ams_loginbar{font-size: 0.24rem; color: #feffff; text-align: center; line-height: 0.26rem; margin-bottom: 0.3rem;}
+#ams_loginbar a{font-size: 0.24rem; color: #feffff; text-align: center; line-height: 0.26rem;}
+.btn-binding{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-bg1.png) no-repeat; width: 1.49rem; height: 0.46rem; background-size: 100% 100%; padding-right: 0.05rem; box-sizing: border-box; text-align: center; font-size: 0.24rem; color: #fff; line-height: 0.4rem; text-shadow: 0.03rem 0.03rem 0.05rem #f47e0b; display: inline-block; margin-right: 2rem;}
+.btn-record{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-bg1.png) no-repeat; width: 1.49rem; height: 0.46rem; background-size: 100% 100%; padding-right: 0.05rem; box-sizing: border-box; text-align: center; font-size: 0.24rem; color: #fff; line-height: 0.4rem; text-shadow: 0.03rem 0.03rem 0.05rem #f47e0b; display: inline-block;}
+
+.cont1{width: 100%;height: 4.3rem; padding-top: .35rem; box-sizing: border-box;}
+.cont1 .title1{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/title-1.png) no-repeat; width: 4rem; height: 0.75rem; margin: 0 auto; background-size: 100% 100%;}
+.cont1 .cont1-txt{height: .52rem; line-height: .52rem; font-size: .24rem; color: #fff; text-align: center; margin-top: .6rem;}
+.cont1 .btn-join{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-join.png) no-repeat; width: 2.41rem; height: 0.71rem; display: block; margin: 0.18rem auto 0; background-size: 100% 100%;}
+.cont1 .btn-join.on{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-join-on.png) no-repeat; background-size: 100% 100%;}
+
+
+
+.cont2{width: 100%;height: 7.5rem; padding-top: .72rem; box-sizing: border-box; position: relative;}
+.cont2 .title2{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/title-2.png) no-repeat; width: 3.44rem; height: 0.88rem; margin: 0 auto; background-size: 100% 100%;}
+.cont2 .nav-box{width: 7.3rem;position: relative; display: flex; text-align: center; margin: .15rem auto 0;}
+.cont2 .nav-box .nav{display: inline-block; width: 1.8rem; height: 0.7rem; margin-right: 0.02rem;}
+.cont2 .nav-box .nav-1{background-position: 0 0;}
+.cont2 .nav-box .nav-2{background-position: -1.83rem 0;}
+.cont2 .nav-box .nav-3{background-position: -3.66rem 0;}
+.cont2 .nav-box .nav-4{background-position: -5.49rem 0; margin-right: 0;}
+.cont2 .nav-box .nav-1.on{background-position: 0 -0.8rem;}
+.cont2 .nav-box .nav-2.on{background-position: -1.83rem -0.8rem;}
+.cont2 .nav-box .nav-3.on{background-position: -3.66rem -0.8rem;}
+.cont2 .nav-box .nav-4.on{background-position: -5.49rem -0.8rem;}
+
+.prize-box{width: 6.22rem; height: 1.87rem; margin: 0.6rem auto;}
+.prize-box img{width: 6.22rem; height: 1.87rem; background-size: 100% 100%;}
+.btn-receive{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-order.png) no-repeat; width: 2.54rem; height: 0.85rem; display: block; background-size: 100% 100%; margin: 1.25rem auto 0;}
+.btn-receive.on{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/btn-order-on.png) no-repeat; background-size: 100% 100%;}
+
+.cont3{width: 100%;height: 4.5rem; padding-top: 1.1rem; box-sizing: border-box; position: relative;}
+.title3{background: url(//game.gtimg.cn/images/tgclub/act/a20201109bitxy/title-3.png) no-repeat; width: 2.56rem; height: 0.32rem; background-size: 100% 100%; margin: 0 auto;}
+.rules-box{width: 6.6rem; margin: 0.25rem auto 0;}
+.rules-box p{position: relative; width: 6.6rem; padding-left: 0.4rem; box-sizing: border-box; font-size: 0.24rem; color: #203d8a; line-height: 0.3rem;}
+.rules-box p span{position: absolute; top: 0; left: 0rem;}

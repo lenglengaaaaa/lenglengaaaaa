@@ -1,0 +1,185 @@
+/* reset */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer,div,li,a,span,div,input,textarea,i,li{margin:0;padding: 0;outline: none;}
+a,img,input {border:none;}
+body{font: 14px/1.75  -apple-system, "Microsoft YaHei" ,"Helvetica Neue", Helvetica, Arial, sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body{font-family: "Microsoft YaHei";background: #a53611;}
+a {text-decoration:none;}
+ul,li{list-style: none}
+em,b,i{font-style:normal}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单，根据需要选择是否删除 */}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+/* reset end */
+html {
+  font-size: 50px;/* 兼容不支持vw的系统 */
+  font-size: 13.33333333vw;/* 7.5rem === 100vw */
+}
+
+@media (max-width: 1024px) {
+  html,body {
+    max-width: 1024px;
+  }
+}
+.hidden{font-size:0;}
+
+#afooter{background-color: #a53611;text-align: center;font-size:.2rem;padding:.2rem 0;}
+#afooter, #afooter a{color: #fff;text-decoration: none;}
+
+h1{font-size: 0;display: none;}
+.wrap{overflow: hidden;width: 100%;height: auto; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/bg1.jpg) no-repeat top;background-size: 7.5rem 27.49rem;position: relative;}
+.head{width: 7.5rem;height: 6.23rem;text-align: center; overflow: hidden;position: relative;}
+.content{width:7.5rem;height: auto;}
+/* 头部 */
+.logo{width:1.4rem;height:.39rem; background:url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/logo.png) no-repeat;background-size:100% 100%;position:absolute;top:.2rem;left:.3rem;}
+.login-box{padding-top: 4.85rem;font-size: .2rem;color: #ffe291;line-height: .24rem;}
+.login-box a{color: #ffe291;}
+
+.btn-look{display: block;width: .58rem;height: 2.4rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-look.png) no-repeat;background-size: 100% 100%;position: absolute;top: 1.55rem;right: 0;}
+
+/* cont1*/
+.cont1{width: 100%;height: auto; padding-top: .45rem;margin-bottom: .6rem;}
+.cont1 .lotttop .title{width: 4rem;height: 0.67rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/lotttop-titl.png) no-repeat;background-size: 100% 100%;margin: 0 auto;}
+.cont1 .lott1 .title{width: 3.25rem;height: 0.5rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/title1.png) no-repeat;background-size: 100% 100%;margin: 0 auto .2rem;}
+.cont1 .lott2 .title{width: 3.1rem;height: 0.27rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/title2.png) no-repeat;background-size: 100% 100%;margin: 0 auto .09rem;}
+.cont1 .lott3 .title{width: 3.09rem;height: 0.27rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/title3.png) no-repeat;background-size: 100% 100%;margin: 0 auto .09rem;}
+.cont1 .lott4 .title{width: 2.43rem;height: 0.27rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/title4.png) no-repeat;background-size: 100% 100%;margin: 0 auto .09rem;}
+.cont1 .lott5 .title{width: 2.58rem;height: 0.27rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/title5.png) no-repeat;background-size: 100% 100%;margin: 0 auto .09rem;}
+
+.cont1 .giftlist{width: 100%;height: auto;text-align: center; font-size: .2rem;line-height: .3rem; color: #fffacf;text-shadow:  0 .02rem .02rem #000;}
+
+.cont1 .lotttop{width: 6.98rem;height: auto;margin: 0 auto;}
+.cont1 .lotttop div{width: 6.98rem;height: 7.3rem;background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/lotttop-bg.png) no-repeat;background-size: 100% 7.3rem;position: relative;padding-top: .3rem;box-sizing: border-box;}
+.cont1 .lotttop div .giftlist{width: 100%;font-size: .28rem;line-height: .4rem;text-align: center;margin-top: -.3rem;}
+.cont1 .lotttop div img{width: 6.63rem;height:6.03rem;background-size: 100% 100%;display: block; margin: 0 auto;}
+
+
+.cont1 .lott1{width: 4.81rem;;height: auto;margin: .2rem auto 0;}
+.cont1 .lott1 div{width: 4.81rem;height: 2.67rem;background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/gift-bg1.png) no-repeat;background-size: 100% 100%; display: flex;align-items: center;position: relative;}
+.cont1 .lott1 div .giftlist{width: 4rem;position: absolute;top: 55%;transform: translateY(-55%);left : .3rem;z-index: 1;text-align: left;}
+.cont1 .lott1 div img{width: 2.45rem;height: 2.15rem;background-size: 100% 100%;position: absolute;bottom: .15rem;right: .15rem;}
+
+.cont1 .lott-box{width: 3.39rem;height: auto;margin-top: .5rem;}
+.cont1 .lott-box div{width: 3.39rem;height: 2.5rem; display: flex;align-items: center; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/gift-bg2.png) no-repeat;background-size: 100% 100%;}
+
+.cont1 .lott2,.cont1 .lott4{ float: left;margin-left: .27rem;}
+.cont1 .lott3,.cont1 .lott5{ float: right;margin-right: .27rem;}
+.cont1 .lott4,.cont1 .lott5{ margin-top: .4rem;margin-bottom: .3rem;}
+
+.cont1 .txt{clear: both; width: fit-content;height: .6rem; font-size: .2rem;line-height: .3rem;color: #ffdd69;text-align: center;margin: 0 auto;position: relative;}
+.cont1 .txt::before{content: '';display: block;width: 0.04rem;height: 0.04rem;border: .02rem solid #ffdd69;transform: rotateZ(45deg);position: absolute;left: -.4rem;top: .13rem;}
+.cont1 .txt::after{content: '';display: block;width: 0.04rem;height: 0.04rem;border: .02rem solid #ffdd69;transform: rotateZ(45deg);position: absolute;right: -.4rem;top: .13rem;}
+
+.cont1 .btn-lott{display: block; width: 2.93rem;height: 0.77rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-lott.png) no-repeat;background-size: 100% 100%;margin: .3rem auto 0;}
+
+/* cont2 */
+.cont2{width: 100%;height: auto;padding-top: .8rem;margin-bottom: 1.2rem;}
+.cont2 img{width: 3.31rem;height: 4.7rem;background-size: 100% 100%;display: block;margin: 0 auto;
+ }
+.cont2 .btn-openred{display: block;width: 3.31rem; height: 4.7rem;margin: 0 auto;position: relative;
+  /* -webkit-animation:pulse .5s .5s ease both; */
+}
+.cont2 .btn-openred i{display: block;width: 100%;height: 51%;position: absolute;z-index: 99;}
+.cont2 .btn-openred .top-box{background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/card1.png) no-repeat top;background-size: 3.31rem 4.7rem;top: 0;
+  /* -webkit-animation:top 1s 2s ease both; */
+}
+.cont2 .btn-openred .bottom-box{background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/card1.png) no-repeat bottom;background-size: 3.31rem 4.7rem;bottom: 0;
+  /* -webkit-animation:bottom 1s 2s ease both; */
+}
+.cont2 .btn-openred.active .top-box{-webkit-animation:top 2s ease both; }
+.cont2 .btn-openred.active .bottom-box{-webkit-animation:bottom 2s ease both; }
+.cont2 .btn-lott{display: block;width: 2.71rem;height: 0.75rem;background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-lott1.png) no-repeat;background-size: 100% 100%;margin: .5rem auto 0;}
+
+  @-webkit-keyframes pulse{
+    0%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(2)}
+  }
+  @-webkit-keyframes top{
+    0%{top: 0;opacity: 1;-webkit-transform:scale(1)}
+    100%{top: -4rem;opacity: 0;-webkit-transform:scale(2)}
+  }
+  @-webkit-keyframes bottom{
+    0%{bottom: 0;opacity: 1;-webkit-transform:scale(1)}
+    100%{bottom: -4rem;opacity: 0;-webkit-transform:scale(2)}
+  }
+
+/* cont3 */
+.cont3{width: 100%;height: auto;padding-top: .55rem;margin-bottom: .6rem;}
+.cont3 .gift-box{width: 3.79rem;height: 4.25rem;background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/card2.png) no-repeat; background-size: 100% 100%;display: block;margin: 0 auto .3rem;}
+.cont3 .gift-box img{background-size: 100% 100%;}
+.cont3 p{width: 100%;height: 0.9rem; text-align: center;font-size: .18rem;line-height: .23rem;color: #f4c27e;position: relative;}
+.cont3 p::before{content: '';display: block;width: 100%;height: 0.9rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-bg.png) no-repeat center;background-size: 3.81rem .76rem;position: absolute;top: 0;left: 0;}
+
+/* cont4 */
+.cont4{width: 100%;height: auto;padding-top: .55rem;}
+.cont4 .gift-box{width: 3.79rem;height: 4.25rem;background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/card2.png) no-repeat; background-size: 100% 100%;display: block;margin: 0 auto .3rem;}
+.cont4 .gift-box img{background-size: 100% 100%;}
+.cont4 p{width: 100%;height: 0.9rem; text-align: center;font-size: .18rem;line-height: .23rem;color: #f4c27e;position: relative;}
+.cont4 p::before{content: '';display: block;width: 100%;height: 0.9rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-bg.png) no-repeat center;background-size: 3.81rem .76rem;position: absolute;top: 0;left: 0;}
+.cont4 .btn-address{display: block;width: 2.45rem;height: 0.64rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-address.png) no-repeat;background-size: 100% 100%;margin:.15rem auto 0;}
+
+/* cont5*/
+.cont5{width: 100%;height: auto;padding-top: .55rem;}
+.cont5 .gift-box{background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/card2.png) no-repeat;width: 3.79rem;height: 4.25rem;background-size: 100% 100%;display: flex; align-items: center;justify-content: center; font-size: .27rem;line-height: .4rem;color: #fff6df;text-shadow: 0 .03rem .08rem #000;margin: 0 auto; position: relative;}
+.cont5 .gift-box img{background-size: 100% 100%;}
+.cont5 .btn-sure{display: block;width: 2.74rem;height: 0.71rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-sure.png) no-repeat;background-size: 100% 100%;margin:.5rem auto 0;}
+
+/* 弹窗 */
+.dialog{position: relative;text-align: center;}
+.dialog .dia-close{display: block;width: 0.63rem;height: 0.63rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-close.png) no-repeat;background-size: 100% 100%;position: absolute;top: .15rem;right: .15rem;}
+.dialog .dia-con{padding-top: .8rem;}
+.dia-address{width: 4.7rem;height: 5.98rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dia-bg.png) no-repeat;background-size: 100% 100%;}
+.dia-address label{width: fit-content;text-align: left; font-size: .25rem;color: #fcdd89;line-height: .46rem;display: block;margin-bottom: .43rem;padding-left: .45rem;box-sizing: border-box;}
+.dia-address input{width: 3rem;height: .46rem;background: none;border: .02rem solid #c99c5c;padding: 0 .1rem;box-sizing: border-box;font-size: .2rem;color: #fcdd89;}
+.dia-address textarea{display: block;width: 3.73rem;height: 1.44rem;background: none;border: .02rem solid #c99c5c;padding: .06rem .1rem;box-sizing: border-box;font-size: .2rem;color: #fcdd89;text-align: justify;}
+.dia-address input.sAddress{display: block;width: 3.73rem;height: 1.44rem;background: none;border: .02rem solid #c99c5c;padding: .06rem .1rem;box-sizing: border-box;font-size: .2rem;color: #fcdd89;text-align: justify;}
+.dia-address .dia-btn1{display: block;width: 2.75rem;height: 0.72rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dia-address.png) no-repeat;background-size: 100% 100%;margin: 0 auto;}
+
+.dia-submit{width: 4.7rem;height: 1.88rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dia-bg1.png) no-repeat;}
+.dia-submit .dia-con{padding-top: .63rem;}
+.dia-submit .dia-btn2{display: block;width: 2.75rem;height: 0.72rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dia-submit.png) no-repeat;background-size: 100% 100%;margin: 0 auto;}
+
+/* 领取记录 */
+.dia-record{width: 6.7rem;height: 6.86rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dia-bg2.png) no-repeat;background-size: 100% 100%;text-align: center;}
+.dia-record .dia-con{padding-top: .4rem;}
+.dia-record h3{font-size: .35rem;color: #fcdd89;line-height: .4rem;margin-bottom: .3rem;}
+.dia-record ul{width: 90%;margin: 0 auto;height: auto;}
+.dia-record li{width: 100%;height: 0.55rem;border-bottom: 1px solid #fcdd89;box-sizing: border-box;color: #fcdd89;}
+.dia-record ul span{font-size: .18rem;height: 100%; float: left;line-height: .55rem;padding: 0 .05rem;box-sizing: border-box;
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;}
+  .dia-record span:first-child{width: 35%;}
+  .dia-record span:last-child{width: 65%;}
+.dia-record .record-gift li{height: .5rem;}
+.dia-record .record-gift span{line-height: .5rem;}
+.dia-record .record-titl span{font-size: .25rem;}
+.dia-record .record-none{font-size: .3rem;}
+.dia-record .record-none li{border: none;}
+
+.dia-record .btn-address{display: block;width: 2.45rem;height: 0.64rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-address.png) no-repeat;background-size: 100% 100%;position: absolute;bottom: .5rem;left: 50%;transform: translateX(-50%);}
+
+
+/* 弹出抽中后的奖励 */
+.dialott{display: none; position: fixed;width: 100%;height: 100%;z-index: 999;top: 0;left: 0;background: rgba(0,0,0,.5);text-align: center;z-index: 9999;}
+.dialott .dialott-con{width: 5.82rem;height: 6.24rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dialott-bg1.png) no-repeat;background-size: 100% 100%; position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.dialott .dia-close{display: block;width: 0.63rem;height: 0.63rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-close.png) no-repeat;background-size: 100% 100%;position: absolute;top: 1.15rem;right: .3rem;z-index: 9999;}
+.dialott .dia-box{position: relative;margin: 0 .2rem; box-sizing: border-box;}
+.dialott .dia-box span{display: block;height: .8rem;margin-top: 2.5rem; font-size: .34rem;line-height: .4rem;display: flex;justify-content: center;align-items: center; color: #fcdd89;padding: 0 .2rem;}
+.dialott .tips{width: 4.67rem;height: .88rem;background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/tips.png) no-repeat top;background-size: 100% .88rem;padding-top: .2rem;margin: .2rem auto;font-size: .22rem;color: #fcdd89;line-height: .26rem;padding: .2rem .4rem 0;box-sizing: border-box;}
+.dialott .btn-address{display: block;width: 2.45rem;height: 0.64rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/btn-address.png) no-repeat;background-size: 100% 100%;margin:.15rem auto 0;}
+
+.dianone .dia-box{padding-top: 3rem;}
+.dianone .tips{font-size: .35rem;line-height: .4rem;padding-top: 0;}
+
+.dialott.dia2 .dialott-con{width: 5.82rem;height: 5.17rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dialott-bg2.png) no-repeat;}
+
+.dia3 .dialott-con{width: 5.82rem;height: 7.9rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dialott-bg3.png);background-size: 100% 100%;}
+.dia4 .dialott-con{width: 5.82rem;height: 7.11rem; background: url(//game.gtimg.cn/images/lpl/act/a20210202springmlott/dialott-bg4.png);background-size: 100% 100%;}
+.dialott1 .dia-box{padding-top: 2.1rem;}
+.dialott1 .dia-box img{width: 2rem;height: 3.44rem;background-size: 100% 100%;}
+.dialott1 .dia-box span{display: block;height: .3rem;margin-top: 0rem;font-size: .25rem;line-height: .3rem;display: flex;justify-content: center;align-items: center;color: #fcdd89;padding: 0 .2rem;}
+.dialott1 .tips{margin: 0rem auto 0;}
+
+/* #t6Hl8#206B52483EC7723010A4A160FA542D41 */

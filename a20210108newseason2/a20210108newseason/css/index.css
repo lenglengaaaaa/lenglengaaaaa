@@ -1,0 +1,423 @@
+/* reset */
+body,a,div,dl,dd,ul,li,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer{margin:0;outline: none;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em,b,i{font-style:normal}
+a{text-decoration:none; outline: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+a:hover{text-decoration:none;filter: brightness(1.2);}
+img{border:0}
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+td,th,ul,ol{padding:0;list-style: none;}
+div{outline: none;}
+.hidden{font-size: 0; text-indent: -999em;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{*zoom:1;}
+#afooter {max-width: 1920px; position:relative;  padding: 20px 0px 20px 0px; text-align:center; font:normal 12px/19px Tahoma;z-index:10;background: #191219;}
+#afooter .e { font:normal 10px/19px Tahoma;}
+#afooter, #afooter a { color:#c6c6c6; text-decoration:none;}
+#loginStatusSyncFrame_ams_ame{ display: none;}
+
+@font-face {
+    font-family: 'sellnum-2';
+    src: url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.eot');
+    src: url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.woff') format('woff'),url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.ttf') format('truetype'),url('//game.gtimg.cn/images/lol/common/sell/font/sellnum-2.svg') format('svg');
+}
+
+/* 渐变样式示例 */
+.text{
+    font-size:21px;
+    font-weight: bold;
+    color:#d8c29b;/* 默认色值 低级浏览器下显示 */
+}
+  
+@supports (-webkit-background-clip: text) {
+    .text{
+        background-image: linear-gradient(#fff, #e1ba83);
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.spr{width: 700px;height: 500px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/spr.png) no-repeat;}
+
+html{max-width: 1920px;min-width: 1280x;margin: 0 auto;}
+body{max-width: 1920px;min-width: 1280px; padding-top: 42px;position: relative;background: #04283b;margin: 0 auto;}
+.wrap{width:100%;height:100%;position:relative;}
+.head{width: 100%;height: 1126px;min-width: 1280px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/bg1.jpg) no-repeat center; margin: 0 auto;position: relative; overflow:hidden;text-align: center;}
+.content{width: 100%;height: auto;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/bg2.jpg) no-repeat center;background-size: 100% 100%;margin: 0 auto;}
+
+.head .time{font-size: 20px;color: #fff;padding-top: 875px;}
+.head .time span{margin: 0 auto;position: relative;line-height: 40px;}
+/* .head .time span::before{content: '';display: inline-block;vertical-align: top;margin: 19px 22px 0 0; width: 100px;height: 3px;background: linear-gradient(to right, transparent 0%,transparent 60%,rgb(254, 251, 219,.5) 100%);}
+.head .time span::after{content: '';display: inline-block;vertical-align: top;margin: 19px 0 0 22px; width: 100px;height: 3px;background: linear-gradient(to left, transparent 0%,transparent 60%,rgb(254, 251, 219,.5) 100%);} */
+.head .login-box{font-size: 16px;color: #fff;margin-top: 80px;}
+.head .login-box a{color: #f9dda4;}
+.head .login-box a:hover{filter: none;}
+.logo{width: 170px;height: 53px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/logo.png) no-repeat;position: absolute;top: 20px;left: 50px;z-index: 2;}
+
+/* 序列帧 */
+
+
+/* 测导航 */
+/* nav */
+.nav{display: none; width: 188px;height: auto; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/nav-bg.png) no-repeat;position: fixed;right: 0;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);z-index: 9;}
+.nav ul{width: 100%;height: auto;margin-left: 0;}
+.nav li{width: 100%;height: 55px;margin-bottom: 0;}
+.nav li.on,.nav li:hover{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/nav-on.png) no-repeat top;}
+.nav li a{display: block;width: 100%;height: 54px;font-size: 16px;color: #89929b;line-height: 55px;text-align: right;padding-right: 15px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.nav li.on a,.nav li:hover a{color: #fff;font-weight: bold;}
+.nav .topon{display: block;width: 100%;height: 54px;font-size: 16px;color: #89929b;line-height: 55px;text-align: right;padding-right: 15px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.nav .topon i{display: inline-block;width: 10px;height: 10px;background-position: -2px -152px;margin-right: 10px;}
+.nav .btn-nav{display: block; width: 189px;height: 132px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/nav-icon.png) no-repeat;margin-top: 10px;}
+
+/* cont1 */
+.cont1{width: 1280px;height: 1113px; margin: 0 auto;position: relative;}
+.cont1 .title{width: 100%;height: 50px;text-align: center;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/title1.png) no-repeat top center;background-size: 299px 136px;font-size: 20px;color: #9e907d;line-height: 22px;padding-top: 95px;}
+.cont1 .jd-box{width: 790px;height: 560px;margin: 0 auto;position: relative;}
+.cont1 .jd-box .img-box{width: 500px;height: 500px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/gift-bg.png) no-repeat center; position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);z-index: 2;}
+/* .cont1 .jd-box .img-box::before{content: '';display: block;width: 100%;height: 100%;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/gift-line.png) no-repeat;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);z-index: 3;} */
+.cont1 .jd-box img{width: 500px;height: 500px;display: block;}
+.cont1 ul{width: 100%;height: auto;overflow: hidden;margin: 30px auto 0;}
+.cont1 li{width: 115px;height: 216px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/c1-bg.png) no-repeat;text-align: center;float: left;cursor: pointer;}
+.cont1 li.on,.cont1 li:hover{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/c1-bg1.png) no-repeat;}
+.cont1 .task1{float: left;margin-bottom: 120px;}
+.cont1 .task2{float: right;margin-bottom: 120px;}
+.cont1 .task3{float: left;clear: both;}
+.cont1 .task4{float: right;}
+.cont1 li p{font-size: 14px;color: #e7d4af;padding-top: 25px; /*text-shadow: 1px 2px 5px #000;*/}
+.cont1 li p span{display: block;font-size: 18px;line-height: 20px; font-weight: bold;margin: 10px auto 0;}
+.cont1 li em{display: block; width: 84px;height: 84px;margin: 5px auto 0;}
+.cont1 .task1 em{background-position: -41px -3px;}
+.cont1 .task2 em{background-position: -142px -3px;}
+.cont1 .task3 em{background-position: -232px -3px;}
+.cont1 .task4 em{background-position: -323px -3px;}
+.cont1 li .sel{display: none;width: 28px;height: 21px;background-position: -6px -3px;margin: -15px auto;}
+.cont1 li.on .sel{display: block;}
+.cont1 li .line{display: none;width: 500px;height: 500px; position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);}
+.cont1 li .line span{display: block; width: 249px;height: 249px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/jd-icon.gif) no-repeat;}
+
+.cont1 .task1 .line span{background-position: 0px 0px;/* margin: -1px; */}
+.cont1 .task2 .line span{background-position: -250px 0;margin-left: 250px;}
+.cont1 .task3 .line span{background-position: 0px -250px;margin-top: 249px;}
+.cont1 .task4 .line span{background-position: -250px -250px;margin: 249px;}
+.cont1 li.on .line{display: block;}
+
+.cont1 li .fc{display: none;width: 246px;height: 208px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/c-fc1.png) no-repeat;position: absolute;top: 0px;z-index: 9;}
+.cont1 li .fc span{display: inline-block;width: 120px;height: 126px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/fc-imgbg.png) no-repeat;font-size: 0;margin: 25px 10px;}
+.cont1 li .fc img{width: 108px;height: 109px;background-size: 100% 100%;margin: 6px auto 16px;}
+.cont1 li .fc p{font-size: 16px;line-height: 20px; color: #89929b;padding-top: 0;}
+.cont1 .task1 .fc{left: 125px;}
+.cont1 .task1 .fc span,.cont1 .task3 .fc span{margin-left: 50px;}
+.cont1 .task2 .fc span,.cont1 .task4 .fc span{margin-left: -20px;margin-right: 30px;}
+.cont1 .task2 .fc{width: 373px;height: 208px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/c-fc2.png) no-repeat;right: 125px;}
+.cont1 .task3 .fc{left: 125px;top: 335px;}
+.cont1 .task4 .fc{width: 373px;height: 208px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/c-fc2.png) no-repeat;right: 125px;top: 335px;}
+.cont1 li:hover .fc{display: block;}
+
+
+.skin-box{height: auto; text-align: center;font-size: 0;margin-top: -60px;position: relative;z-index: 1;}
+.skin-box p{color: #fff;font-size: 16px;line-height: 35px;display: inline-block;vertical-align: top; }
+.skin-box p em{color: #fdc474;font-weight: bold;}
+.skin-box a{display: block;margin: 10px auto; width: 146px;height: 35px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-skinlist.png) no-repeat;}
+
+.open-box{height: auto;margin: 70px auto 0;text-align: center;}
+.open-box .txt1{width: 210px; margin: 0 auto; height: 30px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/jd-bg.png) no-repeat center left;font-size: 20px;line-height: 30px;color: #fff;padding-left: 17px;}
+.open-box .txt1 span{font-size: 30px;color: #c28e44;letter-spacing: -5px;line-height: 30px;vertical-align: middle;}
+.open-box .txt1 span i{font-family: 'sellnum-2';font-weight: bold;}
+.open-box .txt1 span .num{font-size: 26px;color: #fff;}
+.open-box .txt1 span .tal{font-size: 30px;color: #fbd899;padding-top: 5px;}
+.open-box .btn{width: 680px;height: auto;margin: 15px 0 15px 450px;font-size: 0;}
+.open-box .btn-open{display: inline-block;vertical-align: middle;width: 294px;height: 71px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-open.gif) no-repeat;margin: 0 40px;}
+.open-box .btn-open span{color: #fff;font-weight: bold;text-shadow: 0px 0px 20px #07121a;font-size: 22px;font-family: 'sellnum-2';line-height: 71px;}
+.open-box .btn-go1{display: inline-block;vertical-align: middle; width: 291px;height: 70px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-go1.png) no-repeat;margin: 0 7px;text-align: center;}
+.open-box .btn-go1 span{font-size: 0;font-family: 'sellnum-2';font-weight: bold;line-height: 86px;display: inline;
+    /* background-image: linear-gradient(#fff, #d8c29b);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent; */
+}
+.open-box .tips{font-size: 14px;color: #acdbff;line-height: 24px;}
+.open-box .tips span{color: #dab775;margin: 20px auto;display: block;}
+
+/* cont2 */
+.cont2{width: 100%;height: auto;margin: 0 auto;}
+.cont2 .title{width: 100%;height: 100px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/title2.png) no-repeat center;margin-bottom: 55px;font-size: 0;}
+.cont2 .main{width: 100%;height: 370px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/cont2-bg.png) no-repeat center top;position: relative;}
+.cont2 .main .titl{width: 100%;height: 41px;margin: 0 auto 50px;padding-top: 30px;font-size: 0;}
+.cont2 .cont-box{width: 1280px;height: auto;margin: 0 auto;position: relative;}
+.cont2 .main1 .titl{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/titl2-1.png) no-repeat bottom center;}
+.cont2 .main2 .titl{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/titl2-2.png) no-repeat bottom center;margin-bottom: 90px;}
+.cont2 .main3 .titl{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/titl2-3.png) no-repeat bottom center;margin-bottom: 40px;}
+.cont2 .main4 .titl{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/titl2-4.png) no-repeat bottom center;}
+/* 公用 */
+.cont2 .left{margin-left: 40px;width: 430px;height: 100%;float: left;font-size: 0;}
+.cont2 .left p{font-size: 16px;text-align: center;color: #68ccff;display: block;}
+.cont2 .left p span{color: #fff;margin-left: 10px;}
+.cont2 .left .icon-or{display: block; width: 207px;height: 22px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/icon-or.png) no-repeat;margin: 0 auto;}
+.cont2 .time{float: right;width: 213px;margin: 10px 70px 0 20px;color: #ede5d0;font-size: 14px;line-height: 24px;text-align: center;}
+.cont2 .num{display: inline-block;*display:inline; *zoom:1; width: 39px;height: 40px;background-position: -75px -143px;font-family: 'sellnum-2';color: #f2dda9; text-align: center;line-height: 40px;font-size: 22px;font-weight: bold;}
+
+.cont2 .right{width: 750px;height: 100%;float: right;}
+.cont2 .right ul{width: 400px;height: auto;float: left;margin-top: -85px;font-size: 0;text-align: center;}
+.cont2 .right li{display: inline-block;vertical-align: top; width: 293px;height: 290px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/img-bg.png) no-repeat center;text-align: center;margin: 0 -50px;}
+.cont2 .right li img{width: 108px;height: 108px;display: block;margin: 91px auto 0;}
+.cont2 .right li p{font-size: 16px;line-height: 20px; color: #fff;margin-top: 20px;}
+.cont2 .right .btn-get{display: block;width: 213px;height: 70px;float: right; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-get.png) no-repeat;margin: 28px 70px 0 20px;}
+.cont2 .right .btn-got{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-got.png) no-repeat;}
+
+/* 进度条 */
+.progress-box{width: 230px;height: 7px;margin: 25px auto 0; border: 1px solid #947141;position: relative;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.progress-box div{width: 0;height: 100%;background: #ffb96d;}
+.cont2 .left .progress-box p{margin: 0; position: absolute;left: 250px;top: -10px;font-size: 16px;color: #ede5d0!important;line-height: 20px;}
+
+/* main1 */
+.cont2 .main1 .titl{margin: 0 auto 70px;}
+.main1 .left p{margin-left: 20px;text-align: left;margin-bottom: 40px;}
+/* .main1 .left p i{display: block;font-size: 0;width: 39px;height: 20px;background-position: -459px -33px;float: left;margin: 0 15px 0 25px;} */
+.main1 .left a{display: inline-block;vertical-align: top;margin: 0 20px;}
+.main1 .left a:hover{filter: none;}
+.main1 .left .btn-qq{width: 27px;height: 27px; background-position: 0 -101px;margin-left: 110px;}
+.main1 .left .btn-wx{width: 30px;height: 27px; background-position: -61px -101px;}
+.main1 .left .btn-kj{width: 26px;height: 27px; background-position: -129px -101px;}
+.main1 .left .btn-wb{width: 30px;height: 30px; background-position: -194px -99px;}
+.main1 .btn-share1{display: none!important;vertical-align: top;margin-left: 20px;width: 27px;height: 40px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-share1.png) no-repeat center;background-size: 100% 27px;}
+
+/* main2 */
+.cont2 .main2{height: 500px;}
+.main2 .left .box1{width: 550px;margin-bottom: 15px;line-height: 40px;}
+.main2 .left .btn-invite{display: inline-block;width: 125px;height: 40px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-invite.png) no-repeat;background-size: 100% 100%;vertical-align: top;margin-left: 10px;font-size: 0;}
+/* .main2 .left i{display: block; width: 207px;height: 22px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/icon-or.png) no-repeat;margin: 0 auto;} */
+.main2 .btn-change{display: inline-block;vertical-align: top;margin-left: 20px; width: 107px;height: 40px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-change.png) no-repeat;}
+.main2 .box2 p{line-height: 40px;margin: 10px auto 10px;}
+.main2 .box2 ul{width:500px;height: auto;overflow: hidden; margin-left: -40px;margin-top: 15px;}
+.main2 .box2 li{width: 90px;float: left;margin-right: 10px;}
+.main2 .box2 li p{width: 69px;height: 69px;display: block;margin: 0 auto 5px;border-radius: 50%;border: 1px solid #d5ab62;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main2 .box2 li p img{width: 63px;height: 63px;display: block;margin: 2px auto;border: 1px solid #d5ab62;border-radius: 50%;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main2 .box2 li span{width: 90px;height: 20px;display: block; text-align: center; font-size: 14px;color: #dcd0bb;line-height: 20px; overflow:hidden; white-space: nowrap;text-overflow: ellipsis;-o-text-overflow:ellipsis;}
+.main2 .box2 li .btn-invite1{display: block;width: 86px;height: 31px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-invite1.png) no-repeat;background-size: 100% 100%;margin:7px auto 0;}
+.main2 .box3{margin-top: 15px;}
+.cont2 .main2 .right{padding-top: 110px;}
+/* 进度条 */
+.progress-box11{margin-bottom: 20px;}
+/* 进度条 */
+.progress-box1 div{width: 33%;}
+.main2 .right li p{margin-bottom: 10px;}
+.main2 .right .btn-win{color: #ffe396;font-size: 16px;line-height: 20px;padding-left: 5px;text-decoration: underline;}
+.main2 .right .btn-win:hover{filter: none;}
+/* main3 */
+.main3 .box1{text-align: center;}
+.main3 .icon-logo{width: 131px;height: 32px;position: absolute;top: -56px;left: 40px;}
+.main3 .progress-box{margin-bottom: 10px;}
+.cont2 .main3 .icon-or{margin-top: 20px;}
+.main3 .box1 span{font-size: 16px;line-height: 20px; color: #6b9faf;}
+.main3 .box1 span a{color: #ffe396;text-decoration: underline;position: relative;}
+.main3 .box1 span a:hover{filter: none;}
+.main3 .box1 span a img{width: 171px;height: 195px;position: absolute;top: -72px;right: -190px;display: none;}
+.main3 .box1 span a:hover img{display: block;}
+.main3 .box2 p{margin: 10px auto 15px;}
+.main3 .box2 span{font-size: 16px;line-height: 20px;margin-left: 150px;}
+.main3 .box2 span a{color: #ffe396;line-height: 38px;vertical-align: top;display: inline-block; text-decoration: underline;position: relative;}
+.main3 .box2 img.img-tq{width: 94px;height: 38px;margin-right: 20px;}
+.main3 .box2 span a img.fc1{width: 165px;height: 201px;}
+/* .main3 .box2 span a em{display: none;} */
+/* .main3 .box2 span a:hover img.fc1{display: block;} */
+.main3 .box2 span a:hover{filter: none;}
+.main3 .box2 span a .fc-box{width: 182px;height: 200px;position: absolute;top: -250px;right: -25px;display: none;font-size: 0;}
+.main3 .box2 span a:hover .fc-box{display: inline-block;}
+.cont2 .main3 .right{padding-top: 40px;}
+/* 进度条 */
+.progress-box2 div{width: 20%;}
+
+/* main4 */
+.cont2 .main4{height: 450px;}
+.cont2 .main4 .icon-or{margin: 40px auto;}
+.cont2 .main4 .box1{margin-bottom: 20px;}
+.cont2 .main4 .right{padding-top: 50px;}
+/* 进度条 */
+.progress-box3 div{width: 20%;}
+/* 进度条 */
+.progress-box4 div{width: 20%;}
+
+/* main5同看新赛季 */
+.main5{width: 1280px;height: auto;margin: 0 auto;position: relative;}
+.main5 .title{width: 100%;height: 100px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/title3.png) no-repeat center;margin: 0 auto 50px;}
+.main5 .play-box{width: 1284px;height: 633px;border: 2px solid #e1ba82; margin: 0 auto;position: relative;}
+.main5 .play-box .btn-play{width: 76px;height: 76px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/btn-play.png) no-repeat;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%); z-index: 2;}
+.main5 .play-box .btn-play span{font-size: 20px;line-height: 24px;color: #ede5d0;position: absolute;text-align: center; width: 1284px;height: 24px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);margin-top: 60px;}
+.main5 .play-box .video-container{width: 100%;height: 100%; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/video-img.png) no-repeat;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);}
+.main5 .play-box .video-container::before{content: '';width: 100%;height: 100%;display: block; background: rgba(0,0,0,0.7);position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);}
+.main5 .img-box{width: 100%;height: auto;margin: 50px auto 0;overflow: hidden;}
+.main5 .img-box i{display: block;width: 42px;height: 106px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/m5-icon.png) no-repeat;margin: 0 auto;}
+.main5 .img-box ul{width: 100%;height: auto;margin-top: 43px;}
+.main5 .img-box li{width: 219px;height: 327px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/m5-bg.png) no-repeat; float: left;margin: 0 23px;padding: 3px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.main5 .img-box li.li1{margin-top: -125px;margin-left: 0;}
+.main5 .img-box li.li2{margin-top: -50px;}
+.main5 .img-box li.li3{margin-top: 0;}
+.main5 .img-box li.li4{margin-top: -50px;}
+.main5 .img-box li.li5{margin-top: -125px;margin-right: 0;}
+
+.main5 .swiper-box{width: 100%;height: auto;margin: 100px auto 0;position: relative;}
+.main5 .swiper-container{width: 100%;height: 420px;margin: 0 auto;}
+.swiper-button-prev{width: 48px;height: 48px;background-position: -169px -146px; left: -30px;top: 175px;}
+.swiper-button-next{width: 48px;height: 48px;background-position: -261px -146px; right: -30px;top: 175px;}
+.swiper-pagination-bullet{width: 15px;height: 15px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/spr.png) no-repeat;background-position: -353px -163px;opacity: 1;}
+.swiper-pagination-bullet-active{background-position: -387px -163px;}
+
+
+/* rule */
+.rule-box{width: 1280px;height: auto;overflow: hidden; margin: 70px auto 0;}
+.rule-box .titl{width: 100%;height: 50px;font-size: 0;text-align: center; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/rule-title.png) no-repeat center;background-size: 201px 130px; font-size: 20px;color: #9e907d;line-height: 22px;padding-top: 95px;margin: 0 auto 40px;}
+.rule-box ul{width: 1000px;height: auto;margin: 0 auto;}
+.rule-box ul li{margin-bottom: 25px;font-size: 16px;line-height: 24px;}
+.rule-box ul li .txt1{color: #fff;}
+.rule-box ul li .txt2{color: #59aff8;}
+.rule-box ul li i{color: #fff3a4;}
+.rule-box ul li em{color: #738292;}
+
+
+/* 弹窗 */
+.dialog{position: relative;text-align: center;}
+.dialog .dia-close{display: block;width: 49px;height: 49px;background-position: -310px -94px;position: absolute;top: -20px;right: -20px;}
+.dialog .dia-con{width: 100%;height: auto;padding-top: 57px;}
+.dialog h1{width: 100%;height: 47px;font-size: 0;}
+.dialog .btn-box{width: 706px;height: 70px;margin: 0 auto;}
+.dialog .btn-box a{width: 273px;height: 70px;margin: 0 40px;font-size: 0;}
+/* 皮肤列表 */
+.dia-skin{ background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia1.png) no-repeat; width: 1005px; height: 704px; background-size: 100% 100%;}
+.dia-skin h1{height: auto; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-title1.png) no-repeat center top;margin-bottom: 20px; padding-top: 70px; font-size: 19px;line-height: 22px; color: #fefbdb;font-weight: normal;}
+.dia-skin .skinul{width: 960px;height: 420px;display: block;margin: 0 auto; overflow-y: auto;}
+.dia-skin .skinul li{width: 168px;height: 175px;float: left;margin: 0 0 20px 15px;overflow: hidden;position: relative;}
+.dia-skin .skinul li div{width: 100%;height: 100%;position: relative;}
+.dia-skin .skinul li div::before{content: '';display: block;width: 100%;height: 100%; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-skinbg1.png) no-repeat;position: absolute;top: 0;left: 0;}
+.dia-skin .skinul li img{width: 156px;height: 166px;background-size: 100%;display: block;margin: 0 auto;padding-top: 5px;object-fit: cover;}
+.dia-skin .skinul li.skin1{width: 168px;height: 295px;float: left;margin: 0 0 20px 15px;overflow: hidden;position: relative;}
+.dia-skin .skinul li.skin1 div{width: 100%;height: 100%;position: relative;}
+.dia-skin .skinul li.skin1 div::before{content: '';display: block;width: 100%;height: 100%; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-skinbg.png) no-repeat;position: absolute;top: 0;left: 0;}
+.dia-skin .skinul li.skin1 img{width: 156px;height: 286px;background-size: 100%;display: block;margin: 0 auto;padding-top: 5px;object-fit: cover;}
+.dia-skin .skinul li .name{width: 154px;height: auto;background-size: 100% 100%;background: linear-gradient(to top,#000,transparent);position: absolute;left: 7px;bottom: 5px;font-size: 14px;color: #fefbdb;padding: 10px 0px;}
+
+.dia-skin .skin-tab{font-size: 0;text-align: center;width: 100%;height: 54px;margin: 0 auto 30px;}
+.dia-skin .skin-tab a{width: 146px;height: 54px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/skin-tab.png) no-repeat;display: inline-block;vertical-align: top;color: #cebee9;margin: 0 8px 0 0;position: relative;}
+.dia-skin .skin-tab a span{text-align: center;font-size: 16px;color: #fff;display: block;font-weight: bold;box-sizing: border-box;line-height: 54px;}
+.dia-skin .skin-tab a.on,.pop-skin .skin-tab a:hover{width: 146px;height: 54px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/skin-tabon.png) no-repeat;}
+
+
+
+
+/* 恭喜您获得：英雄+皮肤可自选一组(7天) */
+.dia-receive1{ background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia5.png) no-repeat; width: 1005px; height: 724px; background-size: 100% 100%;}
+.dia-receive1 h1{height: 40px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-title5.png) no-repeat center;margin-bottom: 30px;}
+.dia-receive1 .heroul{width: 960px;height: 470px;display: block;margin: 0 auto; overflow-y: auto;padding-top: 10px;}
+.dia-receive1 .heroul li{width: 168px;height: 295px;float: left;margin: 0 0 20px 15px;position: relative;}
+.dia-receive1 .heroul li div{width: 100%;height: 100%;position: relative;}
+.dia-receive1 .heroul li div::before{content: '';display: block;width: 100%;height: 100%; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-skinbg.png) no-repeat;position: absolute;top: 0;left: 0;}
+.dia-receive1 .heroul li img.pic{width: 156px;height: 286px;background-size: 100%;display: block;margin: 0 auto;padding-top: 5px;}
+.dia-receive1 .heroul li .phone-box{display: flex;align-items: center;justify-content: center; overflow: hidden; width: 64px;height: 64px;border: 1px solid #4e594f;border-radius: 50%; position: absolute;top: 180px;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.dia-receive1 .heroul li .phone-box span{width: 54px;height: 54px;display: block;overflow: hidden;position: relative;border-radius: 50%;border:1px solid #be9e56;}
+.dia-receive1 .heroul li img.pic1{width: 78px;height: 143px;object-fit: cover;background-size: 100%; /* background-position: -53px -200px; */display: block;position: absolute;top: -10px;left: -10px;}
+.dia-receive1 .heroul li .name{width: 154px; height: auto; background-size: 100% 100%;background: linear-gradient(to top,#052a3c,#052a3c,transparent); position: absolute; left: 7px; bottom: 4px; font-size: 14px; color: #fefbdb;padding: 100px 0px 10px;}
+.dia-receive1 .heroul li a{width: 100%;height: 100%;display: block;position: absolute;top: 0;left: 0;}
+.dia-receive1 .heroul li a::before{content: '';display: block;width: 32px;height: 32px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/spr.png) no-repeat;background-size: 700px 500px;background-position: -517px -102px;position: absolute;top: -10px;right: -10px;}
+.dia-receive1 .heroul li.on a::before{background-position: -475px -101px;}
+.dia-receive1 .heroul li a:hover:before{filter: none;}
+.dia-receive1 .btn-box .dia-get{display: block;margin: 20px auto 0; width: 273px;height: 70px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-get.png) no-repeat;}
+
+/* 开启礼盒 */
+.dia-openGift{width: 1005px;height: 814px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia2.png) no-repeat;background-size: 100% 100%;}
+.dia-openGift .dia-con{padding-top: 40px;}
+.dia-openGift h1{height: 57px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-title2.png) no-repeat center;}
+.dia-openGift .titl{width: 95%;margin: 30px auto 0px;font-size: 16px;line-height: 32px;color: #fff;}
+.dia-openGift .titl span{color: #ffe3af;}
+.dia-openGift ul{width: fit-content;font-size: 0;margin: -30px auto 0;}
+.dia-openGift ul li{display: inline-block;vertical-align: top;width: 500px;height: 500px;position: relative;}
+.dia-openGift ul li div{width: 500px;height: 500px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/jd-icon.png) no-repeat;background-size: 100% 100%;}
+.dia-openGift ul li img{width: 500px;height: 500px;background-size: 100% 100%; display: block; margin: 0 auto;}
+.dia-openGift ul li span{width: 100%;display: block;margin-bottom: 30px;}
+.dia-openGift ul li p{position: absolute;width: 100%;bottom: -10px;left: 0;font-size: 20px;line-height: 22px;color: #fff;}
+.dia-openGift ul li p i{display: inline-block;margin-left: 10px;width: 134px;height: 40px;background-position: -7px -239px;vertical-align: middle;position: relative;cursor: pointer;}
+.dia-openGift ul li.li2{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-giftbg.png) no-repeat top;}
+.dia-openGift ul li.li2 span{font-size: 28px;font-weight: bold;}
+.dia-openGift ul li a{width: 273px;height: 70px;display: block;position: absolute;bottom: -150px;left: 48px;font-size: 0;}
+.dia-openGift .btn-box{margin-top: 45px;}
+.dia-openGift .btn-box .dia-useIcon{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-useIcon.png) no-repeat;float: left;position: relative;}
+.dia-openGift .btn-box .dia-open{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-open.png) no-repeat;float: left;position: relative;}
+/* 浮层 */
+.dia-openGift .dia-fc{text-align: center;color: #ede5d0;font-size: 20px;line-height: 24px;padding-bottom: 12px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;position: absolute;}
+.dia-openGift .dia-fc em{display: flex;width: 90%;height: 100%;margin: 0 auto; align-items: center;justify-content: center;}
+.dia-openGift .dia-fc1{width: 528px;height: 96px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-fc1.png) no-repeat top;top: 63px;left: -13px;}
+.dia-openGift .dia-fc2{display: none;width: 236px;height: 108px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-fc2.png) no-repeat top;top: -35px;left: 150px;font-size: 16px;padding-bottom: 0;padding-left: 12px;}
+.dia-openGift .dia-fc3{display: none; width: 248px;height: 96px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-fc3.png) no-repeat top;top: -100px;left: 15px;}
+.dia-openGift .dia-fc4{display: none; width: 288px;height: 96px;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-fc4.png) no-repeat top;top: -100px;left: -7px;}
+.dia-openGift ul li p i:hover .dia-fc2{display: block;}
+.dia-openGift .btn-box .dia-useIcon:hover,.dia-openGift .btn-box .dia-open:hover{filter: none;}
+.dia-openGift .btn-box .dia-useIcon:hover .dia-fc3{display: block;}
+.dia-openGift .btn-box .dia-open:hover .dia-fc4{display: block;}
+
+/* 邀请好友 */
+.dia-invite{width: 705px;height: 804px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia3.png) no-repeat;background-size: 100%  100%;}
+.dia-invite h1{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-title3.png) no-repeat center;margin-bottom: 50px;}
+.dia-invite ul{width: 600px;height: 510px;margin: 0 auto 40px;overflow-y: auto;}
+.dia-invite ul li{text-align: left;margin-bottom: 40px;font-size: 22px;color: #f0e6d2;line-height: 26px;overflow:hidden; white-space: nowrap;text-overflow: ellipsis;-o-text-overflow:ellipsis;}
+.dia-invite ul li a{display: block;float: left;width: 26px;height: 26px;background-position: -432px -103px;margin-right: 25px;}
+.dia-invite ul li.on a{background-position: -388px -102px;}
+.dia-invite .btn-box .dia-cancel{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-cancel.png) no-repeat;float: left;}
+.dia-invite .btn-box .dia-invite{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-invite.png) no-repeat;float: left;}
+
+/* 邀请成功 */
+.dia-success{width: 705px;height: 361px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia4.png) no-repeat;}
+.dia-success h1{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-title4.png) no-repeat center;margin-bottom: 20px;}
+.dia-success p{width: 90%;height: 96px;display: flex;justify-content: center;align-items: center;font-size: 18px;color: #ede5d0;line-height: 24px;margin: 0 auto 40px;overflow: hidden;}
+.dia-success .btn-box .dia-cancel{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-cancel.png) no-repeat;float: left;}
+.dia-success .btn-box .dia-sure{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-sure.png) no-repeat;float: left;}
+
+/* 恭喜获得 */
+.dia-receive{width: 1005px;height: 704px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia2.png) no-repeat;background-size: 100% 100%;}
+.dia-receive h1{background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-title6.png) no-repeat center;margin-bottom: 30px;}
+.dia-receive .gift-box{width: 274px;height: 354px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-giftbg1.png) no-repeat;margin: 0 auto 5px;position: relative;}
+.dia-receive .gift-box div{width: 168px;height: 295px;position: relative;margin: 0 auto;}
+.dia-receive .gift-box div::before{content: '';display: block;width: 100%;height: 100%; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-skinbg.png) no-repeat;position: absolute;top: 0;left: 0;}
+.dia-receive .gift-box img{width: 156px;height: 286px;background-size: 100%;display: block;margin: 0 auto;padding-top: 5px;}
+.dia-receive .gift-box .name{width: 154px;height: auto;background-size: 100% 100%;background: linear-gradient(to top,#000,transparent);font-size: 14px;color: #fefbdb;padding: 10px 0px;position: absolute;left: 50%;bottom: 64px;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.dia-receive .gift-box span{font-size: 20px;font-weight: bold;color: #fefbdb;margin-top: 10px;}
+.dia-receive .gift-dj{width: 293px;height: 290px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/img-bg.png) no-repeat top;}
+.dia-receive .gift-dj div{width: 108px;height: 109px;background: none;padding-top: 91px;}
+.dia-receive .gift-dj div::before{display: none;}
+.dia-receive .gift-dj img{width: 108px;height: 108px; display: block;padding: 0;}
+.dia-receive .gift-dj .name{background: none;bottom: 40px;}
+.dia-receive .tips{font-size: 14px;color: #eacb95;line-height: 20px;}
+.dia-receive .area{font-size: 16px;color: #ede5d0;line-height: 20px;margin-top: 40px;}
+.dia-receive .area a{color: #eacb95;}
+.dia-receive .area a:hover{filter: none;}
+.dia-receive .btn-box{margin-top: 30px;}
+.dia-receive .btn-box .dia-sure{float: left; display: block;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-sure.png) no-repeat;}
+.dia-receive .btn-box .dia-inquire{float: left; display: block;background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia-inquire.png) no-repeat;}
+
+/* 系统弹窗 */
+.dia-system{width: 705px;height: 361px; background: url(//game.gtimg.cn/images/lol/act/a20210108newseason/dia4.png) no-repeat;background-size: 100%  100%;}
+.dia-system .dia-con{width: 100%;height: auto;padding: 100px 0;}
+.dia-system p{width: 90%;height: 160px;display: flex;justify-content: center; align-items: center;font-size: 24px;color: #ede5d0;line-height: 30px;margin: 0 auto;}
+
+/*  */
+.dia-sharemc{display: none;}
+
+.scroll::-webkit-scrollbar-track
+{
+	border-radius: 6px;
+	background-color: #072328; 
+}
+
+.scroll::-webkit-scrollbar
+{
+	width: 6px;
+	border-radius: 6px;
+	background-color:#072328;
+}
+.scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 6px;
+	background-color: #f9eab8;
+}
+
+/* #t6Hl8#6FA2CDBAE9BBEED57603C70F664A0975 */

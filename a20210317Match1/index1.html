@@ -1,0 +1,1608 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="codm">
+    <meta name="keywords" content="codm">
+
+    <!-- facebook share -->
+    <!-- facebook 分享的标题 -->
+    <meta property="og:title" content="World Championship">
+    <!--&lt;!&ndash; facebook 分享的描述 &ndash;&gt;-->
+    <meta property="og:description" content="CODM Championship 2021">
+    <!-- facebook 分享时显示的图片 图片比例：  双引号中的图片地址需要使用 http 或 https 开头的地址 -->
+    <meta property="og:image" content="images/facebook.jpg">
+    <!-- facebook share end -->
+    <title>CODM Championship 2021</title>
+    <!-- Designer：cp | Programmer：cp | Team：full speed -->
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <script>
+        //屏幕适应
+        (function (win, doc) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+
+            function setFont() {
+                var html = document.documentElement;
+                var k = 1386;
+                html.style.fontSize = html.clientWidth / k * 100 + "px";
+            }
+            setFont();
+            setTimeout(function () {
+                setFont();
+            }, 300);
+            doc.addEventListener('DOMContentLoaded', setFont, false);
+            win.addEventListener('resize', setFont, false);
+            win.addEventListener('orientationchange', setFont, false);
+            win.addEventListener('load', setFont, false);
+        })(window, document);
+    </script>
+</head>
+<!--
+     body为
+     class为VR就是阿语样式
+-->
+
+<body style="background: #1b252e">
+    <!-- 未报名 添加notBm 提示未报名 -->
+    <div class="bg ">
+        <div class="matchBox">
+            <!-- 比赛未开始：倒计时  -->
+            <div class="not_started" id="team_ready" style="display: none1">
+                <!-- 返回上一级 -->
+                <div class="returnBox">
+                    <a href="javascript:;" class="btn_fh"></a>
+                    <div class="phb">
+                        <em data_lang="">BACK</em>
+                    </div>
+                    <a href="javascript:;" class="btn_help" data_lang="">HELP</a>
+                </div>
+                <div class="notBox flex spb">
+                    <div class="leftBox">
+                        <div class="titl flex">
+                            <h2 data_lang="">RULES</h2>
+                        </div>
+                        <i class="line"></i>
+                        <ul>
+                            <li data_lang="">After signing in the match,there are 30 Rank matches, with this team will be calculated.</li>
+                            <li data_lang="">Each win will get 10 points, and failed will get 0 points.</li>
+                            <li data_lang="">The higher rarity has more additional points.</li>
+                            <li data_lang="">Each team can claim rewards due to the leaderboard of this match.</li>
+                        </ul>
+                    </div>
+                    <div class="midBox">
+                        <h3 data_lang="">There is still before the start of the team match</h3>
+                        <h4>3 DAYS 23 HOURS</h4>
+                    </div>
+                    <div class="rightBox">
+                        <div class="titl flex">
+                            <h2 data_lang="">REWARDS</h2>
+                        </div>
+                        <i class="line"></i>
+                        <ul>
+                            <li>
+                                <p data_lang="">COMPLETION REWARDS</p>
+                                <div>
+                                    <img src="images/gift.png" alt="">
+                                    <em>1</em>
+                                </div>
+                            </li>
+                            <li>
+                                <p data_lang="">ADVANCEMENT REWARDS</p>
+                                <div>
+                                    <img src="images/gift.png" alt="">
+                                    <em>1</em>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="kd_Box">
+                <!-- 主页面  组队/加入战队-->
+                <div class="join_team" style="display: block">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                        <a href="javascript:;" class="btn_help">HELP</a>
+                    </div>
+                    <div class="joinBox flex">
+                        <div class="leftBox">
+                            <div class="logos flex">
+                                <!-- <p class="sur"></p> -->
+                                <h2 data_lang="">REGIONAL<br> TEAM UP</h2>
+                            </div>
+                            <div class="times">
+                                <em data_lang="">JUNE 3 - JUNE 6</em>
+                                <span data_lang="">ENDS IN:2D  19H</span>
+                            </div>
+                            <div class="gifts">
+                                <p data_lang="">ADVANCEMENT REWARD</p>
+                                <div>
+                                    <img src="images/gift.png" alt="">
+                                    <em>1</em>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href="javascript:;" class="sur btn_rewards" data_lang="">REWARDS</a>
+                                <a href="javascript:;" class="sur btn_about" data_lang="">ABOUT&RULES</a>
+                                <a href="javascript:;" class="sur btn_leaderboard" data_lang="">LEADERBOARD</a>
+                            </div>
+                        </div>
+                        <div class="midBox">
+                            <img src="images/join_bg.png" alt="">
+                        </div>
+                        <div class="rightBox">
+                            <a href="javascript:;" class="sur tips" style="display:none"></a>
+                            <!-- 通过验证，不通过验证请加类no -->
+                            <div class="pass">
+                                <h2 data_lang="">REQUIREMENTS</h2>
+                                <p data_lang="">Pass Regional Solo Auditions</p>
+                            </div>
+                            <div class="match">
+                                <em data_lang="">QUALIFICATION GOAL</em>
+                                <span data_lang="">Place Top 215</span>
+                            </div>
+                            <div class="gifts">
+                                <p data_lang="">ADVANCEMENT REWARD</p>
+                                <div>
+                                    <img src="images/gift.png" alt="">
+                                    <em>1</em>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href="javascript:;" class="sur btn_join" data_lang="">JOIN A TEAM<i></i></a>
+                                <a href="javascript:;" class="sur btn_create" data_lang="">CREATE A TEAM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 比赛详情-进行中-队长视角 -->
+                <div class="detail_match" style="display: none">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                        <div class="topBtns flex spb">
+                            <a href="javascript:;" class="btn_help" data_lang="">HELP</a>
+                            <a href="javascript:;" class="btn_matchTeam flex spb">
+                                <em>2</em>
+                                <span data_lang="">MATCH UNTIL TEAM LOCK</span>
+                                <i class="sur"></i>
+                            </a>
+                            <a href="javascript:;" class="btn_matchHis" data_lang="">MATCH HISTORY</a>
+                        </div>
+                    </div>
+                    <div class="detailBox flex spb">
+                        <div class="leftBox">
+                            <div class="logos flex">
+                                <!-- <p class="sur"></p> -->
+                                <h2 data_lang="">REGIONAL<br> TEAM UP</h2>
+                            </div>
+                            <div class="times">
+                                <em data_lang="">JUNE 3 - JUNE 6</em>
+                                <span data_lang="">ENDS IN:2D  19H</span>
+                            </div>
+                            <div class="gifts">
+                                <p data_lang="">ADVANCEMENT REWARD</p>
+                                <div>
+                                    <img src="images/gift.png" alt="">
+                                    <em>1</em>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href="javascript:;" class="sur btn_rewards" data_lang="">REWARDS</a>
+                                <a href="javascript:;" class="sur btn_about" data_lang="">ABOUT&RULES</a>
+                                <a href="javascript:;" class="sur btn_leaderboard" data_lang="">LEADERBOARD</a>
+                            </div>
+                        </div>
+                        <div class="rightBox">
+                            <div class="topBox">
+                                <div class="teams">
+                                    <span>
+                                        <a href="javascript:;" class="sur tips" style="display:none"></a>
+                                        <p data_lang="">TEAM GHOST-NORTH AMERICA</p>
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <img src="images/head_bg1.jpg" alt="">
+                                            <!-- 队长图标 -->
+                                            <i class="sur"></i>
+                                        </li>
+                                        <li>
+                                            <img src="images/head_bg1.jpg" alt="">
+                                            <!-- 删除队员 -->
+                                            <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                        </li>
+                                        <li>
+                                            <img src="images/head_bg1.jpg" alt="">
+                                            <!-- 删除队员 -->
+                                            <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                        </li>
+                                        <li>
+                                            <img src="images/head_bg1.jpg" alt="">
+                                            <!-- 删除队员 -->
+                                            <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                        </li>
+                                        <li>
+                                            <img src="images/head_bg1.jpg" alt="">
+                                            <!-- 删除队员 -->
+                                            <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:;" class="btn_add"></a>
+                                </div>
+                                <div class="current">
+                                    <p data_lang="">CURRENT PLACEMENT</p>
+                                    <em>982</em>
+                                </div>
+                            </div>
+                            <div class="gameBox">
+                                <div class="up_game flex spb">
+                                    <span data_lang="">MATCHES PLAYED</span>
+                                    <em>8/30</em>
+                                </div>
+                                <ul class="Game_bg flex spb">
+                                    <!-- 成功请加类win，失败请加类losses -->
+                                    <li class="win"></li>
+                                    <li class="win"></li>
+                                    <li class="losses"></li>
+                                    <li class="win"></li>
+                                    <li class="win"></li>
+                                    <li class="win"></li>
+                                    <li class="win"></li>
+                                    <li class="win"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="table flex">
+                                <div>
+                                    <span data_lang="">TEAM RANK</span>
+                                    <span data_lang="">
+                                        <em data_lang="">ROOKIE</em>
+                                        <p>10/<i data_lang="">Match</i></p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span data_lang="">WINS</span>
+                                    <span data_lang="">7</span>
+                                </div>
+                                <div>
+                                    <span data_lang="">LOSSES</span>
+                                    <span data_lang="">1</span>
+                                </div>
+                                <div>
+                                    <span data_lang="">SCORE</span>
+                                    <span data_lang="">92</span>
+                                </div>
+                            </div>
+                            <div class="stage_rewards_details">
+                                <div class="stage_rewards_txt">
+                                    <p class="stage_rewards_tips">
+                                        <span data_lang="">NEXT MILESTONE </span>
+                                        <span data_lang="">REWARDS</span>
+                                    </p>
+                                    <img src="images/dj_500.jpg" alt="">
+                                    <img src="images/dj_500.jpg" alt="">
+                                    <p class="stage_rewards_txt2" data_lang="">COMPLETE 10 MATCHES!</p>
+                                    <!--<p class="stage_rewards_txt3" data_lang="">NEXT MILESTONE REWARD</p>-->
+                                </div>
+                                <a href="javascript:;" class="sur btn_clain on" onclick="" data_lang="">CLAIN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 创建战队:队长视角 -->
+                <div class="create_team create_team1" style="display: none">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                        <a href="javascript:;" class="btn_help" data_lang="">HELP</a>
+                    </div>
+                    <div class="createBox">
+                        <h4 data_lang="" class="flex">SIGN UP DURATION</h4>
+                        <div class="tableBox">
+                            <div class="titl">
+                                <span data_lang="">TEAM NAME</span>
+                                <input type="text" placeholder="MY TEAM NAME">
+                            </div>
+                            <ul class="table">
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                    <!-- 队长图标 -->
+                                    <i class="sur"></i>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                    <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                    <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                    <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                    <a href="javascript:;" class="sur btn_del" data_lang="">DISBAND TEAM</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <h5 data_lang="">INVITE TEAMMATE</h5>
+                            <ul>
+                                <li>
+                                    <p data_lang="">Teammates must follow ranked matchmaking rules to form a team.  </p>
+                                    <a href="" class="wen_icon sur"></a>
+                                </li>
+                                <li>
+                                    <p data_lang="">Teammates must have qualified for Stage 2.</p>
+                                </li>
+                                <li>
+                                    <p data_lang="">Teammates must be in the same region.</p>
+                                </li>
+                                <li>
+                                    <p data_lang="">Teammates must follow ranked matchmaking rules to form a team. </p>
+                                </li>
+                            </ul>
+                            <div class="idBox">
+                                <label data_lang="">WC ID</label>
+                                <div class="flex spb">
+                                    <input type="text">
+                                    <a href="javascript:;" class="btn_invite" data_lang="">INVITE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns flex spb">                                            
+                            <a href="javascript:;" class="sur btn_disband" data_lang="">DISBAND TEAM</a>
+                            <div class="flex">
+                                <p data_lang="">Team Members Required</p>
+                                <a href="javascript:;" class="sur btn_register" data_lang="">REGISTER</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 创建战队:队员视角 -->
+                <div class="create_team create_team2" style="display: none">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                        <a href="javascript:;" class="btn_help" data_lang="">HELP</a>
+                    </div>
+                    <div class="createBox">
+                        <h4 data_lang="">SIGN UP DURATION</h4>
+                        <div class="tableBox">
+                            <div class="titl">
+                                <span data_lang="">TEAM NAME</span>
+                                <em data_lang="">MY TEAM NAME</em>
+                            </div>
+                            <ul class="table">
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                    <!-- 队长图标 -->
+                                    <i class="sur"></i>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="img_box">
+                                        <img src="images/head_bg1.jpg">
+                                    </div>
+                                    <p class="name" data_lang="">PlayerName</p>
+                                    <div class="describe_box flex">
+                                        <img src="images/1-4.png" class="img1">
+                                        <p class="describe" data_lang="">VETERAN1</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <h5 data_lang="">INVITE TEAMMATE</h5>
+                            <ul>
+                                <li>
+                                    <p data_lang="">Teammates must follow ranked matchmaking rules to form a team. </p>
+                                    <a href="" class="wen_icon sur"></a>
+                                </li>
+                                <li>
+                                    <p data_lang="">Teammates must follow ranked matchmaking rules to form a team. </p>
+                                </li>
+                                <li>
+                                    <p data_lang="">Teammates must be in the same region.</p>
+                                </li>
+                                <li>
+                                    <p data_lang="">Teammates must follow ranked matchmaking rules to form a team. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btns">
+                            <a href="javascript:;" class="sur btn_leave" data_lang="">LEAVE TEAM</a>
+                        </div>                                        
+                    </div>
+                </div>
+                <!-- 加入战队 UID PLAYERID可复制 -->
+                <div class="copy_team" style="display: none">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                    </div>
+                    <div class="copyBox">
+                        <div class="topBox flex">
+                            <p data_lang="">PROVIDE THIS INFROMATION TO YOUR TEAM LEADER.TO ENABLE TEAM TO ADD YOU TO THEIR TAME.</p>
+                            <div class="copy_box">
+                                <div class="copy_f  flex">
+                                    <em data_lang="lang_13">MY UID</em>:
+                                    <span id="copyId"> 1234567890OPP2</span>
+                                </div>
+                                    <a href="javascript:;" class="codeBtn flex" data-clipboard-action="copy" data-clipboard-target="#copyId"><i class="sur"></i></a>
+                            </div>
+                        </div>
+                        <div class="tableBox">
+                            <div class="titl flex">
+                                <span data_lang="">TEAM NAME</span>
+                                <span data_lang="">TEAM CAPTAIN</span>
+                                <span data_lang="">INVITATION TIME</span>
+                            </div>
+                            <i class="line"></i>
+                            <ul class="table scroll">
+                                <li class="flex">
+                                    <span><a href="javascript:;" class="btn_inYes0" data_lang="">TEAM NAME</a></span>
+                                    <span><img src="images/head_bg1.jpg" alt=""> <em data_lang="">NAME</em></span>
+                                    <span>12/02/2020</span>
+                                    <div class="btns">
+                                        <a href="javascript:;" class="sur btn_inYes"></a>
+                                        <a href="javascript:;" class="sur btn_inNo"></a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span><a href="javascript:;" class="btn_inYes0" data_lang="">TEAM NAME</a></span>
+                                    <span><img src="images/head_bg1.jpg" alt=""> <em data_lang="">NAME</em></span>
+                                    <span>12/02/2020</span>
+                                    <div class="btns">
+                                        <a href="javascript:;" class="sur btn_inYes"></a>
+                                        <a href="javascript:;" class="sur btn_inNo"></a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span><a href="javascript:;" class="btn_inYes0" data_lang="">TEAM NAME</a></span>
+                                    <span><img src="images/head_bg1.jpg" alt=""> <em data_lang="">NAME</em></span>
+                                    <span>12/02/2020</span>
+                                    <div class="btns">
+                                        <a href="javascript:;" class="sur btn_inYes"></a>
+                                        <a href="javascript:;" class="sur btn_inNo"></a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span><a href="javascript:;" class="btn_inYes0" data_lang="">TEAM NAME</a></span>
+                                    <span><img src="images/head_bg1.jpg" alt=""> <em data_lang="">NAME</em></span>
+                                    <span>12/02/2020</span>
+                                    <div class="btns">
+                                        <a href="javascript:;" class="sur btn_inYes"></a>
+                                        <a href="javascript:;" class="sur btn_inNo"></a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span><a href="javascript:;" class="btn_inYes0" data_lang="">TEAM NAME</a></span>
+                                    <span><img src="images/head_bg1.jpg" alt=""> <em data_lang="">NAME</em></span>
+                                    <span>12/02/2020</span>
+                                    <div class="btns">
+                                        <a href="javascript:;" class="sur btn_inYes"></a>
+                                        <a href="javascript:;" class="sur btn_inNo"></a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span><a href="javascript:;" class="btn_inYes0" data_lang="">TEAM NAME</a></span>
+                                    <span><img src="images/head_bg1.jpg" alt=""> <em data_lang="">NAME</em></span>
+                                    <span>12/02/2020</span>
+                                    <div class="btns">
+                                        <a href="javascript:;" class="sur btn_inYes"></a>
+                                        <a href="javascript:;" class="sur btn_inNo"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 排行榜 -->
+                <div class="leaderboard_B" style="display: none">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                    </div>
+                    <!-- 更新时间 -->
+                    <div class="updateBox">
+                        <p class="time" data_lang="">Updated: 2021/03/09 21:25 GMT</p>
+                        <p class="ref" data_lang="">PAGE REFRESHES EVERY 30MS</p>
+                    </div>
+                    <div class="listBox">
+                        <div class="tabs flex">
+                            <!-- 选中请加类on -->
+                            <a href="javascript:;" class="tab tab1 on" data_lang="">NORTH AMERICA</a>
+                            <a href="javascript:;" class="tab tab2" data_lang="">JAPAN</a>
+                            <a href="javascript:;" class="tab tab3" data_lang="">EUROPE</a>
+                            <a href="javascript:;" class="tab tab4" data_lang="">LATIN AMERICA</a>
+                            <a href="javascript:;" class="tab tab5" data_lang="">OTHERS</a>
+                        </div>
+                        <div class="list">
+                            <div class="titl flex">
+                                <span data_lang="">RANK</span>
+                                <span data_lang="">TEAM</span>
+                                <span data_lang="">SCORE</span>
+                                <span data_lang="">WINS</span>
+                                <span data_lang="">LOSSES</span>
+                                <span data_lang="">DATE FINISHED</span>
+                            </div>
+                            <ul class="table scroll">
+                                <li class="flex">
+                                    <span>10</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                                <li class="flex">
+                                    <span>10</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                                <li class="flex">
+                                    <span>10</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                                <li class="flex">
+                                    <span>10</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                                <li class="flex">
+                                    <span>10</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                            </ul>
+                            <div class="foot flex">
+                                <span data_lang="">99</span>
+                                <span class="teamList">
+                                    <p class="name" data_lang="">TEAM NAME</p>
+                                    <p class="describe" data_lang="">VETERAN 1</p>
+                                </span>
+                                <span>49130</span>
+                                <span>13</span>
+                                <span>17</span>
+                                <span>12/02/2020</span>
+                            </div>
+                        </div>
+                        <div class="list" style="display: none;">
+                            <div class="titl flex">
+                                <span data_lang="">RANK</span>
+                                <span data_lang="">TEAM</span>
+                                <span data_lang="">SCORE</span>
+                                <span data_lang="">WINS</span>
+                                <span data_lang="">LOSSES</span>
+                                <span data_lang="">DATE FINISHED</span>
+                            </div>
+                            <ul class="table scroll">
+                                <li class="flex">
+                                    <span>2</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                            </ul>
+                            <div class="foot flex">
+                                <span data_lang="">2</span>
+                                <span class="teamList">
+                                    <p class="name" data_lang="">TEAM NAME</p>
+                                    <p class="describe" data_lang="">VETERAN 1</p>
+                                </span>
+                                <span>49130</span>
+                                <span>13</span>
+                                <span>17</span>
+                                <span>12/02/2020</span>
+                            </div>
+                        </div>
+                        <div class="list" style="display: none;">
+                            <div class="titl flex">
+                                <span data_lang="">RANK</span>
+                                <span data_lang="">TEAM</span>
+                                <span data_lang="">SCORE</span>
+                                <span data_lang="">WINS</span>
+                                <span data_lang="">LOSSES</span>
+                                <span data_lang="">DATE FINISHED</span>
+                            </div>
+                            <ul class="table scroll">
+                                <li class="flex">
+                                    <span>3</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                            </ul>
+                            <div class="foot flex">
+                                <span data_lang="">3</span>
+                                <span class="teamList">
+                                    <p class="name" data_lang="">TEAM NAME</p>
+                                    <p class="describe" data_lang="">VETERAN 1</p>
+                                </span>
+                                <span>49130</span>
+                                <span>13</span>
+                                <span>17</span>
+                                <span>12/02/2020</span>
+                            </div>
+                        </div>
+                        <div class="list" style="display: none;">
+                            <div class="titl flex">
+                                <span data_lang="">RANK</span>
+                                <span data_lang="">TEAM</span>
+                                <span data_lang="">SCORE</span>
+                                <span data_lang="">WINS</span>
+                                <span data_lang="">LOSSES</span>
+                                <span data_lang="">DATE FINISHED</span>
+                            </div>
+                            <ul class="table scroll">
+                                <li class="flex">
+                                    <span>4</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                            </ul>
+                            <div class="foot flex">
+                                <span data_lang="">4</span>
+                                <span class="teamList">
+                                    <p class="name" data_lang="">TEAM NAME</p>
+                                    <p class="describe" data_lang="">VETERAN 1</p>
+                                </span>
+                                <span>49130</span>
+                                <span>13</span>
+                                <span>17</span>
+                                <span>12/02/2020</span>
+                            </div>
+                        </div>
+                        <div class="list" style="display: none;">
+                            <div class="titl flex">
+                                <span data_lang="">RANK</span>
+                                <span data_lang="">TEAM</span>
+                                <span data_lang="">SCORE</span>
+                                <span data_lang="">WINS</span>
+                                <span data_lang="">LOSSES</span>
+                                <span data_lang="">DATE FINISHED</span>
+                            </div>
+                            <ul class="table scroll">
+                                <li class="flex">
+                                    <span>5</span>
+                                    <span class="teamList">
+                                        <p class="name" data_lang="">TEAM NAME</p>
+                                        <p class="describe" data_lang="">VETERAN 1</p>
+                                    </span>
+                                    <span>49130</span>
+                                    <span>13</span>
+                                    <span>17</span>
+                                    <span>12/02/2020</span>
+                                </li>
+                            </ul>
+                            <div class="foot flex">
+                                <span data_lang="">5</span>
+                                <span class="teamList">
+                                    <p class="name" data_lang="">TEAM NAME</p>
+                                    <p class="describe" data_lang="">VETERAN 1</p>
+                                </span>
+                                <span>49130</span>
+                                <span>13</span>
+                                <span>17</span>
+                                <span>12/02/2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 组队赛未晋级 -->
+            <div class="Advance" style="display: none1">
+                <!-- 未晋级 -->
+                <div class="w_Advance">
+                    <!-- 返回上一级 -->
+                    <div class="returnBox">
+                        <a href="javascript:;" class="btn_fh"></a>
+                        <div class="phb">
+                            <em data_lang="">BACK</em>
+                        </div>
+                        <a href="javascript:;" class="btn_help">HELP</a>
+                    </div>
+                    <div class="n_bgTm">
+                        <p data_lang="lang_414">Thanks for participating in Stage 1 of the Call Of Duty Mobile World Championship 2020.</p>
+                        <p data_lang="lang_415">Sorry soldier, you did not earn enough points to qualify for Stage 2 of the Call Of Duty Mobile World Championship 2020 Tournament. You have made history by competing in this world wide event and we salute your valiant efforts.</p>
+                        <p data_lang="lang_416">Don’t give up! We are giving players a second chance to qualify starting June 25 UTC! Keep checking in game for more info coming soon.</p>
+                        <i class="line"></i>
+                        <div class="phb_btm">
+                            <a class="sur" href="javascript:myRegionRank();" data_lang="lang_16"
+                                onclick="GAClickSend('advance_rank')">LEADERBOARD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 横竖屏提示 -->
+    <div class="s_prompt">
+        <p data_lang="change">Please switch to landscape mode to participate</p>
+    </div>
+
+    
+    <!-- 页面弹窗 tips -->
+    <!-- 已发送邀请 -->
+    <div class="pop nwTips pop21" id="pop21" data_lang="">
+        Invitation sent
+    </div>
+    <!-- 该队伍已经满员 -->
+    <div class="pop nwTips pop22" id="pop22" data_lang="">
+        Unable to join the team
+    </div>
+
+    <!-- 统一错误弹窗 -->
+    <div class="pop confirmP errorPop" id="pop30">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4></h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+        </div>
+        <div class="errorC">
+            <p>error error error error</p>
+            <div class="smP">
+                <a class="sur" onclick="closeDialog()" data_lang="lang_63">CONFIRM</a>
+            </div>
+        </div>
+    </div>
+    <!--关于/规则弹窗-->
+	<div class="pop confirmP rulePop" id="pop31">
+        <div class="pop-con">
+            <div class="upTitle flex spb">
+                <h4 data-lang="">ABOUT&amp;RULES</h4>
+                <div class="shut_down t" onclick="closeDialog()">关闭</div>
+            </div>
+           <div class="about_con">
+                <p class="about_nav">
+                    <span class="on" data-lang="">ABOUT</span>
+                    <span data-lang="" class="">RULES</span>
+                    <span data-lang="" class="">SCORING</span>
+                    <span data-lang="" class="">TEAM UP</span>
+                </p>
+                <div class="about_con_box about_con_box1" style="">
+                    <div class="about_txt">
+                    <p data-lang="">Millions of players around the world competed in app during stages 1-3 with the goal of qualifying for Stage4;
+                    <br>
+                    <br>
+                    Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. </p>
+                    </div>
+                    <div class="about_img">
+                        <img src="images/dia-about.jpg" alt="">
+                    </div>
+                </div>
+                <div class="about_con_box" style="display: none;">
+                    <div class="about_txt"><p data-lang="">Millions of players around the world competed in app during stages 1-3 with the goal of qualifying for Stage4;<br>Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. <br>Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on.Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. <br>Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. </p>
+                    </div>
+                </div>
+                
+                <div class="about_con_box box_cont" style="display: none;">
+                	<p class="ranked_txt1" data-lang="">The potential qualification points earned per win will positively scale with rank.</p>
+            		<p class="ranked_scroll_title"><span data-lang="">RANK</span><span data-lang="">POINTS PER WIN</span></p>
+            		<p class="icon_line2"><span></span></p>
+                	<div class="ranked_scroll_box">
+	            		<div class="ranked_scroll_body">
+	            			<div class="ranked_cont">
+	            				<p><span>ROOKIE </span><!--<em>601-800</em>--></p>
+	            				<p>8</p>
+	            			</div>
+	            			<div class="ranked_cont">
+	            				<p><span>VATERAN </span><!--<em>601-800</em>--></p>
+	            				<p>10</p>
+	            			</div>
+	            			<div class="ranked_cont">
+	            				<p><span>ELITE </span><!--<em>601-800</em>--></p>
+	            				<p>12</p>
+	            			</div>
+	            			<div class="ranked_cont">
+	            				<p><span>PRO </span><!--<em>601-800</em>--></p>
+	            				<p>14</p>
+	            			</div>
+	            			<div class="ranked_cont">
+	            				<p><span>MASTER </span><!--<em>601-800</em>--></p>
+	            				<p>16</p>
+	            			</div>
+	            			<div class="ranked_cont">
+	            				<p><span>LEGENDARY </span><!--<em>601-800</em>--></p>
+	            				<p>20</p>
+	            			</div>
+	            		</div>
+	            	</div>
+                </div>
+                <div class="about_con_box" style="display: none;">
+                    <div class="about_txt"><p data-lang="">Millions of players around the world competed in app during stages 1-3 with the goal of qualifying for Stage4;<br>Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. <br>Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on.Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. <br>Regional Playoffs.The top 8 teams in each region were incited to participate in the Regional Playoffs as the world watches on. </p>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <!-- 删除队员 -->
+    <div class="pop confirmP delPlayerPop" id="pop32">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4 data_lang="">LEAVE TEAM CONFRIM</h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+            <div class="bt_con">
+                <div class="smP">
+                    <p data_lang="">can't join the team for 24 hours</p>
+                    <a href="javascript:;" class="sur" onclick="closeDialog()" data_lang="">CONFIRM TO LEAVE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 确认队员 -->
+    <div class="pop confirmP confirmPop" id="pop33">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4 data_lang="">CONFIRM MEMBER</h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+            <div class="conf_con">
+                <p data_lang="" class="smp-title">PLEASE CONFIRM THE DETAILS AND MEMBERS OF YOUR TOURNAMENT TEAM.</p>
+                <div class="confirmPop_cent">
+                    <div class="left">
+                        <p class="name" data_lang="">Team Ghost</p>
+                        <p class="describe"><span data_lang="">VETERAN</span></p>
+                    </div>
+                    <ul class="right">
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                            <!-- 队长图标 -->
+                            <i class="sur"></i>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="smP">
+                    <a href="javascript:;" class="sur btn_member" onclick="closeDialog()"  data_lang="">CONFIRM MEMBER</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 赛事纪录 -->
+    <div class="pop confirmP matchPop" id="pop34">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4 data_lang="">MATCH HISTORY</h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+            <div class="mat_con">
+                <div class="titl">
+                    <span data_lang="">MATCH</span>
+                    <span data_lang="">RESULT</span>
+                    <span data_lang="">SCORE</span>
+                    <span data_lang="">DATE PLAYED</span>
+                </div>
+                <i class="line"></i>
+                <ul class="table scroll">
+                    <li class="flex">
+                        <span>10</span>
+                        <span data_lang="">VICTORY</span>
+                        <span>12932</span>
+                        <span>12/02/2020</span>
+                    </li>
+                    <li class="flex">
+                        <span>10</span>
+                        <span data_lang="">VICTORY</span>
+                        <span>12932</span>
+                        <span>12/02/2020</span>
+                    </li>
+                    <li class="flex">
+                        <span>10</span>
+                        <span data_lang="">VICTORY</span>
+                        <span>12932</span>
+                        <span>12/02/2020</span>
+                    </li>
+                    <li class="flex">
+                        <span>10</span>
+                        <span data_lang="">VICTORY</span>
+                        <span>12932</span>
+                        <span>12/02/2020</span>
+                    </li>
+                    <li class="flex">
+                        <span>10</span>
+                        <span data_lang="">VICTORY</span>
+                        <span>12932</span>
+                        <span>12/02/2020</span>
+                    </li>
+                    <li class="flex">
+                        <span>10</span>
+                        <span data_lang="">VICTORY</span>
+                        <span>12932</span>
+                        <span>12/02/2020</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 解散战队 -->
+    <div class="pop confirmP disTeamPop" id="pop35">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4 data_lang="">DISBAND TEAM CONFIRMATION</h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+            <div class="dis_con">
+                <p class="txt flex" data_lang="">Eeplain about any rank or player level requirements here and how it can also effect the points they gain after playing a ranked match.After explaining,include a detailed chart.</p>
+                <div class="smP">
+                    <a href="javascript:;" class="sur" onclick="closeDialog()" data_lang="">CONFIRM & DISBAND TEAM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 奖励展示 -->
+    <div class="pop confirmP rewardPop" id="pop36">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4 data_lang="">INVITATION RECORD</h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+            <div class="rew_con">
+                <div class="titl">
+                    <span data_lang="">ACTIVITY</span>
+                    <span data_lang="">REWARDS</span>
+                </div>
+                <i class="line"></i>
+                <ul class="table scroll">
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                            <div>
+                                <img src="images/gift.png" alt="">
+                                <em>1</em>
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+                <a href="javascript:;" class="btn_reward">VIEW REWARD DETAILS</a>
+            </div>
+        </div>
+    </div>
+    <!-- 邀请记录 -->
+    <div class="pop confirmP invitePop" id="pop37" style="display:none">
+        <div class="popCon">
+            <div class="upTitle flex spb">
+                <h4 data_lang="">INVITATION RECORD</h4>
+                <div class="shut_down sur t" onclick="closeDialog()">关闭</div>
+            </div>
+            <div class="inv_con">
+                <div class="titl">
+                    <span data_lang="">TEAM NAME</span>
+                    <span data_lang="">TEAM CAPTAIN</span>
+                    <span data_lang="">INVITATION TIME</span>
+                </div>
+                <i class="line"></i>
+                <ul class="table scroll">
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span data_lang="">NAME</span>
+                        <span>12/02/2020</span>
+                        <div class="btns">
+                            <a href="javascript:;" class="sur btn_inYes"></a>
+                            <a href="javascript:;" class="sur btn_inNo"></a>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span data_lang="">NAME</span>
+                        <span>12/02/2020</span>
+                        <div class="btns">
+                            <a href="javascript:;" class="sur btn_inYes"></a>
+                            <a href="javascript:;" class="sur btn_inNo"></a>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span data_lang="">NAME</span>
+                        <span>12/02/2020</span>
+                        <div class="btns">
+                            <a href="javascript:;" class="sur btn_inYes"></a>
+                            <a href="javascript:;" class="sur btn_inNo"></a>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span data_lang="">NAME</span>
+                        <span>12/02/2020</span>
+                        <div class="btns">
+                            <a href="javascript:;" class="sur btn_inYes"></a>
+                            <a href="javascript:;" class="sur btn_inNo"></a>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span data_lang="">TEAM A</span>
+                        <span data_lang="">NAME</span>
+                        <span>12/02/2020</span>
+                        <div class="btns">
+                            <a href="javascript:;" class="sur btn_inYes"></a>
+                            <a href="javascript:;" class="sur btn_inNo"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 二级弹窗 确认加入 -->
+    <div class="pop2 confirmP popJoin" id="popJoin">
+        <div class="popCon">
+            <div class="upTitle flex">
+                <div class="shut_down sur t" onclick="closeDialog1()">关闭</div>
+            </div>
+            <div class="conf_con">
+                <div class="confirmPop_cent">
+                    <p class="titl" data_lang="">TEAM NAME A</p>
+                    <ul class="right">
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                            <!-- 队长图标 -->
+                            <i class="sur"></i>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img_box">
+                                <img src="images/head_bg1.jpg">
+                            </div>
+                            <p class="name" data_lang="">PlayerName</p>
+                            <div class="describe_box flex">
+                                <img src="images/1-4.png" class="img1">
+                                <p class="describe" data_lang="">VETERAN1</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="smP">
+            <a href="javascript:;" class="sur" onclick="closeDialog1()" data_lang="">CONFIRM TO JOIN</a>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/comm.js"></script>
+    <script src="js/language_data.js?v=16"></script>
+    <script src="js/language.js?v=7"></script>
+    <script src="js/common.js?v=1"></script>
+    <script src="js/index.js?v=17"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script>
+        var clipboard = new Clipboard('.codeBtn');
+
+        clipboard.on('success', function (e) {
+            alert('复制成功');
+        });
+
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+
+        //点击弹出对应弹窗
+        var isRepeat = true;
+
+        function edBtm(id) {
+            if (isRepeat) {
+                isRepeat = false;
+                $('.pop' + id).addClass('Show');
+                setTimeout(function () {
+                    $('.pop' + id).addClass('close_c');
+                    setTimeout(function () {
+                        $('.pop' + id).removeClass('Show close_c');
+                        isRepeat = true;
+                    }, 400);
+                }, 2000)
+            }
+        }
+
+        // 组队/加入战队页面 按钮
+        // 点击奖励按钮弹出奖励展示
+        $('.btn_rewards').on('click',function() {
+            OpenDialog('pop36');
+        })
+
+        // 查看规则弹窗
+        $('.btn_about').on('click',function() {
+            OpenDialog('pop31');
+        })
+        
+        // 点击查看排行榜打开排行榜页面
+        $('.btn_leaderboard').on('click',function() {
+            $('.leaderboard_B').show().siblings('div').hide();
+        })
+        // 点击排行榜返回按钮
+        $('.leaderboard_B .btn_fh').on('click',function(){
+            $('.join_team').show().siblings('div').hide();
+        })
+
+
+        // 点击加入战队按钮打开加入战队页面
+        $('.btn_join').on('click',function() {
+            $('.copy_team').show().siblings('div').hide();
+        })
+        // 点击邀请按钮打开邀请记录二级弹窗
+        $('.copy_team .btn_inYes0,.copy_team .btn_inYes').on('click',function() {
+            OpenDialog1('popJoin');
+        })
+        // 点击加入战队页面返回按钮
+        $('.copy_team .btn_fh').on('click',function(){
+            $('.join_team').show().siblings('div').hide();
+        })
+
+
+        // 点击创建战队按钮打开创建战队页面
+        $('.btn_create').on('click',function() {
+            var random=Math.round(Math.random()+1);
+            $('.create_team'+random+'').show().siblings('div').hide();
+        })
+         // 点击创建战队页面返回按钮
+         $('.create_team .btn_fh').on('click',function(){
+            $('.join_team').show().siblings('div').hide();
+        })
+        // 点击邀请按钮
+        $('.btn_invite').on('click',function(){
+            OpenDialog('pop21');
+        })
+        // 打开解散战队弹窗
+        $('.btn_disband').on('click',function(){
+            OpenDialog('pop35');
+        })
+        // 打开确认成员弹窗
+        $('.btn_register').on('click',function(){
+            OpenDialog('pop33');
+        })
+        // 打开删除成员弹窗
+        $('.create_team1 .btn_del').on('click',function(){
+            OpenDialog('pop32');
+        })
+
+        // 打开比赛详情页面
+        $('.btn_member').on('click',function(){
+            $('.detail_match').show().siblings('div').hide();
+        })
+        // 点击赛详情页面返回按钮
+        $('.detail_match .btn_fh').on('click',function(){
+            $('.join_team').show().siblings('div').hide();
+        })
+        // 打开赛事记录弹窗
+        $('.btn_matchHis').on('click',function(){
+            OpenDialog('pop34');
+        })
+
+        // 赛事规则弹窗切换
+        $('.rulePop .about_nav span').on('click',function(){
+            var idx=$(this).index();
+            $(this).addClass('on').siblings('span').removeClass('on');
+            $('.rulePop .about_con_box').eq(idx).show().siblings('.rulePop .about_con_box').hide();
+        })
+
+
+        // 排行榜国家榜单切换
+        $('.leaderboard_B .tab').on('click',function(){
+            var idx=$(this).index();
+            $(this).addClass('on').siblings('a').removeClass('on');
+            $('.leaderboard_B .list').eq(idx).show().siblings('.list').hide();
+        })
+
+
+        var storeKey = getParam('roleid');
+        //本地储存value
+        function SetValue(dom, val) {
+            dom.blur(function () {
+                dom.each(function (index) {
+                    var v = $(this).val();
+                    localStorage.setItem(storeKey + val + index, v);
+                })
+            });
+            getValue(dom, val)
+        }
+        SetValue($('.FormIpt input'), 'value');
+        SetValue($('.bodyTeamNew input'), 'valuee');
+
+
+        // //得到本地储存
+        localStorage.getItem(storeKey + 'value');
+
+        function getValue(dom, val) {
+            var len = localStorage.length;
+            for (var i = 0; i < len; i++) {
+                dom.eq(i).val(localStorage[storeKey + val + i]);
+            }
+        }
+
+
+        //判断是否使用的是ipad
+        function isIpad() {
+            var u = navigator.userAgent;
+            if (u.indexOf('iPad') > -1) {
+                console.log(1);
+                $(".matchBox").css({
+                    "position": "fixed",
+                    "left": "50%",
+                    "margin-left": '-6.2rem',
+                    "top": '50%',
+                    "margin-top": "-3.2rem"
+                });
+            }
+        }
+
+        isIpad();
+
+        // 赛事自适应高度
+        // var Nav = $('.tabLi').height();
+        // var cityH = $(document).height() - Nav  ;
+        // $('.cityBox,.city_wz').css({
+        //     "height" : cityH
+        // });
+
+        //禁止用户输入
+        // 判断是ios还是安卓
+        if (ios_or_android() == 'ios') {
+            $("input").on("keyup", function () {
+                var param = $(this).val();
+                var regRule = /[^\u4E00-\u9FA5|\d|\a-zA-Z|\r\n\s,.?!，。？！…—&$=()-+/*{}[\]]|\s/g;
+                $(this).val(param.replace(regRule, ""));
+            })
+        } else {
+
+            $("input").on("input", function () {
+                var param = $(this).val();
+                var regRule = /[^\u4E00-\u9FA5|\d|\a-zA-Z|\r\n\s,.?!，。？！…—&$=()-+/*{}[\]]|\s/g;
+                $(this).val(param.replace(regRule, ""));
+            })
+        }
+
+        function ios_or_android() {
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+            if (isAndroid) {
+                return 'and';
+            } else {
+                return 'ios';
+            }
+        }
+    </script>
+</body>
+
+</html>
